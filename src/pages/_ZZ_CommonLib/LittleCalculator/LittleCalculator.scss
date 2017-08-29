@@ -1,0 +1,15 @@
+.Calculator_Content {
+    & ion-col {
+        padding: 0px 0px 0px 0px;
+        border: 1px solid #2F4F4F;
+    }
+
+    & button {
+        margin: 0px 0px 0px 0px;
+        font-size: x-large !important;
+    }
+
+    & .btn_operator {
+        background-color: #DAA520;
+    }
+}

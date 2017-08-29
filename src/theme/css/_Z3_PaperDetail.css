@@ -1,0 +1,34 @@
+﻿.table4_4 table {
+    width: 100%;
+    margin: 15px 0;
+    border: 0;
+}
+
+.table4_4 th {
+    background-color: #91D0D2;
+    color: #000000;
+}
+
+.table4_4, .table4_4 th, .table4_4 td {
+    font-size: 0.95em;
+    text-align: center;
+    padding: 4px;
+    border-collapse: collapse;
+}
+
+    .table4_4 th, .table4_4 td {
+        border: 2px solid #c0e4e5;
+        border-width: 2px 0 2px 0;
+    }
+
+    .table4_4 tr {
+        border: 1px solid #c0e4e5;
+    }
+
+        .table4_4 tr:nth-child(odd) {
+            background-color: #daeff0;
+        }
+
+        .table4_4 tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }

@@ -1,0 +1,26 @@
+﻿.button_temperature{
+    height: 40px !important;
+    width: 30px !important;
+    font-size: xx-large !important;
+}
+.button_pos_temperature{
+
+}
+.button_neg_temperature{
+    background-color: #FFD306;
+        color: red;
+}
+
+.input_pos_temperature {
+    & input {
+        background-color: black;
+        color: white;
+    }
+}
+
+.input_neg_temperature {
+    & input {
+        background-color: #FFD306;
+        color: red;
+    }
+}

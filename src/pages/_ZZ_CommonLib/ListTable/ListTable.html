@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons start>
+            <button ion-button (click)="choose('')">返回</button>
+        </ion-buttons>
+        <ion-title>選擇一個選項</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content (swipe)="swipeEvent($event)">
+    <ion-list>
+        <button ion-button large full
+                *ngFor="let obj of Lists"
+                class="btn_list"
+                color="dark"
+                (click)="choose(obj)">
+            {{obj.Name}}
+        </button>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,45 @@
+﻿<ion-header>
+    <ion-navbar>
+        <ion-title (click)="help()">籃明細</ion-title>
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-item>
+            <ion-label>條碼</ion-label>
+            <ion-input #scan_Entry id="txb_scan_Entry" type="tel"
+                       (keyup.enter)="search()"
+                       (ionFocus)="selectAll($event)"
+                       [(ngModel)]="data.ScanBarcode"
+                       autofocus></ion-input>
+        </ion-item>
+        <ion-buttons end>
+            <button ion-button (click)="reset()" color="danger" solid class="toolbar-button">
+                <ion-icon name="close"></ion-icon>
+            </button>
+            <button ion-button (click)="search()" color="primary" solid class="toolbar-button">
+                <ion-icon name="search"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content (swipe)="swipeEvent($event)">
+    <ion-card>
+        <ion-card-header>
+            <ion-col>批次</ion-col>
+            <ion-col>{{data.JOBID}}</ion-col>
+        </ion-card-header>
+    </ion-card>
+    <ion-list radio-group>
+        <ion-list-header>
+            選擇模式
+        </ion-list-header>
+        <ion-item>
+            <ion-label>DAS</ion-label>
+            <ion-radio checked="true" value="DAS"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>SF</ion-label>
+            <ion-radio value="SF"></ion-radio>
+        </ion-item>
+    </ion-list>
+</ion-content>
