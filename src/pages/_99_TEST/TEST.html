@@ -4,11 +4,12 @@
     </ion-navbar>
 </ion-header>
 <ion-content>
-    <ion-item>
-        <ion-textarea #scan_Entry
-                      placeholder="Enter a description"
-                      rows="4" cols="50"
-                      type="text"
-                      (keyup.enter)="testEnter()"></ion-textarea>
-    </ion-item>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <button ion-button outline (click)="showCalculator()">Calculator</button>
+                <button ion-button outline (click)="showCamera()">CAMERA</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

@@ -1,4 +1,6 @@
-﻿.button_temperature{
+﻿
+//溫度選擇
+.button_temperature{
     height: 40px !important;
     width: 30px !important;
     font-size: xx-large !important;
@@ -22,5 +24,19 @@
     & input {
         background-color: #FFD306;
         color: red;
+    }
+}
+
+.mysegment{
+    height:40px;
+
+    & .segment-button{
+        height:inherit;
+        width:40px;
+    }
+    & .segment-activated{
+        color:white;
+        font-size:x-large;
+        background-color:#488aff;
     }
 }

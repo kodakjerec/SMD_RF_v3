@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { NavParams, ViewController } from 'ionic-angular';
 
+//Cordova
+import { Vibration } from '@ionic-native/vibration';
+
+//My Pages
 import * as myGlobals from '../../../app/Settings';
 
 @Component({
@@ -10,14 +14,18 @@ export class ListTablePage {
     Lists: [{}];
 
     constructor(
-        public viewCtrl: ViewController,
-        params: NavParams
-    ) {
+        public viewCtrl: ViewController
+        , params: NavParams
+        , private vibration: Vibration) {
         this.Lists = myGlobals.ProgParameters.get('ListTable_Source');
     }
 
     choose(item) {
-        myGlobals.ProgParameters.set('ListTable_answer', item);
+        this.vibration.vibrate(100);
+        if (item == '')
+            myGlobals.ProgParameters.set('ListTable_answer', { Name: '', Value: '' });
+        else
+            myGlobals.ProgParameters.set('ListTable_answer', item);
         this.viewCtrl.dismiss();
     }
 

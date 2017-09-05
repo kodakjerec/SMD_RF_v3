@@ -1,0 +1,62 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-buttons left>
+            <button ion-button (click)="Leave()">返回</button>
+        </ion-buttons>
+        <ion-title>拍照上傳</ion-title>
+        <ion-buttons right>
+            <button ion-button color="primary" solid icon-start (click)="callCamera()">
+                <ion-icon name="camera"></ion-icon>
+                拍照
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <img [src]="data.FileSource" *ngIf="data.FileSource" />
+            </ion-col>
+        </ion-row>
+        <ion-row align-items-center>
+            <ion-col col-2>
+                <ion-label>檔<br />名<br />：</ion-label>
+            </ion-col>
+            <ion-col col-8>
+                <ion-textarea [(ngModel)]="data.FileName" row="2"></ion-textarea>
+            </ion-col>
+            <ion-col col-2>
+                <ion-label>.jpg</ion-label>
+            </ion-col>
+        </ion-row>
+        <ion-row align-items-center>
+            <ion-col col-2>
+                <ion-label>固<br />定<br />描<br />述<br />：</ion-label>
+            </ion-col>
+            <ion-col col-10>
+                <ion-label style="white-space: pre;font-size:small">{{data.defaultFileDescription}}</ion-label>
+            </ion-col>
+        </ion-row>
+        <ion-row align-items-center>
+            <ion-col col-2>
+                <ion-label>自<br />訂<br />描<br />述<br />：</ion-label>
+            </ion-col>
+            <ion-col col-10>
+                <ion-textarea placeholder="輸入照片描述"
+                              [(ngModel)]="data.FileDescription"
+                              rows="5"></ion-textarea>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <button ion-button color="primary" block solid icon-start
+                        [disabled]="data.IsDisabled"
+                        (click)="upload()">
+                    <ion-icon name="cloud-upload"></ion-icon>
+                    傳送
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

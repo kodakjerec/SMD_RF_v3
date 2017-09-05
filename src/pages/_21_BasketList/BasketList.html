@@ -50,14 +50,14 @@
     <div id="DCS_log" [hidden]="data.DCS_log_show">
         <ion-grid>
             <ion-row class="mytable_Head">
-                <ion-col>條碼</ion-col>
-                <ion-col>動作</ion-col>
-                <ion-col>掃描時間</ion-col>
+                <ion-col col-6>條碼</ion-col>
+                <ion-col col-3>動作</ion-col>
+                <ion-col col-3>掃描時間</ion-col>
             </ion-row>
             <ion-row *ngFor="let s of DCS_Log" class="mytable_Detail">
-                <ion-col>[{{s.barcode}}]</ion-col>
-                <ion-col>{{s.Check}}</ion-col>
-                <ion-col>{{s.scanTime | date:'HH:mm:ss'}}</ion-col>
+                <ion-col col-6>[{{s.barcode}}]</ion-col>
+                <ion-col col-3>{{s.Check}}</ion-col>
+                <ion-col col-3>{{s.scanTime | date:'HH:mm:ss'}}</ion-col>
             </ion-row>
         </ion-grid>
     </div>

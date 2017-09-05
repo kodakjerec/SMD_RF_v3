@@ -32,6 +32,20 @@ input[type] {
     }
 }
 
+ion-textarea{
+    font-size: larger;
+    background-color: black;
+    color: white;
+    border: solid #6C6C6C;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+
+    &:focus {
+        border: solid #FF8040;
+    }
+}
+
 /***block、menu***/
 .mylist {
     margin: 0px 0px 0px 0px !important;
@@ -43,6 +57,19 @@ input[type] {
 
         & ion-label.item-left {
             max-width: 30% !important;
+        }
+    }
+
+    & ion-grid {
+        padding-left:16px;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: white !important;
+        font-size:16px;
+
+        & ion-col{
+            padding-left:0px;
+            padding-right:0px;
         }
     }
 }
@@ -80,5 +107,13 @@ input[type] {
     }
 }
 
+//toolbar最低高度
 $toolbar-ios-height:40px;
-ion-toolbar{max-height:40px;}
+
+/*移除input下方的底線*/
+$text-input-md-highlight-color-invalid: transparent;
+$text-input-md-highlight-color-valid: transparent;
+$text-input-md-show-invalid-highlight: transparent;
+$text-input-md-highlight-color: transparent;
+$text-input-md-show-valid-highlight: transparent;
+.item-md.item-input .item-inner { border-bottom-color: transparent !important; box-shadow: none !important; } .list-md .item-input:last-child { border-bottom-color: transparent !important; box-shadow: none !important; }

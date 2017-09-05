@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { NavParams, ViewController } from 'ionic-angular';
 
+//Cordova
+import { Vibration } from '@ionic-native/vibration';
+
+//My Pages
 import * as myGlobals from '../../../app/Settings';
 
 @Component({
@@ -16,31 +20,31 @@ export class LittleCalculatorPage {
     decimalAdd = false;
     dotAdd = false;
 
-    data = { showOldNum: '0', KeyinValue: '0' };
+    data = {  KeyinValue: '0' };
 
     constructor(
-        public viewCtrl: ViewController,
-        params: NavParams
+        public viewCtrl: ViewController
+        , params: NavParams
+        , private vibration: Vibration
     ) {
-        this.data.showOldNum = myGlobals.ProgParameters.get('ListTable_Source');
+        this.data.KeyinValue = myGlobals.ProgParameters.get('ListTable_Source');
     }
 
     click(flag) {
-
+        this.vibration.vibrate(100);
         switch (flag) {
             case 'OK':
                 //計算
                 this.CalSub('=');
 
                 //回傳
-                myGlobals.ProgParameters.set('ListTable_answer', this.data.showOldNum);
+                myGlobals.ProgParameters.set('ListTable_answer', this.data.KeyinValue);
                 this.viewCtrl.dismiss();
             case 'AC':
                 this.oldNum = 0;
                 this.newNum = 0;
                 this.decimalAdd = false;
                 this.dotAdd = false;
-                this.data.showOldNum = '0';
                 this.data.KeyinValue = '0';
                 this.log += 'AC\n';
                 break;
@@ -79,12 +83,25 @@ export class LittleCalculatorPage {
                 }
                 break;
             default:    //數字
-                this.decimalAdd = false;
-                this.NumClicked = true;
-                if (this.data.KeyinValue == '0')
-                    this.data.KeyinValue = flag;
-                else
-                    this.data.KeyinValue += flag;
+                if (this.decimalAdd == false) { //有按下運算鑑
+                    if (this.NumClicked == false) { //第一次按下數字
+                        this.data.KeyinValue = flag;
+                    }
+                    else {
+                        this.data.KeyinValue += flag;
+                    }
+                    this.NumClicked = true;
+                }
+                else {
+                    //沒有按下運算建
+
+                    this.decimalAdd = false;
+                    this.NumClicked = true;
+                    if (this.data.KeyinValue == '0')
+                        this.data.KeyinValue = flag;
+                    else
+                        this.data.KeyinValue += flag;
+                }
                 this.newNum = parseFloat(this.data.KeyinValue);
                 this.log += flag;
         }
@@ -94,8 +111,7 @@ export class LittleCalculatorPage {
     //計算函數
     CalSub(New_operator) {
         console.log(
-            'showOldNum:' + this.data.showOldNum
-            + ' KeyinValue:' + this.data.KeyinValue
+            ' KeyinValue:' + this.data.KeyinValue
             + ' New_operator:' + New_operator);
 
         if (this.lastClickChar == New_operator) {
@@ -106,7 +122,6 @@ export class LittleCalculatorPage {
         if (this.data.KeyinValue.substring(0, 1) == '+'
             || this.data.KeyinValue.substring(0, 1) == '-') {
             //Calculate
-            this.oldNum = parseFloat(this.data.showOldNum);
             this.newNum = eval(this.data.KeyinValue);
             this.oldNum = eval(this.oldNum + '+' + this.newNum);
         }
@@ -117,14 +132,18 @@ export class LittleCalculatorPage {
         }
 
         //Final
-        this.data.showOldNum = this.oldNum.toString();
+        this.oldNum = this.GetRound(this.oldNum, 1);
         this.newNum = 0;
-        this.data.KeyinValue = '0';
-        this.log += New_operator + this.data.showOldNum + '\n';
+        //this.data.KeyinValue = '0';
+        this.data.KeyinValue = this.oldNum.toString();
+        this.log += New_operator + this.data.KeyinValue + '\n';
 
         //RESET
         this.decimalAdd = false;
         this.dotAdd = false;
         this.NumClicked = false;
     }
+    GetRound(num, len) {
+    　　　　return Math.round(num * Math.pow(10, len)) / Math.pow(10, len);
+　　}
 }

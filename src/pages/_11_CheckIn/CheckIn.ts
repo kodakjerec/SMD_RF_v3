@@ -1,6 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Platform, NavParams, AlertController, IonicPage } from 'ionic-angular';
 
+//Cordova
+import { Vibration } from '@ionic-native/vibration';
+
+//My Pages
 import * as myGlobals from '../../app/Settings';
 import { http_services } from '../_ZZ_CommonLib/http_services';
 
@@ -15,6 +19,7 @@ export class _11_CheckIn {
     constructor(public navCtrl: NavController
         , plt: Platform
         , public navParams: NavParams
+        , private vibration: Vibration
         , public _http_services: http_services
         , private alertCtrl: AlertController) {
         this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
@@ -36,7 +41,6 @@ export class _11_CheckIn {
     //重置btn
     reset() {
         myGlobals.ProgParameters.set('CarNo', '');
-        this.data.CarNo = '';
         this.data.viewColor = '';
         this.data.IsDisabled = true;
 
@@ -49,8 +53,11 @@ export class _11_CheckIn {
 
     //#region 查詢報到牌btn
     search() {
+        this.vibration.vibrate(100);
         if (this.data.CarNo == '')
             return;
+
+        this.reset();
 
         this._http_services.POST('', 'sp'
             , 'spactDCS_ID_HEADER'
@@ -99,31 +106,10 @@ export class _11_CheckIn {
     };//#endregion
 
     //#region 20170613需求，加入溫度正負按鈕
-    neg = { buttonClass: false };
-    pos = { buttonClass: true };
-
-    VEHICLE_TEMP0_color = this.pos;
-    VEHICLE_TEMP1_color = this.pos;
-    VEHICLE_TEMP2_color = this.pos;
-
-    VEHICLE_TEMP0_p() {
-        this.VEHICLE_TEMP0_color = this.pos;
-    }
-    VEHICLE_TEMP0_n() {
-        this.VEHICLE_TEMP0_color = this.neg;
-    }
-    VEHICLE_TEMP1_p() {
-        this.VEHICLE_TEMP1_color = this.pos;
-    }
-    VEHICLE_TEMP1_n() {
-        this.VEHICLE_TEMP1_color = this.neg;
-    }
-    VEHICLE_TEMP2_p() {
-        this.VEHICLE_TEMP2_color = this.pos;
-    }
-    VEHICLE_TEMP2_n() {
-        this.VEHICLE_TEMP2_color = this.neg;
-    }//#endregion
+    VEHICLE_TEMP0_color = 'pos';
+    VEHICLE_TEMP1_color = 'pos';
+    VEHICLE_TEMP2_color = 'pos';
+    //#endregion
 
     //#region 報到牌報到btn
     register() {
@@ -135,11 +121,11 @@ export class _11_CheckIn {
             var TEMP1 = this.answer.VEHICLE_TEMP1;
             var TEMP2 = this.answer.VEHICLE_TEMP2;
 
-            if (this.VEHICLE_TEMP0_color == this.neg)
+            if (this.VEHICLE_TEMP0_color == 'neg')
                 TEMP0 = -TEMP0;
-            if (this.VEHICLE_TEMP1_color == this.neg)
+            if (this.VEHICLE_TEMP1_color == 'neg')
                 TEMP1 = -TEMP1;
-            if (this.VEHICLE_TEMP2_color == this.neg)
+            if (this.VEHICLE_TEMP2_color == 'neg')
                 TEMP2 = -TEMP2;
 
             this._http_services.POST('', 'sp'

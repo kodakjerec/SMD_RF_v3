@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
     <ion-navbar>
         <ion-title (click)="help()">報到牌</ion-title>
         <ion-buttons end>
@@ -60,9 +60,9 @@
         </ion-list>
     </ion-card>
 </ion-content>
-<ion-footer>
+<ion-footer no-border>
     <ion-toolbar>
-        <ion-buttons start>
+        <ion-buttons left>
             <button ion-button outline (click)="callPaperDetail()" color="secondary" [disabled]="data.IsDisabled">
                 明細
             </button>

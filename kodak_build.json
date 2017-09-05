@@ -1,0 +1,11 @@
+{
+     "android": {
+         "debug": {
+             "keystore": "mtk6753.keystore",
+             "storePassword": "android",
+             "alias": "androiddebugkey",
+             "password" : "android",
+             "keystoreType": ""
+         }
+     }
+ }

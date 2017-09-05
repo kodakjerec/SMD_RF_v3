@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
     <ion-navbar>
         <ion-title (click)="help()">呼出碼查詢</ion-title>
         <ion-buttons end>
@@ -11,7 +11,7 @@
     <ion-toolbar>
         <ion-item>
             <ion-label>呼出碼</ion-label>
-            <ion-input #scan_Entry id="txb_scan_Entry" type="text"
+            <ion-input #scan_Entry id="txb_scan_Entry" type="tel"
                        (keyup.enter)="search()"
                        (ionFocus)="selectAll($event)"
                        [(ngModel)]="data.ItemCode"
@@ -28,7 +28,7 @@
     </ion-toolbar>
 </ion-header>
 <ion-content (swipe)="swipeEvent($event)">
-    <ion-card>
+    <ion-card [hidden]="data.IsDisabled">
         <ion-list class="mylist">
             <ion-item>
                 <ion-label>太陽日</ion-label>
@@ -42,35 +42,48 @@
             </ion-item>
             <ion-item [hidden]="!result.QL_TYPE">
                 <ion-label>廠商批號</ion-label>
-                <ion-input [(ngModel)]="answer.LOT"
+                <ion-input type="text"
+                           [(ngModel)]="answer.LOT"
                            (ionFocus)="selectAll($event)"></ion-input>
             </ion-item>
-            <ion-item [hidden]="!result.QE_TYPE">
-                <ion-label>{{result.QE_TYPE_NAME}}</ion-label>
-                <ion-input [(ngModel)]="answer.SunDay"
-                           (ionFocus)="selectAll($event)"
-                           placeholder="{{answer.SunDay_placeholder}}"></ion-input>
-            </ion-item>
-            <ion-item [hidden]="!result.QT_TYPE">
-                <ion-label>{{result.QT_TYPE_NAME}}</ion-label>
-                <button item-content ion-button solid
-                        class="button_temperature"
-                        [ngClass]="{'button_pos_temperature':Temp_color.buttonClass, 'button_neg_temperature':!Temp_color.buttonClass}"
-                        (click)="Tempr_p()">
-                    ＋
-                </button>
-                <button item-content ion-button solid
-                        class="button_temperature"
-                        [ngClass]="{'button_pos_temperature':Temp_color.buttonClass, 'button_neg_temperature':!Temp_color.buttonClass}"
-                        (click)="Tempr_n()">
-                    －
-                </button>
-                <ion-input type="tel"
-                           [(ngModel)]="answer.Temp"
-                           (ionFocus)="selectAll($event)"
-                           [ngClass]="{'input_pos_temperature':Temp_color.buttonClass, 'input_neg_temperature':!Temp_color.buttonClass}"
-                           onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46"></ion-input>
-            </ion-item>
+            <ion-grid [hidden]="!result.QE_TYPE">
+                <ion-row align-items-center>
+                    <ion-col col-4>
+                        <ion-label>{{result.QE_TYPE_NAME}}</ion-label>
+                    </ion-col>
+                    <ion-col>
+                        <ion-input type="tel"
+                                   [(ngModel)]="answer.SunDay"
+                                   (ionFocus)="selectAll($event)"
+                                   placeholder="{{answer.SunDay_placeholder}}"></ion-input>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-grid [hidden]="!result.QT_TYPE">
+                <ion-row align-items-center>
+                    <ion-col>
+                        <ion-label>{{result.QT_TYPE_NAME}}</ion-label>
+                    </ion-col>
+                    <ion-col>
+                        <ion-segment class="mysegment"
+                                     [(ngModel)]="Temp_color">
+                            <ion-segment-button value="pos">
+                                ＋
+                            </ion-segment-button>
+                            <ion-segment-button value="neg">
+                                －
+                            </ion-segment-button>
+                        </ion-segment>
+                    </ion-col>
+                    <ion-col>
+                        <ion-input type="tel"
+                                   [(ngModel)]="answer.Temp"
+                                   (ionFocus)="selectAll($event)"
+                                   [ngClass]="{'input_pos_temperature':Temp_color=='pos', 'input_neg_temperature':Temp_color=='neg'}"
+                                   onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46"></ion-input>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
             <ion-item>
                 <ion-row>
                     <label [ngStyle]="{color: data.viewColor}">{{result.ROW3}}</label>
@@ -85,7 +98,7 @@
         </ion-list>
     </ion-card>
 </ion-content>
-<ion-footer>
+<ion-footer no-border>
     <ion-toolbar>
         <ion-item>
             <ion-label>{{result.ROW5}}</ion-label>
@@ -94,7 +107,7 @@
         </ion-item>
     </ion-toolbar>
     <ion-toolbar>
-        <ion-buttons start>
+        <ion-buttons left>
             <button ion-button icon-start solid (click)="finish()" color="primary" [disabled]="data.IsDisabled">
                 <ion-icon name="checkmark"></ion-icon>
                 單品完成

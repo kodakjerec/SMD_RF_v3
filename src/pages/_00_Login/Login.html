@@ -1,40 +1,55 @@
 <ion-header>
     <ion-navbar>
         <ion-title>五股善美的RF驗收</ion-title>
-        <ion-buttons end>
-            <button ion-button (click)="reload()" outline>
-                <ion-icon name="refresh"></ion-icon>
-                重新整理
-            </button>
-        </ion-buttons>
     </ion-navbar>
 </ion-header>
 <ion-content>
     <form [formGroup]="todo">
         <img class="myimg" src="img/ionic.png" />
-        <ion-list inset>
-            <ion-item>
-                <ion-label for="name">帳號</ion-label>
-                <ion-input #txb_username id='txb_username' type="tel"
-                           formControlName="username"
-                           (keyup.enter)="enter('username')"
-                           (ionFocus)="selectAll($event)"
-                           placeholder="工號"
-                           autocomplete="">
-                </ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label>密碼</ion-label>
-                <ion-input #txb_password id='txb_password' type="password"
-                           formControlName="password"
-                           (keyup.enter)="enter('password')"
-                           (ionFocus)="selectAll($event)">
-                </ion-input>
-            </ion-item>
-            <button ion-button [disabled]="!todo.valid" color="primary" (click)="login()" block>登入</button>
-            <button ion-button color="primary" (click)="gotoTest()" block>進入測試區</button>
+        <ion-list>
+            <div id="div_login" [hidden]="loginData.NeedUpdate">
+                <ion-item>
+                    <ion-label for="name">帳號</ion-label>
+                    <ion-input #txb_username id='txb_username' type="tel"
+                               [(ngModel)]="loginData.username"
+                               formControlName="username"
+                               (keyup.enter)="enter('username')"
+                               (ionFocus)="selectAll($event)"
+                               placeholder="工號"
+                               autocomplete="">
+                    </ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>密碼</ion-label>
+                    <ion-input #txb_password id='txb_password' type="password"
+                               [(ngModel)]="loginData.password"
+                               formControlName="password"
+                               (keyup.enter)="enter('password')"
+                               placeholder="密碼"
+                               (ionFocus)="selectAll($event)">
+                    </ion-input>
+                </ion-item>
+                <button ion-button [disabled]="!todo.valid" color="primary" (click)="login()" block>登入</button>
+            </div>
+
+            <ion-grid>
+                <ion-row align-items-center>
+                    <ion-col>
+                        <button small ion-button outline [color]="checkNFCreturnColor()" [disabled]="true">NFC</button>
+                    </ion-col>
+                </ion-row>
+                <ion-row align-items-center>
+                    <ion-col>
+                        <span style="color:white">版本：{{loginData.Version}}</span>
+                        <button ion-button (click)="showDCS_log()" outline>
+                            {{loginData.DCS_log_show_btnName}}
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
         </ion-list>
-        <span style="color:white">v:{{loginData.Version}}</span>
-        <p style="white-space: pre;color:white">改版歷程：{{loginData.Changelog}}</p>
+        <div id="DCS_log" [hidden]="loginData.DCS_log_show">
+            <p style="white-space: pre;color:white">{{loginData.Changelog}}</p>
+        </div>
     </form>
 </ion-content>

@@ -1,6 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, ModalController, Platform, NavParams, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, ModalController, ToastController, Platform, NavParams, IonicPage } from 'ionic-angular';
 
+//Cordova
+import { Vibration } from '@ionic-native/vibration';
+
+//My Pages
 import * as myGlobals from '../../../app/Settings';
 import { http_services } from '../../_ZZ_CommonLib/http_services';
 import { ListTablePage } from '../../_ZZ_CommonLib/ListTable/ListTable';
@@ -17,9 +21,11 @@ export class _123_ItemCode {
     constructor(public navCtrl: NavController
         , plt: Platform
         , public navParams: NavParams
+        , private vibration: Vibration
         , public _http_services: http_services
         , private modalCtrl: ModalController
-        , private alertCtrl: AlertController) {
+        , private alertCtrl: AlertController
+        , private toastCtrl: ToastController) {
         this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
         this.data.BLOCK_ID = myGlobals.ProgParameters.get('BLOCK_ID');
         this.data.CarNo = myGlobals.ProgParameters.get('CarNo');
@@ -53,17 +59,7 @@ export class _123_ItemCode {
     result = {};
 
     //20170613需求，加入溫度正負按鈕
-    neg = { buttonClass: false };
-    pos = { buttonClass: true };
-
-    Temp_color = this.pos;
-
-    Tempr_p() {
-        this.Temp_color = this.pos;
-    }
-    Tempr_n() {
-        this.Temp_color = this.neg;
-    }
+    Temp_color = 'pos';
     //加入溫度正負按鈕END
 
     ionViewDidEnter() {
@@ -76,7 +72,6 @@ export class _123_ItemCode {
     reset() {
         myGlobals.ProgParameters.set('ItemCode', '');
         myGlobals.ProgParameters.set('ITEM_HOID', '');
-        this.data.ItemCode = '';
         this.data.ITEM_HOID = '';
 
         this.answer.LOT = '';
@@ -95,12 +90,11 @@ export class _123_ItemCode {
 
     //#region 查詢報到牌btn
     search() {
+        this.vibration.vibrate(100);
         if (this.data.ItemCode == '')
             return;
 
-        //RESET
-        this.result = {};
-        this.data.IsDisabled = true;
+        this.reset();
 
         this._http_services.POST('', 'sp'
             , 'spactDCS_ID_LINE'
@@ -197,10 +191,57 @@ export class _123_ItemCode {
             });
     };//#endregion
 
+    //單品完成
+    finish() {
+        this.vibration.vibrate(100);
+        if (this.data.ItemCode == '')
+            return;
+
+        this._http_services.POST('', 'sp'
+            , 'spactDCS_ID_LINE'
+            , [
+                { Name: '@JOB_ID', Value: '45' }
+                , { Name: '@ID', Value: this.data.PaperNo_ID }
+                , { Name: '@ITEM', Value: this.data.ItemCode }
+                , { Name: '@USER_ID', Value: this.data.USER_ID }
+            ])
+            .then((response) => {
+                if (response != undefined) {
+                    switch (response[0].RT_CODE) {
+                        case 0:
+                            let toast = this.toastCtrl.create({
+                                message: response[0].RT_MSG,
+                                duration: myGlobals.Set_timeout,
+                                position: 'bottom'
+                            });
+                            toast.present();
+                            break;
+                        default:
+                            //Error
+                            let alert_fail = this.alertCtrl.create({
+                                title: '失敗',
+                                subTitle: response[0].RT_MSG,
+                                buttons: [{
+                                    text: '關閉',
+                                    handler: data => {
+                                        this.scan_Entry.setFocus();
+                                    }
+                                }]
+                            });
+                            alert_fail.present();
+                            break;
+                    }
+                }
+            });
+    }
+
     //下一步
     Next() {
         if (this.data.IsDisabled == true)
             return;
+
+        if (this.Temp_color == 'neg')
+            this.answer.Temp = -this.answer.Temp;
 
         //開始鎖定
         this._http_services.POST('', 'sp'

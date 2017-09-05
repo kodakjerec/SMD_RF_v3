@@ -2,10 +2,16 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController, AlertController, ModalController, ToastController, Platform, NavParams, IonicPage } from 'ionic-angular';
 import { Navbar } from 'ionic-angular';
 
+//Cordova
+import { Vibration } from '@ionic-native/vibration';
+
+//My Pages
 import * as myGlobals from '../../../app/Settings';
 import { http_services } from '../../_ZZ_CommonLib/http_services';
 import { ListTablePage } from '../../_ZZ_CommonLib/ListTable/ListTable';
 import { LittleCalculatorPage } from '../../_ZZ_CommonLib/LittleCalculator/LittleCalculator';
+import { myCAMERAPage } from '../../_ZZ_CommonLib/myCAMERA/myCAMERA';
+
 
 @IonicPage({
     name: '_124_ItemRcv',
@@ -19,6 +25,7 @@ export class _124_ItemRcv {
     constructor(public navCtrl: NavController
         , plt: Platform
         , public navParams: NavParams
+        , private vibration: Vibration
         , public _http_services: http_services
         , private modalCtrl: ModalController
         , private alertCtrl: AlertController
@@ -94,24 +101,8 @@ export class _124_ItemRcv {
     };
 
     //20170613需求，加入溫度正負按鈕
-    neg = { buttonClass: false };
-    pos = { buttonClass: true };
-
-    QTY_color = this.pos;
-    WEIGHT_color = this.pos;
-
-    QTY_p() {
-        this.QTY_color = this.pos;
-    }
-    QTY_n() {
-        this.QTY_color = this.neg;
-    }
-    WEIGHT_p() {
-        this.WEIGHT_color = this.pos;
-    }
-    WEIGHT_n() {
-        this.WEIGHT_color = this.neg;
-    }
+    QTY_color = 'pos';
+    WEIGHT_color = 'pos';
     //加入溫度正負按鈕END
 
     //上一頁
@@ -158,6 +149,7 @@ export class _124_ItemRcv {
     }
     //品質選擇清單
     QueryItemState() {
+        this.vibration.vibrate(100);
         //Multi variables, choose one
         myGlobals.ProgParameters.set('ListTable_Source', this.answer.QualityList);
 
@@ -191,6 +183,7 @@ export class _124_ItemRcv {
 
     //呼叫小鍵盤
     showCalculator(flag) {
+        this.vibration.vibrate(100);
         switch (flag) {
             case 'QTY':
                 myGlobals.ProgParameters.set('ListTable_Source', this.answer.QTY);
@@ -223,6 +216,7 @@ export class _124_ItemRcv {
 
     //驗收
     Receive() {
+        this.vibration.vibrate(100);
         //檢查
         if (this.result.PRICE_TYPE == 0 && this.answer.WEIGHT <= 0) {
             //Error
@@ -241,9 +235,9 @@ export class _124_ItemRcv {
         }
 
         //正負
-        if (this.QTY_color == this.neg)
+        if (this.QTY_color == 'neg')
             this.answer.QTY = 0 - this.answer.QTY;
-        if (this.WEIGHT_color == this.neg)
+        if (this.WEIGHT_color == 'neg')
             this.answer.WEIGHT = 0 - this.answer.WEIGHT;
 
         //驗收
@@ -322,6 +316,24 @@ export class _124_ItemRcv {
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ]);
     };
+
+    //拍照上傳
+    showCamera() {
+        this.vibration.vibrate(100);
+        myGlobals.ProgParameters.set('ListTable_Source', {
+            FileDescription: '車號：' + this.data.CarNo + '\n'
+            + 'PO單：' + this.data.PaperNo + '\n'
+            + 'PO_ID：' + this.data.PaperNo_ID + '\n'
+            + '呼出碼：' + this.data.ItemCode + '\n'
+            + 'HO_ID：' + this.data.ITEM_HOID + '\n'
+            + 'LOT_ID：' + this.data.LOT_ID + '\n'
+            + '品質：' + this.answer.QualityName + '\n'
+            , PaperNo: this.data.PaperNo
+        });
+
+        let obj = this.modalCtrl.create(myCAMERAPage);
+        obj.present();
+    }
 
     //全選
     selectAll($event) {

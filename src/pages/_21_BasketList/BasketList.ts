@@ -1,7 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Platform, NavParams, AlertController, IonicPage } from 'ionic-angular';
+
+//Cordova
 import { Vibration } from '@ionic-native/vibration';
 
+//My Pages
 import { http_services } from '../_ZZ_CommonLib/http_services';
 import { PipesModule } from '../../pipes/pipes.module';
 
@@ -90,6 +93,7 @@ export class _21_BasketList {
 
     //查詢條碼
     search() {
+        this.vibration.vibrate(100);
         var ErrMsg = '';
         var scanData = {
             barcode: this.data.ScanBarcode
@@ -225,7 +229,7 @@ export class _21_BasketList {
         if (ErrMsg != '') {
             this.data.ShowBackgroundColor = true;
             this.data.ShowBackgroundColor_header = 'danger';
-            this.vibration.vibrate([1000, 500, 1000]);
+            this.vibration.vibrate([200, 100, 200, 100, 200, 100, 200, 100, 200]);
         }
         else {
             this.data.ShowBackgroundColor = false;

@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
     <ion-navbar>
         <ion-title (click)="help()">進貨驗收</ion-title>
     </ion-navbar>
@@ -6,61 +6,73 @@
 <ion-content (swipe)="swipeEvent($event)">
     <ion-card>
         <ion-list class="mylist">
-            <ion-item>
-                <ion-label>{{result.UNIT}}</ion-label>
-                <button item-content ion-button solid
-                        class="button_temperature"
-                        [ngClass]="{'button_pos_temperature':QTY_color.buttonClass, 'button_neg_temperature':!QTY_color.buttonClass}"
-                        (click)="QTY_p()">
-                    ＋
-                </button>
-                <button item-content ion-button solid
-                        class="button_temperature"
-                        [ngClass]="{'button_pos_temperature':QTY_color.buttonClass, 'button_neg_temperature':!QTY_color.buttonClass}"
-                        (click)="QTY_n()">
-                    －
-                </button>
-                <ion-input #scan_Entry autofocus
-                           type="tel"
-                           [(ngModel)]="answer.QTY"
-                           (ionFocus)="selectAll($event)"
-                           [ngClass]="{'input_pos_temperature':QTY_color.buttonClass, 'input_neg_temperature':!QTY_color.buttonClass}"
-                           onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46'></ion-input>
-                <!--小鍵盤-->
-                <button item-end ion-button outline icon-only (click)="showCalculator('QTY')">
-                    <ion-icon name="calculator"></ion-icon>
-                </button>
-            </ion-item>
-            <ion-item [hidden]="result.PRICE_TYPE">
-                <ion-label>秤重重量<br />(kg)</ion-label>
-                <button item-content ion-button solid
-                        class="button_temperature"
-                        [ngClass]="{'button_pos_temperature':WEIGHT_color.buttonClass, 'button_neg_temperature':!WEIGHT_color.buttonClass}"
-                        (click)="WEIGHT_p()">
-                    ＋
-                </button>
-                <button item-content ion-button solid
-                        class="button_temperature"
-                        [ngClass]="{'button_pos_temperature':WEIGHT_color.buttonClass, 'button_neg_temperature':!WEIGHT_color.buttonClass}"
-                        (click)="WEIGHT_n()">
-                    －
-                </button>
-                <ion-input #scan_Entry2 type="tel"
-                           [(ngModel)]="answer.WEIGHT"
-                           (ionFocus)="selectAll($event)"
-                           [ngClass]="{'input_pos_temperature':WEIGHT_color.buttonClass, 'input_neg_temperature':!WEIGHT_color.buttonClass}"
-                           onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46'></ion-input>
-                <!--小鍵盤-->
-                <button item-end ion-button outline icon-only (click)="showCalculator('WEIGHT')">
-                    <ion-icon name="calculator"></ion-icon>
-                </button>
-            </ion-item>
-            <ion-item>
+            <ion-grid>
+                <ion-row align-items-center>
+                    <ion-col col-2><ion-label>{{result.UNIT}}</ion-label></ion-col>
+                    <ion-col col-3>
+                        <ion-segment class="mysegment"
+                                     [(ngModel)]="QTY_color">
+                            <ion-segment-button value="pos">
+                                ＋
+                            </ion-segment-button>
+                            <ion-segment-button value="neg">
+                                －
+                            </ion-segment-button>
+                        </ion-segment>
+                    </ion-col>
+                    <ion-col col-5>
+                        <ion-input #scan_Entry autofocus
+                                   type="tel"
+                                   [(ngModel)]="answer.QTY"
+                                   (ionFocus)="selectAll($event)"
+                                   [ngClass]="{'input_pos_temperature':QTY_color=='pos', 'input_neg_temperature':QTY_color=='neg'}"
+                                   onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46'></ion-input>
+                    </ion-col>
+                    <ion-col col-2>
+                        <!--小鍵盤-->
+                        <button ion-button outline icon-only (click)="showCalculator('QTY')">
+                            <ion-icon name="calculator"></ion-icon>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+            <ion-grid [hidden]="!result.PRICE_TYPE">
+                <ion-row align-items-center>
+                    <ion-col col-2><ion-label>秤重<br />(kg)</ion-label></ion-col>
+                    <ion-col col-3>
+                        <ion-segment class="mysegment"
+                                     [(ngModel)]="WEIGHT_color">
+                            <ion-segment-button value="pos">
+                                ＋
+                            </ion-segment-button>
+                            <ion-segment-button value="neg">
+                                －
+                            </ion-segment-button>
+                        </ion-segment>
+                    </ion-col>
+                    <ion-col col-5>
+                        <ion-input #scan_Entry autofocus
+                                   type="tel"
+                                   [(ngModel)]="answer.WEIGHT"
+                                   (ionFocus)="selectAll($event)"
+                                   [ngClass]="{'input_pos_temperature':WEIGHT_color=='pos', 'input_neg_temperature':WEIGHT_color=='neg'}"
+                                   onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46'></ion-input>
+                    </ion-col>
+                    <ion-col col-2>
+                        <!--小鍵盤-->
+                        <button ion-button outline icon-only (click)="showCalculator('WEIGHT')">
+                            <ion-icon name="calculator"></ion-icon>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-grid>
                 <ion-row align-items-center>
                     <ion-col col-2>
                         <label>品質</label>
                     </ion-col>
-                    <ion-col col-10>
+                    <ion-col col-8>
                         <button ion-button block solid
                                 color="light"
                                 [ngStyle]="{'color': data.viewColor}"
@@ -68,8 +80,13 @@
                             {{answer.QualityName}}
                         </button>
                     </ion-col>
+                    <ion-col col-2>
+                        <button ion-button outline icon-only (click)="showCamera()">
+                            <ion-icon name="camera"></ion-icon>
+                        </button>
+                    </ion-col>
                 </ion-row>
-            </ion-item>
+            </ion-grid>
             <ion-item>
                 <ion-label>{{result.ROW1}}</ion-label>
             </ion-item>
@@ -90,7 +107,7 @@
         </ion-list>
     </ion-card>
 </ion-content>
-<ion-footer>
+<ion-footer no-border>
     <ion-toolbar>
         <ion-item>
             <ion-label>{{result.ROW5}}</ion-label>

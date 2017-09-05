@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "322693075345",
+    "firebase_url": "https://api-project-322693075345.firebaseio.com",
+    "project_id": "api-project-322693075345",
+    "storage_bucket": "api-project-322693075345.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322693075345:android:7b83a45e6e561b10",
+        "android_client_info": {
+          "package_name": "pxmart.RD2.SMDRF"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322693075345-08e893o7vh54mo27kr1hnt1jqos1ti3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSJKbuLlwAByUdlB38oy6YqP419W0SQYg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

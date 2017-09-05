@@ -1,6 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, AlertController, ModalController, Platform, NavParams, IonicPage } from 'ionic-angular';
 
+//Cordova
+import { Vibration } from '@ionic-native/vibration';
+
+//My Pages
 import * as myGlobals from '../../../app/Settings';
 import { http_services } from '../../_ZZ_CommonLib/http_services';
 import { PaperDetailPage } from '../../_ZZ_CommonLib/PaperDetail/PaperDetail';
@@ -17,6 +21,7 @@ export class _121_CarNo {
     constructor(public navCtrl: NavController
         , plt: Platform
         , public navParams: NavParams
+        , private vibration: Vibration
         , public _http_services: http_services
         , private modalCtrl: ModalController
         , private alertCtrl: AlertController) {
@@ -40,7 +45,6 @@ export class _121_CarNo {
     reset() {
         myGlobals.ProgParameters.set('CarNo', '');
         this.result = {};
-        this.data.CarNo = '';
         this.data.viewColor = '';
         this.data.IsDisabled = true;
 
@@ -49,13 +53,11 @@ export class _121_CarNo {
 
     //#region 查詢報到牌btn
     search() {
+        this.vibration.vibrate(100);
         if (this.data.CarNo == '')
             return;
 
-        //RESET
-        this.result = {};
-        this.data.viewColor = '';
-        this.data.IsDisabled = true;
+        this.reset();
 
         this._http_services.POST('', 'sp'
             , 'spactDCS_ID_HEADER'

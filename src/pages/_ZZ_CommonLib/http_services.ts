@@ -33,26 +33,14 @@ export class http_services {
         //sp or query
         urlSearchParams.append('mode', mode);
 
-        if (mode == 'sp') {
-            //sp name
-            urlSearchParams.append('sqlcmd', sqlcmd);
+        //sp name
+        urlSearchParams.append('sqlcmd', sqlcmd);
 
-            //params
-            params.forEach(value => {
-                var obj = value;
-                urlSearchParams.append(obj.Name, obj.Value);
-            });
-        }
-        else {
-            //Query string
-            urlSearchParams.append('sqlcmd', sqlcmd);
-
-            //params
-            params.forEach(value => {
-                var obj = value;
-                urlSearchParams.append(obj.Name, obj.Value);
-            });
-        }
+        //params
+        params.forEach(value => {
+            var obj = value;
+            urlSearchParams.append(obj.Name, obj.Value);
+        });
 
         let options = new RequestOptions();
         options.body = urlSearchParams;
@@ -61,6 +49,7 @@ export class http_services {
         return this.http.post('http://' + myGlobals.Global_Server + '/handler/RF3_httpService.ashx', '', options)
             .toPromise()
             .then((res: Response) => {  //成功
+                console.log(res);
                 loading.dismiss();
                 return res.json();
             })
