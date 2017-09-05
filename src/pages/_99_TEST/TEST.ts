@@ -35,7 +35,14 @@ export class _99_TEST {
 
     showCamera() {
         myGlobals.ProgParameters.set('ListTable_Source', {
-            FileDescription: '車號：081, PO單：PO17090100001, 呼出碼：123456, 品質：外表不良'+'\n'
+            FileDescription: '車號：072\n'
+            + 'PO單：PO170826000090\n'
+            + 'PO_ID：ID170828000049\n'
+            + '呼出碼：211566\n'
+            + 'HO_ID：1170726461142\n'
+            + 'LOT_ID：2170828000068\n'
+            + '品質：不良\n'
+            , PaperNo: 'PO170826000090'
         });
 
         let obj = this.modalCtrl.create(myCAMERAPage);

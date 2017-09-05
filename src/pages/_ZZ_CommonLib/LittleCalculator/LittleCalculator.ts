@@ -45,8 +45,9 @@ export class LittleCalculatorPage {
                 this.newNum = 0;
                 this.decimalAdd = false;
                 this.dotAdd = false;
+                this.NumClicked = false;
                 this.data.KeyinValue = '0';
-                this.log += 'AC\n';
+                this.log += '\nAC\n';
                 break;
             case 'DEL':
                 this.data.KeyinValue = this.data.KeyinValue.substring(0, this.data.KeyinValue.length - 1).trim();
@@ -62,6 +63,7 @@ export class LittleCalculatorPage {
                 break;
             case '+':
             case '-':
+            case '*':
                 if (!this.decimalAdd) {
                     if (this.data.KeyinValue == '0')
                         this.data.KeyinValue = flag;

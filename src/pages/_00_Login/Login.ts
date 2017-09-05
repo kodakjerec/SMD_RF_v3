@@ -41,7 +41,7 @@ export class _00_Login {
 
         this.initializeApp();
 
-        //this.gotoTest();
+        this.gotoTest();
 
         this.todo = this.formBuilder.group({
             username: ['', Validators.required],

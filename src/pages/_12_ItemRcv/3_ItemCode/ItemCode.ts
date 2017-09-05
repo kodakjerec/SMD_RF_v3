@@ -263,7 +263,7 @@ export class _123_ItemCode {
                             this.data.LOT_ID = response[0].LOT_ID;
 
                             myGlobals.ProgParameters.set('LOT_ID', this.data.LOT_ID);
-                            myGlobals.ProgParameters.set('RecviveResult', this.result);
+                            myGlobals.ProgParameters.set('ReceiveResult', this.result);
 
                             this.navCtrl.push('_124_ItemRcv');
                             break;

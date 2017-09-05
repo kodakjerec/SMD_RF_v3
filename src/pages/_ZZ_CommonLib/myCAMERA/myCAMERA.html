@@ -14,11 +14,6 @@
 </ion-header>
 <ion-content>
     <ion-grid>
-        <ion-row>
-            <ion-col>
-                <img [src]="data.FileSource" *ngIf="data.FileSource" />
-            </ion-col>
-        </ion-row>
         <ion-row align-items-center>
             <ion-col col-2>
                 <ion-label>檔<br />名<br />：</ion-label>
@@ -56,6 +51,11 @@
                     <ion-icon name="cloud-upload"></ion-icon>
                     傳送
                 </button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <img [src]="data.FileSource" *ngIf="data.FileSource" />
             </ion-col>
         </ion-row>
     </ion-grid>
