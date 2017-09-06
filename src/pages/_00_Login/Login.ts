@@ -6,6 +6,7 @@ import {Platform, NavController, AlertController, ToastController } from 'ionic-
 //Cordova
 import { AppUpdate } from '@ionic-native/app-update';
 import { NFC } from '@ionic-native/nfc';
+import { Keyboard } from '@ionic-native/keyboard';
 
 //My Pages
 import * as myGlobals from '../../app/Settings';
@@ -16,8 +17,10 @@ import { http_services } from '../_ZZ_CommonLib/http_services';
 })
 
 export class _00_Login {
-    loginData = {
-        Version: myGlobals.packageVersion
+
+    data = {
+        IsHideWhenKeyboardOpen: false
+        , Version: myGlobals.packageVersion
         , Changelog: myGlobals.Changelog
         , username: ''
         , password: ''
@@ -37,11 +40,12 @@ export class _00_Login {
         , private nfc: NFC
         , private appUpdate: AppUpdate
         , private alertCtrl: AlertController
-        , private toastCtrl: ToastController) {
+        , private toastCtrl: ToastController
+        , private keyboard: Keyboard) {
 
         this.initializeApp();
 
-        this.gotoTest();
+        //this.gotoTest();
 
         this.todo = this.formBuilder.group({
             username: ['', Validators.required],
@@ -60,6 +64,10 @@ export class _00_Login {
             })
             .then(() => {
                 this.checkUpdate();
+            })
+            .then(() => {
+                this.keyboard.onKeyboardShow().subscribe(() => { this.data.IsHideWhenKeyboardOpen = true });
+                this.keyboard.onKeyboardHide().subscribe(() => { this.data.IsHideWhenKeyboardOpen = false });
             })
             ;
     }
@@ -102,8 +110,8 @@ export class _00_Login {
     login() {
         this._http_services.POST('', 'sp'
             , '[sys.spDCS_LOGIN]'
-            , [{ Name: '@ID', Value: this.loginData.username }
-                , { Name: '@PASSWORD', Value: this.loginData.password }])
+            , [{ Name: '@ID', Value: this.data.username }
+                , { Name: '@PASSWORD', Value: this.data.password }])
             .then((response) => {
                 if (response != undefined) {
 
@@ -152,15 +160,15 @@ export class _00_Login {
         //NFC感應
         this.nfc.addTagDiscoveredListener(() => {
             console.log('successfully attached TagDiscovered listener');
-            this.loginData.IsNFC_ON = true;
+            this.data.IsNFC_ON = true;
         }, (err) => {
             console.log('error attaching ndef listener', err);
         }).subscribe((event) => {
             console.log('received ndef message. the tag contains: ', event.tag);
             console.log('decoded tag id', this.nfc.bytesToHexString(event.tag.id));
 
-            this.loginData.username = this.nfc.bytesToHexString(event.tag.id);
-            this.loginData.password = this.nfc.bytesToHexString(event.tag.id);
+            this.data.username = this.nfc.bytesToHexString(event.tag.id);
+            this.data.password = this.nfc.bytesToHexString(event.tag.id);
             this.login();
 
             //分享訊息
@@ -169,7 +177,7 @@ export class _00_Login {
         });
     }
     checkNFCreturnColor(): string {
-        if (this.loginData.IsNFC_ON == true) {
+        if (this.data.IsNFC_ON == true) {
             return 'secondary';
         }
         else {
@@ -180,7 +188,7 @@ export class _00_Login {
 
     //#region 檢查更新
     checkUpdate() {
-        this.loginData.NeedUpdate = true;
+        this.data.NeedUpdate = true;
         const updateUrl = 'http://' + myGlobals.Global_Server + '/Version/update.xml';
         this.appUpdate.checkAppUpdate(updateUrl)
             .then(response => {
@@ -189,7 +197,7 @@ export class _00_Login {
                     case 201:   //need update
                         break;
                     case 202:   //No need to update
-                        this.loginData.NeedUpdate = false;
+                        this.data.NeedUpdate = false;
                         break;
                     case 203:   //version is updating
                         break;
@@ -213,8 +221,8 @@ export class _00_Login {
                     });
                     alert_appupdate.present();
                 }
-                if (this.loginData.NeedUpdate) {
-                    this.loginData.Changelog = '請安裝更新。';
+                if (this.data.NeedUpdate) {
+                    this.data.Changelog = '請安裝更新。';
                 }
             });
     }
@@ -222,13 +230,13 @@ export class _00_Login {
 
     //變更log區塊高度
     showDCS_log() {
-        if (this.loginData.DCS_log_show) {
-            this.loginData.DCS_log_show = false;
-            this.loginData.DCS_log_show_btnName = "不顯示改版歷程";
+        if (this.data.DCS_log_show) {
+            this.data.DCS_log_show = false;
+            this.data.DCS_log_show_btnName = "不顯示改版歷程";
         }
         else {
-            this.loginData.DCS_log_show = true;
-            this.loginData.DCS_log_show_btnName = "顯示改版歷程";
+            this.data.DCS_log_show = true;
+            this.data.DCS_log_show_btnName = "顯示改版歷程";
         }
     }
 }

@@ -7,11 +7,11 @@
     <form [formGroup]="todo">
         <img class="myimg" src="assets/imgs/ionic.png" />
         <ion-list>
-            <div id="div_login" [hidden]="loginData.NeedUpdate">
+            <div id="div_login" [hidden]="data.NeedUpdate">
                 <ion-item>
                     <ion-label for="name">帳號</ion-label>
                     <ion-input #txb_username id='txb_username' type="tel"
-                               [(ngModel)]="loginData.username"
+                               [(ngModel)]="data.username"
                                formControlName="username"
                                (keyup.enter)="enter('username')"
                                (ionFocus)="selectAll($event)"
@@ -22,7 +22,7 @@
                 <ion-item>
                     <ion-label>密碼</ion-label>
                     <ion-input #txb_password id='txb_password' type="password"
-                               [(ngModel)]="loginData.password"
+                               [(ngModel)]="data.password"
                                formControlName="password"
                                (keyup.enter)="enter('password')"
                                placeholder="密碼"
@@ -30,27 +30,29 @@
                     </ion-input>
                 </ion-item>
                 <button ion-button [disabled]="!todo.valid" color="primary" (click)="login()" block>登入</button>
-                <button small ion-button outline (click)="gototest()">test</button>
             </div>
 
             <ion-grid>
                 <ion-row align-items-center>
                     <ion-col>
-                        <button small ion-button outline [color]="checkNFCreturnColor()" [disabled]="true">NFC</button>
-                    </ion-col>
-                </ion-row>
-                <ion-row align-items-center>
-                    <ion-col>
-                        <span style="color:white">版本：{{loginData.Version}}</span>
+                        <span style="color:white">版本：{{data.Version}}</span>
                         <button ion-button (click)="showDCS_log()" outline>
-                            {{loginData.DCS_log_show_btnName}}
+                            {{data.DCS_log_show_btnName}}
                         </button>
                     </ion-col>
                 </ion-row>
             </ion-grid>
         </ion-list>
-        <div id="DCS_log" [hidden]="loginData.DCS_log_show">
-            <p style="white-space: pre;color:white">{{loginData.Changelog}}</p>
+        <div id="DCS_log" [hidden]="data.DCS_log_show">
+            <p style="white-space: pre;color:white">{{data.Changelog}}</p>
         </div>
     </form>
 </ion-content>
+<div [hidden]="data.IsHideWhenKeyboardOpen">
+    <ion-footer no-border>
+        <ion-toolbar>
+            <button small ion-button outline (click)="gotoTest()">test</button>
+            <button small ion-button outline [color]="checkNFCreturnColor()" [disabled]="true">NFC</button>
+        </ion-toolbar>
+    </ion-footer>
+</div>

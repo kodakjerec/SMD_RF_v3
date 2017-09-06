@@ -3,6 +3,7 @@ import { NavController, Platform, NavParams, AlertController, IonicPage } from '
 
 //Cordova
 import { Vibration } from '@ionic-native/vibration';
+import { Keyboard } from '@ionic-native/keyboard';
 
 //My Pages
 import * as myGlobals from '../../app/Settings';
@@ -17,17 +18,27 @@ import { http_services } from '../_ZZ_CommonLib/http_services';
 })
 export class _11_CheckIn {
     constructor(public navCtrl: NavController
-        , plt: Platform
+        , public platform: Platform
         , public navParams: NavParams
         , private vibration: Vibration
         , public _http_services: http_services
-        , private alertCtrl: AlertController) {
+        , private alertCtrl: AlertController
+        , private keyboard: Keyboard) {
         this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
         this.data.BLOCK_ID = myGlobals.ProgParameters.get('BLOCK_ID');
+
+        this.initializeApp();
     }
     @ViewChild('scan_Entry') scan_Entry;
 
-    data = { CarNo: '', viewColor: '', IsDisabled: true, USER_ID: '', BLOCK_ID: '' };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
+    data = {
+        CarNo: ''
+        , viewColor: ''
+        , IsDisabled: true
+        , USER_ID: ''
+        , BLOCK_ID: ''
+        , IsHideWhenKeyboardOpen: false
+    };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
     color = { green: '#79FF79', red: '#FF5151' }; // 控制已報到/未報到 顏色
     result = {};
     answer = { VEHICLE_TEMP0: 0, VEHICLE_TEMP1: 0, VEHICLE_TEMP2: 0 };
@@ -36,6 +47,19 @@ export class _11_CheckIn {
         setTimeout(() => {
             this.scan_Entry.setFocus();
         }, 150);
+    }
+
+    initializeApp() {
+        if (this.platform.is('core')) {
+            console.log("You're develop in the browser");
+            return;
+        }
+        this.platform.ready()
+            .then(() => {
+                this.keyboard.onKeyboardShow().subscribe(() => { this.data.IsHideWhenKeyboardOpen = true });
+                this.keyboard.onKeyboardHide().subscribe(() => { this.data.IsHideWhenKeyboardOpen = false });
+            })
+            ;
     }
 
     //重置btn
@@ -106,9 +130,15 @@ export class _11_CheckIn {
     };//#endregion
 
     //#region 20170613需求，加入溫度正負按鈕
-    VEHICLE_TEMP0_color = 'pos';
-    VEHICLE_TEMP1_color = 'pos';
-    VEHICLE_TEMP2_color = 'pos';
+    VEHICLE_TEMP0_color = { labelName: '＋', checked: false };
+    VEHICLE_TEMP1_color = { labelName: '＋', checked: false };
+    VEHICLE_TEMP2_color = { labelName: '＋', checked: false };
+    onToggleChange(item) {
+        if (item.checked == true)
+            item.labelName = '－';
+        else
+            item.labelName = '＋';
+    }
     //#endregion
 
     //#region 報到牌報到btn
@@ -121,11 +151,11 @@ export class _11_CheckIn {
             var TEMP1 = this.answer.VEHICLE_TEMP1;
             var TEMP2 = this.answer.VEHICLE_TEMP2;
 
-            if (this.VEHICLE_TEMP0_color == 'neg')
+            if (this.VEHICLE_TEMP0_color.checked == true)
                 TEMP0 = -TEMP0;
-            if (this.VEHICLE_TEMP1_color == 'neg')
+            if (this.VEHICLE_TEMP1_color.checked == true)
                 TEMP1 = -TEMP1;
-            if (this.VEHICLE_TEMP2_color == 'neg')
+            if (this.VEHICLE_TEMP2_color.checked == true)
                 TEMP2 = -TEMP2;
 
             this._http_services.POST('', 'sp'

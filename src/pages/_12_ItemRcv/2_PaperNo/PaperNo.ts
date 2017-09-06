@@ -3,6 +3,7 @@ import { NavController, AlertController, ModalController, ToastController, Platf
 
 //Cordova
 import { Vibration } from '@ionic-native/vibration';
+import { Keyboard } from '@ionic-native/keyboard';
 
 //My Pages
 import * as myGlobals from '../../../app/Settings';
@@ -20,27 +21,51 @@ import { PaperDetailPage } from '../../_ZZ_CommonLib/PaperDetail/PaperDetail';
 
 export class _122_PaperNo {
     constructor(public navCtrl: NavController
-        , plt: Platform
+        , public platform: Platform
         , public navParams: NavParams
         , private vibration: Vibration
         , public _http_services: http_services
         , private modalCtrl: ModalController
         , private alertCtrl: AlertController
-        , private toastCtrl: ToastController) {
+        , private toastCtrl: ToastController
+        , private keyboard: Keyboard) {
         this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
         this.data.BLOCK_ID = myGlobals.ProgParameters.get('BLOCK_ID');
         this.data.CarNo = myGlobals.ProgParameters.get('CarNo');
+
+        this.initializeApp();
     }
 
     @ViewChild('scan_Entry') scan_Entry;
 
-    data = { CarNo: '', PaperNo: '', PaperNo_ID: '', IsDisabled: true, USER_ID: '', BLOCK_ID: '' };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
+    data = {
+        CarNo: ''
+        , PaperNo: ''
+        , PaperNo_ID: ''
+        , IsDisabled: true
+        , USER_ID: ''
+        , BLOCK_ID: ''
+        , IsHideWhenKeyboardOpen: false
+    };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
     result = {};
 
     ionViewDidEnter() {
         setTimeout(() => {
             this.scan_Entry.setFocus();
         }, 150);
+    }
+
+    initializeApp() {
+        if (this.platform.is('core')) {
+            console.log("You're develop in the browser");
+            return;
+        }
+        this.platform.ready()
+            .then(() => {
+                this.keyboard.onKeyboardShow().subscribe(() => { this.data.IsHideWhenKeyboardOpen = true });
+                this.keyboard.onKeyboardHide().subscribe(() => { this.data.IsHideWhenKeyboardOpen = false });
+            })
+            ;
     }
 
     //重置btn

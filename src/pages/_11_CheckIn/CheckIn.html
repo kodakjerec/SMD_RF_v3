@@ -42,55 +42,50 @@
             </ion-item>
             <ion-grid>
                 <ion-row align-items-center>
-                    <ion-col>
+                    <ion-col col-4>
                         <ion-label>冷凍溫度</ion-label>
                     </ion-col>
-                    <ion-col>
-                        <ion-segment class="mysegment"
-                                     [disabled]="data.IsDisabled"
-                                     [(ngModel)]="VEHICLE_TEMP0_color">
-                            <ion-segment-button value="pos">
-                                ＋
-                            </ion-segment-button>
-                            <ion-segment-button value="neg">
-                                －
-                            </ion-segment-button>
-                        </ion-segment>
+                    <ion-col col-3>
+                        <ion-toggle [disabled]="data.IsDisabled"
+                                    [(ngModel)]="VEHICLE_TEMP0_color.checked"
+                                    (ionChange)="onToggleChange(VEHICLE_TEMP0_color)"
+                                    class="toggle_temp"
+                                    color="danger"></ion-toggle>
                     </ion-col>
-                    <ion-col>
+                    <ion-col col-2>
+                        <ion-label class="label_temp">{{VEHICLE_TEMP0_color.labelName}}</ion-label>
+                    </ion-col>
+                    <ion-col col-3>
                         <ion-input type="tel"
                                    [(ngModel)]="answer.VEHICLE_TEMP0"
                                    (ionFocus)="selectAll($event)"
                                    [disabled]="data.IsDisabled"
-                                   [ngClass]="{'input_pos_temperature':VEHICLE_TEMP0_color=='pos', 'input_neg_temperature':VEHICLE_TEMP0_color=='neg'}"
+                                   [ngClass]="{'input_pos_temperature':!VEHICLE_TEMP0_color.checked, 'input_neg_temperature':VEHICLE_TEMP0_color.checked}"
                                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46"></ion-input>
                     </ion-col>
                 </ion-row>
             </ion-grid>
             <ion-grid>
                 <ion-row align-items-center>
-                    <ion-col>
+                    <ion-col col-4>
                         <ion-label item-start>冷藏溫度</ion-label>
                     </ion-col>
-                    <ion-col>
-                        <ion-segment item-start
-                                     class="mysegment"
-                                     [disabled]="data.IsDisabled"
-                                     [(ngModel)]="VEHICLE_TEMP1_color">
-                            <ion-segment-button value="pos">
-                                ＋
-                            </ion-segment-button>
-                            <ion-segment-button value="neg">
-                                －
-                            </ion-segment-button>
-                        </ion-segment>
+                    <ion-col col-3>
+                        <ion-toggle [disabled]="data.IsDisabled"
+                                    [(ngModel)]="VEHICLE_TEMP1_color.checked"
+                                    (ionChange)="onToggleChange(VEHICLE_TEMP1_color)"
+                                    class="toggle_temp"
+                                    color="danger"></ion-toggle>
                     </ion-col>
-                    <ion-col>
+                    <ion-col col-2>
+                        <ion-label class="label_temp">{{VEHICLE_TEMP1_color.labelName}}</ion-label>
+                    </ion-col>
+                    <ion-col col-3>
                         <ion-input item-end type="tel"
                                    [(ngModel)]="answer.VEHICLE_TEMP1"
                                    (ionFocus)="selectAll($event)"
                                    [disabled]="data.IsDisabled"
-                                   [ngClass]="{'input_pos_temperature':VEHICLE_TEMP1_color=='pos', 'input_neg_temperature':VEHICLE_TEMP1_color=='neg'}"
+                                   [ngClass]="{'input_pos_temperature':!VEHICLE_TEMP1_color.checked, 'input_neg_temperature':VEHICLE_TEMP1_color.checked}"
                                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46"></ion-input>
                     </ion-col>
                 </ion-row>
@@ -100,35 +95,39 @@
                     <ion-col>
                         <ion-label item-start>溫控溫度</ion-label>
                     </ion-col>
-                    <ion-col>
-                        <ion-segment item-start
-                                     class="mysegment"
-                                     [disabled]="data.IsDisabled"
-                                     [(ngModel)]="VEHICLE_TEMP2_color">
-                            <ion-segment-button value="pos">
-                                ＋
-                            </ion-segment-button>
-                            <ion-segment-button value="neg">
-                                －
-                            </ion-segment-button>
-                        </ion-segment>
+                    <ion-col col-3>
+                        <ion-toggle [disabled]="data.IsDisabled"
+                                    [(ngModel)]="VEHICLE_TEMP2_color.checked"
+                                    (ionChange)="onToggleChange(VEHICLE_TEMP2_color)"
+                                    class="toggle_temp"
+                                    color="danger"></ion-toggle>
                     </ion-col>
-                    <ion-col>
+                    <ion-col col-2>
+                        <ion-label class="label_temp">{{VEHICLE_TEMP2_color.labelName}}</ion-label>
+                    </ion-col>
+                    <ion-col col-3>
                         <ion-input item-end type="tel"
                                    [(ngModel)]="answer.VEHICLE_TEMP2"
                                    (ionFocus)="selectAll($event)"
                                    [disabled]="data.IsDisabled"
-                                   [ngClass]="{'input_pos_temperature':VEHICLE_TEMP2_color=='pos', 'input_neg_temperature':VEHICLE_TEMP2_color=='neg'}"
+                                   [ngClass]="{'input_pos_temperature':!VEHICLE_TEMP2_color.checked, 'input_neg_temperature':VEHICLE_TEMP2_color.checked}"
                                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46"></ion-input>
                     </ion-col>
                 </ion-row>
             </ion-grid>
         </ion-list>
+        <ion-item>
+            <!--IonicPage+div+hidden會導致Ionic排版錯誤，故意多加兩行空白-->
+            <h1>&nbsp;</h1><br />
+            <h1>&nbsp;</h1>
+        </ion-item>
     </ion-card>
 </ion-content>
-<ion-footer no-border>
-    <ion-toolbar>
-        <button ion-button (click)="register()" [disabled]="data.IsDisabled" block>報到</button>
-        <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_ID}}</ion-label>
-    </ion-toolbar>
-</ion-footer>
+<div [hidden]="data.IsHideWhenKeyboardOpen">
+    <ion-footer no-border>
+        <ion-toolbar>
+            <button ion-button (click)="register()" [disabled]="data.IsDisabled" block>報到</button>
+            <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_ID}}</ion-label>
+        </ion-toolbar>
+    </ion-footer>
+</div>

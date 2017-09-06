@@ -1,16 +1,19 @@
 ﻿
 //溫度選擇
-.button_temperature{
-    height: 40px !important;
-    width: 30px !important;
-    font-size: xx-large !important;
+.label_temp {
+    font-size: xx-large;
 }
-.button_pos_temperature{
 
-}
-.button_neg_temperature{
-    background-color: #FFD306;
-        color: red;
+.toggle_temp {
+    opacity:0.8;
+
+    &.toggle-checked{
+        opacity:1;
+    }
+    & .toggle-icon {
+        margin-top: -20px;
+        background-color:white;
+    }
 }
 
 .input_pos_temperature {
@@ -27,16 +30,17 @@
     }
 }
 
-.mysegment{
-    height:40px;
+.mysegment {
+    height: 40px;
 
-    & .segment-button{
-        height:inherit;
-        width:40px;
+    & .segment-button {
+        height: inherit;
+        width: 40px;
     }
-    & .segment-activated{
-        color:white;
-        font-size:x-large;
-        background-color:#488aff;
+
+    & .segment-activated {
+        color: white;
+        font-size: x-large;
+        background-color: #488aff;
     }
 }

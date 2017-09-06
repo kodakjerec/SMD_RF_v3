@@ -24,22 +24,23 @@
 <ion-content (swipe)="swipeEvent($event)">
     <ion-card>
         <ion-card-header>
-            <ion-col>批次</ion-col>
-            <ion-col>{{data.JOBID}}</ion-col>
+            <ion-item>
+                <ion-label>批次</ion-label>
+                <ion-label>{{data.JOBID}}</ion-label>
+            </ion-item>
         </ion-card-header>
+        <ion-list radio-group>
+            <ion-list-header>
+                選擇模式
+            </ion-list-header>
+            <ion-item>
+                <ion-label>DAS</ion-label>
+                <ion-radio checked="true" value="DAS"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>SF</ion-label>
+                <ion-radio value="SF"></ion-radio>
+            </ion-item>
+        </ion-list>
     </ion-card>
-    <ion-list radio-group>
-        <ion-list-header>
-            選擇模式
-        </ion-list-header>
-        <ion-item>
-            <ion-label>DAS</ion-label>
-            <ion-radio checked="true" value="DAS"></ion-radio>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>SF</ion-label>
-            <ion-radio value="SF"></ion-radio>
-        </ion-item>
-    </ion-list>
 </ion-content>

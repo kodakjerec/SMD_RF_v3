@@ -10,7 +10,7 @@
 
 $font-family-base: Microsoft JhengHei;
 
-/***°Ï°ì***/
+/***ï¿½Ï°ï¿½***/
 .bottom_BLOCK {
     font-size: small;
     color: #FFFF37;
@@ -32,13 +32,14 @@ input[type] {
     }
 }
 
-ion-textarea{
+.mytextarea {
     font-size: larger;
     background-color: black;
     color: white;
     border: solid #6C6C6C;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    width: 100%;
     outline: none;
 
     &:focus {
@@ -46,7 +47,7 @@ ion-textarea{
     }
 }
 
-/***block¡Bmenu***/
+/***blockï¿½Bmenu***/
 .mylist {
     margin: 0px 0px 0px 0px !important;
 
@@ -61,22 +62,22 @@ ion-textarea{
     }
 
     & ion-grid {
-        padding-left:16px;
+        padding-left: 16px;
         border-width: 1px 1px 1px 1px;
         border-style: solid;
         border-color: white !important;
-        font-size:16px;
+        font-size: 16px;
 
-        & ion-col{
-            padding-left:0px;
-            padding-right:0px;
+        & ion-col {
+            padding-left: 0px;
+            padding-right: 0px;
         }
     }
 }
 
-/***¦Û­qªºion-grid***/
+/***ï¿½Û­qï¿½ï¿½ion-grid***/
 .mytable {
-    //column³q¥Î
+    //columnï¿½qï¿½ï¿½
     & ion-col {
         font-size: 0.95em;
         text-align: center;
@@ -84,36 +85,48 @@ ion-textarea{
         border-collapse: collapse;
         border: 1px solid #feb3b9;
     }
-
-    //¼ÐÃD
+    //ï¿½ï¿½ï¿½D
     & .mytable_Head {
         background-color: #FF7A85;
         color: #FFFFFF;
     }
-
-    //©ú²Ó
+    //ï¿½ï¿½ï¿½ï¿½
     & .mytable_Detail {
         color: #000000;
-
-        //©_¼Æ¦æ
+        //ï¿½_ï¿½Æ¦ï¿½
         &:nth-child(odd) {
             background-color: #fed2d6;
         }
-
-        //°¸¼Æ¦æ
+        //ï¿½ï¿½ï¿½Æ¦ï¿½
         &:nth-child(even) {
             background-color: #fdfdfd;
         }
     }
 }
 
-//toolbar³Ì§C°ª«×
-$toolbar-ios-height:40px;
+//toggle
+$toggle-md-track-width: 48px;
+$toggle-md-track-height: 24px;
+$toggle-md-handle-width: 24px;
+$toggle-md-handle-height: 24px;
+$toggle-md-padding-top: 2px;
 
-/*²¾°£input¤U¤èªº©³½u*/
+//toolbarï¿½Ì§Cï¿½ï¿½ï¿½ï¿½
+$toolbar-ios-height: 40px;
+
+/*ï¿½ï¿½ï¿½ï¿½inputï¿½Uï¿½èªºï¿½ï¿½ï¿½u*/
 $text-input-md-highlight-color-invalid: transparent;
 $text-input-md-highlight-color-valid: transparent;
 $text-input-md-show-invalid-highlight: transparent;
 $text-input-md-highlight-color: transparent;
 $text-input-md-show-valid-highlight: transparent;
-.item-md.item-input .item-inner { border-bottom-color: transparent !important; box-shadow: none !important; } .list-md .item-input:last-child { border-bottom-color: transparent !important; box-shadow: none !important; }
+
+.item-md.item-input .item-inner {
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.list-md .item-input:last-child {
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+}

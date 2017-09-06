@@ -61,25 +61,24 @@
             </ion-grid>
             <ion-grid [hidden]="!result.QT_TYPE">
                 <ion-row align-items-center>
-                    <ion-col>
+                    <ion-col col-4>
                         <ion-label>{{result.QT_TYPE_NAME}}</ion-label>
                     </ion-col>
-                    <ion-col>
-                        <ion-segment class="mysegment"
-                                     [(ngModel)]="Temp_color">
-                            <ion-segment-button value="pos">
-                                ＋
-                            </ion-segment-button>
-                            <ion-segment-button value="neg">
-                                －
-                            </ion-segment-button>
-                        </ion-segment>
+                    <ion-col col-3>
+                        <ion-toggle [disabled]="data.IsDisabled"
+                                    [(ngModel)]="Temp_color.checked"
+                                    (ionChange)="onToggleChange(Temp_color)"
+                                    class="toggle_temp"
+                                    color="danger"></ion-toggle>
                     </ion-col>
-                    <ion-col>
+                    <ion-col col-2>
+                        <ion-label class="label_temp">{{Temp_color.labelName}}</ion-label>
+                    </ion-col>
+                    <ion-col col-3>
                         <ion-input type="tel"
                                    [(ngModel)]="answer.Temp"
                                    (ionFocus)="selectAll($event)"
-                                   [ngClass]="{'input_pos_temperature':Temp_color=='pos', 'input_neg_temperature':Temp_color=='neg'}"
+                                   [ngClass]="{'input_pos_temperature':!Temp_color.checked, 'input_neg_temperature':Temp_color.checked}"
                                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46"></ion-input>
                     </ion-col>
                 </ion-row>
@@ -96,23 +95,29 @@
                 <ion-label>{{result.ROW4}}</ion-label>
             </ion-item>
         </ion-list>
+        <ion-item><!--IonicPage+div+hidden會導致Ionic排版錯誤，故意多加兩行空白-->
+            <h1>&nbsp;</h1><br />
+            <h1>&nbsp;</h1>
+        </ion-item>
     </ion-card>
 </ion-content>
-<ion-footer no-border>
-    <ion-toolbar>
-        <ion-item>
-            <ion-label>{{result.ROW5}}</ion-label>
-            <ion-label>{{result.ROW6}}</ion-label>
-            <ion-label>{{result.ROW7}}</ion-label>
-        </ion-item>
-    </ion-toolbar>
-    <ion-toolbar>
-        <ion-buttons left>
-            <button ion-button icon-start solid (click)="finish()" color="primary" [disabled]="data.IsDisabled">
-                <ion-icon name="checkmark"></ion-icon>
-                單品完成
-            </button>
-        </ion-buttons>
-        <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_ID}}</ion-label>
-    </ion-toolbar>
-</ion-footer>
+<div [hidden]="data.IsHideWhenKeyboardOpen">
+    <ion-footer no-border>
+        <ion-toolbar>
+            <ion-item>
+                <ion-label>{{result.ROW5}}</ion-label>
+                <ion-label>{{result.ROW6}}</ion-label>
+                <ion-label>{{result.ROW7}}</ion-label>
+            </ion-item>
+        </ion-toolbar>
+        <ion-toolbar>
+            <ion-buttons left>
+                <button ion-button icon-start solid (click)="finish()" color="primary" [disabled]="data.IsDisabled">
+                    <ion-icon name="checkmark"></ion-icon>
+                    單品完成
+                </button>
+            </ion-buttons>
+            <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_ID}}</ion-label>
+        </ion-toolbar>
+    </ion-footer>
+</div>

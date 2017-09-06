@@ -10,22 +10,21 @@
                 <ion-row align-items-center>
                     <ion-col col-2><ion-label>{{result.UNIT}}</ion-label></ion-col>
                     <ion-col col-3>
-                        <ion-segment class="mysegment"
-                                     [(ngModel)]="QTY_color">
-                            <ion-segment-button value="pos">
-                                ＋
-                            </ion-segment-button>
-                            <ion-segment-button value="neg">
-                                －
-                            </ion-segment-button>
-                        </ion-segment>
+                        <ion-toggle [disabled]="data.IsDisabled"
+                                    [(ngModel)]="QTY_color.checked"
+                                    (ionChange)="onToggleChange(QTY_color)"
+                                    class="toggle_temp"
+                                    color="danger"></ion-toggle>
                     </ion-col>
-                    <ion-col col-5>
+                    <ion-col col-2>
+                        <ion-label class="label_temp">{{QTY_color.labelName}}</ion-label>
+                    </ion-col>
+                    <ion-col col-3>
                         <ion-input #scan_Entry autofocus
                                    type="tel"
                                    [(ngModel)]="answer.QTY"
                                    (ionFocus)="selectAll($event)"
-                                   [ngClass]="{'input_pos_temperature':QTY_color=='pos', 'input_neg_temperature':QTY_color=='neg'}"
+                                   [ngClass]="{'input_pos_temperature':!QTY_color.checked, 'input_neg_temperature':QTY_color.checked}"
                                    onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46'></ion-input>
                     </ion-col>
                     <ion-col col-2>
@@ -41,22 +40,21 @@
                 <ion-row align-items-center>
                     <ion-col col-2><ion-label>秤重<br />(kg)</ion-label></ion-col>
                     <ion-col col-3>
-                        <ion-segment class="mysegment"
-                                     [(ngModel)]="WEIGHT_color">
-                            <ion-segment-button value="pos">
-                                ＋
-                            </ion-segment-button>
-                            <ion-segment-button value="neg">
-                                －
-                            </ion-segment-button>
-                        </ion-segment>
+                        <ion-toggle [disabled]="data.IsDisabled"
+                                    [(ngModel)]="WEIGHT_color.checked"
+                                    (ionChange)="onToggleChange(WEIGHT_color)"
+                                    class="toggle_temp"
+                                    color="danger"></ion-toggle>
                     </ion-col>
-                    <ion-col col-5>
+                    <ion-col col-2>
+                        <ion-label class="label_temp">{{WEIGHT_color.labelName}}</ion-label>
+                    </ion-col>
+                    <ion-col col-3>
                         <ion-input #scan_Entry autofocus
                                    type="tel"
                                    [(ngModel)]="answer.WEIGHT"
                                    (ionFocus)="selectAll($event)"
-                                   [ngClass]="{'input_pos_temperature':WEIGHT_color=='pos', 'input_neg_temperature':WEIGHT_color=='neg'}"
+                                   [ngClass]="{'input_pos_temperature':!WEIGHT_color.checked, 'input_neg_temperature':WEIGHT_color.checked}"
                                    onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46'></ion-input>
                     </ion-col>
                     <ion-col col-2>
@@ -105,20 +103,27 @@
                 <ion-label>{{result.ROW4}}</ion-label>
             </ion-item>
         </ion-list>
+        <ion-item>
+            <!--IonicPage+div+hidden會導致Ionic排版錯誤，故意多加兩行空白-->
+            <h1>&nbsp;</h1><br />
+            <h1>&nbsp;</h1>
+        </ion-item>
     </ion-card>
 </ion-content>
-<ion-footer no-border>
-    <ion-toolbar>
-        <ion-item>
-            <ion-label>{{result.ROW5}}</ion-label>
-            <ion-label>{{result.ROW6}}</ion-label>
-            <ion-label>{{result.ROW7}}</ion-label>
-        </ion-item>
-    </ion-toolbar>
-    <ion-toolbar>
-        <button ion-button icon-start solid full (click)="Receive()" color="primary">
-            <ion-icon name="checkmark"></ion-icon>
-            驗收
-        </button>
-    </ion-toolbar>
-</ion-footer>
+<div [hidden]="data.IsHideWhenKeyboardOpen">
+    <ion-footer no-border>
+        <ion-toolbar>
+            <ion-item>
+                <ion-label>{{result.ROW5}}</ion-label>
+                <ion-label>{{result.ROW6}}</ion-label>
+                <ion-label>{{result.ROW7}}</ion-label>
+            </ion-item>
+        </ion-toolbar>
+        <ion-toolbar>
+            <button ion-button icon-start solid full (click)="Receive()" color="primary">
+                <ion-icon name="checkmark"></ion-icon>
+                驗收
+            </button>
+        </ion-toolbar>
+    </ion-footer>
+</div>

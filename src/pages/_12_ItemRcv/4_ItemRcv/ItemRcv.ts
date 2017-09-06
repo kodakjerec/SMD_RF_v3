@@ -4,6 +4,7 @@ import { Navbar } from 'ionic-angular';
 
 //Cordova
 import { Vibration } from '@ionic-native/vibration';
+import { Keyboard } from '@ionic-native/keyboard';
 
 //My Pages
 import * as myGlobals from '../../../app/Settings';
@@ -23,13 +24,14 @@ import { myCAMERAPage } from '../../_ZZ_CommonLib/myCAMERA/myCAMERA';
 
 export class _124_ItemRcv {
     constructor(public navCtrl: NavController
-        , plt: Platform
+        , public platform: Platform
         , public navParams: NavParams
         , private vibration: Vibration
         , public _http_services: http_services
         , private modalCtrl: ModalController
         , private alertCtrl: AlertController
-        , private toastCtrl: ToastController) {
+        , private toastCtrl: ToastController
+        , private keyboard: Keyboard) {
         this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
         this.data.BLOCK_ID = myGlobals.ProgParameters.get('BLOCK_ID');
         this.data.CarNo = myGlobals.ProgParameters.get('CarNo');
@@ -46,6 +48,8 @@ export class _124_ItemRcv {
         var QTY = this.result.PO_QTY.split("/");
         this.answer.QTY_left = parseInt(QTY[0]);
         this.answer.QTY_ShowTotal = parseInt(QTY[1]);
+
+        this.initializeApp();
     }
 
     @ViewChild(Navbar) navBar: Navbar;
@@ -65,6 +69,19 @@ export class _124_ItemRcv {
         }
     }
 
+    initializeApp() {
+        if (this.platform.is('core')) {
+            console.log("You're develop in the browser");
+            return;
+        }
+        this.platform.ready()
+            .then(() => {
+                this.keyboard.onKeyboardShow().subscribe(() => { this.data.IsHideWhenKeyboardOpen = true });
+                this.keyboard.onKeyboardHide().subscribe(() => { this.data.IsHideWhenKeyboardOpen = false });
+            })
+            ;
+    }
+
     data = {
         CarNo: ''
         , PaperNo: ''
@@ -75,6 +92,7 @@ export class _124_ItemRcv {
         , viewColor: ''
         , USER_ID: ''
         , BLOCK_ID: ''
+        , IsHideWhenKeyboardOpen: false
     };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
     answer = {
         QTY: 0
@@ -101,8 +119,14 @@ export class _124_ItemRcv {
     };
 
     //20170613需求，加入溫度正負按鈕
-    QTY_color = 'pos';
-    WEIGHT_color = 'pos';
+    QTY_color = { labelName: '＋', checked: false };
+    WEIGHT_color = { labelName: '＋', checked: false };
+    onToggleChange(item) {
+        if (item.checked == true)
+            item.labelName = '－';
+        else
+            item.labelName = '＋';
+    }
     //加入溫度正負按鈕END
 
     //上一頁
@@ -235,9 +259,9 @@ export class _124_ItemRcv {
         }
 
         //正負
-        if (this.QTY_color == 'neg')
+        if (this.QTY_color.checked == true)
             this.answer.QTY = 0 - this.answer.QTY;
-        if (this.WEIGHT_color == 'neg')
+        if (this.WEIGHT_color.checked == true)
             this.answer.WEIGHT = 0 - this.answer.WEIGHT;
 
         //驗收
