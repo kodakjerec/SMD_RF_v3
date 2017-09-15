@@ -35,6 +35,14 @@ export class _121_CarNo {
 
     @ViewChild('scan_Entry') scan_Entry;
 
+    ionViewDidEnter() {
+        if (this.data.IsDisabled == true) {
+            setTimeout(() => {
+                this.scan_Entry.setFocus();
+            }, 150);
+        }
+    }
+
     data = {
         CarNo: ''
         , viewColor: ''
@@ -45,12 +53,6 @@ export class _121_CarNo {
     };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
     color = { green: '#79FF79', red: '#FF5151' }; // 控制已報到/未報到 顏色
     result = {};
-
-    ionViewDidEnter() {
-        setTimeout(() => {
-            this.scan_Entry.setFocus();
-        }, 150);
-    }
 
     initializeApp() {
         if (this.platform.is('core')) {
@@ -68,7 +70,9 @@ export class _121_CarNo {
     //重置btn
     reset() {
         myGlobals.ProgParameters.set('CarNo', '');
+
         this.result = {};
+
         this.data.viewColor = '';
         this.data.IsDisabled = true;
 

@@ -31,6 +31,14 @@ export class _11_CheckIn {
     }
     @ViewChild('scan_Entry') scan_Entry;
 
+    ionViewDidEnter() {
+        if (this.data.IsDisabled == true) {
+            setTimeout(() => {
+                this.scan_Entry.setFocus();
+            }, 150);
+        }
+    }
+
     data = {
         CarNo: ''
         , viewColor: ''
@@ -42,12 +50,6 @@ export class _11_CheckIn {
     color = { green: '#79FF79', red: '#FF5151' }; // 控制已報到/未報到 顏色
     result = {};
     answer = { VEHICLE_TEMP0: 0, VEHICLE_TEMP1: 0, VEHICLE_TEMP2: 0 };
-
-    ionViewDidEnter() {
-        setTimeout(() => {
-            this.scan_Entry.setFocus();
-        }, 150);
-    }
 
     initializeApp() {
         if (this.platform.is('core')) {
@@ -71,6 +73,8 @@ export class _11_CheckIn {
         this.answer.VEHICLE_TEMP0 = 0;
         this.answer.VEHICLE_TEMP1 = 0;
         this.answer.VEHICLE_TEMP2 = 0;
+
+        this.result = {};
 
         this.scan_Entry.setFocus();
     };

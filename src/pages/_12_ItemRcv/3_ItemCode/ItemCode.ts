@@ -39,6 +39,14 @@ export class _123_ItemCode {
 
     @ViewChild('scan_Entry') scan_Entry;
 
+    ionViewDidEnter() {
+        if (this.data.IsDisabled == true) {
+            setTimeout(() => {
+                this.scan_Entry.setFocus();
+            }, 150);
+        }
+    }
+
     data = {
         CarNo: ''
         , PaperNo: ''
@@ -72,12 +80,6 @@ export class _123_ItemCode {
             item.labelName = '＋';
     }
     //加入溫度正負按鈕END
-
-    ionViewDidEnter() {
-        setTimeout(() => {
-            this.scan_Entry.setFocus();
-        }, 150);
-    }
 
     initializeApp() {
         if (this.platform.is('core')) {

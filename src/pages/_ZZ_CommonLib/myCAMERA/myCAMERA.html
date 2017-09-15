@@ -5,7 +5,7 @@
         </ion-buttons>
         <ion-title>拍照上傳</ion-title>
         <ion-buttons right>
-            <button ion-button color="primary" solid icon-start (click)="callCamera()">
+            <button ion-button color="primary" [disabled]="data.DuringCamera" solid icon-start (click)="callCamera()">
                 <ion-icon name="camera"></ion-icon>
                 拍照
             </button>

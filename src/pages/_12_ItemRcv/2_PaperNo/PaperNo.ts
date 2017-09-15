@@ -38,6 +38,14 @@ export class _122_PaperNo {
 
     @ViewChild('scan_Entry') scan_Entry;
 
+    ionViewDidEnter() {
+        if (this.data.IsDisabled == true) {
+            setTimeout(() => {
+                this.scan_Entry.setFocus();
+            }, 150);
+        }
+    }
+
     data = {
         CarNo: ''
         , PaperNo: ''
@@ -48,12 +56,6 @@ export class _122_PaperNo {
         , IsHideWhenKeyboardOpen: false
     };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
     result = {};
-
-    ionViewDidEnter() {
-        setTimeout(() => {
-            this.scan_Entry.setFocus();
-        }, 150);
-    }
 
     initializeApp() {
         if (this.platform.is('core')) {
@@ -73,7 +75,9 @@ export class _122_PaperNo {
         myGlobals.ProgParameters.set('PaperNo', '');
         myGlobals.ProgParameters.set('PaperNo_ID', '');
         this.data.PaperNo_ID = '';
+
         this.result = {};
+
         this.data.IsDisabled = true;
 
         this.scan_Entry.setFocus();

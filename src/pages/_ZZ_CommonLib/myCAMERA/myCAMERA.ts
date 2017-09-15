@@ -15,6 +15,7 @@ import { http_services } from '../../_ZZ_CommonLib/http_services';
 export class myCAMERAPage {
     data = {
         IsDisabled: true
+        , DuringCamera: false
         , FileName: ''
         , imageData: ''     //傳檔用
         , FileSource: ''    //顯示用
@@ -25,13 +26,18 @@ export class myCAMERAPage {
 
     //拍照使用的設定
     options: CameraOptions = {
+        sourceType: this.camera.PictureSourceType.CAMERA,
         quality: 100,
         destinationType: this.camera.DestinationType.DATA_URL,
         encodingType: this.camera.EncodingType.JPEG,
+        targetWidth: 768,
+        targetHeight: 1024,
         mediaType: this.camera.MediaType.PICTURE,
-        saveToPhotoAlbum: true,
+        saveToPhotoAlbum: false,
+        cameraDirection: this.camera.Direction.BACK,
         allowEdit: false
     }
+
     constructor(
         public viewCtrl: ViewController
         , params: NavParams
@@ -91,6 +97,8 @@ export class myCAMERAPage {
     callCamera() {
         this.vibration.vibrate(100);
         this.data.IsDisabled = true;
+        this.data.DuringCamera = true;
+        console.log(this.data.DuringCamera);
 
         this.camera.getPicture(this.options)
             .then((imageData) => {
@@ -107,8 +115,11 @@ export class myCAMERAPage {
                     buttons: ['關閉']
                 });
                 alert.present();
+                this.data.FileSource = '';
             })
             .then(() => {
+                this.data.DuringCamera = false;
+
                 if (this.data.FileSource != '')
                     this.data.IsDisabled = false;
             });
@@ -116,8 +127,14 @@ export class myCAMERAPage {
 
     //上傳
     upload() {
+        if (this.data.IsDisabled)
+            return;
+
+        this.vibration.vibrate(100);
+        this.data.IsDisabled = false;
+
         // Upload a file:
-        this._http_services.POST('172_31_31_250', 'Picture'
+        this._http_services.POST('', 'Picture'
             , 'Picture'
             , [{ Name: '@FileName', Value: this.data.FileName }
                 , { Name: '@FileSource', Value: this.data.imageData }
@@ -145,6 +162,8 @@ export class myCAMERAPage {
                     }
                 }
             });
+
+        this.data.IsDisabled = true;
     }
 
     //Toast

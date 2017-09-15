@@ -179,7 +179,6 @@ export class _21_BasketList {
                                     switch (result.RT_CODE) {
                                         case 0:
                                             this.data.ShowStoreName = result.RT_MSG;
-                                            this.scan_Entry.setFocus();
                                             break;
                                         default:
                                             let alert = this.alertCtrl.create({
@@ -189,8 +188,8 @@ export class _21_BasketList {
                                             });
                                             alert.present();
                                     }
-
                                 }
+                                this.scan_Entry.setFocus();
                             });
                     }
                     //#endregion
@@ -239,7 +238,9 @@ export class _21_BasketList {
     }
     //喪失focus
     myfocus() {
-        this.scan_Entry.setFocus();
+        setTimeout(() => {
+            this.scan_Entry.setFocus();
+        }, 150);
     };
 
     //塞入log
