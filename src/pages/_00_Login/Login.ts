@@ -112,8 +112,8 @@ export class _00_Login {
             , '[sys.spDCS_LOGIN]'
             , [{ Name: '@ID', Value: this.data.username }
                 , { Name: '@PASSWORD', Value: this.data.password }])
-            .then((response) => {
-                if (response != undefined) {
+            .subscribe((response) => {
+                if (response) {
 
                     switch (response[0].LOGIN_RESULT) {
                         case 0:

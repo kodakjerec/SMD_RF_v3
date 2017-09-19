@@ -3,13 +3,16 @@
 //連結伺服器
 //網址
 //export const Global_Server = 'localhost:1793';
-//export const Global_Server = 'localhost/RF_DB';
-export const Global_Server = '172.20.20.11/RF_DB';
+export const Global_Server = 'localhost/RF_DB';
+//export const Global_Server = '172.20.20.11/RF_DB';
 export const Set_timeout = 1500;
-export const packageVersion = '17.09.01';
+export const packageVersion = '17.09.19';
 export const DefaultServer = "DCStest";
 
 export const Changelog = ''
+    + '\n17.09.19:'
+    + '\n 1.新增功能，物流標籤補印，路徑：測試功能=>物流標籤補印'
+    + '\n'
     + '\n17.09.01:'
     + '\n 1.加入自動更新功能，如果跳出更新程式請同意下載更新'
     + '\n 2."_21_籃明細"加入掃到錯誤的條碼，會短暫震動5次'

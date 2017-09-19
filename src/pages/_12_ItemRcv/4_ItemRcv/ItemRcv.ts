@@ -160,14 +160,12 @@ export class _124_ItemRcv {
         this._http_services.POST('', 'sqlcmd'
             , 'Select ID as Value, Name from vDCS_Table_item_State'
             , [])
-            .then((response) => {
+            .subscribe((response) => {
                 for (var index in response) {
                     var value = response[index];
                     this.answer.QualityList.push({ Name: value.Name, Value: value.Value });
                 }
-            })
-            .then(data => {
-                //查表找屬性
+
                 this.findQualityNameAndColor();
             });
     }
@@ -276,7 +274,7 @@ export class _124_ItemRcv {
                 , { Name: '@WT', Value: this.answer.WEIGHT }
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ])
-            .then((response) => {
+            .subscribe((response) => {
                 if (response != undefined) {
                     switch (response[0].RT_CODE) {
                         case 0:

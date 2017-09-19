@@ -139,7 +139,7 @@ export class myCAMERAPage {
             , [{ Name: '@FileName', Value: this.data.FileName }
                 , { Name: '@FileSource', Value: this.data.imageData }
                 , { Name: '@FileDescription', Value: this.data.defaultFileDescription + this.data.FileDescription }])
-            .then((response) => {
+            .subscribe((response) => {
                 if (response != undefined) {
                     console.log(response);
                     switch (response[0].RT_CODE) {
