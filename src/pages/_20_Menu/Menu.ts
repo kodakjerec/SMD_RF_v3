@@ -23,7 +23,8 @@ export class _20_Menu {
 
         this.Lists = [
             { Name: '籃明細', Value:'_21_BasketList' },
-            { Name: '撿貨標籤列印', Value: '_22_PrintPickingLabel' }];
+            { Name: '撿貨標籤列印', Value: '_22_PrintPickingLabel' },
+            { Name: '網路相簿', Value: '_23_PhotoGallery' }];
     }
 
     menuClicked(item) {

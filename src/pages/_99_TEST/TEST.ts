@@ -51,4 +51,8 @@ export class _99_TEST {
         });
         obj.present();
     }
+
+    gallery() {
+        this.navCtrl.push('_23_PhotoGallery');
+    }
 }

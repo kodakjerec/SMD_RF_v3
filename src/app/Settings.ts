@@ -3,8 +3,8 @@
 //連結伺服器
 //網址
 //export const Global_Server = 'localhost:1793';
-//export const Global_Server = 'localhost/RF_DB';
-export const Global_Server = '172.20.20.11/RF_DB';
+export const Global_Server = 'localhost/RF_DB';
+//export const Global_Server = '172.20.20.11/RF_DB';
 export const Set_timeout = 1500;
 export const packageVersion = '17.09.01';
 export const DefaultServer = "DCStest";

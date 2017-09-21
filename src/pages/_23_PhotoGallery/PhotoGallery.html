@@ -1,0 +1,15 @@
+﻿<ion-header>
+    <ion-navbar>
+        <ion-title (click)="help()">相簿</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content (swipe)="swipeEvent($event)">
+    <ion-grid>
+        <ion-row>
+            <ion-col  *ngFor="let item of Lists">
+                {{item.FileName}}
+                <img [src]="item.ThumbnailImage" *ngIf="item.ThumbnailImage" />
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
