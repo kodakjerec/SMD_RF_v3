@@ -93,7 +93,7 @@ export class _121_CarNo {
                 { Name: '@JOB_ID', Value: '1' }
                 , { Name: '@REG_ID', Value: this.data.CarNo }
             ])
-            .then((response) => {
+            .subscribe((response) => {
 
                 if (response != undefined) {
                     switch (response[0].RT_CODE) {
@@ -155,7 +155,7 @@ export class _121_CarNo {
             , 'spactDCS_ID_HEADER'
             , [{ Name: '@JOB_ID', Value: 11 }
                 , { Name: '@REG_ID', Value: this.data.CarNo }])
-            .then((response) => {
+            .subscribe((response) => {
                 myGlobals.ProgParameters.set('ListTable_Source', response);
 
                 let obj = this.modalCtrl.create(PaperDetailPage);

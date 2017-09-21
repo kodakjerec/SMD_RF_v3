@@ -115,7 +115,7 @@ export class _21_BasketList {
                     , 'spactDCS_BASKET'
                     , [{ Name: '@Step', Value: '0' }
                         , { Name: '@GUIDMessage', Value: obj }])
-                    .then((response) => {
+                    .subscribe((response) => {
                         var result = response[0];
                         var successPageId = {};
                         switch (result.RT_CODE) {
@@ -172,7 +172,7 @@ export class _21_BasketList {
                             , 'spactDCS_BASKET'
                             , [{ Name: '@Step', Value: '1' }
                                 , { Name: '@GUIDMessage', Value: SuccessData.StoreId }])
-                            .then((response) => {
+                            .subscribe((response) => {
                                 if (response != undefined) {
                                     var result = response[0];
 

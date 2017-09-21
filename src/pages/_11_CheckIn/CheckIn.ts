@@ -93,7 +93,7 @@ export class _11_CheckIn {
                 { Name: '@JOB_ID', Value: '1' }
                 , { Name: '@REG_ID', Value: this.data.CarNo }
             ])
-            .then((response) => {
+            .subscribe((response) => {
 
                 if (response != undefined) {
                     switch (response[0].RT_CODE) {
@@ -172,7 +172,7 @@ export class _11_CheckIn {
                     , { Name: '@TEMP2', Value: this.answer.VEHICLE_TEMP2 }
                     , { Name: '@USER_NAME', Value: this.data.USER_ID }
                 ])
-                .then((response) => {
+                .subscribe((response) => {
                     if (response != undefined) {
                         var result = response[0];
                         switch (result.RT_CODE) {

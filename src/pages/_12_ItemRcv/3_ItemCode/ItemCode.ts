@@ -130,7 +130,7 @@ export class _123_ItemCode {
                 , { Name: '@ITEM', Value: this.data.ItemCode }
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ])
-            .then((response) => {
+            .subscribe((response) => {
                 if (response != undefined) {
                     switch (response[0].RT_CODE) {
                         case -1:
@@ -169,7 +169,7 @@ export class _123_ItemCode {
                             this._http_services.POST('', 'sqlcmd'
                                 , "SELECT DATENAME(dayofyear, getdate()) AS 'SunDay'"
                                 , [])
-                                .then((response2) => {
+                                .subscribe((response2) => {
                                     this.answer.DisplaySunDay = response2[0].SunDay;
                                 });
 
@@ -231,7 +231,7 @@ export class _123_ItemCode {
                 , { Name: '@ITEM', Value: this.data.ItemCode }
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ])
-            .then((response) => {
+            .subscribe((response) => {
                 if (response != undefined) {
                     switch (response[0].RT_CODE) {
                         case 0:
@@ -281,7 +281,7 @@ export class _123_ItemCode {
                 , { Name: '@ITEM_TEMP', Value: this.answer.Temp }
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ])
-            .then((response) => {
+            .subscribe((response) => {
                 if (response != undefined) {
                     switch (response[0].RT_CODE) {
                         case 0:

@@ -99,7 +99,7 @@ export class _122_PaperNo {
                 , { Name: '@ID', Value: this.data.PaperNo }
                 , { Name: '@USER_NAME', Value: this.data.USER_ID }
             ])
-            .then((response) => {
+            .subscribe((response) => {
 
                 if (response != undefined) {
                     switch (response[0].RT_CODE) {
@@ -141,7 +141,7 @@ export class _122_PaperNo {
                                     , { Name: '@ID', Value: this.data.PaperNo }
                                     , { Name: '@USER_NAME', Value: this.data.USER_ID }
                                 ])
-                                .then((response2) => {
+                                .subscribe((response2) => {
                                     this.result = response2[0];
                                 });
 
@@ -182,7 +182,7 @@ export class _122_PaperNo {
             , [{ Name: '@JOB_ID', Value: 13 }
                 , { Name: '@REG_ID', Value: this.data.CarNo }
                 , { Name: '@ID', Value: this.data.PaperNo }])
-            .then((response) => {
+            .subscribe((response) => {
                 myGlobals.ProgParameters.set('ListTable_Source', response);
 
                 let obj = this.modalCtrl.create(PaperDetailPage);
@@ -204,7 +204,7 @@ export class _122_PaperNo {
                 , { Name: '@ID', Value: this.data.PaperNo_ID }
                 , { Name: '@USER_NAME', Value: this.data.USER_ID }
             ])
-            .then((response) => {
+            .subscribe((response) => {
                 if (response != undefined) {
                     switch (response[0].RT_CODE) {
                         case 0:

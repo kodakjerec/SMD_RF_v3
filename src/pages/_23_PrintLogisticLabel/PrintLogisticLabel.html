@@ -1,0 +1,92 @@
+﻿<ion-header>
+    <ion-navbar>
+        <ion-title>物流標籤列印</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content (swipe)="swipeEvent($event)">
+    <ion-card>
+        <ion-card-header (click)="help()">
+            從 物流標籤 補印(help)
+        </ion-card-header>
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-2>
+                        <ion-label>物流標</ion-label>
+                    </ion-col>
+                    <ion-col col-8>
+                        <ion-input #scan_Entry id="txb_scan_Entry" type="tel"
+                                   (keyup.enter)="search()"
+                                   (ionFocus)="selectAll($event)"
+                                   [(ngModel)]="data.ScanBarcode"
+                                   autofocus></ion-input>
+                    </ion-col>
+                    <ion-col col-2>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <button ion-button (click)="search()" color="primary" solid class="toolbar-button">
+                            <ion-icon name="print"></ion-icon>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header (click)="help2()">
+            指定 詳細內容 補印(help)
+        </ion-card-header>
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-2>
+                        <ion-label>*呼出碼</ion-label>
+                    </ion-col>
+                    <ion-col col-10>
+                        <ion-input #scan_Entry2 id="txb_scan_Entry2" type="tel"
+                                   (ionFocus)="selectAll($event)"
+                                   [(ngModel)]="data2.Barcode"></ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-2>
+                        <ion-label>店鋪代號</ion-label>
+                    </ion-col>
+                    <ion-col col-10>
+                        <ion-input type="tel"
+                                   (ionFocus)="selectAll($event)"
+                                   [(ngModel)]="data2.Shop"></ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-2>
+                        <ion-label>數量</ion-label>
+                    </ion-col>
+                    <ion-col col-4>
+                        <ion-input type="tel"
+                                   (ionFocus)="selectAll($event)"
+                                   [(ngModel)]="data2.Qty"></ion-input>
+                    </ion-col>
+                    <ion-col col-2>
+                        <ion-label>入數</ion-label>
+                    </ion-col>
+                    <ion-col col-4>
+                        <ion-input type="tel"
+                                   (ionFocus)="selectAll($event)"
+                                   [(ngModel)]="data2.IP_Qty"></ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <button ion-button (click)="search2()" color="secondary" solid class="toolbar-button">
+                            <ion-icon name="print"></ion-icon>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

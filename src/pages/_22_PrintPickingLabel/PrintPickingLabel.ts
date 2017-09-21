@@ -47,7 +47,7 @@ export class _22_PrintPickingLabel {
         this._http_services.POST('', 'sqlcmd'
             , 'select OrderNo=MAX(OrderNo) from DDI.dbo.DDI_WORKSPACE_STATUS with(nolock)'
             , [{}])
-            .then((response) => {
+            .subscribe((response) => {
                 this.data.JOBID = response[0].OrderNo;
             });
     };
