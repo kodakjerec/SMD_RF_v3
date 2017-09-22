@@ -39,7 +39,9 @@ export class _23_PrintLogisticLabel {
             , '[md.spDCS_LABEL_SORTER]'
             , [
                 { Name: '@CODE', Value: this.data.ScanBarcode }
-            ]);
+            ]).subscribe(() => {
+
+            });
 
         //準備下一輪掃描
         this.reset();
@@ -55,7 +57,9 @@ export class _23_PrintLogisticLabel {
                 , { Name: '@SITE_ID', Value: this.data2.Shop }
                 , { Name: '@QTY', Value: this.data2.Qty }
                 , { Name: '@IP_QTY', Value: this.data2.IP_Qty }
-            ]);
+            ]).subscribe(() => {
+
+            });
 
         //準備下一輪掃描
         this.reset();

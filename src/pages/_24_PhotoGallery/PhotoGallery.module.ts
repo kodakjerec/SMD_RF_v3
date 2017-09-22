@@ -2,14 +2,14 @@
 import { CommonModule } from '@angular/common';
 import { IonicPageModule } from 'ionic-angular';
 
-import { _23_PhotoGallery } from './PhotoGallery';
+import { _24_PhotoGallery } from './PhotoGallery';
 
 @NgModule({
   imports: [
     CommonModule,
-    IonicPageModule.forChild(_23_PhotoGallery)
+    IonicPageModule.forChild(_24_PhotoGallery)
   ],
-  declarations: [_23_PhotoGallery],
-  entryComponents: [_23_PhotoGallery]
+  declarations: [_24_PhotoGallery],
+  entryComponents: [_24_PhotoGallery]
 })
 export class AppModule { }

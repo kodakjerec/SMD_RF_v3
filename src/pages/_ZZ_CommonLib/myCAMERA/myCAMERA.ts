@@ -29,7 +29,7 @@ export class myCAMERAPage {
         sourceType: this.camera.PictureSourceType.CAMERA,
         quality: 100,
         destinationType: this.camera.DestinationType.DATA_URL,
-        encodingType: this.camera.EncodingType.JPEG,
+        encodingType: this.camera.EncodingType.PNG,
         targetWidth: 768,
         targetHeight: 1024,
         mediaType: this.camera.MediaType.PICTURE,
@@ -59,7 +59,7 @@ export class myCAMERAPage {
         //for test
         //this.data.IsDisabled = false;
         this.data.imageData = '';
-        this.data.FileSource = 'data:image/jpeg;base64,' + this.data.imageData;
+        this.data.FileSource = 'data:image/png;base64,' + this.data.imageData;
     }
 
     //離開
@@ -105,7 +105,7 @@ export class myCAMERAPage {
                 // imageData is either a base64 encoded string or a file URI
                 // If it's base64:
                 this.data.imageData = imageData;
-                this.data.FileSource = 'data:image/jpeg;base64,' + this.data.imageData;
+                this.data.FileSource = 'data:image/png;base64,' + this.data.imageData;
             }, (err) => {
                 console.log(err);
                 // Handle error

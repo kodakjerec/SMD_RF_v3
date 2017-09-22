@@ -53,6 +53,6 @@ export class _99_TEST {
     }
 
     gallery() {
-        this.navCtrl.push('_23_PhotoGallery');
+        this.navCtrl.push('_24_PhotoGallery');
     }
 }
