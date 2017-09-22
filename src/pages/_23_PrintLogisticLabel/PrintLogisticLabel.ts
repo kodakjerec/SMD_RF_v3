@@ -71,7 +71,6 @@ export class _23_PrintLogisticLabel {
                     position: 'bottom'
                 });
                 toast.present();
-            ]).subscribe(() => {
             });
 
         //準備下一輪掃描
