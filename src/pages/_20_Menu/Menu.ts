@@ -25,7 +25,7 @@ export class _20_Menu {
             { Name: '籃明細', Value:'_21_BasketList' },
             { Name: '撿貨標籤列印', Value: '_22_PrintPickingLabel' },
             { Name: '物流標籤列印', Value: '_23_PrintLogisticLabel' },
-            { Name: '網路相簿', Value: '_23_PhotoGallery' }
+            { Name: '不良品相簿管理', Value: '_24_PhotoGallery' }
         ];
     }
 
