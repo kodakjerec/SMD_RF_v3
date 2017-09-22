@@ -1,0 +1,34 @@
+﻿<ion-header>
+    <ion-navbar>
+        <ion-title (click)="help()">不良品相簿管理</ion-title>
+        <ion-buttons end>
+            <button ion-fab mini (click)="deletePic(item)"><ion-icon name="trash"></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content (swipe)="swipeEvent($event)">
+    <ion-grid>
+        <ion-row>
+            <ion-col *ngFor="let item of Lists" col-4>
+                <ion-card>
+                    <ion-card-header style="padding:0px 0px 0px 0px;" (click)="showPic(item)">
+                        <img [src]="item.ThumbnailImage" />
+                    </ion-card-header>
+                    <div>
+                        <ion-fab right top>
+                            <button ion-fab mini [hidden]="!item.check"><ion-icon name="checkmark"></ion-icon></button>
+                        </ion-fab>
+                        <div (window:resize)="onResize()" [hidden]="data.devWidth<480">
+                            <label>{{item.FileName}}</label><br />
+                            <label style="white-space: pre;color:white">{{item.showDescription}}</label>
+
+                            <ion-fab right bottom>
+                                <button ion-fab mini (click)="downloadPic(item)"><ion-icon name="download"></ion-icon></button>
+                            </ion-fab>
+                        </div>
+                    </div>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

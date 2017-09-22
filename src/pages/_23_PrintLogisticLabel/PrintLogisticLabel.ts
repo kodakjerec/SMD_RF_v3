@@ -71,6 +71,7 @@ export class _23_PrintLogisticLabel {
                     position: 'bottom'
                 });
                 toast.present();
+            ]).subscribe(() => {
             });
 
         //準備下一輪掃描
@@ -109,6 +110,7 @@ export class _23_PrintLogisticLabel {
                 , { Name: '@SITE_ID', Value: this.data2.Shop }
                 , { Name: '@QTY', Value: this.data2.Qty }
                 , { Name: '@IP_QTY', Value: this.data2.IP_Qty }
+<<<<<<< HEAD
             ])
             .subscribe((response) => {
                 let toast = this.toastCtrl.create({
@@ -117,6 +119,10 @@ export class _23_PrintLogisticLabel {
                     position: 'bottom'
                 });
                 toast.present();
+=======
+            ]).subscribe(() => {
+
+>>>>>>> 2ccf751295a9a6906b730442afda7063370d4e8d
             });
 
         //準備下一輪掃描

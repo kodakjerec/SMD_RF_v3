@@ -66,16 +66,30 @@ export class http_services {
             .timeout(5000)
             .map((res: Response) => {
                 loading.dismiss();
-                console.log(res.json());
-                return res.json();
+                console.log(res);
+                if (mode == 'Picture') {
+                    switch (sqlcmd) {
+                        case 'download':
+                            this.downloadFile(res, params[0].Value);
+                            return "[{}]";
+                        case 'open':
+                            return '[{"ImageContent":' + 'data:image/png;base64,' + res['_body'] + '}]';
+                        case 'search':
+                            return res.json();
+                        case 'delete':
+                            return "[{}]";
+                    }
+                }
+                else
+                    return res.json();
             }) // ...and calling .json() on the response to return data
             .catch((error: any) => {
                 loading.dismiss();
                 console.log(error);
 
                 // In a real world app, you might use a remote logging infrastructure
-                let errtitle: string='錯誤';
-                let errMsg: string='';
+                let errtitle: string = '錯誤';
+                let errMsg: string = '';
 
                 if (error instanceof Response) {
                     //const body = error.json() || '';
@@ -94,5 +108,20 @@ export class http_services {
                 alert.present();
                 return Observable.throw(error || 'Server Error');
             }); //...errors if any
+    }
+
+    downloadFile(data: any, filename: string) {
+        var pom = document.createElement('a');
+        pom.setAttribute('href', 'data:image/png;base64,' + data._body);
+        pom.setAttribute('download', filename);
+
+        if (document.createEvent) {
+            var event = document.createEvent('MouseEvents');
+            event.initEvent('click', true, true);
+            pom.dispatchEvent(event);
+        }
+        else {
+            pom.click();
+        }
     }
 }
