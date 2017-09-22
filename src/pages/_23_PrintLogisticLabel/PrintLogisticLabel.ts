@@ -1,6 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Platform, NavParams, AlertController, IonicPage } from 'ionic-angular';
+import { NavController, Platform, NavParams, AlertController, ToastController, IonicPage } from 'ionic-angular';
 
+//Cordova
+import { Vibration } from '@ionic-native/vibration';
+
+import * as myGlobals from '../../app/Settings';
 import { http_services } from '../_ZZ_CommonLib/http_services';
 
 @IonicPage({
@@ -16,7 +20,9 @@ export class _23_PrintLogisticLabel {
         , plt: Platform
         , public navParams: NavParams
         , public _http_services: http_services
-        , private alertCtrl: AlertController) {
+        , private alertCtrl: AlertController
+        , private toastCtrl: ToastController
+        , private vibration: Vibration) {
     }
 
     //#region Init
@@ -35,32 +41,88 @@ export class _23_PrintLogisticLabel {
     //#endregion
 
     search() {
+        this.vibration.vibrate(100);
+
+        //#region Check error
+        let ErrMsg: string='';
+        if (this.data.ScanBarcode == '') {
+            ErrMsg = '請輸入物流標';
+        }
+        if (ErrMsg != '') {
+            let toast = this.toastCtrl.create({
+                message: ErrMsg,
+                duration: myGlobals.Set_timeout,
+                position: 'bottom'
+            });
+            toast.present();
+            return;
+        }
+        //#endregion
+
         this._http_services.POST('', 'sp'
             , '[md.spDCS_LABEL_SORTER]'
             , [
                 { Name: '@CODE', Value: this.data.ScanBarcode }
-            ]);
+            ])
+            .subscribe((response) => {
+                let toast = this.toastCtrl.create({
+                    message: '成功送出補印需求',
+                    duration: myGlobals.Set_timeout,
+                    position: 'bottom'
+                });
+                toast.present();
+            });
 
         //準備下一輪掃描
         this.reset();
 
-        this.scan_Entry.setFocus();
+        this.myfocus();
     };
 
     search2() {
+        this.vibration.vibrate(100);
+
+        //#region Check error
+        let ErrMsg: string = '';
+        if (this.data2.Barcode == '') {
+            ErrMsg = '請輸入呼出碼';
+        }
+        if (this.data2.Qty == '') {
+            ErrMsg = '請輸入數量';
+        }
+        if (ErrMsg != '') {
+            let toast = this.toastCtrl.create({
+                message: ErrMsg,
+                duration: myGlobals.Set_timeout,
+                position: 'bottom'
+            });
+            toast.present();
+            return;
+        }
+        //#endregion
+
         this._http_services.POST('', 'sp'
             , '[md.spDCS_LABEL_SORTER]'
             , [
-                { Name: '@ITEM_ID', Value: this.data2.Barcode }
+                { Name: '@CODE', Value: '' }
+                , { Name: '@ITEM_ID', Value: this.data2.Barcode }
                 , { Name: '@SITE_ID', Value: this.data2.Shop }
                 , { Name: '@QTY', Value: this.data2.Qty }
                 , { Name: '@IP_QTY', Value: this.data2.IP_Qty }
-            ]);
+            ])
+            .subscribe((response) => {
+                let toast = this.toastCtrl.create({
+                    message: '成功送出補印需求',
+                    duration: myGlobals.Set_timeout,
+                    position: 'bottom'
+                });
+                toast.present();
+            });
 
         //準備下一輪掃描
         this.reset();
 
-        this.scan_Entry2.setFocus();
+        this.myfocus2();
     };
 
     reset() {
@@ -85,9 +147,8 @@ export class _23_PrintLogisticLabel {
     help2() {
         let alert = this.alertCtrl.create({
             title: '使用說明',
-            subTitle: '1. 呼出碼一定要輸入<br/>'
+            subTitle: '1. 呼出碼和數量一定要輸入<br/>'
             + '2. 不指定店鋪，會印出所有店鋪標籤<br/>'
-            + '3. 不指定數量，會印出指定店鋪訂單的最大量<br/>'
             + '4. 不指定入數，會印出系統預設入數:6',
             buttons: ['關閉']
         });
@@ -97,7 +158,14 @@ export class _23_PrintLogisticLabel {
 
     //喪失focus
     myfocus() {
-        this.scan_Entry.setFocus();
+        setTimeout(() => {
+            this.scan_Entry.setFocus();
+        }, 150);
+    };
+    myfocus2() {
+        setTimeout(() => {
+            this.scan_Entry2.setFocus();
+        }, 150);
     };
 
     //全選

@@ -61,7 +61,10 @@ export class _22_PrintPickingLabel {
                     { Name: '@JOBID', Value: this.data.JOBID }
                     , { Name: '@PRINTER', Value: "172.20.22.4" }
                     , { Name: '@BC', Value: this.data.ScanBarcode }
-                ]);
+                ])
+                .subscribe((response) => {
+                    console.log(response);
+                });
         }
         else {
             this._http_services.POST('', 'sp'
@@ -73,7 +76,10 @@ export class _22_PrintPickingLabel {
                     , { Name: '@cTYPE', Value: "BOX" }
                     , { Name: '@cPRINT_SITE', Value: "172.20.22.4" }
                     , { Name: '@cBARCODE', Value: this.data.ScanBarcode }
-                ]);
+                ])
+                .subscribe((response) => {
+                    console.log(response);
+                });
         }
         //#endregion
 
