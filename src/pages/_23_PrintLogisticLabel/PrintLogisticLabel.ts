@@ -87,9 +87,6 @@ export class _23_PrintLogisticLabel {
         if (this.data2.Barcode == '') {
             ErrMsg = '請輸入呼出碼';
         }
-        if (this.data2.Qty == '') {
-            ErrMsg = '請輸入數量';
-        }
         if (ErrMsg != '') {
             let toast = this.toastCtrl.create({
                 message: ErrMsg,
@@ -117,7 +114,7 @@ export class _23_PrintLogisticLabel {
                     position: 'bottom'
                 });
                 toast.present();
-            };
+            });
 
         //準備下一輪掃描
         this.reset();
