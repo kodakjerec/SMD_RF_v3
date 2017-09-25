@@ -78,6 +78,11 @@ export class _121_CarNo {
 
         this.scan_Entry.setFocus();
     };
+    //查詢欄位專用清除
+    reset_btn() {
+        this.reset();
+        this.data.CarNo = '';
+    }
 
     //#region 查詢報到牌btn
     search() {
@@ -95,7 +100,7 @@ export class _121_CarNo {
             ])
             .subscribe((response) => {
 
-                if (response != undefined) {
+                if (response != '') {
                     switch (response[0].RT_CODE) {
                         case 0:
                             //Correct

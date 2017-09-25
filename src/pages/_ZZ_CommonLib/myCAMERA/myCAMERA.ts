@@ -135,12 +135,12 @@ export class myCAMERAPage {
 
         // Upload a file:
         this._http_services.POST('', 'Picture'
-            , 'Picture'
+            , 'upload'
             , [{ Name: '@FileName', Value: this.data.FileName }
                 , { Name: '@FileSource', Value: this.data.imageData }
                 , { Name: '@FileDescription', Value: this.data.defaultFileDescription + this.data.FileDescription }])
             .subscribe((response) => {
-                if (response != undefined) {
+                if (response != '') {
                     console.log(response);
                     switch (response[0].RT_CODE) {
                         case 0:

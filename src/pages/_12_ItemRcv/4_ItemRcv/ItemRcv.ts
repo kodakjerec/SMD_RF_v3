@@ -149,8 +149,15 @@ export class _124_ItemRcv {
 
         this.answer.QualityValue = 1;
         this.answer.QualityName = '品質';
+
+        //數量 重量
         this.answer.QTY = 0;
         this.answer.WEIGHT = 0.0;
+        //數量 重量 正負 reset
+        this.QTY_color.checked = false;
+        this.onToggleChange(this.QTY_color);
+        this.WEIGHT_color.checked = false;
+        this.onToggleChange(this.WEIGHT_color);
 
         this.scan_Entry.setFocus();
     };
@@ -275,7 +282,7 @@ export class _124_ItemRcv {
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ])
             .subscribe((response) => {
-                if (response != undefined) {
+                if (response != '') {
                     switch (response[0].RT_CODE) {
                         case 0:
                             //SHOW 待收百分比
@@ -336,7 +343,7 @@ export class _124_ItemRcv {
                 , { Name: '@ID', Value: this.data.PaperNo_ID }
                 , { Name: '@ITEM', Value: this.data.LOT_ID }
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
-            ]);
+            ]).subscribe(() => { });
     };
 
     //拍照上傳

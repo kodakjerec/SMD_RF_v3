@@ -1,28 +1,29 @@
-﻿
-//溫度選擇
-.label_temp {
-    font-size: xx-large;
-}
-
+﻿//溫度選擇 toggle
 .toggle_temp {
-    opacity:0.8;
+    opacity: 0.8;
 
-    &.toggle-checked{
-        opacity:1;
+    &.toggle-checked {
+        opacity: 1;
     }
+
     & .toggle-icon {
-        margin-top: -20px;
-        background-color:white;
+        background-color: white;
+
+        @media screen and (max-width: 480px) {
+            margin-top: -20px !important;
+        }
     }
 }
 
+//溫度文字的顏色
+//+
 .input_pos_temperature {
     & input {
         background-color: black;
         color: white;
     }
 }
-
+//-
 .input_neg_temperature {
     & input {
         background-color: #FFD306;

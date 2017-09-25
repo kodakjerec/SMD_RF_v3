@@ -70,9 +70,17 @@ export class _11_CheckIn {
         this.data.viewColor = '';
         this.data.IsDisabled = true;
 
+        //輸入溫度
         this.answer.VEHICLE_TEMP0 = 0;
         this.answer.VEHICLE_TEMP1 = 0;
         this.answer.VEHICLE_TEMP2 = 0;
+        //輸入溫度正負 reset
+        this.VEHICLE_TEMP0_color.checked = false;
+        this.onToggleChange(this.VEHICLE_TEMP0_color);
+        this.VEHICLE_TEMP1_color.checked = false;
+        this.onToggleChange(this.VEHICLE_TEMP1_color);
+        this.VEHICLE_TEMP2_color.checked = false;
+        this.onToggleChange(this.VEHICLE_TEMP2_color);
 
         this.result = {};
 
@@ -95,14 +103,29 @@ export class _11_CheckIn {
             ])
             .subscribe((response) => {
 
-                if (response != undefined) {
+                if (response != '') {
                     switch (response[0].RT_CODE) {
                         case 0:
                             //Correct
                             this.result = response[0];
-                            this.answer.VEHICLE_TEMP0 = response[0].VEHICLE_TEMP0;
-                            this.answer.VEHICLE_TEMP1 = response[0].VEHICLE_TEMP1;
-                            this.answer.VEHICLE_TEMP2 = response[0].VEHICLE_TEMP2;
+
+                            //溫度
+                            this.answer.VEHICLE_TEMP0 = Math.abs(response[0].VEHICLE_TEMP0);
+                            this.answer.VEHICLE_TEMP1 = Math.abs(response[0].VEHICLE_TEMP1);
+                            this.answer.VEHICLE_TEMP2 = Math.abs(response[0].VEHICLE_TEMP2);
+                            //溫度正負
+                            if (response[0].VEHICLE_TEMP0 < 0) {
+                                this.VEHICLE_TEMP0_color.checked = true;
+                                this.onToggleChange(this.VEHICLE_TEMP0_color);
+                            }
+                            if (response[0].VEHICLE_TEMP1 < 0) {
+                                this.VEHICLE_TEMP1_color.checked = true;
+                                this.onToggleChange(this.VEHICLE_TEMP1_color);
+                            }
+                            if (response[0].VEHICLE_TEMP2 < 0) {
+                                this.VEHICLE_TEMP2_color.checked = true;
+                                this.onToggleChange(this.VEHICLE_TEMP2_color);
+                            }
 
                             this.data.CarNo = response[0].REG_ID;
                             if (response[0].ROW10 == '未報到') {
@@ -130,7 +153,7 @@ export class _11_CheckIn {
                     }
                 }
                 this.scan_Entry.setFocus();
-            });   
+            });
     };//#endregion
 
     //#region 20170613需求，加入溫度正負按鈕
@@ -173,7 +196,7 @@ export class _11_CheckIn {
                     , { Name: '@USER_NAME', Value: this.data.USER_ID }
                 ])
                 .subscribe((response) => {
-                    if (response != undefined) {
+                    if (response != '') {
                         var result = response[0];
                         switch (result.RT_CODE) {
                             case 0:

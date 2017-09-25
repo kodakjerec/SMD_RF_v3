@@ -173,7 +173,7 @@ export class _21_BasketList {
                             , [{ Name: '@Step', Value: '1' }
                                 , { Name: '@GUIDMessage', Value: SuccessData.StoreId }])
                             .subscribe((response) => {
-                                if (response != undefined) {
+                                if (response != '') {
                                     var result = response[0];
 
                                     switch (result.RT_CODE) {

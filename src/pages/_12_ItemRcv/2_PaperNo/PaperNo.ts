@@ -82,6 +82,11 @@ export class _122_PaperNo {
 
         this.scan_Entry.setFocus();
     };
+    //查詢欄位專用清除
+    reset_btn() {
+        this.reset();
+        this.data.PaperNo = '';
+    }
 
     //#region 查詢報到牌btn
     search() {
@@ -101,7 +106,7 @@ export class _122_PaperNo {
             ])
             .subscribe((response) => {
 
-                if (response != undefined) {
+                if (response != '') {
                     switch (response[0].RT_CODE) {
                         case -1:
                             //Multi variables, choose one
@@ -190,7 +195,7 @@ export class _122_PaperNo {
             });
     };
 
-    //單品完成
+    //單據完成
     finish() {
         this.vibration.vibrate(100);
         if (this.data.IsDisabled == true)
@@ -205,7 +210,7 @@ export class _122_PaperNo {
                 , { Name: '@USER_NAME', Value: this.data.USER_ID }
             ])
             .subscribe((response) => {
-                if (response != undefined) {
+                if (response != '') {
                     switch (response[0].RT_CODE) {
                         case 0:
                             let toast = this.toastCtrl.create({
@@ -214,6 +219,8 @@ export class _122_PaperNo {
                                 position: 'bottom'
                             });
                             toast.present();
+                            this.reset_btn();
+
                             break;
                         default:
                             //Error

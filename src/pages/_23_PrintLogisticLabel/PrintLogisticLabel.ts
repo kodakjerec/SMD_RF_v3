@@ -87,6 +87,11 @@ export class _23_PrintLogisticLabel {
         if (this.data2.Barcode == '') {
             ErrMsg = '請輸入呼出碼';
         }
+        if (this.data2.Shop != '') {
+            if (this.data2.Qty == '') {
+                ErrMsg = '請輸入數量(已指定店鋪)';
+            }
+        }
         if (ErrMsg != '') {
             let toast = this.toastCtrl.create({
                 message: ErrMsg,
@@ -144,8 +149,9 @@ export class _23_PrintLogisticLabel {
     help2() {
         let alert = this.alertCtrl.create({
             title: '使用說明',
-            subTitle: '1. 呼出碼和數量一定要輸入<br/>'
+            subTitle: '1. 呼出碼一定要輸入<br/>'
             + '2. 不指定店鋪，會印出所有店鋪標籤<br/>'
+            + '3.   指定店鋪一定要輸入數量<br/>'
             + '4. 不指定入數，會印出系統預設入數:6',
             buttons: ['關閉']
         });

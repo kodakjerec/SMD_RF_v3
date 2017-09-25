@@ -46,6 +46,9 @@ export class _00_Login {
         this.initializeApp();
 
         //this.gotoTest();
+        setTimeout(() => {
+            this.txb_username.setFocus();
+        }, 150);
 
         this.todo = this.formBuilder.group({
             username: ['', Validators.required],
@@ -78,10 +81,6 @@ export class _00_Login {
     //進入頁面
     ionViewDidEnter() {
         this.initializeBackButtonCustomHandler();
-
-        setTimeout(() => {
-            this.txb_username.setFocus();
-        }, 150);
     }
 
     //離開頁面

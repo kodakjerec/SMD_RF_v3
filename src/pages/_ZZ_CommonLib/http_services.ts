@@ -33,7 +33,7 @@ export class http_services {
     //mode: 'sp', 'sqlcmd'
     //sqlcmd: sql command
     //params: parameters array list
-    POST(server: string, mode: string, sqlcmd: string, params: Array<any>): Observable<JSON> {
+    POST(server: string, mode: string, sqlcmd: string, params: Array<any>): Observable<any> {
         let loading = this.loadingCtrl.create({
             content: '送出查詢中...'
         });
@@ -71,13 +71,14 @@ export class http_services {
                     switch (sqlcmd) {
                         case 'download':
                             this.downloadFile(res, params[0].Value);
-                            return "[{}]";
+                            return '';
                         case 'open':
                             return '[{"ImageContent":' + 'data:image/png;base64,' + res['_body'] + '}]';
+                        case 'upload':
                         case 'search':
                             return res.json();
                         case 'delete':
-                            return "[{}]";
+                            return '';
                     }
                 }
                 else

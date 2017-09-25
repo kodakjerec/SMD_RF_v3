@@ -16,7 +16,7 @@
                     </ion-card-header>
                     <div>
                         <ion-fab right top>
-                            <button ion-fab mini [hidden]="!item.check"><ion-icon name="checkmark"></ion-icon></button>
+                            <button ion-fab mini [hidden]="!item.check" (click)="showPic(item)"><ion-icon name="checkmark"></ion-icon></button>
                         </ion-fab>
                         <div (window:resize)="onResize()" [hidden]="data.devWidth<480">
                             <label>{{item.FileName}}</label><br />

@@ -103,16 +103,27 @@ export class _123_ItemCode {
         this.answer.LOT = '';
         this.answer.SunDay = '';
         this.answer.SunDay_placeholder = '123';
-        this.answer.Temp = 0;
+
         this.answer.QTY_ShowTotal = 0;
         this.answer.QTY_left = 0;
         this.answer.DisplaySunDay = 0;
+
+        //溫度
+        this.answer.Temp = 0;
+        //溫度正負
+        this.Temp_color.checked = false;
+        this.onToggleChange(this.Temp_color);
 
         this.result = {};
         this.data.IsDisabled = true;
 
         this.scan_Entry.setFocus();
     };
+    //查詢欄位專用清除
+    reset_btn() {
+        this.reset();
+        this.data.ItemCode = '';
+    }
 
     //#region 查詢報到牌btn
     search() {
@@ -131,7 +142,7 @@ export class _123_ItemCode {
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ])
             .subscribe((response) => {
-                if (response != undefined) {
+                if (response != '') {
                     switch (response[0].RT_CODE) {
                         case -1:
                             //Multi variables, choose one
@@ -228,11 +239,11 @@ export class _123_ItemCode {
             , [
                 { Name: '@JOB_ID', Value: '45' }
                 , { Name: '@ID', Value: this.data.PaperNo_ID }
-                , { Name: '@ITEM', Value: this.data.ItemCode }
+                , { Name: '@ITEM', Value: this.data.ITEM_HOID }
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ])
             .subscribe((response) => {
-                if (response != undefined) {
+                if (response != '') {
                     switch (response[0].RT_CODE) {
                         case 0:
                             let toast = this.toastCtrl.create({
@@ -241,6 +252,8 @@ export class _123_ItemCode {
                                 position: 'bottom'
                             });
                             toast.present();
+                            this.reset_btn();
+
                             break;
                         default:
                             //Error
@@ -282,7 +295,7 @@ export class _123_ItemCode {
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ])
             .subscribe((response) => {
-                if (response != undefined) {
+                if (response != '') {
                     switch (response[0].RT_CODE) {
                         case 0:
                             //Correct
