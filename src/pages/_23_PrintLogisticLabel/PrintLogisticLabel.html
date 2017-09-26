@@ -60,21 +60,33 @@
                     </ion-col>
                 </ion-row>
                 <ion-row>
-                    <ion-col col-3>
+                    <ion-col col-4>
                         <ion-label>數量</ion-label>
                     </ion-col>
-                    <ion-col col-3>
+                    <ion-col col-8>
                         <ion-input type="tel"
                                    (ionFocus)="selectAll($event)"
                                    [(ngModel)]="data2.Qty"></ion-input>
                     </ion-col>
-                    <ion-col col-3>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-4>
                         <ion-label>入數</ion-label>
                     </ion-col>
-                    <ion-col col-3>
+                    <ion-col col-8>
                         <ion-input type="tel"
                                    (ionFocus)="selectAll($event)"
                                    [(ngModel)]="data2.IP_Qty"></ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-4>
+                        <ion-label>廠商入數</ion-label>
+                    </ion-col>
+                    <ion-col col-8>
+                        <ion-input type="tel"
+                                   (ionFocus)="selectAll($event)"
+                                   [(ngModel)]="data2.SUP_Qty"></ion-input>
                     </ion-col>
                 </ion-row>
                 <ion-row>

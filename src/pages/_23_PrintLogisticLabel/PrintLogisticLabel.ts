@@ -33,7 +33,8 @@ export class _23_PrintLogisticLabel {
         Barcode: ''
         , Shop: ''
         , Qty: ''
-        ,IP_Qty:''
+        , IP_Qty: ''
+        , SUP_Qty:''
     };
 
     @ViewChild('scan_Entry') scan_Entry;
@@ -65,12 +66,27 @@ export class _23_PrintLogisticLabel {
                 { Name: '@CODE', Value: this.data.ScanBarcode }
             ])
             .subscribe((response) => {
-                let toast = this.toastCtrl.create({
-                    message: '成功送出補印需求',
-                    duration: myGlobals.Set_timeout,
-                    position: 'bottom'
-                });
-                toast.present();
+                if (response != '') {
+                    switch (response[0].RT_CODE) {
+                        case '0':
+                            let toast = this.toastCtrl.create({
+                                message: '成功送出補印需求',
+                                duration: myGlobals.Set_timeout,
+                                position: 'bottom'
+                            });
+                            toast.present();
+                            break;
+                        default:
+                            let alert = this.alertCtrl.create({
+                                title: '錯誤' + response[0].RT_CODE,
+                                subTitle: response[0].RT_MSG,
+                                buttons: ['關閉']
+                            });
+
+                            alert.present();
+                            break;
+                    }
+                }
             });
 
         //準備下一輪掃描
@@ -111,14 +127,30 @@ export class _23_PrintLogisticLabel {
                 , { Name: '@SITE_ID', Value: this.data2.Shop }
                 , { Name: '@QTY', Value: this.data2.Qty }
                 , { Name: '@IP_QTY', Value: this.data2.IP_Qty }
+                , { Nmae: '@SUP_QTY', Value: this.data2.SUP_Qty }
             ])
             .subscribe((response) => {
-                let toast = this.toastCtrl.create({
-                    message: '成功送出補印需求',
-                    duration: myGlobals.Set_timeout,
-                    position: 'bottom'
-                });
-                toast.present();
+                if (response != '') {
+                    switch (response[0].RT_CODE) {
+                        case '0':
+                            let toast = this.toastCtrl.create({
+                                message: '成功送出補印需求',
+                                duration: myGlobals.Set_timeout,
+                                position: 'bottom'
+                            });
+                            toast.present();
+                            break;
+                        default:
+                            let alert = this.alertCtrl.create({
+                                title: '錯誤' + response[0].RT_CODE,
+                                subTitle: response[0].RT_MSG,
+                                buttons: ['關閉']
+                            });
+
+                            alert.present();
+                            break;
+                    }
+                }
             });
 
         //準備下一輪掃描

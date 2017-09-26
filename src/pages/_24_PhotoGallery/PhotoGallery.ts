@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Platform, NavParams, AlertController, IonicPage } from 'ionic-angular';
-
 import { http_services } from '../_ZZ_CommonLib/http_services';
 
 @IonicPage({
@@ -76,7 +75,7 @@ export class _24_PhotoGallery {
     //刪除圖片
     deletePic() {
         let strPicsList_show: string = '',
-            strPicsList: Array<string>=[];
+            strPicsList: Array<string> = [];
 
         this.Lists.forEach(value => {
             if (value.check) {
