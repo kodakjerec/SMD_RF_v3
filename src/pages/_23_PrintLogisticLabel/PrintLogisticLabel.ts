@@ -60,17 +60,19 @@ export class _23_PrintLogisticLabel {
         }
         //#endregion
 
+        var parameters = [];
+        if (this.data.ScanBarcode != '')
+            parameters.push({ Name: '@CODE', Value: this.data.ScanBarcode });
+
         this._http_services.POST('', 'sp'
             , '[md.spDCS_LABEL_SORTER]'
-            , [
-                { Name: '@CODE', Value: this.data.ScanBarcode }
-            ])
+            , parameters)
             .subscribe((response) => {
                 if (response != '') {
                     switch (response[0].RT_CODE) {
                         case '0':
                             let toast = this.toastCtrl.create({
-                                message: '成功送出補印需求',
+                                message: response[0].RT_MSG,
                                 duration: myGlobals.Set_timeout,
                                 position: 'bottom'
                             });
@@ -119,22 +121,28 @@ export class _23_PrintLogisticLabel {
         }
         //#endregion
 
+        //add parameter
+        var parameters = [];
+        if (this.data2.Barcode != '')
+            parameters.push({ Name: '@ITEM_ID', Value: this.data2.Barcode });
+        if (this.data2.Shop != '')
+            parameters.push({ Name: '@SITE_ID', Value: this.data2.Shop });
+        if (this.data2.Qty != '')
+            parameters.push({ Name: '@QTY', Value: this.data2.Qty });
+        if (this.data2.IP_Qty != '')
+            parameters.push({ Name: '@IP_QTY', Value: this.data2.IP_Qty });
+        if (this.data2.SUP_Qty != '')
+            parameters.push({ Name: '@SUP_QTY', Value: this.data2.SUP_Qty });
+
         this._http_services.POST('', 'sp'
             , '[md.spDCS_LABEL_SORTER]'
-            , [
-                { Name: '@CODE', Value: '' }
-                , { Name: '@ITEM_ID', Value: this.data2.Barcode }
-                , { Name: '@SITE_ID', Value: this.data2.Shop }
-                , { Name: '@QTY', Value: this.data2.Qty }
-                , { Name: '@IP_QTY', Value: this.data2.IP_Qty }
-                , { Nmae: '@SUP_QTY', Value: this.data2.SUP_Qty }
-            ])
+            , parameters)
             .subscribe((response) => {
                 if (response != '') {
                     switch (response[0].RT_CODE) {
                         case '0':
                             let toast = this.toastCtrl.create({
-                                message: '成功送出補印需求',
+                                message: response[0].RT_MSG,
                                 duration: myGlobals.Set_timeout,
                                 position: 'bottom'
                             });

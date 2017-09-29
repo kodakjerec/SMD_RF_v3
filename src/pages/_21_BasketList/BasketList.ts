@@ -222,9 +222,6 @@ export class _21_BasketList {
         //紀錄掃描資料
         this.pushLog(scanData);
 
-        //準備下一輪掃描
-        this.reset();
-
         if (ErrMsg != '') {
             this.data.ShowBackgroundColor = true;
             this.data.ShowBackgroundColor_header = 'danger';
@@ -234,6 +231,10 @@ export class _21_BasketList {
             this.data.ShowBackgroundColor = false;
             this.data.ShowBackgroundColor_header = '';
         }
+
+        //準備下一輪掃描
+        this.reset();
+
         this.scan_Entry.setFocus();
     }
     //喪失focus

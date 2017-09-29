@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget android-versionCode="1" id="pxmart.RD2.SMDRF" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>SMDRF</name>
+    <name>善美的RF</name>
     <description>善美的用app</description>
     <author email="kota_ching@pxmart.com.tw" href="kota_ching@pxmart.com.tw">kota_ching@pxmart.com.tw</author>
     <content src="index.html" />

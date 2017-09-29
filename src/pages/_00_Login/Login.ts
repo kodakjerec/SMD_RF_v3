@@ -80,13 +80,13 @@ export class _00_Login {
 
     //進入頁面
     ionViewDidEnter() {
-        this.initializeBackButtonCustomHandler();
+        //this.initializeBackButtonCustomHandler();
     }
 
     //離開頁面
     ionViewWillLeave() {
         // Unregister the custom back button action for this page
-        this.unregisterBackButtonAction && this.unregisterBackButtonAction();
+        // this.unregisterBackButtonAction && this.unregisterBackButtonAction();
     }
 
     public initializeBackButtonCustomHandler(): void {
