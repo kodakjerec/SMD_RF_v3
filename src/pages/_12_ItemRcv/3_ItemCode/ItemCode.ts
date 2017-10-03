@@ -256,10 +256,17 @@ export class _123_ItemCode {
 
                             break;
                         default:
+                            //sp回傳有兩種錯誤格式
+                            var ErrorMessage = '';
+                            if (response[0].RT_MSG != undefined)
+                                ErrorMessage = response[0].RT_MSG;
+                            else
+                                ErrorMessage = response[0].MEG;
+
                             //Error
                             let alert_fail = this.alertCtrl.create({
                                 title: '失敗',
-                                subTitle: response[0].RT_MSG,
+                                subTitle: ErrorMessage,
                                 buttons: [{
                                     text: '關閉',
                                     handler: data => {
