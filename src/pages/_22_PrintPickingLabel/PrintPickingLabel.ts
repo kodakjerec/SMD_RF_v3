@@ -70,7 +70,7 @@ export class _22_PrintPickingLabel {
             this._http_services.POST('', 'sp'
                 , '[md.spDCS_LABEL_SF]'
                 , [
-                    { Name: '@cGUID', Value: '' }
+                    { Name: '@cGUID', Value: this._uuid() }
                     , { Name: '@cJOB_ID', Value: this.data.JOBID }
                     , { Name: '@iSEQ', Value: "1" }
                     , { Name: '@cTYPE', Value: "BOX" }
@@ -91,6 +91,18 @@ export class _22_PrintPickingLabel {
 
         this.scan_Entry.setFocus();
     };
+
+    _uuid() {
+    var d = Date.now();
+    if (typeof performance !== 'undefined' && typeof performance.now === 'function') {
+        d += performance.now(); //use high-precision timer if available
+    }
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = (d + Math.random() * 16) % 16 | 0;
+        d = Math.floor(d / 16);
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+}
 
     reset() {
         this.data.ScanBarcode = '';
