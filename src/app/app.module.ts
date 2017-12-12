@@ -44,9 +44,7 @@ import { http_services } from '../pages/_ZZ_CommonLib/http_services';
             backButtonText: '返回',
             mode: 'md',
             iconMode: 'md',
-            modalEnter: 'modal-slide-in',
-            modalLeave: 'modal-slide-out',
-            pageTransition: 'ios-transition',
+            pageTransition: 'md-transition',
             tabsPlacement: 'bottom'
         })
     ],

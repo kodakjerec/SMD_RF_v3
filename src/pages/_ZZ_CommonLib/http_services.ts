@@ -46,7 +46,7 @@ export class http_services {
             server = myGlobals.DefaultServer;
         urlSearchParams.append('server', server);
 
-        //sp or query
+        //sp or query or excel or Picture
         urlSearchParams.append('mode', mode);
 
         //sp name

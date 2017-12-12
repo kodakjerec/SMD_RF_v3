@@ -1,6 +1,6 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>選單</ion-title>
+        <ion-title>{{data.Caption}}</ion-title>
     </ion-navbar>
 </ion-header>
 <ion-content>
@@ -10,6 +10,7 @@
                 (click)="menuClicked(item)"
                 class="btn_list"
                 color="dark"
+                [disabled]="data.isButtonDisabled"
                 large block>
             {{item.Caption}}
         </button>
@@ -17,6 +18,6 @@
 </ion-content>
 <ion-footer>
     <ion-toolbar>
-        <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_ID}}</ion-label>
+        <ion-label class="bottom_BLOCK">區域：{{data.GROUP_ID}}</ion-label>
     </ion-toolbar>
 </ion-footer>
