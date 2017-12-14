@@ -14,7 +14,7 @@ import { http_services } from '../_ZZ_CommonLib/http_services';
 
 export class _01_Zone {
     Lists: [{ Name: string, Value: any }];
-    data = { USER_ID: '', GROUP_ID: '' };
+    data = { USER_ID: '' };
 
     constructor(public navCtrl: NavController
         , plt: Platform
@@ -22,9 +22,7 @@ export class _01_Zone {
         , private toastCtrl: ToastController
         , public _http_services: http_services
     ) {
-        this.data.USER_ID = localStorage.getItem('USER_ID');
-        this.data.GROUP_ID = 'admin';
-        localStorage.setItem('GROUP_ID', this.data.GROUP_ID);
+        this.data.USER_ID = navParams.get('USER_ID');
 
         let toast = this.toastCtrl.create({
             message: '使用者 ' + this.data.USER_ID + ' 成功登入',
@@ -37,13 +35,11 @@ export class _01_Zone {
     }
 
     queryBLOCKS() {
-        var sql_cmd = "[ui.spDCS_RF_MENU]";
+        var sql_cmd = "[ui].[spDCS_LOGIN_WORKSPACE]";
         this._http_services.POST('', 'sp'
             , sql_cmd
             , [
-                { Name: '@MODE', Value: '1' }
-                , { Name: '@UserGroup', Value: this.data.GROUP_ID }
-                , { Name: '@BLOCK', Value: '' }
+                { Name: '@ID', Value: this.data.USER_ID }
             ])
             .subscribe((response) => {
                 if (response) {
@@ -55,7 +51,12 @@ export class _01_Zone {
     }
 
     menuClicked(item) {
-        localStorage.setItem('BLOCK_ID', item.MENUID);
-        this.navCtrl.push('_02_Menu', { Title: item.Caption + '選單' });
+        myGlobals.ProgParameters.set('BLOCK_NAME',item.NAME);
+        this.navCtrl.push('_02_Menu', {
+            Title: '選單'
+            , BLOCK_ID: '0'
+            , BLOCK_NAME: item.NAME
+            , OP_TYPE: item.OP_TYPE
+        });
     };
 }

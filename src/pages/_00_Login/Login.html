@@ -6,52 +6,61 @@
 <ion-content>
     <form [formGroup]="todo">
         <img class="myimg" src="assets/imgs/ionic.png" />
-        <ion-list>
+        <ion-grid>
             <div id="div_login" [hidden]="data.NeedUpdate">
-                <ion-item>
-                    <ion-label for="name">帳號</ion-label>
-                    <ion-input #txb_username id='txb_username' type="tel"
-                               [(ngModel)]="data.username"
-                               formControlName="username"
-                               (keyup.enter)="enter('username')"
-                               (ionFocus)="selectAll($event)"
-                               placeholder="工號"
-                               autocomplete="">
-                    </ion-input>
-                </ion-item>
-                <ion-item>
-                    <ion-label>密碼</ion-label>
-                    <ion-input #txb_password id='txb_password' type="password"
-                               [(ngModel)]="data.password"
-                               formControlName="password"
-                               (keyup.enter)="enter('password')"
-                               placeholder="密碼"
-                               (ionFocus)="selectAll($event)">
-                    </ion-input>
-                </ion-item>
-                <button ion-button [disabled]="!todo.valid" color="primary" (click)="login()" block>登入</button>
-            </div>
-
-            <ion-grid>
                 <ion-row align-items-center>
-                    <ion-col>
-                        <span style="color:white">版本：{{data.Version}}</span>
-                        <button ion-button (click)="showDCS_log()" outline>
-                            {{data.DCS_log_show_btnName}}
-                        </button>
+                    <ion-col col-3><span style="font-size: large">帳號</span></ion-col>
+                    <ion-col col-9>
+                        <ion-input #txb_username id='txb_username' type="tel"
+                                   [(ngModel)]="data.username"
+                                   formControlName="username"
+                                   (keyup.enter)="enter('username')"
+                                   (ionFocus)="selectAll($event)"
+                                   placeholder="工號"
+                                   autocomplete="">
+                        </ion-input>
                     </ion-col>
                 </ion-row>
-            </ion-grid>
-        </ion-list>
-        <div id="DCS_log" [hidden]="data.DCS_log_show">
-            <p style="white-space: pre;color:white">{{data.Changelog}}</p>
-        </div>
+                <ion-row align-items-center>
+                    <ion-col col-3><span style="font-size: large">密碼</span></ion-col>
+                    <ion-col col-9>
+                        <ion-input #txb_password id='txb_password' type="password"
+                                   [(ngModel)]="data.password"
+                                   formControlName="password"
+                                   (keyup.enter)="enter('password')"
+                                   placeholder="密碼"
+                                   (ionFocus)="selectAll($event)">
+                        </ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <button ion-button [disabled]="!todo.valid" color="primary" (click)="login()" block>登入</button>
+                </ion-row>
+            </div>
+            <ion-row>
+                <ion-col>
+                    <span style="color:white">版本：{{data.Version}}</span>
+                    <button ion-button (click)="showDCS_log()" outline>
+                        {{data.DCS_log_show_btnName}}
+                    </button>
+                </ion-col>
+            </ion-row>
+			<ion-row>
+				<div id="DCS_log" [hidden]="data.DCS_log_show">
+					<p style="white-space: pre;color:white">{{data.Changelog}}</p>
+				</div>
+			</ion-row>
+        </ion-grid>
+
     </form>
 </ion-content>
 <div [hidden]="data.IsHideWhenKeyboardOpen">
     <ion-footer no-border>
         <ion-toolbar>
-            <button small ion-button outline (click)="gotoTest()">test</button>
+            <!-- <button small ion-button outline (click)="gotoTest()">test</button> -->
+            <button small ion-button outline>
+              <a [href]="getDownloadURL()">APK</a>  
+            </button>
             <button small ion-button outline [color]="checkNFCreturnColor()" [disabled]="true">NFC</button>
         </ion-toolbar>
     </ion-footer>

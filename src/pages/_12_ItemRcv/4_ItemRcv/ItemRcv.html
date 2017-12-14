@@ -1,6 +1,6 @@
 <ion-header no-border>
     <ion-navbar>
-        <ion-title (click)="help()">進貨驗收</ion-title>
+        <ion-title>進貨驗收</ion-title>
     </ion-navbar>
 </ion-header>
 <ion-content (swipe)="swipeEvent($event)">
@@ -20,7 +20,7 @@
                         <ion-label class="label_temp">{{QTY_color.labelName}}</ion-label>
                     </ion-col>
                     <ion-col col-3>
-                        <ion-input #scan_Entry autofocus
+                        <ion-input #scan_Entry
                                    type="tel"
                                    [(ngModel)]="answer.QTY"
                                    (ionFocus)="selectAll($event)"

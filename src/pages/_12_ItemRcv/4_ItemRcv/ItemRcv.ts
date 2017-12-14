@@ -33,7 +33,7 @@ export class _124_ItemRcv {
         , private toastCtrl: ToastController
         , private keyboard: Keyboard) {
         this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
-        this.data.BLOCK_ID = myGlobals.ProgParameters.get('BLOCK_ID');
+        this.data.BLOCK_NAME = myGlobals.ProgParameters.get('BLOCK_NAME');
         this.data.CarNo = myGlobals.ProgParameters.get('CarNo');
         this.data.PaperNo = myGlobals.ProgParameters.get('PaperNo');
         this.data.PaperNo_ID = myGlobals.ProgParameters.get('PaperNo_ID');
@@ -91,7 +91,7 @@ export class _124_ItemRcv {
         , LOT_ID: ''
         , viewColor: ''
         , USER_ID: ''
-        , BLOCK_ID: ''
+        , BLOCK_NAME: ''
         , IsHideWhenKeyboardOpen: false
     };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
     answer = {

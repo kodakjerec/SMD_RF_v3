@@ -13,7 +13,7 @@ import { http_services } from '../_ZZ_CommonLib/http_services';
 
 export class _02_Menu {
     Lists = [{}];
-    data = { Caption: '', GROUP_ID: '', BLOCK_ID: '', isButtonDisabled: false };
+    data = { Caption: '', OP_TYPE: '', BLOCK_ID: '', BLOCK_NAME:'', isButtonDisabled: false };
 
 
     constructor(public navCtrl: NavController
@@ -22,25 +22,25 @@ export class _02_Menu {
         , public _http_services: http_services
     ) {
         this.data.Caption = navParams.get('Title');
-        this.data.GROUP_ID = localStorage.getItem('GROUP_ID');
-        this.data.BLOCK_ID = localStorage.getItem('BLOCK_ID');
+        this.data.OP_TYPE = navParams.get('OP_TYPE');
+        this.data.BLOCK_ID = navParams.get('BLOCK_ID');
+        this.data.BLOCK_NAME = navParams.get('BLOCK_NAME');
 
         this.queryMENUS();
     }
 
     queryMENUS() {
-        var sql_cmd = "[ui.spDCS_RF_MENU]";
+        var sql_cmd = "[ui].[spDCS_RF_MENU]";
         this._http_services.POST('', 'sp'
             , sql_cmd
             , [
                 { Name: '@MODE', Value: '2' }
-                , { Name: '@UserGroup', Value: this.data.GROUP_ID }
-                , { Name: '@BLOCK', Value: this.data.BLOCK_ID }
+                , { Name: '@OP_TYPE', Value: this.data.OP_TYPE }
+                , { Name: '@MENUID', Value: this.data.BLOCK_ID }
             ])
             .subscribe((response) => {
                 if (response) {
                     this.Lists = response;
-                    localStorage.setItem('Menu', JSON.stringify(response));
                 }
             });
     }
@@ -52,8 +52,12 @@ export class _02_Menu {
         //Menu
         switch (item.URL) {
             case '':
-                localStorage.setItem('BLOCK_ID', item.MENUID);
-                this.navCtrl.push('_02_Menu', { Title: item.Caption });
+                this.navCtrl.push('_02_Menu', {
+                    Title: item.Caption
+                    , BLOCK_ID: item.MENUID
+                    , BLOCK_NAME: this.data.BLOCK_NAME
+                    , OP_TYPE: this.data.OP_TYPE
+                });
                 break;
             case 'BACK':
                 this.navCtrl.pop();

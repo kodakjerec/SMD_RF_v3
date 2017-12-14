@@ -1,6 +1,6 @@
 <ion-header no-border>
     <ion-navbar>
-        <ion-title (click)="help()">進貨報到</ion-title>
+        <ion-title>進貨報到</ion-title>
     </ion-navbar>
     <ion-toolbar>
         <ion-item>
@@ -8,8 +8,7 @@
             <ion-input #scan_Entry id="txb_scan_Entry" type="text"
                        (keyup.enter)="search()"
                        (ionFocus)="selectAll($event)"
-                       [(ngModel)]="data.CarNo"
-                       autofocus></ion-input>
+                       [(ngModel)]="data.CarNo"></ion-input>
         </ion-item>
         <ion-buttons end>
             <button ion-button (click)="reset()" color="danger" solid class="toolbar-button">
@@ -127,7 +126,7 @@
     <ion-footer no-border>
         <ion-toolbar>
             <button ion-button (click)="register()" [disabled]="data.IsDisabled" block>報到</button>
-            <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_ID}}</ion-label>
+            <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_NAME}}</ion-label>
         </ion-toolbar>
     </ion-footer>
 </div>

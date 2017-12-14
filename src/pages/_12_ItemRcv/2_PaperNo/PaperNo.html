@@ -1,6 +1,6 @@
 <ion-header no-border>
     <ion-navbar>
-        <ion-title (click)="help()">進貨單查詢</ion-title>
+        <ion-title>進貨單查詢</ion-title>
         <ion-buttons end>
             <button ion-button icon-end (click)="Next()" [disabled]="data.IsDisabled">
                 下一步
@@ -14,8 +14,7 @@
             <ion-input #scan_Entry id="txb_scan_Entry" type="text"
                        (keyup.enter)="search()"
                        (ionFocus)="selectAll($event)"
-                       [(ngModel)]="data.PaperNo"
-                       autofocus></ion-input>
+                       [(ngModel)]="data.PaperNo"></ion-input>
         </ion-item>
         <ion-buttons end>
             <button ion-button (click)="reset_btn()" color="danger" solid class="toolbar-button">
@@ -61,7 +60,7 @@
                     完成驗收
                 </button>
             </ion-buttons>
-            <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_ID}}</ion-label>
+            <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_NAME}}</ion-label>
         </ion-toolbar>
     </ion-footer>
 </div>

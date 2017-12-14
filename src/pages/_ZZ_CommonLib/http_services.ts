@@ -34,10 +34,14 @@ export class http_services {
     //sqlcmd: sql command
     //params: parameters array list
     POST(server: string, mode: string, sqlcmd: string, params: Array<any>): Observable<any> {
+
+
         let loading = this.loadingCtrl.create({
             content: '送出查詢中...'
         });
-        loading.present();
+        if(myGlobals.ShowLoadingWindow){
+            loading.present();
+        }
 
         let urlSearchParams = new URLSearchParams();
 

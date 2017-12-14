@@ -8,10 +8,9 @@
         <button ion-button
                 *ngFor="let item of Lists"
                 (click)="menuClicked(item)"
-                class="btn_list"
                 color="dark"
                 large block>
-            {{item.Caption}}
+            {{item.ID}},{{item.NAME}}
         </button>
     </ion-list>
 </ion-content>

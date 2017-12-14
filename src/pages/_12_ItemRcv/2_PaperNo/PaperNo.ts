@@ -30,7 +30,7 @@ export class _122_PaperNo {
         , private toastCtrl: ToastController
         , private keyboard: Keyboard) {
         this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
-        this.data.BLOCK_ID = myGlobals.ProgParameters.get('BLOCK_ID');
+        this.data.BLOCK_NAME = myGlobals.ProgParameters.get('BLOCK_NAME');
         this.data.CarNo = myGlobals.ProgParameters.get('CarNo');
 
         this.initializeApp();
@@ -52,7 +52,7 @@ export class _122_PaperNo {
         , PaperNo_ID: ''
         , IsDisabled: true
         , USER_ID: ''
-        , BLOCK_ID: ''
+        , BLOCK_NAME: ''
         , IsHideWhenKeyboardOpen: false
     };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
     result = {};
