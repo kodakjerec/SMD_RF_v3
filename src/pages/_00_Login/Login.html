@@ -24,7 +24,7 @@
                 <ion-row align-items-center>
                     <ion-col col-3><span style="font-size: large">密碼</span></ion-col>
                     <ion-col col-9>
-                        <ion-input #txb_password id='txb_password' type="password"
+                        <ion-input #txb_password id='txb_password' type="tel"
                                    [(ngModel)]="data.password"
                                    formControlName="password"
                                    (keyup.enter)="enter('password')"
@@ -57,7 +57,7 @@
 <div [hidden]="data.IsHideWhenKeyboardOpen">
     <ion-footer no-border>
         <ion-toolbar>
-            <!-- <button small ion-button outline (click)="gotoTest()">test</button> -->
+            <button small ion-button outline (click)="gotoTest()">test</button>
             <button small ion-button outline>
               <a [href]="getDownloadURL()">APK</a>  
             </button>

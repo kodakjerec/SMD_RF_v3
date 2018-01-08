@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 //Cordova plugins
-import { Vibration } from '@ionic-native/vibration';
 import { FCM } from '@ionic-native/fcm';
 import { AppUpdate } from '@ionic-native/app-update';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -13,6 +12,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { NFC, Ndef } from '@ionic-native/nfc';
 import { Camera } from '@ionic-native/camera';
 import { Keyboard } from '@ionic-native/keyboard';
+import { CodePush } from '@ionic-native/code-push';
+import { Vibration } from '@ionic-native/vibration';
 
 
 //My Pages
@@ -34,7 +35,9 @@ import { http_services } from '../pages/_ZZ_CommonLib/http_services';
         ListTablePage,
         PaperDetailPage,
         myCAMERAPage,
-        //Pipes
+
+        //Directives
+
     ],
     imports: [
         BrowserModule,
@@ -61,12 +64,13 @@ import { http_services } from '../pages/_ZZ_CommonLib/http_services';
         StatusBar,
         SplashScreen,
         http_services,
-        Vibration,
         FCM,
         AppUpdate,
         NFC, Ndef,
         Camera,
         Keyboard,
+        CodePush,
+        Vibration,
         { provide: ErrorHandler, useClass: IonicErrorHandler }
     ]
 })

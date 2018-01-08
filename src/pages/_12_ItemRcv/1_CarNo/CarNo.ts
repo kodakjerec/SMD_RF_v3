@@ -2,8 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController, AlertController, ModalController, Platform, NavParams, IonicPage } from 'ionic-angular';
 
 //Cordova
-import { Vibration } from '@ionic-native/vibration';
 import { Keyboard } from '@ionic-native/keyboard';
+import { Vibration } from '@ionic-native/vibration';
 
 //My Pages
 import * as myGlobals from '../../../app/Settings';
@@ -22,13 +22,14 @@ export class _121_CarNo {
     constructor(public navCtrl: NavController
         , public platform: Platform
         , public navParams: NavParams
-        , private vibration: Vibration
         , public _http_services: http_services
         , private modalCtrl: ModalController
         , private alertCtrl: AlertController
-        , private keyboard: Keyboard) {
+        , private keyboard: Keyboard
+        , private vibration: Vibration) {
         this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
         this.data.BLOCK_NAME = myGlobals.ProgParameters.get('BLOCK_NAME');
+        myGlobals.loginCheck.check();
 
         this.initializeApp();
     }

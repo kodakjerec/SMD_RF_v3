@@ -22,7 +22,8 @@ export class _01_Zone {
         , private toastCtrl: ToastController
         , public _http_services: http_services
     ) {
-        this.data.USER_ID = navParams.get('USER_ID');
+        myGlobals.loginCheck.check();
+        this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
 
         let toast = this.toastCtrl.create({
             message: '使用者 ' + this.data.USER_ID + ' 成功登入',
@@ -51,7 +52,7 @@ export class _01_Zone {
     }
 
     menuClicked(item) {
-        myGlobals.ProgParameters.set('BLOCK_NAME',item.NAME);
+        myGlobals.ProgParameters.set('BLOCK_NAME', item.NAME);
         this.navCtrl.push('_02_Menu', {
             Title: '選單'
             , BLOCK_ID: '0'

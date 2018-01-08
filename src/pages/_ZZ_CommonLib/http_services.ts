@@ -65,12 +65,12 @@ export class http_services {
         let options = new RequestOptions();
         options.body = urlSearchParams;
 
-        console.log(urlSearchParams);
+        //console.log(urlSearchParams);
         return this.http.post('http://' + myGlobals.Global_Server + '/handler/RF3_httpService.ashx', '', options)
             //.timeout(5000)
             .map((res: Response) => {
                 loading.dismiss();
-                console.log(res);
+                //console.log(res);
                 if (mode == 'Picture') {
                     switch (sqlcmd) {
                         case 'download':

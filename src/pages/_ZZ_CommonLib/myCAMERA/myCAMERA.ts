@@ -45,8 +45,7 @@ export class myCAMERAPage {
         , private camera: Camera
         , private toastCtrl: ToastController
         , public _http_services: http_services
-        , private vibration: Vibration
-    ) {
+        , private vibration: Vibration) {
         let obj = myGlobals.ProgParameters.get('ListTable_Source');
 
         this.data.defaultFileDescription = obj.FileDescription;

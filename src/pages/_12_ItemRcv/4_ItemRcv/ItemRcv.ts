@@ -3,8 +3,8 @@ import { NavController, AlertController, ModalController, ToastController, Platf
 import { Navbar } from 'ionic-angular';
 
 //Cordova
-import { Vibration } from '@ionic-native/vibration';
 import { Keyboard } from '@ionic-native/keyboard';
+import { Vibration } from '@ionic-native/vibration';
 
 //My Pages
 import * as myGlobals from '../../../app/Settings';
@@ -12,7 +12,6 @@ import { http_services } from '../../_ZZ_CommonLib/http_services';
 import { ListTablePage } from '../../_ZZ_CommonLib/ListTable/ListTable';
 import { LittleCalculatorPage } from '../../_ZZ_CommonLib/LittleCalculator/LittleCalculator';
 import { myCAMERAPage } from '../../_ZZ_CommonLib/myCAMERA/myCAMERA';
-
 
 @IonicPage({
     name: '_124_ItemRcv',
@@ -26,12 +25,12 @@ export class _124_ItemRcv {
     constructor(public navCtrl: NavController
         , public platform: Platform
         , public navParams: NavParams
-        , private vibration: Vibration
         , public _http_services: http_services
         , private modalCtrl: ModalController
         , private alertCtrl: AlertController
         , private toastCtrl: ToastController
-        , private keyboard: Keyboard) {
+        , private keyboard: Keyboard
+        , private vibration: Vibration) {
         this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
         this.data.BLOCK_NAME = myGlobals.ProgParameters.get('BLOCK_NAME');
         this.data.CarNo = myGlobals.ProgParameters.get('CarNo');
@@ -40,6 +39,7 @@ export class _124_ItemRcv {
         this.data.ItemCode = myGlobals.ProgParameters.get('ItemCode');
         this.data.ITEM_HOID = myGlobals.ProgParameters.get('ITEM_HOID');
         this.data.LOT_ID = myGlobals.ProgParameters.get('LOT_ID');
+        myGlobals.loginCheck.check();
 
         this.result = myGlobals.ProgParameters.get('ReceiveResult');
         this.InitQueryItemState();

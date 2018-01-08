@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, Platform, NavParams, IonicPage } from 'ionic-angular';
 
+import * as myGlobals from '../../app/Settings';
 import { http_services } from '../_ZZ_CommonLib/http_services';
 
 @IonicPage({
@@ -25,6 +26,7 @@ export class _02_Menu {
         this.data.OP_TYPE = navParams.get('OP_TYPE');
         this.data.BLOCK_ID = navParams.get('BLOCK_ID');
         this.data.BLOCK_NAME = navParams.get('BLOCK_NAME');
+        myGlobals.loginCheck.check();
 
         this.queryMENUS();
     }

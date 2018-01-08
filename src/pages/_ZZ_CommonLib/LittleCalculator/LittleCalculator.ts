@@ -25,8 +25,7 @@ export class LittleCalculatorPage {
     constructor(
         public viewCtrl: ViewController
         , params: NavParams
-        , private vibration: Vibration
-    ) {
+        , private vibration: Vibration) {
         this.data.KeyinValue = myGlobals.ProgParameters.get('ListTable_Source');
     }
 
