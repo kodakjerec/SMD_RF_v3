@@ -12,6 +12,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { NFC, Ndef } from '@ionic-native/nfc';
 import { Camera } from '@ionic-native/camera';
 import { Keyboard } from '@ionic-native/keyboard';
+import { CodePush } from '@ionic-native/code-push';
 import { Vibration } from '@ionic-native/vibration';
 
 
@@ -68,6 +69,7 @@ import { http_services } from '../pages/_ZZ_CommonLib/http_services';
         NFC, Ndef,
         Camera,
         Keyboard,
+        CodePush,
         Vibration,
         { provide: ErrorHandler, useClass: IonicErrorHandler }
     ]

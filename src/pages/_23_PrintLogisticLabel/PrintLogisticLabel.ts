@@ -38,6 +38,7 @@ export class _23_PrintLogisticLabel {
     };
 
     @ViewChild('scan_Entry') scan_Entry;
+    @ViewChild('scan_Entry2') scan_Entry2;
     //#endregion
 
     search() {
@@ -96,28 +97,7 @@ export class _23_PrintLogisticLabel {
         this.myfocus();
     };
 
-    @ViewChild('txb_search_0') txb_search_0;
-    @ViewChild('txb_search_1') txb_search_1;
-    @ViewChild('txb_search_2') txb_search_2;
-    @ViewChild('txb_search_3') txb_search_3;
-    @ViewChild('txb_search_4') txb_search_4;
-    search2(Mode) {
-        switch (Mode) {
-            case 0:
-                this.txb_search_1.setFocus();
-                return;
-            case 1:
-                this.txb_search_2.setFocus();
-                return;
-            case 2:
-                this.txb_search_3.setFocus();
-                return;
-            case 3:
-                this.txb_search_4.setFocus();
-                return;
-            case 4:
-                break;
-        }
+    search2() {
         this.vibration.vibrate(100);
 
         //#region Check error
@@ -172,12 +152,7 @@ export class _23_PrintLogisticLabel {
                             let alert = this.alertCtrl.create({
                                 title: '錯誤' + response[0].RT_CODE,
                                 subTitle: response[0].RT_MSG,
-                                buttons: [{
-                                    text: '關閉',
-                                    handler: () => {
-                                        this.myfocus2();
-                                    }
-                                }]
+                                buttons: ['關閉']
                             });
 
                             alert.present();
@@ -199,7 +174,6 @@ export class _23_PrintLogisticLabel {
         this.data2.Shop = '';
         this.data2.Qty = '';
         this.data2.IP_Qty = '';
-        this.data2.SUP_Qty = '';
     };
 
     help() {
@@ -233,7 +207,7 @@ export class _23_PrintLogisticLabel {
     };
     myfocus2() {
         setTimeout(() => {
-            this.txb_search_0.setFocus();
+            this.scan_Entry2.setFocus();
         }, 150);
     };
 

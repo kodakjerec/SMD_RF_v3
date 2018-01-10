@@ -39,16 +39,17 @@
             </div>
             <ion-row>
                 <ion-col>
+                    <span style="color:white">版本：{{data.Version}}</span>
                     <button ion-button (click)="showDCS_log()" outline>
                         {{data.DCS_log_show_btnName}}
                     </button>
                 </ion-col>
             </ion-row>
-            <ion-row>
-                <div id="DCS_log" [hidden]="data.DCS_log_show">
-                    <p style="white-space: pre;color:white">{{data.Changelog}}</p>
-                </div>
-            </ion-row>
+			<ion-row>
+				<div id="DCS_log" [hidden]="data.DCS_log_show">
+					<p style="white-space: pre;color:white">{{data.Changelog}}</p>
+				</div>
+			</ion-row>
         </ion-grid>
 
     </form>
@@ -56,18 +57,11 @@
 <div [hidden]="data.IsHideWhenKeyboardOpen">
     <ion-footer no-border>
         <ion-toolbar>
-            <!--<button small ion-button outline (click)="gotoTest()">test</button>-->
+            <button small ion-button outline (click)="gotoTest()">test</button>
             <button small ion-button outline>
-                <a [href]="getDownloadURL()">APK</a>
+              <a [href]="getDownloadURL()">APK</a>  
             </button>
-            <button small ion-button outline icon-only (click)="hotCodePushUI()">
-                <ion-icon name="refresh"></ion-icon>
-            </button>
-            <!--<button small ion-button outline [color]="checkNFCreturnColor()" [disabled]="true">NFC</button>-->
-
-            <ion-buttons end>
-                <span style="color:white">Web:{{data.WebVersion}}<br /> Apk:{{data.ApkVersion}}</span>
-            </ion-buttons>
+            <button small ion-button outline [color]="checkNFCreturnColor()" [disabled]="true">NFC</button>
         </ion-toolbar>
     </ion-footer>
 </div>

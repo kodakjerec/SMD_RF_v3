@@ -1,12 +1,14 @@
-import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, AlertController } from 'ionic-angular';
+import { Component, ViewChild, NgZone } from '@angular/core';
+import { Nav, Platform, AlertController, Events } from 'ionic-angular';
 
 //Cordova plugins
 import { FCM } from '@ionic-native/fcm';
 import { AppUpdate } from '@ionic-native/app-update';
 import { StatusBar } from '@ionic-native/status-bar';
-import { Keyboard } from '@ionic-native/keyboard';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SyncStatus } from 'ionic-native';
+import { CodePush  } from '@ionic-native/code-push';
+
 
 //My Pages
 import { _00_Login } from '../pages/_00_Login/Login';
@@ -30,10 +32,10 @@ export class SMDRF {
         , public fcm: FCM
         , private appUpdate: AppUpdate
         , private alertCtrl: AlertController
-        , private keyboard: Keyboard
+        , private codePush: CodePush
+        , private ngZone: NgZone
+        , private events: Events
     ) {
-        keyboard.disableScroll(false);
-
         this.initializeApp();
 
         // used for an example of ngFor and navigation
@@ -53,6 +55,9 @@ export class SMDRF {
             return;
         }
         this.platform.ready()
+            .then(() => {
+                this.hotCodePush();
+            })
             .then(() => {
                 this.checkUpdate();
             })
@@ -89,6 +94,7 @@ export class SMDRF {
                     buttons: ['關閉']
                 });
                 alert_background.present();
+                console.log("Received in background");
             } else {
                 let alert_foreground = this.alertCtrl.create({
                     title: 'F ' + data.title,
@@ -96,11 +102,13 @@ export class SMDRF {
                     buttons: ['關閉']
                 });
                 alert_foreground.present();
+                console.log("Received in foreground");
             };
         })
 
         this.fcm.onTokenRefresh().subscribe(token => {
             //backend.registerToken(token);
+            console.log(token);
         })
 
         //解除安裝
@@ -109,9 +117,7 @@ export class SMDRF {
 
     //#region 檢查更新 Full apk
     checkUpdate() {
-        myGlobals.ProgParameters.set('ApkVersion', AppVersion.version);
-
-        let NeedUpdateApk = true;
+        let NeedUpdate = true;
         const updateUrl = 'http://' + myGlobals.Global_Server + '/Version/update.xml';
         this.appUpdate.checkAppUpdate(updateUrl)
             .then(response => {
@@ -120,7 +126,7 @@ export class SMDRF {
                     case 201:   //need update
                         break;
                     case 202:   //No need to update
-                        NeedUpdateApk = false;
+                        NeedUpdate = false;
                         break;
                     case 203:   //version is updating
                         break;
@@ -144,9 +150,20 @@ export class SMDRF {
                     });
                     alert_appupdate.present();
                 }
-                console.log("Update Status Code: " + response.code);
-                myGlobals.ProgParameters.set('NeedUpdateApk', NeedUpdateApk);
+
+                myGlobals.ProgParameters.set('NeedUpdate', NeedUpdate);
             });
+    }
+    //#endregion
+
+    //#region 檢查更新 hot code push
+    hotCodePush() {
+        this.codePush.sync().subscribe((syncStatus) => {
+            console.log('Sync Status: ', syncStatus);
+        });
+
+        const downloadProgress = (progress) => { console.log(`Downloaded ${progress.receivedBytes} of ${progress.totalBytes}`); }
+        this.codePush.sync({}, downloadProgress).subscribe((syncStatus) => console.log(syncStatus));
     }
     //#endregion
 
