@@ -16,14 +16,15 @@ npm-debug.log*
 .sass-cache/
 .tmp/
 .versions/
-coverage/
-dist/
-tmp/
-temp/
-hooks/
-platforms/
-plugins/
-www/
+/coverage/
+/dist/
+/tmp/
+/temp/
+/hooks/
+/platforms/
+/node_modules/
+/plugins/
+/www/
 $RECYCLE.BIN/
 /.sourcemaps/
 
