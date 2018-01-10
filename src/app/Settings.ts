@@ -3,13 +3,17 @@
 //連結伺服器
 //網址
 //export const Global_Server = 'localhost:1793';
-export const Global_Server = 'localhost/RF_DB';
-//export const Global_Server = '172.20.20.11/RF_DB';
+//export const Global_Server = 'localhost/RF_DB';
+export const Global_Server = '172.20.20.11/RF_DB';
 export const Set_timeout = 1500;
-export const packageVersion = '17.09.19';
 export const DefaultServer = "DCStest";
+export const ShowLoadingWindow = false;
 
 export const Changelog = ''
+    + '\n17.12.13:'
+    + '\n 1.登入步驟變更，登入->選區域->功能選單'
+    + '\n 2.自動更新app 目前可相容android 7.0'
+    + '\n'
     + '\n17.09.19:'
     + '\n 1.新增功能，物流標籤補印，路徑：測試功能=>物流標籤補印'
     + '\n'
@@ -93,5 +97,14 @@ export const ProgParameters = {
                 object = value.Value;
         });
         return object;
+    }
+}
+
+export const loginCheck = {
+    check() {
+        let UserID = ProgParameters.get('USER_ID');
+        if (UserID == undefined)
+            location.href = '/';
+		
     }
 }
