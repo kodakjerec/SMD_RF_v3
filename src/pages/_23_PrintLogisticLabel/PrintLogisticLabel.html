@@ -6,7 +6,7 @@
 <ion-content (swipe)="swipeEvent($event)">
     <ion-card>
         <ion-card-header (click)="help()">
-            從 物流標籤 補印(help)
+            從 物流標籤 補印<button small ion-button outline>HELP</button>
         </ion-card-header>
         <ion-card-content>
             <ion-grid>
@@ -18,8 +18,7 @@
                         <ion-input #scan_Entry id="txb_scan_Entry" type="tel"
                                    (keyup.enter)="search()"
                                    (ionFocus)="selectAll($event)"
-                                   [(ngModel)]="data.ScanBarcode"
-                                   autofocus></ion-input>
+                                   [(ngModel)]="data.ScanBarcode"></ion-input>
                     </ion-col>
                 </ion-row>
                 <ion-row>
@@ -35,7 +34,7 @@
 
     <ion-card>
         <ion-card-header (click)="help2()">
-            指定 詳細內容 補印(help)
+            指定 詳細內容 補印<button small ion-button outline>HELP</button>
         </ion-card-header>
         <ion-card-content>
             <ion-grid>
@@ -44,8 +43,9 @@
                         <ion-label>*呼出碼</ion-label>
                     </ion-col>
                     <ion-col col-8>
-                        <ion-input #scan_Entry2 id="txb_scan_Entry2" type="tel"
+                        <ion-input #txb_search_0 id="txb_scan_Entry2" type="tel"
                                    (ionFocus)="selectAll($event)"
+                                   (keyup.enter)="search2(0)"
                                    [(ngModel)]="data2.Barcode"></ion-input>
                     </ion-col>
                 </ion-row>
@@ -54,8 +54,9 @@
                         <ion-label>店鋪代號</ion-label>
                     </ion-col>
                     <ion-col col-8>
-                        <ion-input type="tel"
+                        <ion-input #txb_search_1 type="tel"
                                    (ionFocus)="selectAll($event)"
+                                   (keyup.enter)="search2(1)"
                                    [(ngModel)]="data2.Shop"></ion-input>
                     </ion-col>
                 </ion-row>
@@ -64,8 +65,9 @@
                         <ion-label>數量</ion-label>
                     </ion-col>
                     <ion-col col-8>
-                        <ion-input type="tel"
+                        <ion-input #txb_search_2 type="tel"
                                    (ionFocus)="selectAll($event)"
+                                   (keyup.enter)="search2(2)"
                                    [(ngModel)]="data2.Qty"></ion-input>
                     </ion-col>
                 </ion-row>
@@ -74,8 +76,9 @@
                         <ion-label>入數</ion-label>
                     </ion-col>
                     <ion-col col-8>
-                        <ion-input type="tel"
+                        <ion-input #txb_search_3 type="tel"
                                    (ionFocus)="selectAll($event)"
+                                   (keyup.enter)="search2(3)"
                                    [(ngModel)]="data2.IP_Qty"></ion-input>
                     </ion-col>
                 </ion-row>
@@ -84,14 +87,15 @@
                         <ion-label>廠商入數</ion-label>
                     </ion-col>
                     <ion-col col-8>
-                        <ion-input type="tel"
+                        <ion-input #txb_search_4 type="tel"
                                    (ionFocus)="selectAll($event)"
+                                   (keyup.enter)="search2(4)"
                                    [(ngModel)]="data2.SUP_Qty"></ion-input>
                     </ion-col>
                 </ion-row>
                 <ion-row>
                     <ion-col>
-                        <button ion-button (click)="search2()" color="secondary" solid class="toolbar-button">
+                        <button ion-button (click)="search2(4)" color="secondary" solid class="toolbar-button">
                             <ion-icon name="print"></ion-icon>
                         </button>
                     </ion-col>
