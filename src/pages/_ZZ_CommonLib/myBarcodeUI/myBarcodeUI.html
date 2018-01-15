@@ -1,0 +1,42 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>WAS_批次</ion-title>
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-row>
+            <ion-col col-2>
+                <div class="myScanBarcodeUI_Label">條碼</div>
+            </ion-col>
+            <ion-col col-8>
+                <button ion-button outline block
+                        class="myScanBarcodeUI"
+                        id="scan_Entry"
+                        (blur)="mysetFocus()"
+                        (keyup)="myKeylogger($event)">
+                    {{data.ScanBarcode}}
+                </button>
+            </ion-col>
+            <ion-col col-2>
+                <button ion-button (click)="showKeyboard()" color="primary" solid class="toolbar-button">
+                    <ion-icon name="keypad"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+</ion-content>
+<ion-digit-keyboard [align]="keyboardSettings.align"
+                    [width]="keyboardSettings.width"
+                    [visible]="keyboardSettings.visible"
+                    [leftActionOptions]="keyboardSettings.leftActionOptions"
+                    [rightActionOptions]="keyboardSettings.rightActionOptions"
+                    [roundButtons]="keyboardSettings.roundButtons"
+                    [showLetters]="keyboardSettings.showLetters"
+                    [swipeToHide]="keyboardSettings.swipeToHide"
+                    [theme]="keyboardSettings.theme"
+                    (numberClick)="ionkeyboard_numberClick($event)"
+                    (leftActionClick)="ionkeyboard_clear()"
+                    (rightActionClick)="ionkeyboard_hideKeyboard()">
+</ion-digit-keyboard>

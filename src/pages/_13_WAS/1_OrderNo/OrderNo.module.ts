@@ -2,14 +2,14 @@
 import { CommonModule } from '@angular/common';
 import { IonicPageModule } from 'ionic-angular';
 
-import { _131_WASOrderNo } from './OrderNo';
+import { _131_WAS_OrderNo } from './OrderNo';
 
 @NgModule({
     imports: [
         CommonModule,
-        IonicPageModule.forChild(_131_WASOrderNo)
+        IonicPageModule.forChild(_131_WAS_OrderNo)
     ],
-    declarations: [_131_WASOrderNo],
-    entryComponents: [_131_WASOrderNo]
+    declarations: [_131_WAS_OrderNo],
+    entryComponents: [_131_WAS_OrderNo]
 })
 export class AppModule { }

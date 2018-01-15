@@ -2,17 +2,22 @@
 
 // Pipes
 import { OrderByPipe } from './BasketList_pipe';
+import { SearchPipe } from './SearchPipe';
+
 @NgModule({
     declarations: [
         OrderByPipe
+        , SearchPipe
     ],
     imports: [
 
     ],
     exports: [
         OrderByPipe
+        , SearchPipe
     ]
 })
 export class PipesModule {
-    myOrderByPipe= new OrderByPipe();
+    myOrderByPipe = new OrderByPipe();
+    mySearchPipe = new SearchPipe();
 }

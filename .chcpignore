@@ -1,0 +1,8 @@
+index.html
+manifest.json
+service-worker.js
+polyfills.*
+sw-toolbox.*
+ionicons.*
+noto-sans*
+roboto*

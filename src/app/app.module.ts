@@ -12,9 +12,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { NFC, Ndef } from '@ionic-native/nfc';
 import { Camera } from '@ionic-native/camera';
 import { Keyboard } from '@ionic-native/keyboard';
-import { CodePush } from '@ionic-native/code-push';
 import { Vibration } from '@ionic-native/vibration';
-
+import { NativeStorage } from '@ionic-native/native-storage';
 
 //My Pages
 import { SMDRF } from './app.component';
@@ -24,6 +23,7 @@ import { ListTablePage } from '../pages/_ZZ_CommonLib/ListTable/ListTable';
 import { PaperDetailPage } from '../pages/_ZZ_CommonLib/PaperDetail/PaperDetail';
 import { myCAMERAPage } from '../pages/_ZZ_CommonLib/myCAMERA/myCAMERA';
 import { http_services } from '../pages/_ZZ_CommonLib/http_services';
+
 
 @NgModule({
     declarations: [
@@ -69,8 +69,8 @@ import { http_services } from '../pages/_ZZ_CommonLib/http_services';
         NFC, Ndef,
         Camera,
         Keyboard,
-        CodePush,
         Vibration,
+        NativeStorage,
         { provide: ErrorHandler, useClass: IonicErrorHandler }
     ]
 })

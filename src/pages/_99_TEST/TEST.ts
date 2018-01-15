@@ -55,4 +55,12 @@ export class _99_TEST {
     gallery() {
         this.navCtrl.push('_24_PhotoGallery');
     }
+
+    myBarcodeUI() {
+        this.navCtrl.push('_TEST_00_myBarcodeUI');
+    }
+
+    RFWAS() {
+        this.navCtrl.push('_131_WAS_OrderNo');
+    }
 }

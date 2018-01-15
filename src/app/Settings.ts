@@ -10,6 +10,10 @@ export const DefaultServer = "DCStest";
 export const ShowLoadingWindow = false;
 
 export const Changelog = ''
+    + '\n18.01.15:'
+    + '\n 1.新增功能 RFWAS'
+    + '\n 2.新增硬體功能hot code push'
+    + '\n'
     + '\n17.12.13:'
     + '\n 1.登入步驟變更，登入->選區域->功能選單'
     + '\n 2.自動更新app 目前可相容android 7.0'
@@ -36,53 +40,6 @@ export const Changelog = ''
 //程式作用的變數
 export const ProgParameters = {
     params: [
-        //for test
-        //{ Name: 'USER_ID', Value: '123' }
-        //, { Name: 'BLOCK_ID', Value: '02' }
-        //, { Name: 'CarNo', Value: '072' }
-        //, { Name: 'PaperNo', Value: 'PO170826000090' }
-        //, { Name: 'PaperNo_ID', Value: 'ID170828000049' }
-        //, { Name: 'ItemCode', Value: '211566' }
-        //, { Name: 'ITEM_HOID', Value: '1170726461142' }
-        //, { Name: 'LOT_ID', Value: '2170828000068' }
-        //, {
-        //    Name: 'ReceiveResult', Value:
-        //        {
-        //            RT_CODE: 0
-        //            , RT_MSG: '找到了'
-        //            , CN: '211566'
-        //            , IDN_ID: 'IDN170826000078'
-        //            , ITEM_HOID: '1170726461142'
-        //            , ITEM_ID: '211566'
-        //            , NAME: '文蛤（３００ｇ）真空包'
-        //            , NG_QTY: 0
-        //            , NG_WT: 0
-        //            , PO_QTY: '860 / 860'
-        //            , PRICE: 65
-        //            , PRICE_TYPE: 1
-        //            , QC_QTY: 86
-        //            , QC_RATE: '10%'
-        //            , QE_TYPE: 1
-        //            , QE_TYPE_NAME: '效期'
-        //            , QE_TYPE_TEXT: ''
-        //            , QL_TYPE: 0
-        //            , QTY: 0
-        //            , QT_TYPE: 1
-        //            , QT_TYPE_NAME: '表面溫度'
-        //            , ROW1: '211566 文蛤（３００ｇ）真空包'
-        //            , ROW2: '約３００ｇ/ 售價 65'
-        //            , ROW3: '本單應收 860 待收 860'
-        //            , ROW4: '應抽驗數86 (10%)'
-        //            , ROW5: '已收良品 0'
-        //            , ROW6: '已收不良 0'
-        //            , ROW7: '已收搭贈 0'
-        //            , SPEC: '約３００ｇ'
-        //            , UNIT: '包'
-        //            , UNIT_QTY: 1
-        //            , UNIT_WEIGHT: 300
-        //            , WT: 0
-        //        }
-        //}
     ]
     ,
     set(name: string, value: any) {
@@ -104,7 +61,29 @@ export const loginCheck = {
     check() {
         let UserID = ProgParameters.get('USER_ID');
         if (UserID == undefined)
-            location.href = '/';
-		
+            location.href = '/';	
+    }
+}
+
+export const myClass = {
+    keyCodeToValue(keycode: number) {
+        let returnStr = '';
+        switch (keycode) {
+            case 48:
+            case 49:
+            case 50:
+            case 51:
+            case 52:
+            case 53:
+            case 54:
+            case 55:
+            case 56:
+            case 57:
+                returnStr = (keycode - 48).toString(); break;
+            case 13:
+                returnStr = 'ENTER'; break;
+        }
+
+        return returnStr;
     }
 }

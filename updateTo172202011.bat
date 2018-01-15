@@ -1,0 +1,1 @@
+cordova-hcp build && xcopy /D /E /Y www\*.* \\172.20.20.11\c$\pxmart\RF_Web\RF_DB\Version\www\

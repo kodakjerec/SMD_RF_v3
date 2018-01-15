@@ -64,3 +64,118 @@
     }
 }
 //#endregion
+
+/* Empty. Add your own CSS if you like */
+.KeyboardNumber .popup {
+    width: 90%;
+    height: 41%;
+}
+
+.KeyboardNumber .popup-head {
+    display: none;
+}
+
+$font-family-base: Microsoft JhengHei;
+
+/***Legion***/
+.bottom_BLOCK {
+    font-size: small;
+    color: #FFFF37;
+    text-align: right;
+}
+
+/***input***/
+input[type] {
+    font-size: larger;
+    background-color: black;
+    color: white;
+    border: solid #6C6C6C;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+
+    &:focus {
+        border: solid #FF8040;
+    }
+}
+
+.mytextarea {
+    font-size: larger;
+    background-color: black;
+    color: white;
+    border: solid #6C6C6C;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    width: 100%;
+    outline: none;
+
+    &:focus {
+        border: solid #FF8040;
+    }
+}
+
+.myScanBarcodeUI_Label{
+    color:white;
+    font-size:large;
+    margin-top:10px
+}
+.myScanBarcodeUI:focus{
+    border: solid #FF8040;
+}
+
+/***block_menu***/
+.mylist {
+    margin: 0px 0px 0px 0px !important;
+
+    & ion-item {
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: white !important;
+
+        & ion-label.item-left {
+            max-width: 30% !important;
+        }
+    }
+
+    & ion-grid {
+        padding-left: 16px;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: white !important;
+        font-size: 16px;
+
+        & ion-col {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+}
+
+/***ion-grid***/
+.mytable {
+    //column
+    & ion-col {
+        font-size: 0.95em;
+        text-align: center;
+        padding: 4px;
+        border-collapse: collapse;
+        border: 1px solid #feb3b9;
+    }
+    //Grid Head
+    & .mytable_Head {
+        background-color: #FF7A85;
+        color: #FFFFFF;
+    }
+    //Grid row
+    & .mytable_Detail {
+        color: #000000;
+        //odd row
+        &:nth-child(odd) {
+            background-color: #fed2d6;
+        }
+        //even row
+        &:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+    }
+}

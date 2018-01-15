@@ -1,11 +1,13 @@
 //angular, Ionic
 import { Component, ViewChild } from '@angular/core';
-import {Validators, FormBuilder, FormGroup } from '@angular/forms';
+import {Validators, FormBuilder } from '@angular/forms';
 import {Platform, NavController, AlertController, LoadingController } from 'ionic-angular';
 
 //Cordova
 import { NFC } from '@ionic-native/nfc';
 import { Keyboard } from '@ionic-native/keyboard';
+import { AppUpdate } from '@ionic-native/app-update';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 //My Pages
 import * as myGlobals from '../../app/Settings';
@@ -21,19 +23,19 @@ export class _00_Login {
 
     data = {
         IsHideWhenKeyboardOpen: false
-        , WebVersion: myGlobals.ProgParameters.get('WebVersion')
-        , ApkVersion: myGlobals.ProgParameters.get('ApkVersion')
+        , WebVersion: ''
+        , ApkVersion: ''
         , Changelog: myGlobals.Changelog
         , username: ''
-        , password: ''
-        , NeedUpdateApk: false    //通過自動更新 true:通過 false:失敗
-        , IsNFC_ON: false        //NFC有開啟    true:開啟 false:關閉
+        , password: '111'
+        , NeedUpdateApk: false    //通過自動更新 true:未更新 false:免更新
+        , IsNFC_ON: false        //NFC有開啟    true:NFC開啟 false:NFC關閉
         , DCS_log_show: true
         , DCS_log_show_btnName: '顯示改版歷程'
+        , Iskeyin_OK: false
     };
-    private todo: FormGroup;
+
     @ViewChild('txb_username') txb_username;
-    @ViewChild('txb_password') txb_password;
 
     constructor(public platform: Platform
         , public navCtrl: NavController
@@ -42,30 +44,25 @@ export class _00_Login {
         , private nfc: NFC
         , private alertCtrl: AlertController
         , public loadingCtrl: LoadingController
-        , private keyboard: Keyboard) {
-
+        , private appUpdate: AppUpdate
+        , private keyboard: Keyboard
+        , private nativeStorage: NativeStorage
+    ) {
         this.initializeApp();
-
-        setTimeout(() => {
-            this.txb_username.setFocus();
-        }, 150);
-
-        this.todo = this.formBuilder.group({
-            username: ['', Validators.required],
-            password: ['', Validators.required],
-        });
     }
 
     initializeApp() {
-        if (myGlobals.ProgParameters.get('NeedUpdateApk')) {
-            this.data.Changelog = '請安裝更新。';
-        }
-
         if (this.platform.is('core')) {
             console.log("You're develop in the browser. NO NFC,update");
             return;
         }
         this.platform.ready()
+            .then(() => {
+                this.checkUpdate();
+
+                if (this.data.NeedUpdateApk)
+                    this.data.Changelog = '請安裝更新。';
+            })
             .then(() => {
                 this.hotCodePush();
             })
@@ -83,8 +80,10 @@ export class _00_Login {
     public unregisterBackButtonAction: any;
 
     //進入頁面
-    ionViewDidEnter() {
-
+    ionViewWillEnter() {
+        setTimeout(() => {
+            this.txb_username.setFocus();
+        }, 500);
         //this.initializeBackButtonCustomHandler();
     }
 
@@ -137,7 +136,6 @@ export class _00_Login {
 
                 }
             });
-
     }
 
     //全選
@@ -149,18 +147,24 @@ export class _00_Login {
     gotoTest() {
         this.navCtrl.push('_99_TEST');
     }
-
+    //回傳下載路徑
     getDownloadURL() {
         return 'http://' + myGlobals.Global_Server + '/Version/SMDRF_WG.apk';
     }
 
+    //帳號密碼長度
+    checkLength() {
+        if (this.data.username.length > 0 && this.data.password.length > 0)
+            this.data.Iskeyin_OK = true;
+    }
     //按下enter
     enter(obj: string) {
-        if (obj == 'username') {
-            this.txb_password.setFocus();
-        }
-        else {
-            //this.login();
+        switch (obj) {
+            //case 'username':
+            //    this.txb_password.setFocus(); break;
+            default:
+                if (this.data.Iskeyin_OK)
+                    this.login();
         }
     }
 
@@ -177,7 +181,6 @@ export class _00_Login {
             console.log('decoded tag id', this.nfc.bytesToHexString(event.tag.id));
 
             this.data.username = this.nfc.bytesToHexString(event.tag.id);
-            this.data.password = this.nfc.bytesToHexString(event.tag.id);
             this.login();
 
             //分享訊息
@@ -196,6 +199,7 @@ export class _00_Login {
     //#endregion
 
     //#region 檢查更新 hot code push
+
     //前端用
     hotCodePushUI() {
         let loading = this.loadingCtrl.create({
@@ -208,7 +212,11 @@ export class _00_Login {
             location.reload();
         }
         else {
-            this.hotCodePush();
+            this.nativeStorage.clear()
+                .then((response) => {
+                    console.log('clean native storage ' + response);
+                    this.hotCodePush();
+                });
         }
 
         loading.dismiss();
@@ -231,6 +239,8 @@ export class _00_Login {
                     break;
                 default:
                     console.error(error);
+                    if (window["thisRef"].data.NeedUpdateApk)
+                        window["thisRef"].data.Changelog = error.description;
                     break;
             }
         } else {
@@ -264,6 +274,44 @@ export class _00_Login {
     InfoCallback(err, data) {
         window["thisRef"].data.WebVersion = data.currentWebVersion;
         window["thisRef"].data.ApkVersion = data.appVersion;
+    }
+    //#endregion
+
+    //#region 檢查更新 Full apk
+    checkUpdate() {
+        const updateUrl = 'http://' + myGlobals.Global_Server + '/Version/update.xml';
+        this.appUpdate.checkAppUpdate(updateUrl)
+            .then(response => {
+                let ErrMsg: string = '';
+                switch (response.code) {
+                    case 201:   //need update
+                        break;
+                    case 202:   //No need to update
+                        this.data.NeedUpdateApk = false;
+                        break;
+                    case 203:   //version is updating
+                        break;
+                    case 301:
+                    case 302:
+                        ErrMsg = '檢查更新文件錯誤';
+                        break;
+                    case 404:
+                    case 405:
+                        ErrMsg = '網路錯誤';
+                        break;
+                    default:
+                        ErrMsg = '未知錯誤';
+                        break;
+                };
+                if (ErrMsg != '') {
+                    let alert_appupdate = this.alertCtrl.create({
+                        title: '檢查更新出錯',
+                        subTitle: ErrMsg,
+                        buttons: ['關閉']
+                    });
+                    alert_appupdate.present();
+                }
+            });
     }
     //#endregion
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavParams, ViewController } from 'ionic-angular';
+import { ViewController } from 'ionic-angular';
 
 //Cordova
 import { Vibration } from '@ionic-native/vibration';
@@ -15,7 +15,6 @@ export class ListTablePage {
 
     constructor(
         public viewCtrl: ViewController
-        , params: NavParams
         , private vibration: Vibration) {
         this.Lists = myGlobals.ProgParameters.get('ListTable_Source');
     }
