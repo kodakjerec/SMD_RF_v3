@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, ModalController, ToastController, Platform, NavParams, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, ModalController, ToastController, Platform, IonicPage } from 'ionic-angular';
 
 //Cordova
 import { Keyboard } from '@ionic-native/keyboard';
@@ -21,19 +21,13 @@ import { ListTablePage } from '../../_ZZ_CommonLib/ListTable/ListTable';
 export class _123_ItemCode {
     constructor(public navCtrl: NavController
         , public platform: Platform
-        , public navParams: NavParams
         , public _http_services: http_services
         , private modalCtrl: ModalController
         , private alertCtrl: AlertController
         , private toastCtrl: ToastController
         , private keyboard: Keyboard
         , private vibration: Vibration) {
-        this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
-        this.data.BLOCK_NAME = myGlobals.ProgParameters.get('BLOCK_NAME');
-        this.data.CarNo = myGlobals.ProgParameters.get('CarNo');
-        this.data.PaperNo = myGlobals.ProgParameters.get('PaperNo');
-        this.data.PaperNo_ID = myGlobals.ProgParameters.get('PaperNo_ID');
-        myGlobals.loginCheck.check();
+        myGlobals.loginCheck();
 
         this.initializeApp();
     }
@@ -49,16 +43,16 @@ export class _123_ItemCode {
     }
 
     data = {
-        CarNo: ''
-        , PaperNo: ''
-        , PaperNo_ID: ''
+        CarNo: localStorage.getItem('CarNo')
+        , PaperNo: localStorage.getItem('PaperNo')
+        , PaperNo_ID: localStorage.getItem('PaperNo_ID')
         , ItemCode: ''
         , ITEM_HOID: ''
         , LOT_ID: ''
         , viewColor: ''
         , IsDisabled: true
-        , USER_ID: ''
-        , BLOCK_NAME: ''
+        , USER_ID: localStorage.getItem('USER_ID')
+        , BLOCK_NAME: localStorage.getItem('BLOCK_NAME')
         , IsHideWhenKeyboardOpen: false
     };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
     answer = {
@@ -97,8 +91,8 @@ export class _123_ItemCode {
 
     //重置btn
     reset() {
-        myGlobals.ProgParameters.set('ItemCode', '');
-        myGlobals.ProgParameters.set('ITEM_HOID', '');
+        localStorage.setItem('ItemCode', '');
+        localStorage.setItem('ITEM_HOID', '');
         this.data.ITEM_HOID = '';
 
         this.answer.LOT = '';
@@ -120,11 +114,6 @@ export class _123_ItemCode {
 
         this.scan_Entry.setFocus();
     };
-    //查詢欄位專用清除
-    reset_btn() {
-        this.reset();
-        this.data.ItemCode = '';
-    }
 
     //#region 查詢報到牌btn
     search() {
@@ -142,7 +131,7 @@ export class _123_ItemCode {
                 , { Name: '@ITEM', Value: this.data.ItemCode }
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ])
-            .subscribe((response) => {
+            .then((response) => {
                 if (response != '') {
                     switch (response[0].RT_CODE) {
                         case -1:
@@ -174,14 +163,14 @@ export class _123_ItemCode {
                             this.data.ItemCode = response[0].ITEM_ID;
                             this.data.ITEM_HOID = response[0].ITEM_HOID;
 
-                            myGlobals.ProgParameters.set('ItemCode', this.data.ItemCode);
-                            myGlobals.ProgParameters.set('ITEM_HOID', this.data.ITEM_HOID);
+                            localStorage.setItem('ItemCode', this.data.ItemCode);
+                            localStorage.setItem('ITEM_HOID', this.data.ITEM_HOID);
 
                             //帶出太陽日
                             this._http_services.POST('', 'sqlcmd'
                                 , "SELECT DATENAME(dayofyear, getdate()) AS 'SunDay'"
                                 , [])
-                                .subscribe((response2) => {
+                                .then((response2) => {
                                     this.answer.DisplaySunDay = response2[0].SunDay;
                                 });
 
@@ -243,7 +232,7 @@ export class _123_ItemCode {
                 , { Name: '@ITEM', Value: this.data.ITEM_HOID }
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ])
-            .subscribe((response) => {
+            .then((response) => {
                 if (response != '') {
                     switch (response[0].RT_CODE) {
                         case 0:
@@ -253,7 +242,7 @@ export class _123_ItemCode {
                                 position: 'bottom'
                             });
                             toast.present();
-                            this.reset_btn();
+                            this.reset();
 
                             break;
                         default:
@@ -302,14 +291,14 @@ export class _123_ItemCode {
                 , { Name: '@ITEM_TEMP', Value: this.answer.Temp }
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ])
-            .subscribe((response) => {
+            .then((response) => {
                 if (response != '') {
                     switch (response[0].RT_CODE) {
                         case 0:
                             //Correct
                             this.data.LOT_ID = response[0].LOT_ID;
 
-                            myGlobals.ProgParameters.set('LOT_ID', this.data.LOT_ID);
+                            localStorage.setItem('LOT_ID', this.data.LOT_ID);
                             myGlobals.ProgParameters.set('ReceiveResult', this.result);
 
                             this.navCtrl.push('_124_ItemRcv');

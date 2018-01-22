@@ -33,7 +33,7 @@ export class http_services {
     //mode: 'sp', 'sqlcmd'
     //sqlcmd: sql command
     //params: parameters array list
-    POST(server: string, mode: string, sqlcmd: string, params: Array<any>): Observable<any> {
+    POST(server: string, mode: string, sqlcmd: string, params: Array<any>): any {
 
 
         let loading = this.loadingCtrl.create({
@@ -112,7 +112,9 @@ export class http_services {
                 });
                 alert.present();
                 return Observable.throw(error || 'Server Error');
-            }); //...errors if any
+            })
+            .toPromise()
+            ; //...errors if any
     }
 
     downloadFile(data: any, filename: string) {

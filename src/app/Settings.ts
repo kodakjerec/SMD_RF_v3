@@ -57,33 +57,26 @@ export const ProgParameters = {
     }
 }
 
-export const loginCheck = {
-    check() {
-        let UserID = ProgParameters.get('USER_ID');
-        if (UserID == undefined)
-            location.href = '/';	
-    }
+//登入檢查
+export function loginCheck() {
+    let UserID = localStorage.getItem('USER_ID');
+    if (UserID == undefined)
+        location.href = '/';
 }
-
-export const myClass = {
-    keyCodeToValue(keycode: number) {
-        let returnStr = '';
-        switch (keycode) {
-            case 48:
-            case 49:
-            case 50:
-            case 51:
-            case 52:
-            case 53:
-            case 54:
-            case 55:
-            case 56:
-            case 57:
-                returnStr = (keycode - 48).toString(); break;
-            case 13:
-                returnStr = 'ENTER'; break;
-        }
-
-        return returnStr;
+//keycode 回傳 string
+export function keyCodeToValue(keycode: number) {
+    let returnStr = '';
+    if (96 <= keycode && keycode <= 105) {
+        returnStr = String.fromCharCode(keycode - 48);
     }
+    else {
+        switch (keycode) {
+            case 9:     //Tab
+            case 13:    //Enter
+                returnStr = 'ENTER'; break;
+            default:
+                returnStr = String.fromCharCode(keycode);
+        }
+    }
+    return returnStr;
 }

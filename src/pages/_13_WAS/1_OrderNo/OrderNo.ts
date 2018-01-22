@@ -1,13 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Platform, NavParams, AlertController, ToastController, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, ToastController, ModalController, IonicPage } from 'ionic-angular';
 
 //Cordova
-import { Keyboard } from '@ionic-native/keyboard';
 import { Vibration } from '@ionic-native/vibration';
 
 //My Pages
 import * as myGlobals from '../../../app/Settings';
 import { http_services } from '../../_ZZ_CommonLib/http_services';
+import { LittleKeyPad } from '../../_ZZ_CommonLib/LittleKeyPad/LittleKeyPad';
 
 @IonicPage({
     name: '_131_WAS_OrderNo',
@@ -18,56 +18,42 @@ import { http_services } from '../../_ZZ_CommonLib/http_services';
 })
 export class _131_WAS_OrderNo {
     constructor(public navCtrl: NavController
-        , public platform: Platform
-        , public navParams: NavParams
         , public _http_services: http_services
         , private alertCtrl: AlertController
         , private toastCtrl: ToastController
-        , private keyboard: Keyboard
+        , private modalCtrl: ModalController
         , private vibration: Vibration) {
-        this.data.BLOCK_NAME = myGlobals.ProgParameters.get('BLOCK_NAME');
-        this.initializeApp();
     }
+
     @ViewChild('scan_Entry') scan_Entry;
 
-    ionViewWillEnter() {
+    ionViewDidEnter() {
         this.BringDisplayList();
     }
 
+    ionViewWillEnter() {
+        this.myFocus();
+    }
+
     data = {
-        BLOCK_NAME: ''
+        BLOCK_NAME: localStorage.getItem('BLOCK_NAME')
         , WAS_OrderNo: ''
+        , IsInputEnable: true
         , IsHideWhenKeyboardOpen: false
     };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
 
     DisplayList = [];
     DefaultTestServer = '172_31_31_250';
 
-    initializeApp() {
-        if (this.platform.is('core')) {
-            console.log("You're develop in the browser");
-            return;
-        }
-        this.platform.ready()
-            .then(() => {
-                this.keyboard.onKeyboardShow().subscribe(() => { this.data.IsHideWhenKeyboardOpen = true });
-                this.keyboard.onKeyboardHide().subscribe(() => { this.data.IsHideWhenKeyboardOpen = false });
-            })
-            ;
-    }
-
     BringDisplayList() {
         this._http_services.POST(this.DefaultTestServer, 'sp'
             , '[WAS].dbo.spactWAS_Line_v2'
             , [{ Name: '@Step', Value: '00' }
                 , { Name: '@Parameters', Value: '' }])
-            .subscribe((response) => {
+            .then((response) => {
                 if (response != undefined) {
                     this.DisplayList = response;
                 }
-                setTimeout(() => {
-                    this.scan_Entry.setFocus();
-                }, 500);
             });
     }
 
@@ -76,15 +62,15 @@ export class _131_WAS_OrderNo {
         localStorage.setItem('WAS_OrderNo', '');
         this.data.WAS_OrderNo = '';
 
-        this.scan_Entry.setFocus();
+        this.myFocus();
     };
 
     //查詢
     search() {
         this.vibration.vibrate(100);
-
-        //test
-        this.data.WAS_OrderNo = this.DisplayList[0].ORDER_NO;
+        this.data.IsInputEnable = false;
+        ////test
+        //this.data.WAS_OrderNo = this.DisplayList[0].ORDER_NO;
 
         if (this.data.WAS_OrderNo.length <= 0) {
             this.toastCtrl.create({
@@ -93,7 +79,7 @@ export class _131_WAS_OrderNo {
                 position: 'bottom'
             }).present()
                 .then(response => {
-                    this.scan_Entry.setFocus();
+                    this.myFocus();
                 });
             return;
         }
@@ -104,7 +90,7 @@ export class _131_WAS_OrderNo {
             , '[WAS].dbo.spactWAS_Line_v2'
             , [{ Name: '@Step', Value: '0' }
                 , { Name: '@Parameters', Value: sql_parameter }])
-            .subscribe((response) => {
+            .then((response) => {
                 switch (response[0].RT_CODE) {
                     case 0:
                         localStorage.setItem('WAS_OrderNo', response[0].RT_MSG);
@@ -114,10 +100,9 @@ export class _131_WAS_OrderNo {
                             duration: myGlobals.Set_timeout,
                             position: 'bottom'
                         });
-                        toast.present()
-                            .then(response => {
-                                this.navCtrl.push('_132_WAS_Item');
-                            });
+                        toast.present();
+                        this.data.WAS_OrderNo = '';
+                        this.navCtrl.push('_132_WAS_Item');
                         break;
                     default:
                         let alert = this.alertCtrl.create({
@@ -127,7 +112,11 @@ export class _131_WAS_OrderNo {
                         });
                         alert.present();
                 }
-            });
+            })
+            .then(response => {
+                this.data.IsInputEnable = true;
+            })
+            ;
     }
 
     //全選
@@ -136,7 +125,28 @@ export class _131_WAS_OrderNo {
     }
     //Focus
     myFocus() {
-        this.scan_Entry.setFocus();
+        setTimeout(() => {
+            this.scan_Entry._elementRef.nativeElement.focus();
+        }, 300);
+    }
+    myKeylogger(event) {
+        let keyValue = myGlobals.keyCodeToValue(event.keyCode);
+        switch (keyValue) {
+            case 'ENTER':
+                this.search();
+                break;
+            default:
+                this.data.WAS_OrderNo += keyValue;
+                break;
+        }
+    }
+    openKeyPad() {
+        let obj = this.modalCtrl.create(LittleKeyPad, { Name: '批次', Value: this.data.WAS_OrderNo });
+        obj.onDidDismiss(data => {
+            this.data.WAS_OrderNo = myGlobals.ProgParameters.get('ListTable_answer');
+            this.search();
+        });
+        obj.present();
     }
 
     //手勢

@@ -1,0 +1,22 @@
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <button [color]="data.checkStatus0" (click)="initialApp()" ion-button block>更新 Apk</button>
+            <button [color]="data.checkStatus1" (click)="initialApp()" ion-button block>更新 Web</button>
+            <button [disabled]="!data.checkStatus2" ion-button (click)="gotoMain()" block>進入RF</button>
+        </ion-row>
+        <ion-row>
+            {{data.ErrorTitle}}
+        </ion-row>
+        <ion-row>
+            {{data.ErrorMessage}}
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<ion-footer no-border>
+    <ion-toolbar>
+        <ion-buttons end>
+            <span style="color:white">Web:{{data.WebVersion}}<br /> Apk:{{data.ApkVersion}}</span>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

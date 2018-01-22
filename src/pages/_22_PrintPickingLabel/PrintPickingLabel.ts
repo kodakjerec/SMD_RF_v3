@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Platform, NavParams, AlertController, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, IonicPage } from 'ionic-angular';
 
 import { http_services } from '../_ZZ_CommonLib/http_services';
 
@@ -13,8 +13,6 @@ import { http_services } from '../_ZZ_CommonLib/http_services';
 
 export class _22_PrintPickingLabel {
     constructor(public navCtrl: NavController
-        , plt: Platform
-        , public navParams: NavParams
         , public _http_services: http_services
         , private alertCtrl: AlertController) {
     }
@@ -47,7 +45,7 @@ export class _22_PrintPickingLabel {
         this._http_services.POST('', 'sqlcmd'
             , 'select OrderNo=MAX(OrderNo) from DDI.dbo.DDI_WORKSPACE_STATUS with(nolock)'
             , [{}])
-            .subscribe((response) => {
+            .then((response) => {
                 this.data.JOBID = response[0].OrderNo;
             });
     };
@@ -62,7 +60,7 @@ export class _22_PrintPickingLabel {
                     , { Name: '@PRINTER', Value: "172.20.22.4" }
                     , { Name: '@BC', Value: this.data.ScanBarcode }
                 ])
-                .subscribe((response) => {
+                .then((response) => {
                     console.log(response);
                 });
         }
@@ -77,7 +75,7 @@ export class _22_PrintPickingLabel {
                     , { Name: '@cPRINT_SITE', Value: "172.20.22.4" }
                     , { Name: '@cBARCODE', Value: this.data.ScanBarcode }
                 ])
-                .subscribe((response) => {
+                .then((response) => {
                     console.log(response);
                 });
         }

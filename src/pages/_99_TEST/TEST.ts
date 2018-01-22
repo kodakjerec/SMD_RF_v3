@@ -5,6 +5,7 @@ import * as myGlobals from '../../app/Settings';
 
 import { LittleCalculatorPage } from '../_ZZ_CommonLib/LittleCalculator/LittleCalculator';
 import { myCAMERAPage } from '../_ZZ_CommonLib/myCAMERA/myCAMERA';
+import { LittleKeyPad } from '../_ZZ_CommonLib/LittleKeyPad/LittleKeyPad';
 
 
 @IonicPage({
@@ -57,7 +58,11 @@ export class _99_TEST {
     }
 
     myBarcodeUI() {
-        this.navCtrl.push('_TEST_00_myBarcodeUI');
+        let obj = this.modalCtrl.create(LittleKeyPad, {Name:'條碼',Value:'456'});
+        obj.onDidDismiss(data => {
+            console.log(myGlobals.ProgParameters.get('ListTable_answer'));
+        });
+        obj.present();
     }
 
     RFWAS() {

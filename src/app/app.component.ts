@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 //My Pages
-import { _00_Login } from '../pages/_00_Login/Login';
+import { UpdateApp } from '../pages/UpdateApp/UpdateApp';
 
 @Component({
     selector: 'SMDRF',
@@ -16,7 +16,7 @@ import { _00_Login } from '../pages/_00_Login/Login';
 export class SMDRF {
     @ViewChild(Nav) nav: Nav;
     //設定root page
-    rootPage: any = _00_Login;
+    rootPage: any = UpdateApp;
 
     pages: Array<{ title: string, component: any }>;
     messageText: string;
@@ -32,8 +32,8 @@ export class SMDRF {
         // used for an example of ngFor and navigation
         this.pages = [
             {
-                title: '_00_Login'
-                , component: _00_Login
+                title: 'UpdateApp'
+                , component: UpdateApp
             }
         ];
 

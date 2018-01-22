@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, ModalController, Platform, NavParams, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, ModalController, Platform, IonicPage } from 'ionic-angular';
 
 //Cordova
 import { Keyboard } from '@ionic-native/keyboard';
@@ -21,15 +21,12 @@ import { PaperDetailPage } from '../../_ZZ_CommonLib/PaperDetail/PaperDetail';
 export class _121_CarNo {
     constructor(public navCtrl: NavController
         , public platform: Platform
-        , public navParams: NavParams
         , public _http_services: http_services
         , private modalCtrl: ModalController
         , private alertCtrl: AlertController
         , private keyboard: Keyboard
         , private vibration: Vibration) {
-        this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
-        this.data.BLOCK_NAME = myGlobals.ProgParameters.get('BLOCK_NAME');
-        myGlobals.loginCheck.check();
+        myGlobals.loginCheck();
 
         this.initializeApp();
     }
@@ -48,8 +45,8 @@ export class _121_CarNo {
         CarNo: ''
         , viewColor: ''
         , IsDisabled: true
-        , USER_ID: ''
-        , BLOCK_NAME: ''
+        , USER_ID: localStorage.getItem('USER_ID')
+        , BLOCK_NAME: localStorage.getItem('BLOCK_NAME')
         , IsHideWhenKeyboardOpen: false
     };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
     color = { green: '#79FF79', red: '#FF5151' }; // 控制已報到/未報到 顏色
@@ -70,7 +67,7 @@ export class _121_CarNo {
 
     //重置btn
     reset() {
-        myGlobals.ProgParameters.set('CarNo', '');
+        localStorage.setItem('CarNo', '');
 
         this.result = {};
 
@@ -99,7 +96,7 @@ export class _121_CarNo {
                 { Name: '@JOB_ID', Value: '1' }
                 , { Name: '@REG_ID', Value: this.data.CarNo }
             ])
-            .subscribe((response) => {
+            .then((response) => {
 
                 if (response != '') {
                     switch (response[0].RT_CODE) {
@@ -110,7 +107,7 @@ export class _121_CarNo {
                             this.data.CarNo = response[0].REG_ID;
                             this.data.IsDisabled = false;
 
-                            myGlobals.ProgParameters.set('CarNo', this.data.CarNo);
+                            localStorage.setItem('CarNo', this.data.CarNo);
 
                             if (response[0].ROW10 == '未報到') {
                                 this.data.viewColor = 'red';
@@ -161,7 +158,7 @@ export class _121_CarNo {
             , 'spactDCS_ID_HEADER'
             , [{ Name: '@JOB_ID', Value: 11 }
                 , { Name: '@REG_ID', Value: this.data.CarNo }])
-            .subscribe((response) => {
+            .then((response) => {
                 myGlobals.ProgParameters.set('ListTable_Source', response);
 
                 let obj = this.modalCtrl.create(PaperDetailPage);

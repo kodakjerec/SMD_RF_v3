@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavParams, ViewController } from 'ionic-angular';
+import { ViewController } from 'ionic-angular';
 
 //Cordova
 import { Vibration } from '@ionic-native/vibration';
@@ -20,11 +20,10 @@ export class LittleCalculatorPage {
     decimalAdd = false;
     dotAdd = false;
 
-    data = {  KeyinValue: '0' };
+    data = { KeyinValue: '0' };
 
     constructor(
         public viewCtrl: ViewController
-        , params: NavParams
         , private vibration: Vibration) {
         this.data.KeyinValue = myGlobals.ProgParameters.get('ListTable_Source');
     }
@@ -146,5 +145,5 @@ export class LittleCalculatorPage {
     }
     GetRound(num, len) {
     　　　　return Math.round(num * Math.pow(10, len)) / Math.pow(10, len);
-　　}
+    　　}
 }

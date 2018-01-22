@@ -13,29 +13,31 @@ import { NFC, Ndef } from '@ionic-native/nfc';
 import { Camera } from '@ionic-native/camera';
 import { Keyboard } from '@ionic-native/keyboard';
 import { Vibration } from '@ionic-native/vibration';
-import { NativeStorage } from '@ionic-native/native-storage';
+import { File } from '@ionic-native/file';
 
 //My Pages
 import { SMDRF } from './app.component';
+import { UpdateApp } from '../pages/UpdateApp/UpdateApp';
 import { _00_Login } from '../pages/_00_Login/Login';
 import { LittleCalculatorPage } from '../pages/_ZZ_CommonLib/LittleCalculator/LittleCalculator';
 import { ListTablePage } from '../pages/_ZZ_CommonLib/ListTable/ListTable';
 import { PaperDetailPage } from '../pages/_ZZ_CommonLib/PaperDetail/PaperDetail';
 import { myCAMERAPage } from '../pages/_ZZ_CommonLib/myCAMERA/myCAMERA';
 import { http_services } from '../pages/_ZZ_CommonLib/http_services';
-
+import { LittleKeyPad } from '../pages/_ZZ_CommonLib/LittleKeyPad/LittleKeyPad';
 
 @NgModule({
     declarations: [
         SMDRF,
 
         //Pages
+        UpdateApp,
         _00_Login,
         LittleCalculatorPage,
         ListTablePage,
         PaperDetailPage,
         myCAMERAPage,
-
+        LittleKeyPad
         //Directives
 
     ],
@@ -47,6 +49,7 @@ import { http_services } from '../pages/_ZZ_CommonLib/http_services';
             backButtonText: '返回',
             mode: 'md',
             iconMode: 'md',
+            animate: false,
             pageTransition: 'md-transition',
             tabsPlacement: 'bottom'
         })
@@ -54,11 +57,13 @@ import { http_services } from '../pages/_ZZ_CommonLib/http_services';
     bootstrap: [IonicApp],
     entryComponents: [
         SMDRF,
+        UpdateApp,
         _00_Login,
         LittleCalculatorPage,
         ListTablePage,
         PaperDetailPage,
         myCAMERAPage,
+        LittleKeyPad
     ],
     providers: [
         StatusBar,
@@ -70,7 +75,7 @@ import { http_services } from '../pages/_ZZ_CommonLib/http_services';
         Camera,
         Keyboard,
         Vibration,
-        NativeStorage,
+        File,
         { provide: ErrorHandler, useClass: IonicErrorHandler }
     ]
 })

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavParams, ViewController } from 'ionic-angular';
+import { ViewController } from 'ionic-angular';
 
 import * as myGlobals from '../../../app/Settings';
 
@@ -11,7 +11,6 @@ export class PaperDetailPage {
 
     constructor(
         public viewCtrl: ViewController,
-        params: NavParams
     ) {
         this.Lists = myGlobals.ProgParameters.get('ListTable_Source');
     }

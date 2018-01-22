@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, Platform, NavParams, IonicPage } from 'ionic-angular';
+import { NavController, NavParams, IonicPage } from 'ionic-angular';
 
 import * as myGlobals from '../../app/Settings';
 import { http_services } from '../_ZZ_CommonLib/http_services';
@@ -18,7 +18,6 @@ export class _02_Menu {
 
 
     constructor(public navCtrl: NavController
-        , plt: Platform
         , public navParams: NavParams
         , public _http_services: http_services
     ) {
@@ -26,7 +25,7 @@ export class _02_Menu {
         this.data.OP_TYPE = navParams.get('OP_TYPE');
         this.data.BLOCK_ID = navParams.get('BLOCK_ID');
         this.data.BLOCK_NAME = navParams.get('BLOCK_NAME');
-        myGlobals.loginCheck.check();
+        myGlobals.loginCheck();
 
         this.queryMENUS();
     }
@@ -40,7 +39,7 @@ export class _02_Menu {
                 , { Name: '@OP_TYPE', Value: this.data.OP_TYPE }
                 , { Name: '@MENUID', Value: this.data.BLOCK_ID }
             ])
-            .subscribe((response) => {
+            .then((response) => {
                 if (response) {
                     this.Lists = response;
                 }

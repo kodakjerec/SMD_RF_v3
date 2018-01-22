@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Platform, NavParams, AlertController, ToastController, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, ToastController, IonicPage } from 'ionic-angular';
 
 //Cordova
 import { Vibration } from '@ionic-native/vibration';
@@ -17,8 +17,6 @@ import { http_services } from '../_ZZ_CommonLib/http_services';
 
 export class _23_PrintLogisticLabel {
     constructor(public navCtrl: NavController
-        , plt: Platform
-        , public navParams: NavParams
         , public _http_services: http_services
         , private alertCtrl: AlertController
         , private toastCtrl: ToastController
@@ -66,7 +64,7 @@ export class _23_PrintLogisticLabel {
         this._http_services.POST('', 'sp'
             , '[md.spDCS_LABEL_SORTER]'
             , parameters)
-            .subscribe((response) => {
+            .then((response) => {
                 if (response != '') {
                     switch (response[0].RT_CODE) {
                         case '0':
@@ -157,7 +155,7 @@ export class _23_PrintLogisticLabel {
         this._http_services.POST('', 'sp'
             , '[md.spDCS_LABEL_SORTER]'
             , parameters)
-            .subscribe((response) => {
+            .then((response) => {
                 if (response != '') {
                     switch (response[0].RT_CODE) {
                         case '0':

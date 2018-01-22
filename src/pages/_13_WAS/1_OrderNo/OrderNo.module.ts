@@ -12,4 +12,4 @@ import { _131_WAS_OrderNo } from './OrderNo';
     declarations: [_131_WAS_OrderNo],
     entryComponents: [_131_WAS_OrderNo]
 })
-export class AppModule { }
+export class _131_WAS { }

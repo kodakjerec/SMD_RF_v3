@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, Platform, NavParams, ToastController, IonicPage } from 'ionic-angular';
+import { NavController, ToastController, IonicPage } from 'ionic-angular';
 
 import * as myGlobals from '../../app/Settings';
 import { http_services } from '../_ZZ_CommonLib/http_services';
@@ -14,17 +14,13 @@ import { http_services } from '../_ZZ_CommonLib/http_services';
 
 export class _01_Zone {
     Lists: [{ Name: string, Value: any }];
-    data = { USER_ID: '' };
+    data = { USER_ID: localStorage.getItem('USER_ID') };
 
     constructor(public navCtrl: NavController
-        , plt: Platform
-        , public navParams: NavParams
         , private toastCtrl: ToastController
         , public _http_services: http_services
     ) {
-        myGlobals.loginCheck.check();
-        this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
-
+        myGlobals.loginCheck();
         let toast = this.toastCtrl.create({
             message: '使用者 ' + this.data.USER_ID + ' 成功登入',
             duration: myGlobals.Set_timeout,
@@ -42,7 +38,7 @@ export class _01_Zone {
             , [
                 { Name: '@ID', Value: this.data.USER_ID }
             ])
-            .subscribe((response) => {
+            .then((response) => {
                 if (response) {
 
                     this.Lists = response;
@@ -52,7 +48,7 @@ export class _01_Zone {
     }
 
     menuClicked(item) {
-        myGlobals.ProgParameters.set('BLOCK_NAME', item.NAME);
+        localStorage.setItem('BLOCK_NAME', item.NAME);
         this.navCtrl.push('_02_Menu', {
             Title: '選單'
             , BLOCK_ID: '0'

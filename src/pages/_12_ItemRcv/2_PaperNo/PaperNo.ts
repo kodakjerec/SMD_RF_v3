@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, ModalController, ToastController, Platform, NavParams, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, ModalController, ToastController, Platform, IonicPage } from 'ionic-angular';
 
 //Cordova
 import { Keyboard } from '@ionic-native/keyboard';
@@ -22,17 +22,13 @@ import { PaperDetailPage } from '../../_ZZ_CommonLib/PaperDetail/PaperDetail';
 export class _122_PaperNo {
     constructor(public navCtrl: NavController
         , public platform: Platform
-        , public navParams: NavParams
         , public _http_services: http_services
         , private modalCtrl: ModalController
         , private alertCtrl: AlertController
         , private toastCtrl: ToastController
         , private keyboard: Keyboard
         , private vibration: Vibration) {
-        this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
-        this.data.BLOCK_NAME = myGlobals.ProgParameters.get('BLOCK_NAME');
-        this.data.CarNo = myGlobals.ProgParameters.get('CarNo');
-        myGlobals.loginCheck.check();
+        myGlobals.loginCheck();
 
         this.initializeApp();
     }
@@ -48,12 +44,12 @@ export class _122_PaperNo {
     }
 
     data = {
-        CarNo: ''
+        CarNo: localStorage.getItem('CarNo')
         , PaperNo: ''
         , PaperNo_ID: ''
         , IsDisabled: true
-        , USER_ID: ''
-        , BLOCK_NAME: ''
+        , USER_ID: localStorage.getItem('USER_ID')
+        , BLOCK_NAME: localStorage.getItem('BLOCK_NAME')
         , IsHideWhenKeyboardOpen: false
     };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
     result = {};
@@ -73,21 +69,16 @@ export class _122_PaperNo {
 
     //重置btn
     reset() {
-        myGlobals.ProgParameters.set('PaperNo', '');
-        myGlobals.ProgParameters.set('PaperNo_ID', '');
+        localStorage.setItem('PaperNo', '');
+        localStorage.setItem('PaperNo_ID', '');
         this.data.PaperNo_ID = '';
-
+        
         this.result = {};
 
         this.data.IsDisabled = true;
 
         this.scan_Entry.setFocus();
     };
-    //查詢欄位專用清除
-    reset_btn() {
-        this.reset();
-        this.data.PaperNo = '';
-    }
 
     //#region 查詢報到牌btn
     search() {
@@ -105,7 +96,7 @@ export class _122_PaperNo {
                 , { Name: '@ID', Value: this.data.PaperNo }
                 , { Name: '@USER_NAME', Value: this.data.USER_ID }
             ])
-            .subscribe((response) => {
+            .then((response) => {
 
                 if (response != '') {
                     switch (response[0].RT_CODE) {
@@ -135,8 +126,8 @@ export class _122_PaperNo {
                             this.data.PaperNo = response[0].PO_ID;
                             this.data.PaperNo_ID = response[0].ID;
 
-                            myGlobals.ProgParameters.set('PaperNo', this.data.PaperNo);
-                            myGlobals.ProgParameters.set('PaperNo_ID', this.data.PaperNo_ID);
+                            localStorage.setItem('PaperNo', this.data.PaperNo);
+                            localStorage.setItem('PaperNo_ID', this.data.PaperNo_ID);
 
                             //帶出驗收明細
                             this._http_services.POST('', 'sp'
@@ -147,7 +138,7 @@ export class _122_PaperNo {
                                     , { Name: '@ID', Value: this.data.PaperNo }
                                     , { Name: '@USER_NAME', Value: this.data.USER_ID }
                                 ])
-                                .subscribe((response2) => {
+                                .then((response2) => {
                                     this.result = response2[0];
                                 });
 
@@ -188,7 +179,7 @@ export class _122_PaperNo {
             , [{ Name: '@JOB_ID', Value: 13 }
                 , { Name: '@REG_ID', Value: this.data.CarNo }
                 , { Name: '@ID', Value: this.data.PaperNo }])
-            .subscribe((response) => {
+            .then((response) => {
                 myGlobals.ProgParameters.set('ListTable_Source', response);
 
                 let obj = this.modalCtrl.create(PaperDetailPage);
@@ -210,7 +201,7 @@ export class _122_PaperNo {
                 , { Name: '@ID', Value: this.data.PaperNo_ID }
                 , { Name: '@USER_NAME', Value: this.data.USER_ID }
             ])
-            .subscribe((response) => {
+            .then((response) => {
                 if (response != '') {
                     switch (response[0].RT_CODE) {
                         case 0:
@@ -220,7 +211,7 @@ export class _122_PaperNo {
                                 position: 'bottom'
                             });
                             toast.present();
-                            this.reset_btn();
+                            this.reset();
 
                             break;
                         default:

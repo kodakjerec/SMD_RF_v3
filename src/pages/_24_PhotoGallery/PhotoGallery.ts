@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Platform, NavParams, AlertController, IonicPage } from 'ionic-angular';
+import { NavController, Platform, AlertController, IonicPage } from 'ionic-angular';
 import { http_services } from '../_ZZ_CommonLib/http_services';
 
 @IonicPage({
@@ -13,7 +13,6 @@ import { http_services } from '../_ZZ_CommonLib/http_services';
 export class _24_PhotoGallery {
     constructor(public navCtrl: NavController
         , private plt: Platform
-        , public navParams: NavParams
         , public _http_services: http_services
         , private alertCtrl: AlertController) {
 
@@ -44,7 +43,7 @@ export class _24_PhotoGallery {
         this._http_services.POST('', 'Picture'
             , 'search'
             , [{}])
-            .subscribe((response) => {
+            .then((response) => {
                 for (var index in response) {
                     var value = response[index];
                     var value_Description = value.Description;
@@ -67,7 +66,7 @@ export class _24_PhotoGallery {
         //this._http_services.POST('', 'Picture'
         //    , 'open'
         //    , [{ Name: '@FileName', Value: item.FileName }])
-        //    .subscribe((response) => {
+        //    .then((response) => {
         //        console.log(response);
         //    });
     }
@@ -100,7 +99,7 @@ export class _24_PhotoGallery {
                         this._http_services.POST('', 'Picture'
                             , 'delete'
                             , [{ Name: '@FileName', Value: strPicsList }])
-                            .subscribe(() => {
+                            .then(() => {
                                 this.searchPic();
                             });
                     }
@@ -115,7 +114,7 @@ export class _24_PhotoGallery {
         this._http_services.POST('', 'Picture'
             , 'download'
             , [{ Name: '@FileName', Value: item.FileName }])
-            .subscribe(() => {
+            .then(() => {
 
             });
     }

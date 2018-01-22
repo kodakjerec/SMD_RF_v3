@@ -47,14 +47,10 @@
             <button small ion-button outline>
                 <a [href]="getDownloadURL()">APK</a>
             </button>
-            <button small ion-button outline icon-only (click)="hotCodePushUI()">
+            <button small ion-button outline icon-only (click)="gotoUpdateApp()">
                 <ion-icon name="refresh"></ion-icon>
             </button>
             <!--<button small ion-button outline [color]="checkNFCreturnColor()" [disabled]="true">NFC</button>-->
-
-            <ion-buttons end>
-                <span style="color:white">Web:{{data.WebVersion}}<br /> Apk:{{data.ApkVersion}}</span>
-            </ion-buttons>
         </ion-toolbar>
     </ion-footer>
 </div>

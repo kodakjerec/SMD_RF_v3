@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, ModalController, ToastController, Platform, NavParams, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, ModalController, ToastController, Platform, IonicPage } from 'ionic-angular';
 import { Navbar } from 'ionic-angular';
 
 //Cordova
@@ -24,22 +24,13 @@ import { myCAMERAPage } from '../../_ZZ_CommonLib/myCAMERA/myCAMERA';
 export class _124_ItemRcv {
     constructor(public navCtrl: NavController
         , public platform: Platform
-        , public navParams: NavParams
         , public _http_services: http_services
         , private modalCtrl: ModalController
         , private alertCtrl: AlertController
         , private toastCtrl: ToastController
         , private keyboard: Keyboard
         , private vibration: Vibration) {
-        this.data.USER_ID = myGlobals.ProgParameters.get('USER_ID');
-        this.data.BLOCK_NAME = myGlobals.ProgParameters.get('BLOCK_NAME');
-        this.data.CarNo = myGlobals.ProgParameters.get('CarNo');
-        this.data.PaperNo = myGlobals.ProgParameters.get('PaperNo');
-        this.data.PaperNo_ID = myGlobals.ProgParameters.get('PaperNo_ID');
-        this.data.ItemCode = myGlobals.ProgParameters.get('ItemCode');
-        this.data.ITEM_HOID = myGlobals.ProgParameters.get('ITEM_HOID');
-        this.data.LOT_ID = myGlobals.ProgParameters.get('LOT_ID');
-        myGlobals.loginCheck.check();
+        myGlobals.loginCheck();
 
         this.result = myGlobals.ProgParameters.get('ReceiveResult');
         this.InitQueryItemState();
@@ -83,15 +74,15 @@ export class _124_ItemRcv {
     }
 
     data = {
-        CarNo: ''
-        , PaperNo: ''
-        , PaperNo_ID: ''
-        , ItemCode: ''
-        , ITEM_HOID: ''
-        , LOT_ID: ''
+        CarNo: localStorage.getItem('CarNo')
+        , PaperNo: localStorage.getItem('PaperNo')
+        , PaperNo_ID: localStorage.getItem('PaperNo_ID')
+        , ItemCode: localStorage.getItem('ItemCode')
+        , ITEM_HOID: localStorage.getItem('ITEM_HOID')
+        , LOT_ID: localStorage.getItem('LOT_ID')
         , viewColor: ''
-        , USER_ID: ''
-        , BLOCK_NAME: ''
+        , USER_ID: localStorage.getItem('USER_ID')
+        , BLOCK_NAME: localStorage.getItem('BLOCK_NAME')
         , IsHideWhenKeyboardOpen: false
     };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
     answer = {
@@ -167,7 +158,7 @@ export class _124_ItemRcv {
         this._http_services.POST('', 'sqlcmd'
             , 'Select ID as Value, Name from vDCS_Table_item_State'
             , [])
-            .subscribe((response) => {
+            .then((response) => {
                 for (var index in response) {
                     var value = response[index];
                     this.answer.QualityList.push({ Name: value.Name, Value: value.Value });
@@ -281,7 +272,7 @@ export class _124_ItemRcv {
                 , { Name: '@WT', Value: this.answer.WEIGHT }
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
             ])
-            .subscribe((response) => {
+            .then((response) => {
                 if (response != '') {
                     switch (response[0].RT_CODE) {
                         case 0:
@@ -343,7 +334,7 @@ export class _124_ItemRcv {
                 , { Name: '@ID', Value: this.data.PaperNo_ID }
                 , { Name: '@ITEM', Value: this.data.LOT_ID }
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
-            ]).subscribe(() => { });
+            ]).then(() => { });
     };
 
     //拍照上傳

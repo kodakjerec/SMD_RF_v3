@@ -138,7 +138,7 @@ export class myCAMERAPage {
             , [{ Name: '@FileName', Value: this.data.FileName }
                 , { Name: '@FileSource', Value: this.data.imageData }
                 , { Name: '@FileDescription', Value: this.data.defaultFileDescription + this.data.FileDescription }])
-            .subscribe((response) => {
+            .then((response) => {
                 if (response != '') {
                     console.log(response);
                     switch (response[0].RT_CODE) {
