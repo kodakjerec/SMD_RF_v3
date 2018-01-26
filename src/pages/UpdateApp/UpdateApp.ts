@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform, NavParams, AlertController, ToastController, NavController } from 'ionic-angular';
+import { Platform, NavParams, LoadingController, AlertController, ToastController, NavController } from 'ionic-angular';
 
 //Cordova
 import { AppUpdate } from '@ionic-native/app-update';
@@ -19,12 +19,11 @@ export class UpdateApp {
         public platform: Platform
         , private navparams: NavParams
         , public navCtrl: NavController
+        , public loadingCtrl: LoadingController
         , private alertCtrl: AlertController
         , private toastCtrl: ToastController
         , private appUpdate: AppUpdate
     ) {
-        if (this.navparams.get('UpdateApp') != undefined)
-            this.data.CallFromLogin = true;
         this.initialApp();
     }
 
@@ -39,7 +38,6 @@ export class UpdateApp {
             this.data.checkStatus0 = 'secondary';
             this.data.checkStatus1 = 'secondary';
             this.hotcodepush_ChangeFlag();
-            console.log("You're develop in the browser. NO NFC,update");
             return;
         }
         this.platform.ready()
@@ -55,7 +53,6 @@ export class UpdateApp {
         , ApkVersion: ''
         , ErrorTitle: ''
         , ErrorMessage: ''
-        , CallFromLogin: false
     };
 
     gotoMain() {
@@ -63,7 +60,12 @@ export class UpdateApp {
     }
 
     //#region 檢查更新 hot code push
+    myloadingCtrl= this.loadingCtrl.create({
+        content: "檢查網頁更新中...",
+    });
     hotCodePush(): any {
+        this.myloadingCtrl.present();
+
         window["thisRef"] = this;
         chcp.fetchUpdate(this.updateCallback);
         chcp.getVersionInfo(this.InfoCallback);
@@ -95,43 +97,26 @@ export class UpdateApp {
             console.log('Web Update is Loading ');
             window["thisRef"].data.ErrorTitle = 'Web正在更新';
 
-            if (window["thisRef"].data.CallFromLogin) {
-                let myalert = window["thisRef"].alertCtrl.create({
-                    title: '準備下載 Web 更新',
-                    buttons: ['關閉']
-                });
-                myalert.onDidDismiss(response => {
-                    chcp.installUpdate(error => {
-                        if (error) {
-                            console.error(error);
-                            window["thisRef"].data.ErrorTitle = 'Web更新失敗';
-                            window["thisRef"].data.ErrorMessage = error.code;
-                        }
-                        else {
-                            console.log('Web Update Finished ');
-                            window["thisRef"].data.ErrorTitle = 'Web更新完畢';
-                            window["thisRef"].data.checkStatus1 = 'secondary';
-                            window["thisRef"].hotcodepush_ChangeFlag();
-                        }
-                    });
-                });
-                myalert.present();
-            }
-            else {
-                chcp.installUpdate(error => {
-                    if (error) {
-                        console.error(error);
-                        window["thisRef"].data.ErrorTitle = 'Web更新失敗';
-                        window["thisRef"].data.ErrorMessage = error.code;
-                    }
-                    else {
-                        console.log('Web Update Finished ');
-                        window["thisRef"].data.ErrorTitle = 'Web更新完畢';
-                        window["thisRef"].data.checkStatus1 = 'secondary';
-                        window["thisRef"].hotcodepush_ChangeFlag();
-                    }
-                });
-            }
+			let myalert = window["thisRef"].alertCtrl.create({
+				title: '準備下載 Web 更新',
+				buttons: ['關閉']
+			});
+			myalert.onDidDismiss(response => {
+				chcp.installUpdate(error => {
+					if (error) {
+						console.error(error);
+						window["thisRef"].data.ErrorTitle = 'Web更新失敗';
+						window["thisRef"].data.ErrorMessage = error.code;
+					}
+					else {
+						console.log('Web Update Finished ');
+						window["thisRef"].data.ErrorTitle = 'Web更新完畢';
+						window["thisRef"].data.checkStatus1 = 'secondary';
+						window["thisRef"].hotcodepush_ChangeFlag();
+					}
+				});
+			});
+			myalert.present();
         }
     }
     InfoCallback(err, data) {
@@ -139,6 +124,7 @@ export class UpdateApp {
         window["thisRef"].data.ApkVersion = data.appVersion;
     }
     hotcodepush_ChangeFlag() {
+        this.myloadingCtrl.dismiss();
         console.log('Check Finish Apk:' + this.data.checkStatus0 + ' Web:' + this.data.checkStatus1);
 
         //沒有做到同步處理, 無法檢查web 更新狀況
@@ -146,7 +132,7 @@ export class UpdateApp {
             this.data.checkStatus2 = true;
             let toast = this.toastCtrl.create({
                 message: '更新完畢，自動進入登入畫面',
-                duration: 2000,
+                duration: 1000,
                 position: 'middle'
             });
             toast.onDidDismiss(response => {

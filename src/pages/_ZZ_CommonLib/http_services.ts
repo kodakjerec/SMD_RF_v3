@@ -39,7 +39,7 @@ export class http_services {
         let loading = this.loadingCtrl.create({
             content: '送出查詢中...'
         });
-        if(myGlobals.ShowLoadingWindow){
+        if (myGlobals.ShowLoadingWindow) {
             loading.present();
         }
 
@@ -90,27 +90,29 @@ export class http_services {
             }) // ...and calling .json() on the response to return data
             .catch((error: any) => {
                 loading.dismiss();
-                console.log(error);
 
                 // In a real world app, you might use a remote logging infrastructure
                 let errtitle: string = '錯誤';
                 let errMsg: string = '';
 
                 if (error instanceof Response) {
-                    //const body = error.json() || '';
-                    //const err = body.error || JSON.stringify(body);
-                    errMsg = `${error.status} - ${error.statusText || ''}`;
-                } else {
+                    if (error.status <= 0) {
+                        errMsg = error.status.toString() + ' - ' + 'No Network Connection';
+                    }
+                    else {
+                        errMsg = error.status.toString() + ' - ' + error.statusText;
+                    }
+                }
+                else {
                     errtitle += error.name ? error.name : '';
                     errMsg = error.message ? error.message : error.toString();
                 }
 
-                let alert = this.alertCtrl.create({
+                this.alertCtrl.create({
                     title: errtitle,
                     subTitle: errMsg,
                     buttons: ['關閉']
-                });
-                alert.present();
+                }).present();
                 return Observable.throw(error || 'Server Error');
             })
             .toPromise()

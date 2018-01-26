@@ -1,8 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, ModalController, ToastController, Platform, IonicPage } from 'ionic-angular';
+import { NavController, ModalController, ToastController, IonicPage } from 'ionic-angular';
 
 //Cordova
-import { Keyboard } from '@ionic-native/keyboard';
 import { Vibration } from '@ionic-native/vibration';
 
 //My Pages
@@ -21,25 +20,18 @@ import { PaperDetailPage } from '../../_ZZ_CommonLib/PaperDetail/PaperDetail';
 
 export class _122_PaperNo {
     constructor(public navCtrl: NavController
-        , public platform: Platform
         , public _http_services: http_services
         , private modalCtrl: ModalController
-        , private alertCtrl: AlertController
         , private toastCtrl: ToastController
-        , private keyboard: Keyboard
         , private vibration: Vibration) {
         myGlobals.loginCheck();
-
-        this.initializeApp();
     }
 
     @ViewChild('scan_Entry') scan_Entry;
 
     ionViewDidEnter() {
         if (this.data.IsDisabled == true) {
-            setTimeout(() => {
-                this.scan_Entry.setFocus();
-            }, 150);
+            this.myFocus();
         }
     }
 
@@ -54,37 +46,30 @@ export class _122_PaperNo {
     };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
     result = {};
 
-    initializeApp() {
-        if (this.platform.is('core')) {
-            console.log("You're develop in the browser");
-            return;
-        }
-        this.platform.ready()
-            .then(() => {
-                this.keyboard.onKeyboardShow().subscribe(() => { this.data.IsHideWhenKeyboardOpen = true });
-                this.keyboard.onKeyboardHide().subscribe(() => { this.data.IsHideWhenKeyboardOpen = false });
-            })
-            ;
-    }
-
     //重置btn
     reset() {
         localStorage.setItem('PaperNo', '');
         localStorage.setItem('PaperNo_ID', '');
         this.data.PaperNo_ID = '';
-        
+
         this.result = {};
 
         this.data.IsDisabled = true;
 
-        this.scan_Entry.setFocus();
+        this.myFocus();
     };
 
     //#region 查詢報到牌btn
     search() {
         this.vibration.vibrate(100);
-        if (this.data.PaperNo == '')
+        if (this.data.PaperNo == '') {
+            this.toastCtrl.create({
+                message: '請輸入數值',
+                duration: myGlobals.Set_timeout,
+                position: 'middle'
+            }).present();
             return;
+        }
 
         this.reset();
 
@@ -144,24 +129,31 @@ export class _122_PaperNo {
 
                             break;
                         default:
-                            //Error
-                            let alert_fail = this.alertCtrl.create({
-                                title: '失敗',
-                                subTitle: response[0].RT_MSG,
-                                buttons: [{
-                                    text: '關閉',
-                                    handler: data => {
-                                        this.scan_Entry.setFocus();
-                                    }
-                                }]
-                            });
-                            alert_fail.present();
+                            this.toastCtrl.create({
+                                message: response[0].RT_MSG,
+                                duration: myGlobals.Set_timeout,
+                                position: 'middle'
+                            }).present();
                             break;
                     }
                 }
-                this.scan_Entry.setFocus();
+                this.myFocus();
             });
     };//#endregion
+
+    //喪失focus
+    myFocus() {
+        setTimeout(() => {
+            this.scan_Entry.setFocus();
+        }, 300);
+    };
+
+    myKeylogger(event) {
+        let obj = myGlobals.keyCodeToValue(event.keyCode, this.data.CarNo);
+        if (obj.indexOf('ENTER') >= 0) {
+            this.search();
+        }
+    }
 
     //全選
     selectAll($event) {
@@ -215,18 +207,11 @@ export class _122_PaperNo {
 
                             break;
                         default:
-                            //Error
-                            let alert_fail = this.alertCtrl.create({
-                                title: '失敗',
-                                subTitle: response[0].RT_MSG,
-                                buttons: [{
-                                    text: '關閉',
-                                    handler: data => {
-                                        this.scan_Entry.setFocus();
-                                    }
-                                }]
-                            });
-                            alert_fail.present();
+                            this.toastCtrl.create({
+                                message: response[0].RT_MSG,
+                                duration: myGlobals.Set_timeout,
+                                position: 'middle'
+                            }).present();
                             break;
                     }
                 }

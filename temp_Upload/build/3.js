@@ -1,1 +1,213 @@
-webpackJsonp([3],{656:function(l,n,u){"use strict";function a(l){return e._23(0,[e._19(402653184,1,{scan_Entry:0}),(l()(),e.Z(1,0,null,null,56,"ion-header",[["no-border",""]],null,null,null,null,null)),e.Y(2,16384,null,0,I.a,[y.a,e.j,e.z,[2,D.a]],null,null),(l()(),e._21(-1,null,["\n    "])),(l()(),e.Z(4,0,null,null,18,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,v.b,v.a)),e.Y(5,49152,null,0,E.a,[Z.a,[2,D.a],[2,w.a],y.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n        "])),(l()(),e.Z(7,0,null,3,2,"ion-title",[],null,null,null,S.b,S.a)),e.Y(8,49152,null,0,j.a,[y.a,e.j,e.z,[2,z.a],[2,E.a]],null,null),(l()(),e._21(-1,0,["呼出碼查詢"])),(l()(),e._21(-1,3,["\n        "])),(l()(),e.Z(11,0,null,2,10,"ion-buttons",[["end",""]],null,null,null,null,null)),e.Y(12,16384,null,1,M.a,[y.a,e.j,e.z,[2,z.a],[2,E.a]],null,null),e._19(603979776,2,{_buttons:1}),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(15,0,null,null,5,"button",[["icon-end",""],["ion-button",""]],[[8,"disabled",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.Next()&&a}return a},k.b,k.a)),e.Y(16,1097728,[[2,4]],0,O.a,[[8,""],y.a,e.j,e.z],null,null),(l()(),e._21(-1,0,["\n                下一步\n                "])),(l()(),e.Z(18,0,null,0,1,"ion-icon",[["name","ios-arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),e.Y(19,147456,null,0,N.a,[y.a,e.j,e.z],{name:[0,"name"]},null),(l()(),e._21(-1,0,["\n            "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e._21(-1,3,["\n    "])),(l()(),e._21(-1,null,["\n    "])),(l()(),e.Z(24,0,null,null,32,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,P.b,P.a)),e.Y(25,49152,null,0,z.a,[y.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n        "])),(l()(),e.Z(27,0,null,3,16,"ion-item",[["class","item item-block"]],null,null,null,L.b,L.a)),e.Y(28,1097728,null,3,R.a,[V.a,y.a,e.j,e.z,[2,F.a]],null,null),e._19(335544320,3,{contentLabel:0}),e._19(603979776,4,{_buttons:1}),e._19(603979776,5,{_icons:1}),e.Y(32,16384,null,0,A.a,[],null,null),(l()(),e._21(-1,2,["\n            "])),(l()(),e.Z(34,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(35,16384,[[3,4]],0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["呼出碼"])),(l()(),e._21(-1,2,["\n            "])),(l()(),e.Z(38,0,null,3,4,"ion-input",[["id","txb_scan_Entry"],["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"keyup.enter"],[null,"ionFocus"],[null,"ngModelChange"]],function(l,n,u){var a=!0,e=l.component;if("keyup.enter"===n){a=!1!==e.search()&&a}if("ionFocus"===n){a=!1!==e.selectAll(u)&&a}if("ngModelChange"===n){a=!1!==(e.data.ItemCode=u)&&a}return a},H.b,H.a)),e.Y(39,671744,null,0,U.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),e._18(2048,null,U.f,null,[U.h]),e.Y(41,16384,null,0,U.g,[U.f],null,null),e.Y(42,5423104,[[1,4],["scan_Entry",4]],0,x.a,[y.a,W.a,V.a,Z.a,e.j,e.z,[2,K.a],[2,R.a],[2,U.f],B.a],{type:[0,"type"]},{ionFocus:"ionFocus"}),(l()(),e._21(-1,2,["\n        "])),(l()(),e._21(-1,3,["\n        "])),(l()(),e.Z(45,0,null,2,10,"ion-buttons",[["end",""]],null,null,null,null,null)),e.Y(46,16384,null,1,M.a,[y.a,e.j,e.z,[2,z.a],[2,E.a]],null,null),e._19(603979776,6,{_buttons:1}),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(49,0,null,null,5,"button",[["class","toolbar-button"],["color","primary"],["ion-button",""],["solid",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.search()&&a}return a},k.b,k.a)),e.Y(50,1097728,[[6,4]],0,O.a,[[8,""],y.a,e.j,e.z],{color:[0,"color"],solid:[1,"solid"]},null),(l()(),e._21(-1,0,["\n                "])),(l()(),e.Z(52,0,null,0,1,"ion-icon",[["name","search"],["role","img"]],[[2,"hide",null]],null,null,null,null)),e.Y(53,147456,null,0,N.a,[y.a,e.j,e.z],{name:[0,"name"]},null),(l()(),e._21(-1,0,["\n            "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e._21(-1,3,["\n    "])),(l()(),e._21(-1,null,["\n"])),(l()(),e._21(-1,null,["\n"])),(l()(),e.Z(59,0,null,null,188,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[[null,"swipe"]],function(l,n,u){var a=!0;if("swipe"===n){a=!1!==l.component.swipeEvent(u)&&a}return a},G.b,G.a)),e.Y(60,4374528,null,0,K.a,[y.a,W.a,B.a,e.j,e.z,Z.a,J.a,e.u,[2,D.a],[2,w.a]],null,null),(l()(),e._21(-1,1,["\n    "])),(l()(),e.Z(62,0,null,1,184,"ion-card",[],[[8,"hidden",0]],null,null,null,null)),e.Y(63,16384,null,0,q.a,[y.a,e.j,e.z],null,null),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(65,0,null,null,165,"ion-list",[["class","mylist"]],null,null,null,null,null)),e.Y(66,16384,null,0,X.a,[y.a,e.j,e.z,W.a,$.l,B.a],null,null),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(68,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,L.b,L.a)),e.Y(69,1097728,null,3,R.a,[V.a,y.a,e.j,e.z,[2,F.a]],null,null),e._19(335544320,7,{contentLabel:0}),e._19(603979776,8,{_buttons:1}),e._19(603979776,9,{_icons:1}),e.Y(73,16384,null,0,A.a,[],null,null),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(75,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(76,16384,[[7,4]],0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["太陽日"])),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(79,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(80,16384,[[7,4]],0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(81,null,["",""])),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(84,0,null,null,10,"ion-item",[["class","item item-block"]],null,null,null,L.b,L.a)),e.Y(85,1097728,null,3,R.a,[V.a,y.a,e.j,e.z,[2,F.a]],null,null),e._19(335544320,10,{contentLabel:0}),e._19(603979776,11,{_buttons:1}),e._19(603979776,12,{_icons:1}),e.Y(89,16384,null,0,A.a,[],null,null),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(91,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(92,16384,[[10,4]],0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(93,null,["",""])),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(96,0,null,null,10,"ion-item",[["class","item item-block"]],null,null,null,L.b,L.a)),e.Y(97,1097728,null,3,R.a,[V.a,y.a,e.j,e.z,[2,F.a]],null,null),e._19(335544320,13,{contentLabel:0}),e._19(603979776,14,{_buttons:1}),e._19(603979776,15,{_icons:1}),e.Y(101,16384,null,0,A.a,[],null,null),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(103,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(104,16384,[[13,4]],0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(105,null,["",""])),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(108,0,null,null,16,"ion-item",[["class","item item-block"]],[[8,"hidden",0]],null,null,L.b,L.a)),e.Y(109,1097728,null,3,R.a,[V.a,y.a,e.j,e.z,[2,F.a]],null,null),e._19(335544320,16,{contentLabel:0}),e._19(603979776,17,{_buttons:1}),e._19(603979776,18,{_icons:1}),e.Y(113,16384,null,0,A.a,[],null,null),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(115,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(116,16384,[[16,4]],0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["廠商批號"])),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(119,0,null,3,4,"ion-input",[["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionFocus"]],function(l,n,u){var a=!0,e=l.component;if("ngModelChange"===n){a=!1!==(e.answer.LOT=u)&&a}if("ionFocus"===n){a=!1!==e.selectAll(u)&&a}return a},H.b,H.a)),e.Y(120,671744,null,0,U.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),e._18(2048,null,U.f,null,[U.h]),e.Y(122,16384,null,0,U.g,[U.f],null,null),e.Y(123,5423104,null,0,x.a,[y.a,W.a,V.a,Z.a,e.j,e.z,[2,K.a],[2,R.a],[2,U.f],B.a],{type:[0,"type"]},{ionFocus:"ionFocus"}),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(126,0,null,null,24,"ion-grid",[["class","grid"]],[[8,"hidden",0]],null,null,null,null)),e.Y(127,16384,null,0,ll.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(129,0,null,null,20,"ion-row",[["align-items-center",""],["class","row"]],null,null,null,null,null)),e.Y(130,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(132,0,null,null,6,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),e.Y(133,16384,null,0,ul.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(135,0,null,null,2,"ion-label",[],null,null,null,null,null)),e.Y(136,16384,null,0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(137,null,["",""])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(140,0,null,null,8,"ion-col",[["class","col"]],null,null,null,null,null)),e.Y(141,16384,null,0,ul.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(143,0,null,null,4,"ion-input",[["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionFocus"]],function(l,n,u){var a=!0,e=l.component;if("ngModelChange"===n){a=!1!==(e.answer.SunDay=u)&&a}if("ionFocus"===n){a=!1!==e.selectAll(u)&&a}return a},H.b,H.a)),e.Y(144,671744,null,0,U.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),e._18(2048,null,U.f,null,[U.h]),e.Y(146,16384,null,0,U.g,[U.f],null,null),e.Y(147,5423104,null,0,x.a,[y.a,W.a,V.a,Z.a,e.j,e.z,[2,K.a],[2,R.a],[2,U.f],B.a],{type:[0,"type"],placeholder:[1,"placeholder"]},{ionFocus:"ionFocus"}),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(152,0,null,null,45,"ion-grid",[["class","grid"]],[[8,"hidden",0]],null,null,null,null)),e.Y(153,16384,null,0,ll.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(155,0,null,null,41,"ion-row",[["align-items-center",""],["class","row"]],null,null,null,null,null)),e.Y(156,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(158,0,null,null,6,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),e.Y(159,16384,null,0,ul.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(161,0,null,null,2,"ion-label",[],null,null,null,null,null)),e.Y(162,16384,null,0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(163,null,["",""])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(166,0,null,null,9,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(167,16384,null,0,ul.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(169,0,null,null,5,"ion-toggle",[["class","toggle_temp"],["color","danger"]],[[2,"toggle-disabled",null],[2,"toggle-checked",null],[2,"toggle-activated",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionChange"],[null,"keyup"]],function(l,n,u){var a=!0,t=l.component;if("keyup"===n){a=!1!==e._12(l,170)._keyup(u)&&a}if("ngModelChange"===n){a=!1!==(t.Temp_color.checked=u)&&a}if("ionChange"===n){a=!1!==t.onToggleChange(t.Temp_color)&&a}return a},al.b,al.a)),e.Y(170,1228800,null,0,el.a,[V.a,y.a,W.a,e.j,e.z,tl.a,[2,R.a],$.l,B.a,e.u],{color:[0,"color"],disabled:[1,"disabled"]},{ionChange:"ionChange"}),e._18(1024,null,U.e,function(l){return[l]},[el.a]),e.Y(172,671744,null,0,U.h,[[8,null],[8,null],[8,null],[2,U.e]],{isDisabled:[0,"isDisabled"],model:[1,"model"]},{update:"ngModelChange"}),e._18(2048,null,U.f,null,[U.h]),e.Y(174,16384,null,0,U.g,[U.f],null,null),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(177,0,null,null,6,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(178,16384,null,0,ul.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(180,0,null,null,2,"ion-label",[["class","label_temp"]],null,null,null,null,null)),e.Y(181,16384,null,0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(182,null,["",""])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(185,0,null,null,10,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(186,16384,null,0,ul.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(188,0,null,null,6,"ion-input",[["onkeypress","return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46"],["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionFocus"]],function(l,n,u){var a=!0,e=l.component;if("ngModelChange"===n){a=!1!==(e.answer.Temp=u)&&a}if("ionFocus"===n){a=!1!==e.selectAll(u)&&a}return a},H.b,H.a)),e.Y(189,278528,null,0,t.h,[e.p,e.q,e.j,e.A],{ngClass:[0,"ngClass"]},null),e._16(190,{input_pos_temperature:0,input_neg_temperature:1}),e.Y(191,671744,null,0,U.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),e._18(2048,null,U.f,null,[U.h]),e.Y(193,16384,null,0,U.g,[U.f],null,null),e.Y(194,5423104,null,0,x.a,[y.a,W.a,V.a,Z.a,e.j,e.z,[2,K.a],[2,R.a],[2,U.f],B.a],{type:[0,"type"]},{ionFocus:"ionFocus"}),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(199,0,null,null,18,"ion-item",[["class","item item-block"]],null,null,null,L.b,L.a)),e.Y(200,1097728,null,3,R.a,[V.a,y.a,e.j,e.z,[2,F.a]],null,null),e._19(335544320,19,{contentLabel:0}),e._19(603979776,20,{_buttons:1}),e._19(603979776,21,{_icons:1}),e.Y(204,16384,null,0,A.a,[],null,null),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(206,0,null,2,10,"ion-row",[["class","row"]],null,null,null,null,null)),e.Y(207,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(209,0,null,null,3,"label",[],null,null,null,null,null)),e.Y(210,278528,null,0,t.m,[e.q,e.j,e.A],{ngStyle:[0,"ngStyle"]},null),e._16(211,{color:0}),(l()(),e._21(212,null,["",""])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(214,0,null,null,1,"progress",[["style","width:100px;margin-left:0px;"]],[[8,"max",0],[8,"value",0]],null,null,null,null)),(l()(),e._21(215,null,["",""])),(l()(),e._21(-1,null,["\n                "])),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(219,0,null,null,10,"ion-item",[["class","item item-block"]],null,null,null,L.b,L.a)),e.Y(220,1097728,null,3,R.a,[V.a,y.a,e.j,e.z,[2,F.a]],null,null),e._19(335544320,22,{contentLabel:0}),e._19(603979776,23,{_buttons:1}),e._19(603979776,24,{_icons:1}),e.Y(224,16384,null,0,A.a,[],null,null),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(226,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(227,16384,[[22,4]],0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(228,null,["",""])),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(232,0,null,null,13,"ion-item",[["class","item item-block"]],null,null,null,L.b,L.a)),e.Y(233,1097728,null,3,R.a,[V.a,y.a,e.j,e.z,[2,F.a]],null,null),e._19(335544320,25,{contentLabel:0}),e._19(603979776,26,{_buttons:1}),e._19(603979776,27,{_icons:1}),e.Y(237,16384,null,0,A.a,[],null,null),(l()(),e._21(-1,2,["\n            "])),(l()(),e.Z(239,0,null,2,1,"h1",[],null,null,null,null,null)),(l()(),e._21(-1,null,[" "])),(l()(),e.Z(241,0,null,2,0,"br",[],null,null,null,null,null)),(l()(),e._21(-1,2,["\n            "])),(l()(),e.Z(243,0,null,2,1,"h1",[],null,null,null,null,null)),(l()(),e._21(-1,null,[" "])),(l()(),e._21(-1,2,["\n        "])),(l()(),e._21(-1,null,["\n    "])),(l()(),e._21(-1,1,["\n"])),(l()(),e._21(-1,null,["\n"])),(l()(),e.Z(249,0,null,null,49,"div",[],[[8,"hidden",0]],null,null,null,null)),(l()(),e._21(-1,null,["\n    "])),(l()(),e.Z(251,0,null,null,46,"ion-footer",[["no-border",""]],null,null,null,null,null)),e.Y(252,16384,null,0,ol.a,[y.a,e.j,e.z,[2,D.a]],null,null),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(254,0,null,null,22,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,P.b,P.a)),e.Y(255,49152,null,0,z.a,[y.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n            "])),(l()(),e.Z(257,0,null,3,18,"ion-item",[["class","item item-block"]],null,null,null,L.b,L.a)),e.Y(258,1097728,null,3,R.a,[V.a,y.a,e.j,e.z,[2,F.a]],null,null),e._19(335544320,28,{contentLabel:0}),e._19(603979776,29,{_buttons:1}),e._19(603979776,30,{_icons:1}),e.Y(262,16384,null,0,A.a,[],null,null),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(264,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(265,16384,[[28,4]],0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(266,null,["",""])),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(268,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(269,16384,[[28,4]],0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(270,null,["",""])),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(272,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(273,16384,[[28,4]],0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(274,null,["",""])),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,3,["\n        "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(278,0,null,null,18,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,P.b,P.a)),e.Y(279,49152,null,0,z.a,[y.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n            "])),(l()(),e.Z(281,0,null,0,10,"ion-buttons",[["left",""]],null,null,null,null,null)),e.Y(282,16384,null,1,M.a,[y.a,e.j,e.z,[2,z.a],[2,E.a]],null,null),e._19(603979776,31,{_buttons:1}),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(285,0,null,null,5,"button",[["color","primary"],["icon-start",""],["ion-button",""],["solid",""]],[[8,"disabled",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.finish()&&a}return a},k.b,k.a)),e.Y(286,1097728,[[31,4]],0,O.a,[[8,""],y.a,e.j,e.z],{color:[0,"color"],solid:[1,"solid"]},null),(l()(),e._21(-1,0,["\n                    "])),(l()(),e.Z(288,0,null,0,1,"ion-icon",[["name","checkmark"],["role","img"]],[[2,"hide",null]],null,null,null,null)),e.Y(289,147456,null,0,N.a,[y.a,e.j,e.z],{name:[0,"name"]},null),(l()(),e._21(-1,0,["\n                    單品完成\n                "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,3,["\n            "])),(l()(),e.Z(293,0,null,3,2,"ion-label",[["class","bottom_BLOCK"]],null,null,null,null,null)),e.Y(294,16384,null,0,Q.a,[y.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(295,null,["區域：",""])),(l()(),e._21(-1,3,["\n        "])),(l()(),e._21(-1,null,["\n    "])),(l()(),e._21(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,19,0,"ios-arrow-forward");l(n,39,0,u.data.ItemCode);l(n,42,0,"tel");l(n,50,0,"primary","");l(n,53,0,"search");l(n,120,0,u.answer.LOT);l(n,123,0,"text");l(n,144,0,u.answer.SunDay);l(n,147,0,"tel",e._2(1,"",u.answer.SunDay_placeholder,""));l(n,170,0,"danger",u.data.IsDisabled);l(n,172,0,u.data.IsDisabled,u.Temp_color.checked);l(n,189,0,l(n,190,0,!u.Temp_color.checked,u.Temp_color.checked));l(n,191,0,u.answer.Temp);l(n,194,0,"tel");l(n,210,0,l(n,211,0,u.data.viewColor));l(n,286,0,"primary","");l(n,289,0,"checkmark")},function(l,n){var u=n.component;l(n,4,0,e._12(n,5)._hidden,e._12(n,5)._sbPadding);l(n,15,0,u.data.IsDisabled);l(n,18,0,e._12(n,19)._hidden);l(n,24,0,e._12(n,25)._sbPadding);l(n,38,0,e._12(n,41).ngClassUntouched,e._12(n,41).ngClassTouched,e._12(n,41).ngClassPristine,e._12(n,41).ngClassDirty,e._12(n,41).ngClassValid,e._12(n,41).ngClassInvalid,e._12(n,41).ngClassPending);l(n,52,0,e._12(n,53)._hidden);l(n,59,0,e._12(n,60).statusbarPadding,e._12(n,60)._hasRefresher);l(n,62,0,u.data.IsDisabled);l(n,81,0,u.answer.DisplaySunDay);l(n,93,0,u.result.ROW1);l(n,105,0,u.result.ROW2);l(n,108,0,!u.result.QL_TYPE);l(n,119,0,e._12(n,122).ngClassUntouched,e._12(n,122).ngClassTouched,e._12(n,122).ngClassPristine,e._12(n,122).ngClassDirty,e._12(n,122).ngClassValid,e._12(n,122).ngClassInvalid,e._12(n,122).ngClassPending);l(n,126,0,!u.result.QE_TYPE);l(n,137,0,u.result.QE_TYPE_NAME);l(n,143,0,e._12(n,146).ngClassUntouched,e._12(n,146).ngClassTouched,e._12(n,146).ngClassPristine,e._12(n,146).ngClassDirty,e._12(n,146).ngClassValid,e._12(n,146).ngClassInvalid,e._12(n,146).ngClassPending);l(n,152,0,!u.result.QT_TYPE);l(n,163,0,u.result.QT_TYPE_NAME);l(n,169,0,e._12(n,170)._disabled,e._12(n,170)._value,e._12(n,170)._activated,e._12(n,174).ngClassUntouched,e._12(n,174).ngClassTouched,e._12(n,174).ngClassPristine,e._12(n,174).ngClassDirty,e._12(n,174).ngClassValid,e._12(n,174).ngClassInvalid,e._12(n,174).ngClassPending);l(n,182,0,u.Temp_color.labelName);l(n,188,0,e._12(n,193).ngClassUntouched,e._12(n,193).ngClassTouched,e._12(n,193).ngClassPristine,e._12(n,193).ngClassDirty,e._12(n,193).ngClassValid,e._12(n,193).ngClassInvalid,e._12(n,193).ngClassPending);l(n,212,0,u.result.ROW3);l(n,214,0,e._2(1,"",u.answer.QTY_ShowTotal,""),e._2(1,"",u.result.QTY,""));l(n,215,0,(u.answer.QTY_ShowTotal-u.answer.QTY_left)/u.answer.QTY_ShowTotal*100);l(n,228,0,u.result.ROW4);l(n,249,0,u.data.IsHideWhenKeyboardOpen);l(n,254,0,e._12(n,255)._sbPadding);l(n,266,0,u.result.ROW5);l(n,270,0,u.result.ROW6);l(n,274,0,u.result.ROW7);l(n,278,0,e._12(n,279)._sbPadding);l(n,285,0,u.data.IsDisabled);l(n,288,0,e._12(n,289)._hidden);l(n,295,0,u.data.BLOCK_NAME)})}Object.defineProperty(n,"__esModule",{value:!0});var e=u(1),t=(u(0),u(16)),o=(u(36),u(91)),s=u(37),i=u(44),_=u(65),r=u(186),c=function(){function l(l,n,u,a,e,t,o,s){this.navCtrl=l,this.platform=n,this._http_services=u,this.modalCtrl=a,this.alertCtrl=e,this.toastCtrl=t,this.keyboard=o,this.vibration=s,this.data={CarNo:localStorage.getItem("CarNo"),PaperNo:localStorage.getItem("PaperNo"),PaperNo_ID:localStorage.getItem("PaperNo_ID"),ItemCode:"",ITEM_HOID:"",LOT_ID:"",viewColor:"",IsDisabled:!0,USER_ID:localStorage.getItem("USER_ID"),BLOCK_NAME:localStorage.getItem("BLOCK_NAME"),IsHideWhenKeyboardOpen:!1},this.answer={LOT:"",SunDay:"",SunDay_placeholder:"123",Temp:0,QTY_ShowTotal:0,QTY_left:0,DisplaySunDay:0},this.result={},this.Temp_color={labelName:"＋",checked:!1},i.h(),this.initializeApp()}return l.prototype.ionViewDidEnter=function(){var l=this;1==this.data.IsDisabled&&setTimeout(function(){l.scan_Entry.setFocus()},150)},l.prototype.onToggleChange=function(l){l.labelName=1==l.checked?"－":"＋"},l.prototype.initializeApp=function(){var l=this;this.platform.is("core")?console.log("You're develop in the browser"):this.platform.ready().then(function(){l.keyboard.onKeyboardShow().subscribe(function(){l.data.IsHideWhenKeyboardOpen=!0}),l.keyboard.onKeyboardHide().subscribe(function(){l.data.IsHideWhenKeyboardOpen=!1})})},l.prototype.reset=function(){localStorage.setItem("ItemCode",""),localStorage.setItem("ITEM_HOID",""),this.data.ITEM_HOID="",this.answer.LOT="",this.answer.SunDay="",this.answer.SunDay_placeholder="123",this.answer.QTY_ShowTotal=0,this.answer.QTY_left=0,this.answer.DisplaySunDay=0,this.answer.Temp=0,this.Temp_color.checked=!1,this.onToggleChange(this.Temp_color),this.result={},this.data.IsDisabled=!0,this.scan_Entry.setFocus()},l.prototype.search=function(){var l=this;this.vibration.vibrate(100),""!=this.data.ItemCode&&(this.reset(),this._http_services.POST("","sp","spactDCS_ID_LINE",[{Name:"@JOB_ID",Value:"1"},{Name:"@ID",Value:this.data.PaperNo_ID},{Name:"@ITEM",Value:this.data.ItemCode},{Name:"@USER_ID",Value:this.data.USER_ID}]).then(function(n){if(""!=n)switch(n[0].RT_CODE){case-1:var u=[];for(var a in n){var e=n[a];u.push({Name:e.RT_MSG,Value:e.BARCODE})}i.d.set("ListTable_Source",u);var t=l.modalCtrl.create(r.a);t.onDidDismiss(function(n){l.data.ItemCode=i.d.get("ListTable_answer").Value,console.log(i.d.get("ListTable_answer")),l.search()}),t.present();break;case 0:l.result=n[0],l.data.IsDisabled=!1,l.data.ItemCode=n[0].ITEM_ID,l.data.ITEM_HOID=n[0].ITEM_HOID,localStorage.setItem("ItemCode",l.data.ItemCode),localStorage.setItem("ITEM_HOID",l.data.ITEM_HOID),l._http_services.POST("","sqlcmd","SELECT DATENAME(dayofyear, getdate()) AS 'SunDay'",[]).then(function(n){l.answer.DisplaySunDay=n[0].SunDay});var o=n[0],s=o.PO_QTY.split("/");l.answer.QTY_left=parseInt(s[0]),l.answer.QTY_ShowTotal=parseInt(s[1]),l.data.viewColor=l.answer.QTY_left<=0?"white":"red",l.answer.SunDay=o.QE_TYPE_TEXT,l.answer.SunDay_placeholder="效期"==o.QE_TYPE_NAME?"YYMMDD":"123";break;default:l.alertCtrl.create({title:"失敗",subTitle:n[0].RT_MSG,buttons:[{text:"關閉",handler:function(n){l.scan_Entry.setFocus()}}]}).present()}l.scan_Entry.setFocus()}))},l.prototype.finish=function(){var l=this;this.vibration.vibrate(100),""!=this.data.ItemCode&&this._http_services.POST("","sp","spactDCS_ID_LINE",[{Name:"@JOB_ID",Value:"45"},{Name:"@ID",Value:this.data.PaperNo_ID},{Name:"@ITEM",Value:this.data.ITEM_HOID},{Name:"@USER_ID",Value:this.data.USER_ID}]).then(function(n){if(""!=n)switch(n[0].RT_CODE){case 0:l.toastCtrl.create({message:n[0].RT_MSG,duration:i.e,position:"bottom"}).present(),l.reset();break;default:l.alertCtrl.create({title:"失敗",subTitle:void 0!=n[0].RT_MSG?n[0].RT_MSG:n[0].MEG,buttons:[{text:"關閉",handler:function(n){l.scan_Entry.setFocus()}}]}).present()}})},l.prototype.Next=function(){var l=this;1!=this.data.IsDisabled&&(1==this.Temp_color.checked&&(this.answer.Temp=0-this.answer.Temp),this._http_services.POST("","sp","spactDCS_ID_LINE",[{Name:"@JOB_ID",Value:"2"},{Name:"@ID",Value:this.data.PaperNo_ID},{Name:"@ITEM",Value:this.data.ITEM_HOID},{Name:"@ITEM_LOT",Value:this.answer.LOT},{Name:"@ITEM_DATE",Value:this.answer.SunDay},{Name:"@ITEM_TEMP",Value:this.answer.Temp},{Name:"@USER_ID",Value:this.data.USER_ID}]).then(function(n){if(""!=n)switch(n[0].RT_CODE){case 0:l.data.LOT_ID=n[0].LOT_ID,localStorage.setItem("LOT_ID",l.data.LOT_ID),i.d.set("ReceiveResult",l.result),l.navCtrl.push("_124_ItemRcv");break;default:l.alertCtrl.create({title:"失敗",subTitle:n[0].RT_MSG,buttons:[{text:"關閉",handler:function(n){l.scan_Entry.setFocus()}}]}).present()}}))},l.prototype.selectAll=function(l){l._native.nativeElement.select()},l.prototype.swipeEvent=function(l){switch(l.direction){case 1:case 2:break;case 4:this.navCtrl.pop()}},l}(),d=function(){return function(){}}(),h=u(355),g=u(356),b=u(357),p=u(358),m=u(359),T=u(360),Y=u(361),f=u(362),C=u(363),I=u(55),y=u(3),D=u(7),v=u(68),E=u(33),Z=u(8),w=u(19),S=u(69),j=u(43),z=u(34),M=u(61),k=u(30),O=u(17),N=u(39),P=u(182),L=u(364),R=u(27),V=u(24),F=u(70),A=u(129),Q=u(57),H=u(365),U=u(23),x=u(92),W=u(5),K=u(20),B=u(9),G=u(56),J=u(31),q=u(181),X=u(72),$=u(12),ll=u(60),nl=u(45),ul=u(59),al=u(668),el=u(183),tl=u(46),ol=u(90),sl=u(130),il=u(58),_l=u(71),rl=e.X({encapsulation:2,styles:[],data:{}}),cl=e.V("ng-component",c,function(l){return e._23(0,[(l()(),e.Z(0,0,null,null,1,"ng-component",[],null,null,null,a,rl)),e.Y(1,49152,null,0,c,[w.a,W.a,_.a,sl.a,il.a,_l.a,o.a,s.a],null,null)],null,null)},{},{},[]),dl=u(180),hl=u(66);u.d(n,"AppModuleNgFactory",function(){return gl});var gl=e.W(d,[],function(l){return e._8([e._9(512,e.i,e.S,[[8,[h.a,g.a,b.a,p.a,m.a,T.a,Y.a,f.a,C.a,cl]],[3,e.i],e.s]),e._9(4608,t.l,t.k,[e.r,[2,t.t]]),e._9(4608,U.k,U.k,[]),e._9(4608,U.c,U.c,[]),e._9(512,t.b,t.b,[]),e._9(512,U.j,U.j,[]),e._9(512,U.d,U.d,[]),e._9(512,U.i,U.i,[]),e._9(512,dl.a,dl.a,[]),e._9(512,dl.b,dl.b,[]),e._9(512,d,d,[]),e._9(256,hl.a,c,[])])})},668:function(l,n,u){"use strict";function a(l){return e._23(0,[(l()(),e.Z(0,0,null,null,1,"div",[["class","toggle-icon"]],null,null,null,null,null)),(l()(),e.Z(1,0,null,null,0,"div",[["class","toggle-inner"]],null,null,null,null,null)),(l()(),e.Z(2,0,null,null,1,"button",[["class","item-cover"],["disable-activated",""],["ion-button","item-cover"],["role","checkbox"],["type","button"]],[[8,"id",0],[1,"aria-checked",0],[1,"aria-labelledby",0],[1,"aria-disabled",0]],null,null,t.b,t.a)),e.Y(3,1097728,null,0,o.a,[[8,"item-cover"],s.a,e.j,e.z],null,null)],null,function(l,n){var u=n.component;l(n,2,0,u.id,u._value,u._labelId,u._disabled)})}u.d(n,"a",function(){return i}),n.b=a;var e=u(1),t=u(30),o=u(17),s=u(3),i=(u(24),u(5),u(46),u(12),u(9),e.X({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([3],{
+
+/***/ 702:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_24_PhotoGalleryModule", function() { return _24_PhotoGalleryModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PhotoGallery__ = __webpack_require__(722);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var _24_PhotoGalleryModule = /** @class */ (function () {
+    function _24_PhotoGalleryModule() {
+    }
+    _24_PhotoGalleryModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__PhotoGallery__["a" /* _24_PhotoGallery */])
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__PhotoGallery__["a" /* _24_PhotoGallery */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_2__PhotoGallery__["a" /* _24_PhotoGallery */]]
+        })
+    ], _24_PhotoGalleryModule);
+    return _24_PhotoGalleryModule;
+}());
+
+//# sourceMappingURL=PhotoGallery.module.js.map
+
+/***/ }),
+
+/***/ 722:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _24_PhotoGallery; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ZZ_CommonLib_http_services__ = __webpack_require__(87);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var _24_PhotoGallery = /** @class */ (function () {
+    function _24_PhotoGallery(navCtrl, plt, _http_services, alertCtrl) {
+        this.navCtrl = navCtrl;
+        this.plt = plt;
+        this._http_services = _http_services;
+        this.alertCtrl = alertCtrl;
+        //#region Init
+        this.data = {
+            choice: 'DAS',
+            ScanBarcode: '',
+            JOBID: '',
+            devWidth: 0
+        };
+        this.Lists = [];
+        this.data.devWidth = plt.width();
+        console.log('Dev Width' + this.data.devWidth);
+    }
+    //#endregion
+    _24_PhotoGallery.prototype.ngOnInit = function () {
+        this.searchPic();
+    };
+    ;
+    _24_PhotoGallery.prototype.searchPic = function () {
+        var _this = this;
+        this.Lists = [];
+        this._http_services.POST('', 'Picture', 'search', [{}])
+            .then(function (response) {
+            for (var index in response) {
+                var value = response[index];
+                var value_Description = value.Description;
+                _this.Lists.push({
+                    FileName: value.FileName,
+                    Description: value_Description,
+                    showDescription: value_Description.replace(/\<br>/g, "\n"),
+                    ThumbnailImage: 'data:image/png;base64,' + value.ThumbnailImage,
+                    CreateTime: value.CreateTime,
+                    check: false
+                });
+            }
+            console.log(_this.Lists);
+        });
+    };
+    //開啟編輯模式
+    _24_PhotoGallery.prototype.showPic = function (item) {
+        item.check = !item.check;
+        //this._http_services.POST('', 'Picture'
+        //    , 'open'
+        //    , [{ Name: '@FileName', Value: item.FileName }])
+        //    .then((response) => {
+        //        console.log(response);
+        //    });
+    };
+    //刪除圖片
+    _24_PhotoGallery.prototype.deletePic = function () {
+        var _this = this;
+        var strPicsList_show = '', strPicsList = [];
+        this.Lists.forEach(function (value) {
+            if (value.check) {
+                strPicsList_show += value.FileName + '<br>';
+                strPicsList.push(value.FileName);
+            }
+        });
+        var confirm = this.alertCtrl.create({
+            title: '確定要永久刪除勾選的圖片？',
+            message: strPicsList_show,
+            buttons: [
+                {
+                    text: '取消',
+                    handler: function () {
+                    }
+                },
+                {
+                    text: '確定',
+                    handler: function () {
+                        _this._http_services.POST('', 'Picture', 'delete', [{ Name: '@FileName', Value: strPicsList }])
+                            .then(function () {
+                            _this.searchPic();
+                        });
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    //下載圖片
+    _24_PhotoGallery.prototype.downloadPic = function (item) {
+        this._http_services.POST('', 'Picture', 'download', [{ Name: '@FileName', Value: item.FileName }])
+            .then(function () {
+        });
+    };
+    //改變螢幕寬度時觸發
+    _24_PhotoGallery.prototype.onResize = function () {
+        this.data.devWidth = this.plt.width();
+    };
+    ;
+    //help
+    _24_PhotoGallery.prototype.help = function () {
+        var alert = this.alertCtrl.create({
+            title: '使用說明',
+            subTitle: '1. 手機介面瀏覽時，下載功能無法使用<br>'
+                + '2. 按下"下載圖案"：瀏覽器會跳出下載視窗<br>'
+                + '3. 按下"圖片"：勾選該張圖片，勾選的圖片右上角會有V圖案<br>'
+                + '4. 批次刪除：勾選多張圖片後，按下標題列右方的垃圾桶',
+            buttons: ['關閉']
+        });
+        alert.present();
+    };
+    //喪失focus
+    _24_PhotoGallery.prototype.myfocus = function () {
+        this.scan_Entry.setFocus();
+    };
+    ;
+    //全選
+    _24_PhotoGallery.prototype.selectAll = function ($event) {
+        $event._native.nativeElement.select();
+    };
+    //手勢
+    _24_PhotoGallery.prototype.swipeEvent = function (event) {
+        switch (event.direction) {
+            case 1://NONE
+                break;
+            case 2://LEFT
+                break;
+            case 4://RIGHT
+                this.navCtrl.pop();
+                break;
+            case 8://UP
+                break;
+            case 16://DOWN
+                break;
+        }
+        ;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('scan_Entry'),
+        __metadata("design:type", Object)
+    ], _24_PhotoGallery.prototype, "scan_Entry", void 0);
+    _24_PhotoGallery = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_24_PhotoGallery\PhotoGallery.html"*/'﻿<ion-header>\n\n    <ion-navbar>\n\n        <ion-title (click)="help()">不良品相簿管理<button small ion-button outline>HELP</button></ion-title>\n\n        <ion-buttons end>\n\n            <button ion-fab mini (click)="deletePic(item)"><ion-icon name="trash"></ion-icon></button>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content (swipe)="swipeEvent($event)">\n\n    <ion-grid>\n\n        <ion-row>\n\n            <ion-col *ngFor="let item of Lists" col-4>\n\n                <ion-card>\n\n                    <ion-card-header style="padding:0px 0px 0px 0px;" (click)="showPic(item)">\n\n                        <img [src]="item.ThumbnailImage" />\n\n                    </ion-card-header>\n\n                    <div>\n\n                        <ion-fab right top>\n\n                            <button ion-fab mini [hidden]="!item.check" (click)="showPic(item)"><ion-icon name="checkmark"></ion-icon></button>\n\n                        </ion-fab>\n\n                        <div (window:resize)="onResize()" [hidden]="data.devWidth<480">\n\n                            <label>{{item.FileName}}</label><br />\n\n                            <label style="white-space: pre;color:white">{{item.showDescription}}</label>\n\n\n\n                            <ion-fab right bottom>\n\n                                <button ion-fab mini (click)="downloadPic(item)"><ion-icon name="download"></ion-icon></button>\n\n                            </ion-fab>\n\n                        </div>\n\n                    </div>\n\n                </ion-card>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_24_PhotoGallery\PhotoGallery.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_2__ZZ_CommonLib_http_services__["a" /* http_services */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+    ], _24_PhotoGallery);
+    return _24_PhotoGallery;
+}());
+
+//# sourceMappingURL=PhotoGallery.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=3.js.map

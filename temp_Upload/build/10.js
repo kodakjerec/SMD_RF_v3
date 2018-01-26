@@ -1,1 +1,431 @@
-webpackJsonp([10],{660:function(l,n,u){"use strict";function t(l){return a._23(0,[a._19(402653184,1,{scan_Entry:0}),(l()(),a.Z(1,0,null,null,57,"ion-header",[["no-border",""]],null,null,null,null,null)),a.Y(2,16384,null,0,g.a,[I.a,a.j,a.z,[2,A.a]],null,null),(l()(),a._21(-1,null,["\n    "])),(l()(),a.Z(4,0,null,null,14,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,Y.b,Y.a)),a.Y(5,49152,null,0,Z.a,[v.a,[2,A.a],[2,T.a],I.a,a.j,a.z],null,null),(l()(),a._21(-1,3,["\n        "])),(l()(),a.Z(7,0,null,3,2,"ion-title",[],null,null,null,W.b,W.a)),a.Y(8,49152,null,0,C.a,[I.a,a.j,a.z,[2,N.a],[2,Z.a]],null,null),(l()(),a._21(-1,0,["WAS_營業所"])),(l()(),a._21(-1,3,["\n        "])),(l()(),a.Z(11,0,null,2,6,"ion-buttons",[["end",""]],null,null,null,null,null)),a.Y(12,16384,null,1,w.a,[I.a,a.j,a.z,[2,N.a],[2,Z.a]],null,null),a._19(603979776,2,{_buttons:1}),(l()(),a._21(-1,null,["\n            "])),(l()(),a.Z(15,0,null,null,1,"span",[["style","white-space:pre;color:white"]],null,null,null,null,null)),(l()(),a._21(16,null,["",""])),(l()(),a._21(-1,null,["\n        "])),(l()(),a._21(-1,3,["\n    "])),(l()(),a._21(-1,null,["\n    "])),(l()(),a.Z(20,0,null,null,37,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,L.b,L.a)),a.Y(21,49152,null,0,N.a,[I.a,a.j,a.z],null,null),(l()(),a._21(-1,3,["\n        "])),(l()(),a.Z(23,0,null,3,33,"ion-row",[["class","row"]],null,null,null,null,null)),a.Y(24,16384,null,0,D.a,[],null,null),(l()(),a._21(-1,null,["\n            "])),(l()(),a.Z(26,0,null,null,8,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),a.Y(27,16384,null,0,O.a,[],null,null),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(29,0,null,null,4,"ion-label",[],null,null,null,null,null)),a.Y(30,278528,null,0,e.h,[a.p,a.q,a.j,a.A],{ngClass:[0,"ngClass"]},null),a._14(31,1),a.Y(32,16384,null,0,j.a,[I.a,a.j,a.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),a._21(-1,null,["營業所"])),(l()(),a._21(-1,null,["\n            "])),(l()(),a._21(-1,null,["\n            "])),(l()(),a.Z(36,0,null,null,8,"ion-col",[["class","col"],["col-7",""]],null,null,null,null,null)),a.Y(37,16384,null,0,O.a,[],null,null),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(39,0,null,null,4,"button",[["block",""],["ion-button",""],["outline",""]],[[8,"disabled",0]],[[null,"keyup"],[null,"blur"],[null,"ionFocus"]],function(l,n,u){var t=!0,a=l.component;if("keyup"===n){t=!1!==a.myKeylogger(u)&&t}if("blur"===n){t=!1!==a.myFocus()&&t}if("ionFocus"===n){t=!1!==a.selectAll(u)&&t}return t},M.b,M.a)),a.Y(40,278528,null,0,e.h,[a.p,a.q,a.j,a.A],{ngClass:[0,"ngClass"]},null),a._14(41,1),a.Y(42,1097728,[[1,4],["scan_Entry",4]],0,z.a,[[8,""],I.a,a.j,a.z],{outline:[0,"outline"],block:[1,"block"]},null),(l()(),a._21(43,0,["\n                    ","\n                "])),(l()(),a._21(-1,null,["\n            "])),(l()(),a._21(-1,null,["\n            "])),(l()(),a.Z(46,0,null,null,9,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),a.Y(47,16384,null,0,O.a,[],null,null),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(49,0,null,null,5,"button",[["class","toolbar-button"],["color","primary"],["ion-button",""],["solid",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.openKeyPad()&&t}return t},M.b,M.a)),a.Y(50,1097728,null,0,z.a,[[8,""],I.a,a.j,a.z],{color:[0,"color"],solid:[1,"solid"]},null),(l()(),a._21(-1,0,["\n                    "])),(l()(),a.Z(52,0,null,0,1,"ion-icon",[["name","keypad"],["role","img"]],[[2,"hide",null]],null,null,null,null)),a.Y(53,147456,null,0,k.a,[I.a,a.j,a.z],{name:[0,"name"]},null),(l()(),a._21(-1,0,["\n                "])),(l()(),a._21(-1,null,["\n            "])),(l()(),a._21(-1,null,["\n        "])),(l()(),a._21(-1,3,["\n    "])),(l()(),a._21(-1,null,["\n"])),(l()(),a._21(-1,null,["\n"])),(l()(),a.Z(60,0,null,null,74,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[[null,"swipe"]],function(l,n,u){var t=!0;if("swipe"===n){t=!1!==l.component.swipeEvent(u)&&t}return t},R.b,R.a)),a.Y(61,4374528,null,0,P.a,[I.a,V.a,K.a,a.j,a.z,v.a,Q.a,a.u,[2,A.a],[2,T.a]],null,null),(l()(),a._21(-1,1,["\n    "])),(l()(),a.Z(63,0,null,1,70,"ion-card",[],null,null,null,null,null)),a.Y(64,16384,null,0,B.a,[I.a,a.j,a.z],null,null),(l()(),a._21(-1,null,["\n        "])),(l()(),a.Z(66,0,null,null,50,"ion-grid",[["class","mytable grid"]],null,null,null,null,null)),a.Y(67,16384,null,0,F.a,[],null,null),(l()(),a._21(-1,null,["\n            "])),(l()(),a.Z(69,0,null,null,6,"ion-row",[["class","row"]],null,null,null,null,null)),a.Y(70,16384,null,0,D.a,[],null,null),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(72,0,null,null,2,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),a.Y(73,16384,null,0,O.a,[],null,null),(l()(),a._21(74,null,["",""])),(l()(),a._21(-1,null,["\n            "])),(l()(),a._21(-1,null,["\n            "])),(l()(),a.Z(77,0,null,null,6,"ion-row",[["class","row"]],null,null,null,null,null)),a.Y(78,16384,null,0,D.a,[],null,null),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(80,0,null,null,2,"ion-col",[["class","col"],["col-12",""],["style","font-size:70px;color:yellow"]],null,null,null,null,null)),a.Y(81,16384,null,0,O.a,[],null,null),(l()(),a._21(82,null,["",""])),(l()(),a._21(-1,null,["\n            "])),(l()(),a._21(-1,null,["\n            "])),(l()(),a.Z(85,0,null,null,14,"ion-row",[["class","row"]],null,null,null,null,null)),a.Y(86,16384,null,0,D.a,[],null,null),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(88,0,null,null,2,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),a.Y(89,16384,null,0,O.a,[],null,null),(l()(),a._21(-1,null,["訂購量"])),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(92,0,null,null,2,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),a.Y(93,16384,null,0,O.a,[],null,null),(l()(),a._21(-1,null,["實績量"])),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(96,0,null,null,2,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),a.Y(97,16384,null,0,O.a,[],null,null),(l()(),a._21(-1,null,["剩餘量"])),(l()(),a._21(-1,null,["\n            "])),(l()(),a._21(-1,null,["\n            "])),(l()(),a.Z(101,0,null,null,14,"ion-row",[["class","row"]],null,null,null,null,null)),a.Y(102,16384,null,0,D.a,[],null,null),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(104,0,null,null,2,"ion-col",[["class","col"],["col-3",""],["style","font-size:30px"]],null,null,null,null,null)),a.Y(105,16384,null,0,O.a,[],null,null),(l()(),a._21(106,null,["",""])),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(108,0,null,null,2,"ion-col",[["class","col"],["col-3",""],["style","font-size:30px"]],null,null,null,null,null)),a.Y(109,16384,null,0,O.a,[],null,null),(l()(),a._21(110,null,["",""])),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(112,0,null,null,2,"ion-col",[["class","col"],["col-6",""],["style","font-size:30px"]],null,null,null,null,null)),a.Y(113,16384,null,0,O.a,[],null,null),(l()(),a._21(114,null,["",""])),(l()(),a._21(-1,null,["\n            "])),(l()(),a._21(-1,null,["\n        "])),(l()(),a._21(-1,null,["\n        "])),(l()(),a.Z(118,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,U.b,U.a)),a.Y(119,1097728,null,3,x.a,[G.a,I.a,a.j,a.z,[2,J.a]],null,null),a._19(335544320,3,{contentLabel:0}),a._19(603979776,4,{_buttons:1}),a._19(603979776,5,{_icons:1}),a.Y(123,16384,null,0,q.a,[],null,null),(l()(),a._21(-1,2,["\n            "])),(l()(),a._21(-1,2,["\n            "])),(l()(),a.Z(126,0,null,2,1,"h1",[],null,null,null,null,null)),(l()(),a._21(-1,null,[" "])),(l()(),a.Z(128,0,null,2,0,"br",[],null,null,null,null,null)),(l()(),a._21(-1,2,["\n            "])),(l()(),a.Z(130,0,null,2,1,"h1",[],null,null,null,null,null)),(l()(),a._21(-1,null,[" "])),(l()(),a._21(-1,2,["\n        "])),(l()(),a._21(-1,null,["\n    "])),(l()(),a._21(-1,1,["\n"])),(l()(),a._21(-1,null,["\n"])),(l()(),a.Z(136,0,null,null,13,"div",[],[[8,"hidden",0]],null,null,null,null)),(l()(),a._21(-1,null,["\n    "])),(l()(),a.Z(138,0,null,null,10,"ion-footer",[["no-border",""]],null,null,null,null,null)),a.Y(139,16384,null,0,H.a,[I.a,a.j,a.z,[2,A.a]],null,null),(l()(),a._21(-1,null,["\n        "])),(l()(),a.Z(141,0,null,null,6,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,L.b,L.a)),a.Y(142,49152,null,0,N.a,[I.a,a.j,a.z],null,null),(l()(),a._21(-1,3,["\n            "])),(l()(),a.Z(144,0,null,3,2,"ion-label",[["class","bottom_BLOCK"]],null,null,null,null,null)),a.Y(145,16384,null,0,j.a,[I.a,a.j,a.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),a._21(146,null,["區域：",""])),(l()(),a._21(-1,3,["\n        "])),(l()(),a._21(-1,null,["\n    "])),(l()(),a._21(-1,null,["\n"])),(l()(),a._21(-1,null,["\n"]))],function(l,n){l(n,30,0,l(n,31,0,"myScanBarcodeUI_Label"));l(n,40,0,l(n,41,0,"myScanBarcodeUI"));l(n,42,0,"","");l(n,50,0,"primary","");l(n,53,0,"keypad")},function(l,n){var u=n.component;l(n,4,0,a._12(n,5)._hidden,a._12(n,5)._sbPadding);l(n,16,0,u.data.RefValue);l(n,20,0,a._12(n,21)._sbPadding);l(n,39,0,!u.data.IsInputEnable);l(n,43,0,u.data.WAS_Store);l(n,52,0,a._12(n,53)._hidden);l(n,60,0,a._12(n,61).statusbarPadding,a._12(n,61)._hasRefresher);l(n,74,0,u.DisplayList.SITE_NAME);l(n,82,0,u.DisplayList.SITE_ID);l(n,106,0,u.DisplayList.AMOUNT);l(n,110,0,u.DisplayList.TQty);l(n,114,0,u.DisplayList.LeftQty);l(n,136,0,u.data.IsHideWhenKeyboardOpen);l(n,141,0,a._12(n,142)._sbPadding);l(n,146,0,u.data.BLOCK_NAME)})}Object.defineProperty(n,"__esModule",{value:!0});var a=u(1),e=(u(0),u(16)),o=(u(36),u(37)),s=u(44),i=u(65),r=u(184),_=function(){function l(l,n,u,t,a,e){this.navCtrl=l,this._http_services=n,this.alertCtrl=u,this.toastCtrl=t,this.modalCtrl=a,this.vibration=e,this.data={RefValue:"",BLOCK_NAME:localStorage.getItem("BLOCK_NAME"),WAS_Store:"",IsInputEnable:!0,IsHideWhenKeyboardOpen:!1},this.DisplayList={SITE_ID:"",SEQ:0,AMOUNT:0,TQty:0,LeftQty:0,SITE_NAME:""},this.DefaultTestServer="172_31_31_250",localStorage.setItem("WAS_OrderNo","1800901"),localStorage.setItem("WAS_Item",'{ "ITEM_NO": "212521", "ITEM_NAME": "肉魚" }'),this.data.RefValue=localStorage.getItem("WAS_OrderNo")+","+JSON.parse(localStorage.getItem("WAS_Item")).ITEM_NO}return l.prototype.ionViewWillEnter=function(){this.BringDisplayList(),this.myFocus()},l.prototype.BringDisplayList=function(){var l=this;this._http_services.POST(this.DefaultTestServer,"sp","[WAS].dbo.spactWAS_Line_v2",[{Name:"@Step",Value:"11"},{Name:"@Parameters",Value:this.data.RefValue+","}]).then(function(n){void 0!=n&&(l.DisplayList=n[0])})},l.prototype.reset=function(){localStorage.setItem("WAS_Store",""),this.data.WAS_Store="",this.myFocus()},l.prototype.search=function(){var l=this;if(this.vibration.vibrate(100),this.data.IsInputEnable=!1,this.data.WAS_Store=this.DisplayList.SITE_ID,this.data.WAS_Store.length<=0)this.toastCtrl.create({message:"請輸入數值",duration:s.e,position:"bottom"}).present().then(function(n){l.myFocus()});else{this._http_services.POST(this.DefaultTestServer,"sp","[WAS].dbo.spactWAS_Line_v2",[{Name:"@Step",Value:"2"},{Name:"@Parameters",Value:this.data.RefValue+","+this.data.WAS_Store}]).then(function(n){switch(n[0].RT_CODE){case 0:var u=JSON.stringify({SITE_ID:n[0].RT_MSG,SITE_NAME:n[0].SITE_NAME,PRICE:n[0].PRICE,PRICE_TYPE:n[0].PRICE_TYPE,AMOUNT:n[0].AMOUNT,TQty:n[0].TQty,LeftQty:n[0].LeftQty});localStorage.setItem("WAS_Store",u);l.toastCtrl.create({message:"驗證成功 "+n[0].RT_MSG,duration:s.e,position:"bottom"}).present(),l.data.WAS_Store="",l.navCtrl.push("_134_WAS_Receive");break;default:l.alertCtrl.create({title:"錯誤代號："+n[0].RT_CODE,subTitle:n[0].RT_MSG,buttons:["關閉"]}).present()}}).then(function(n){l.data.IsInputEnable=!0})}},l.prototype.selectAll=function(l){l._native.nativeElement.select()},l.prototype.myFocus=function(){var l=this;setTimeout(function(){l.scan_Entry._elementRef.nativeElement.focus()},300)},l.prototype.myKeylogger=function(l){var n=s.g(l.keyCode);switch(n){case"ENTER":this.search();break;default:this.data.WAS_Store+=n}},l.prototype.openKeyPad=function(){var l=this,n=this.modalCtrl.create(r.a,{Name:"營業所",Value:this.data.WAS_Store});n.onDidDismiss(function(n){l.data.WAS_Store=s.d.get("ListTable_answer"),l.search()}),n.present()},l.prototype.swipeEvent=function(l){switch(l.direction){case 1:case 2:break;case 4:this.reset(),this.navCtrl.pop()}},l}(),c=function(){return function(){}}(),p=u(355),d=u(356),b=u(357),h=u(358),S=u(359),y=u(360),f=u(361),m=u(362),E=u(363),g=u(55),I=u(3),A=u(7),Y=u(68),Z=u(33),v=u(8),T=u(19),W=u(69),C=u(43),N=u(34),w=u(61),L=u(182),D=u(45),O=u(59),j=u(57),M=u(30),z=u(17),k=u(39),R=u(56),P=u(20),V=u(5),K=u(9),Q=u(31),B=u(181),F=u(60),U=u(364),x=u(27),G=u(24),J=u(70),q=u(129),H=u(90),X=u(58),$=u(71),ll=u(130),nl=a.X({encapsulation:2,styles:[],data:{}}),ul=a.V("ng-component",_,function(l){return a._23(0,[(l()(),a.Z(0,0,null,null,1,"ng-component",[],null,null,null,t,nl)),a.Y(1,49152,null,0,_,[T.a,i.a,X.a,$.a,ll.a,o.a],null,null)],null,null)},{},{},[]),tl=u(23),al=u(180),el=u(66);u.d(n,"AppModuleNgFactory",function(){return ol});var ol=a.W(c,[],function(l){return a._8([a._9(512,a.i,a.S,[[8,[p.a,d.a,b.a,h.a,S.a,y.a,f.a,m.a,E.a,ul]],[3,a.i],a.s]),a._9(4608,e.l,e.k,[a.r,[2,e.t]]),a._9(4608,tl.k,tl.k,[]),a._9(4608,tl.c,tl.c,[]),a._9(512,e.b,e.b,[]),a._9(512,tl.j,tl.j,[]),a._9(512,tl.d,tl.d,[]),a._9(512,tl.i,tl.i,[]),a._9(512,al.a,al.a,[]),a._9(512,al.b,al.b,[]),a._9(512,c,c,[]),a._9(256,el.a,_,[])])})}});
+webpackJsonp([10],{
+
+/***/ 692:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ItemRcv__ = __webpack_require__(712);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__ItemRcv__["a" /* _124_ItemRcv */])
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_3__ItemRcv__["a" /* _124_ItemRcv */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_3__ItemRcv__["a" /* _124_ItemRcv */]]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=ItemRcv.module.js.map
+
+/***/ }),
+
+/***/ 712:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _124_ItemRcv; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_Settings__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ZZ_CommonLib_ListTable_ListTable__ = __webpack_require__(359);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ZZ_CommonLib_LittleCalculator_LittleCalculator__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ZZ_CommonLib_myCAMERA_myCAMERA__ = __webpack_require__(362);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+//Cordova
+
+//My Pages
+
+
+
+
+
+var _124_ItemRcv = /** @class */ (function () {
+    function _124_ItemRcv(navCtrl, _http_services, alertCtrl, modalCtrl, toastCtrl, vibration) {
+        this.navCtrl = navCtrl;
+        this._http_services = _http_services;
+        this.alertCtrl = alertCtrl;
+        this.modalCtrl = modalCtrl;
+        this.toastCtrl = toastCtrl;
+        this.vibration = vibration;
+        this.data = {
+            CarNo: localStorage.getItem('CarNo'),
+            PaperNo: localStorage.getItem('PaperNo'),
+            PaperNo_ID: localStorage.getItem('PaperNo_ID'),
+            ItemCode: localStorage.getItem('ItemCode'),
+            ITEM_HOID: localStorage.getItem('ITEM_HOID'),
+            LOT_ID: localStorage.getItem('LOT_ID'),
+            viewColor: '',
+            USER_ID: localStorage.getItem('USER_ID'),
+            BLOCK_NAME: localStorage.getItem('BLOCK_NAME'),
+            IsHideWhenKeyboardOpen: false
+        }; // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
+        this.answer = {
+            QTY: 0,
+            WEIGHT: 0.0,
+            QualityValue: 1,
+            QualityName: '品質',
+            QualityList: [],
+            QTY_ShowTotal: 0,
+            QTY_ProgressBar: ''
+        };
+        this.result = {
+            PO_QTY: '0/0',
+            PRICE_TYPE: 0,
+            ADDON_QTY: 0,
+            ADDON_WT: 0,
+            QTY: 0,
+            WT: 0,
+            NG_QTY: 0,
+            NG_WT: 0,
+            ROW3: '',
+            ROW4: '',
+            ROW5: '',
+            ROW6: ''
+        };
+        __WEBPACK_IMPORTED_MODULE_3__app_Settings__["h" /* loginCheck */]();
+        this.result = JSON.parse(localStorage.getItem('ReceiveResult'));
+        this.InitQueryItemState();
+        //SHOW 待收百分比
+        var QTY = this.result.PO_QTY.split("/");
+        this.answer.QTY_ShowTotal = parseInt(QTY[1]);
+        this.answer.QTY_ProgressBar = Math.round(this.result.QTY / this.answer.QTY_ShowTotal * 100).toString() + '%';
+    }
+    _124_ItemRcv.prototype.ionViewDidEnter = function () {
+        this.myFocus();
+    };
+    //覆寫原本退回的動作
+    _124_ItemRcv.prototype.ionViewDidLoad = function () {
+        this.setBackButtonAction();
+    };
+    //Method to override the default back button action
+    _124_ItemRcv.prototype.setBackButtonAction = function () {
+        var _this = this;
+        this.navBar.backButtonClick = function () {
+            //Write here wherever you wanna do
+            _this.Back();
+        };
+    };
+    //進度表
+    _124_ItemRcv.prototype.getQTY_ProgressBar = function () {
+        return this.answer.QTY_ProgressBar;
+    };
+    //上一頁
+    _124_ItemRcv.prototype.Back = function () {
+        this.Unlock();
+        this.reset();
+        __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].set('ReceiveResult', this.result);
+        this.navCtrl.pop();
+    };
+    ;
+    //重置btn
+    _124_ItemRcv.prototype.reset = function () {
+        this.data.viewColor = '';
+        this.answer.QualityValue = 1;
+        this.answer.QualityName = '品質';
+        //數量 重量
+        this.answer.QTY = 0;
+        this.answer.WEIGHT = 0.0;
+        this.myFocus();
+    };
+    ;
+    //選擇品質
+    _124_ItemRcv.prototype.InitQueryItemState = function () {
+        var _this = this;
+        this._http_services.POST('', 'sqlcmd', 'Select ID as Value, Name from vDCS_Table_item_State', [])
+            .then(function (response) {
+            for (var index in response) {
+                var value = response[index];
+                _this.answer.QualityList.push({ Name: value.Name, Value: value.Value });
+            }
+            _this.findQualityNameAndColor();
+        });
+    };
+    //品質選擇清單
+    _124_ItemRcv.prototype.QueryItemState = function () {
+        var _this = this;
+        this.vibration.vibrate(100);
+        //Multi variables, choose one
+        __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].set('ListTable_Source', this.answer.QualityList);
+        var obj = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__ZZ_CommonLib_ListTable_ListTable__["a" /* ListTablePage */]);
+        obj.onDidDismiss(function (data) {
+            console.log(__WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('ListTable_answer'));
+            _this.answer.QualityValue = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('ListTable_answer').Value;
+            //查表找屬性
+            _this.findQualityNameAndColor();
+            return;
+        });
+        obj.present();
+    };
+    ;
+    //查表找屬性和顏色
+    _124_ItemRcv.prototype.findQualityNameAndColor = function () {
+        var _this = this;
+        this.answer.QualityList.forEach(function (value) {
+            if (value.Value == _this.answer.QualityValue)
+                _this.answer.QualityName = value.Name;
+        });
+        switch (this.answer.QualityValue) {
+            case 0:
+                this.data.viewColor = '#79FF79';
+                break;
+            case 1:
+                this.data.viewColor = 'black';
+                break;
+            default:
+                this.data.viewColor = '#FF5151';
+                break;
+        }
+    };
+    ;
+    //呼叫小鍵盤
+    _124_ItemRcv.prototype.showCalculator = function (flag) {
+        var _this = this;
+        this.vibration.vibrate(100);
+        switch (flag) {
+            case 'QTY':
+                __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].set('ListTable_Source', this.answer.QTY);
+                break;
+            case 'WEIGHT':
+                __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].set('ListTable_Source', this.answer.WEIGHT);
+                break;
+            default:
+                return;
+        }
+        var obj = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_6__ZZ_CommonLib_LittleCalculator_LittleCalculator__["a" /* LittleCalculatorPage */]);
+        obj.onDidDismiss(function (data) {
+            console.log(__WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('ListTable_answer'));
+            switch (flag) {
+                case 'QTY':
+                    _this.answer.QTY = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('ListTable_answer');
+                    break;
+                case 'WEIGHT':
+                    _this.answer.WEIGHT = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('ListTable_answer');
+                    break;
+                default:
+                    return;
+            }
+        });
+        obj.present();
+    };
+    //驗收
+    _124_ItemRcv.prototype.Receive = function () {
+        var _this = this;
+        this.vibration.vibrate(100);
+        var ErrMsg = '';
+        //#region 檢查
+        if (this.answer.QTY == 0) {
+            ErrMsg += "數量欄位尚未輸入 ";
+        }
+        if (this.result.PRICE_TYPE == 0 && this.answer.WEIGHT == 0) {
+            ErrMsg += "秤重欄位尚未輸入 ";
+        }
+        if (ErrMsg.length > 0) {
+            //Error
+            this.toastCtrl.create({
+                message: ErrMsg,
+                duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                position: 'middle'
+            }).present();
+            this.myFocus2();
+            return;
+        }
+        //#endregion
+        if (this.answer.QTY < 0 || this.answer.WEIGHT < 0) {
+            if (this.answer.QTY < 0) {
+                ErrMsg = '數量 ' + this.answer.QTY.toString() + ' 小於零，將會執行減量<br/>'
+                    + '請確認是否輸入正確？';
+            }
+            if (this.answer.WEIGHT < 0) {
+                ErrMsg = '重量 ' + this.answer.WEIGHT.toString() + ' 小於零，將會執行減量<br/>'
+                    + '請確認是否輸入正確？';
+            }
+            this.alertCtrl.create({
+                title: '提示 減量',
+                subTitle: ErrMsg,
+                buttons: [{
+                        text: '取消',
+                        handler: function () {
+                            return;
+                        }
+                    },
+                    {
+                        text: '確定'
+                    }
+                ]
+            }).present();
+        }
+        //驗收
+        this._http_services.POST('', 'sp', 'spactDCS_ID_LINE', [
+            { Name: '@JOB_ID', Value: '3' },
+            { Name: '@ID', Value: this.data.PaperNo_ID },
+            { Name: '@ITEM', Value: this.data.LOT_ID },
+            { Name: '@STATE_TYPE', Value: this.answer.QualityValue },
+            { Name: '@QTY', Value: this.answer.QTY },
+            { Name: '@WT', Value: this.answer.WEIGHT },
+            { Name: '@USER_ID', Value: this.data.USER_ID }
+        ])
+            .then(function (response) {
+            if (response != '') {
+                switch (response[0].RT_CODE) {
+                    case 0:
+                        //更新顯示
+                        _this.result.ADDON_QTY = response[0].ADDON_QTY;
+                        _this.result.ADDON_WT = response[0].ADDON_WT;
+                        _this.result.QTY = response[0].QTY;
+                        _this.result.WT = response[0].WT;
+                        _this.result.NG_QTY = response[0].NG_QTY;
+                        _this.result.NG_WT = response[0].NG_WT;
+                        _this.result.ROW3 = response[0].ROW3;
+                        _this.result.ROW4 = response[0].ROW4;
+                        _this.result.ROW5 = response[0].ROW5;
+                        _this.result.ROW6 = response[0].ROW6;
+                        _this.answer.QTY_ProgressBar = Math.round(_this.result.QTY / _this.answer.QTY_ShowTotal * 100).toString() + '%';
+                        //reset
+                        _this.reset();
+                        _this.toastCtrl.create({
+                            message: response[0].RT_MSG,
+                            duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                            position: 'bottom'
+                        }).present();
+                        break;
+                    default:
+                        //Error
+                        _this.toastCtrl.create({
+                            message: response[0].RT_MSG,
+                            duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                            position: 'middle'
+                        }).present();
+                        break;
+                }
+            }
+        });
+        this.myFocus();
+    };
+    ;
+    //解鎖
+    _124_ItemRcv.prototype.Unlock = function () {
+        this._http_services.POST('', 'sp', 'spactDCS_ID_LINE', [
+            { Name: '@JOB_ID', Value: '4' },
+            { Name: '@ID', Value: this.data.PaperNo_ID },
+            { Name: '@ITEM', Value: this.data.LOT_ID },
+            { Name: '@USER_ID', Value: this.data.USER_ID }
+        ]);
+    };
+    ;
+    //拍照上傳
+    _124_ItemRcv.prototype.showCamera = function () {
+        this.vibration.vibrate(100);
+        __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].set('ListTable_Source', {
+            FileDescription: '車號：' + this.data.CarNo + '\n'
+                + 'PO單：' + this.data.PaperNo + '\n'
+                + 'PO_ID：' + this.data.PaperNo_ID + '\n'
+                + '呼出碼：' + this.data.ItemCode + '\n'
+                + 'HO_ID：' + this.data.ITEM_HOID + '\n'
+                + 'LOT_ID：' + this.data.LOT_ID + '\n'
+                + '品質：' + this.answer.QualityName + '\n',
+            PaperNo: this.data.PaperNo
+        });
+        var obj = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_7__ZZ_CommonLib_myCAMERA_myCAMERA__["a" /* myCAMERAPage */]);
+        obj.present();
+    };
+    //喪失focus
+    _124_ItemRcv.prototype.myFocus = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.scan_Entry.setFocus();
+        }, 300);
+    };
+    ;
+    _124_ItemRcv.prototype.myFocus2 = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.scan_Entry2.setFocus();
+        }, 300);
+    };
+    ;
+    //全選
+    _124_ItemRcv.prototype.selectAll = function ($event) {
+        $event._native.nativeElement.select();
+    };
+    //手勢
+    _124_ItemRcv.prototype.swipeEvent = function (event) {
+        switch (event.direction) {
+            case 1://NONE
+                break;
+            case 2://LEFT
+                break;
+            case 4://RIGHT
+                this.Back();
+                break;
+            case 8://UP
+                break;
+            case 16://DOWN
+                break;
+        }
+        ;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Navbar */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Navbar */])
+    ], _124_ItemRcv.prototype, "navBar", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('scan_Entry'),
+        __metadata("design:type", Object)
+    ], _124_ItemRcv.prototype, "scan_Entry", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('scan_Entry2'),
+        __metadata("design:type", Object)
+    ], _124_ItemRcv.prototype, "scan_Entry2", void 0);
+    _124_ItemRcv = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_12_ItemRcv\4_ItemRcv\ItemRcv.html"*/'<ion-header no-border>\n\n    <ion-navbar>\n\n        <ion-title>進貨驗收</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content (swipe)="swipeEvent($event)">\n\n    <ion-card>\n\n        <ion-grid class="mylist">\n\n            <ion-row align-items-center>\n\n                <ion-col col-3>\n\n                    <ion-label>{{result.UNIT}}</ion-label>\n\n                </ion-col>\n\n                <ion-col col-7>\n\n                    <ion-input #scan_Entry type="number"\n\n                               [ngClass]="[\'myScanBarcodeUI_input\']"\n\n                               [(ngModel)]="answer.QTY"\n\n                               (ionFocus)="selectAll($event)"></ion-input>\n\n                </ion-col>\n\n                <ion-col col-2>\n\n                    <!--小鍵盤-->\n\n                    <button ion-button outline icon-only (click)="showCalculator(\'QTY\')">\n\n                        <ion-icon name="calculator"></ion-icon>\n\n                    </button>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row align-items-center [hidden]="result.PRICE_TYPE==1">\n\n                <ion-col col-3>\n\n                    <ion-label>秤重(kg)</ion-label>\n\n                </ion-col>\n\n                <ion-col col-7>\n\n                    <ion-input #scan_Entry2 type="number"\n\n                               [ngClass]="[\'myScanBarcodeUI_input\']"\n\n                               [(ngModel)]="answer.WEIGHT"\n\n                               (ionFocus)="selectAll($event)"></ion-input>\n\n                </ion-col>\n\n                <ion-col col-2>\n\n                    <!--小鍵盤-->\n\n                    <button ion-button outline icon-only (click)="showCalculator(\'WEIGHT\')">\n\n                        <ion-icon name="calculator"></ion-icon>\n\n                    </button>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row align-items-center>\n\n                <ion-col col-3>\n\n                    <label>品質</label>\n\n                </ion-col>\n\n                <ion-col col-7>\n\n                    <button ion-button block solid\n\n                            color="light"\n\n                            [ngStyle]="{\'color\': data.viewColor}"\n\n                            (click)="QueryItemState()">\n\n                        {{answer.QualityName}}\n\n                    </button>\n\n                </ion-col>\n\n                <ion-col col-2>\n\n                    <button ion-button outline icon-only (click)="showCamera()">\n\n                        <ion-icon name="camera"></ion-icon>\n\n                    </button>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-label>{{result.ROW1}}</ion-label>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-label>{{result.ROW2}}</ion-label>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col col-8>\n\n                    <label>{{result.ROW3}}</label>\n\n                </ion-col>\n\n                <ion-col col-4>\n\n                    <div class="myProgressBar">\n\n                        <div class="loader" [ngStyle]="{\'width\': answer.QTY_ProgressBar}">\n\n                            <p class="percent">{{this.answer.QTY_ProgressBar}}</p>\n\n                        </div>\n\n                    </div>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-label>{{result.ROW4}}</ion-label>\n\n            </ion-row>\n\n        </ion-grid>\n\n        <ion-item>\n\n            <!--IonicPage+div+hidden會導致Ionic排版錯誤，故意多加兩行空白-->\n\n            <h1>&nbsp;</h1><br />\n\n            <h1>&nbsp;</h1>\n\n        </ion-item>\n\n    </ion-card>\n\n</ion-content>\n\n<div [hidden]="data.IsHideWhenKeyboardOpen">\n\n    <ion-footer no-border>\n\n        <ion-toolbar>\n\n            <ion-item>\n\n                <ion-label>{{result.ROW5}}</ion-label>\n\n                <ion-label>{{result.ROW6}}</ion-label>\n\n                <ion-label>{{result.ROW7}}</ion-label>\n\n            </ion-item>\n\n        </ion-toolbar>\n\n        <ion-toolbar>\n\n            <button ion-button icon-start solid full (click)="Receive()" color="primary">\n\n                <ion-icon name="checkmark"></ion-icon>\n\n                驗收\n\n            </button>\n\n        </ion-toolbar>\n\n    </ion-footer>\n\n</div>'/*ion-inline-end:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_12_ItemRcv\4_ItemRcv\ItemRcv.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__["a" /* http_services */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__["a" /* Vibration */]])
+    ], _124_ItemRcv);
+    return _124_ItemRcv;
+}());
+
+//# sourceMappingURL=ItemRcv.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=10.js.map

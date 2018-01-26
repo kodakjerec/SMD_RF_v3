@@ -27,21 +27,14 @@
     </ion-toolbar>
 </ion-header>
 <ion-content (swipe)="swipeEvent($event)">
-    <ion-card>
-        <ion-grid class="mytable">
-            <ion-row class="mytable_Head">
-                <ion-col col-12>可用批次</ion-col>
-            </ion-row>
-            <ion-row *ngFor="let ListItem of DisplayList" class="mytable_Detail">
-                <ion-col col-12> {{ListItem.ORDER_NO}}</ion-col>
-            </ion-row>
-        </ion-grid>
-        <ion-item>
-            <!--IonicPage+div+hidden會導致Ionic排版錯誤，故意多加兩行空白-->
-            <h1>&nbsp;</h1><br />
-            <h1>&nbsp;</h1>
-        </ion-item>
-    </ion-card>
+    <ion-grid class="mytable">
+        <ion-row class="mytable_Head">
+            <ion-col col-12>可用批次</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let ListItem of DisplayList" class="mytable_Detail">
+            <ion-col col-12> {{ListItem.ORDER_NO}}</ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
 <div [hidden]="data.IsHideWhenKeyboardOpen">
     <ion-footer no-border>

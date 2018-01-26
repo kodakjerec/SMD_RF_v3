@@ -13,8 +13,7 @@
                         #scan_Entry
                         (keyup)="myKeylogger($event)"
                         (blur)="myFocus()"
-                        (ionFocus)="selectAll($event)"
-                        [disabled]="!data.IsInputEnable">
+                        (ionFocus)="selectAll($event)">
                     {{data.ScanBarcode}}
                 </button>
             </ion-col>

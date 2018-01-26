@@ -1,1 +1,203 @@
-webpackJsonp([5],{666:function(l,n,u){"use strict";function t(l){return a._23(0,[a._19(402653184,1,{scan_Entry:0}),(l()(),a.Z(1,0,null,null,10,"ion-header",[],null,null,null,null,null)),a.Y(2,16384,null,0,k.a,[C.a,a.j,a.z,[2,Y.a]],null,null),(l()(),a._21(-1,null,["\n    "])),(l()(),a.Z(4,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,Z.b,Z.a)),a.Y(5,49152,null,0,j.a,[D.a,[2,Y.a],[2,w.a],C.a,a.j,a.z],null,null),(l()(),a._21(-1,3,["\n        "])),(l()(),a.Z(7,0,null,3,2,"ion-title",[],null,null,null,z.b,z.a)),a.Y(8,49152,null,0,P.a,[C.a,a.j,a.z,[2,O.a],[2,j.a]],null,null),(l()(),a._21(-1,0,["測試網頁"])),(l()(),a._21(-1,3,["\n    "])),(l()(),a._21(-1,null,["\n"])),(l()(),a._21(-1,null,["\n"])),(l()(),a.Z(13,0,null,null,34,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,A.b,A.a)),a.Y(14,4374528,null,0,I.a,[C.a,S.a,L.a,a.j,a.z,D.a,T.a,a.u,[2,Y.a],[2,w.a]],null,null),(l()(),a._21(-1,1,["\n    "])),(l()(),a.Z(16,0,null,1,30,"ion-grid",[["class","grid"]],null,null,null,null,null)),a.Y(17,16384,null,0,F.a,[],null,null),(l()(),a._21(-1,null,["\n        "])),(l()(),a.Z(19,0,null,null,26,"ion-row",[["class","row"]],null,null,null,null,null)),a.Y(20,16384,null,0,R.a,[],null,null),(l()(),a._21(-1,null,["\n            "])),(l()(),a.Z(22,0,null,null,22,"ion-col",[["class","col"]],null,null,null,null,null)),a.Y(23,16384,null,0,W.a,[],null,null),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(25,0,null,null,2,"button",[["ion-button",""],["outline",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.showCalculator()&&t}return t},N.b,N.a)),a.Y(26,1097728,null,0,B.a,[[8,""],C.a,a.j,a.z],{outline:[0,"outline"]},null),(l()(),a._21(-1,0,["Calculator"])),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(29,0,null,null,2,"button",[["ion-button",""],["outline",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.showCamera()&&t}return t},N.b,N.a)),a.Y(30,1097728,null,0,B.a,[[8,""],C.a,a.j,a.z],{outline:[0,"outline"]},null),(l()(),a._21(-1,0,["CAMERA"])),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(33,0,null,null,2,"button",[["ion-button",""],["outline",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.gallery()&&t}return t},N.b,N.a)),a.Y(34,1097728,null,0,B.a,[[8,""],C.a,a.j,a.z],{outline:[0,"outline"]},null),(l()(),a._21(-1,0,["gallery"])),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(37,0,null,null,2,"button",[["ion-button",""],["outline",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.RFWAS()&&t}return t},N.b,N.a)),a.Y(38,1097728,null,0,B.a,[[8,""],C.a,a.j,a.z],{outline:[0,"outline"]},null),(l()(),a._21(-1,0,["RFWAS"])),(l()(),a._21(-1,null,["\n                "])),(l()(),a.Z(41,0,null,null,2,"button",[["ion-button",""],["outline",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.myBarcodeUI()&&t}return t},N.b,N.a)),a.Y(42,1097728,null,0,B.a,[[8,""],C.a,a.j,a.z],{outline:[0,"outline"]},null),(l()(),a._21(-1,0,["myBarcodeUI"])),(l()(),a._21(-1,null,["\n            "])),(l()(),a._21(-1,null,["\n        "])),(l()(),a._21(-1,null,["\n    "])),(l()(),a._21(-1,1,["\n"]))],function(l,n){l(n,26,0,"");l(n,30,0,"");l(n,34,0,"");l(n,38,0,"");l(n,42,0,"")},function(l,n){l(n,4,0,a._12(n,5)._hidden,a._12(n,5)._sbPadding);l(n,13,0,a._12(n,14).statusbarPadding,a._12(n,14)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var a=u(1),o=(u(0),u(16)),e=(u(36),u(44)),i=u(189),r=u(190),c=u(184),s=function(){function l(l,n){this.navCtrl=l,this.modalCtrl=n}return l.prototype.showCalculator=function(){e.d.set("ListTable_Source","123");var l=this.modalCtrl.create(i.a);l.onDidDismiss(function(l){console.log(e.d.get("ListTable_answer"))}),l.present()},l.prototype.showCamera=function(){e.d.set("ListTable_Source",{FileDescription:"車號：072\nPO單：PO170826000090\nPO_ID：ID170828000049\n呼出碼：211566\nHO_ID：1170726461142\nLOT_ID：2170828000068\n品質：不良\n",PaperNo:"PO170826000090"});var l=this.modalCtrl.create(r.a);l.onDidDismiss(function(l){console.log(e.d.get("ListTable_answer"))}),l.present()},l.prototype.gallery=function(){this.navCtrl.push("_24_PhotoGallery")},l.prototype.myBarcodeUI=function(){var l=this.modalCtrl.create(c.a,{Name:"條碼",Value:"456"});l.onDidDismiss(function(l){console.log(e.d.get("ListTable_answer"))}),l.present()},l.prototype.RFWAS=function(){this.navCtrl.push("_131_WAS_OrderNo")},l}(),_=function(){return function(){}}(),d=u(355),b=u(356),f=u(357),p=u(358),h=u(359),m=u(360),g=u(361),y=u(362),v=u(363),k=u(55),C=u(3),Y=u(7),Z=u(68),j=u(33),D=u(8),w=u(19),z=u(69),P=u(43),O=u(34),A=u(56),I=u(20),S=u(5),L=u(9),T=u(31),F=u(60),R=u(45),W=u(59),N=u(30),B=u(17),M=u(130),U=a.X({encapsulation:2,styles:[],data:{}}),E=a.V("ng-component",s,function(l){return a._23(0,[(l()(),a.Z(0,0,null,null,1,"ng-component",[],null,null,null,t,U)),a.Y(1,49152,null,0,s,[w.a,M.a],null,null)],null,null)},{},{},[]),V=u(23),G=u(180),H=u(66);u.d(n,"AppModuleNgFactory",function(){return J});var J=a.W(_,[],function(l){return a._8([a._9(512,a.i,a.S,[[8,[d.a,b.a,f.a,p.a,h.a,m.a,g.a,y.a,v.a,E]],[3,a.i],a.s]),a._9(4608,o.l,o.k,[a.r,[2,o.t]]),a._9(4608,V.k,V.k,[]),a._9(4608,V.c,V.c,[]),a._9(512,o.b,o.b,[]),a._9(512,V.j,V.j,[]),a._9(512,V.d,V.d,[]),a._9(512,V.i,V.i,[]),a._9(512,G.a,G.a,[]),a._9(512,G.b,G.b,[]),a._9(512,_,_,[]),a._9(256,H.a,s,[])])})}});
+webpackJsonp([5],{
+
+/***/ 700:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrintPickingLabelModule", function() { return PrintPickingLabelModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PrintPickingLabel__ = __webpack_require__(720);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var PrintPickingLabelModule = /** @class */ (function () {
+    function PrintPickingLabelModule() {
+    }
+    PrintPickingLabelModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__PrintPickingLabel__["a" /* _22_PrintPickingLabel */])
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__PrintPickingLabel__["a" /* _22_PrintPickingLabel */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_2__PrintPickingLabel__["a" /* _22_PrintPickingLabel */]]
+        })
+    ], PrintPickingLabelModule);
+    return PrintPickingLabelModule;
+}());
+
+//# sourceMappingURL=PrintPickingLabel.module.js.map
+
+/***/ }),
+
+/***/ 720:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _22_PrintPickingLabel; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ZZ_CommonLib_http_services__ = __webpack_require__(87);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var _22_PrintPickingLabel = /** @class */ (function () {
+    function _22_PrintPickingLabel(navCtrl, _http_services, alertCtrl) {
+        this.navCtrl = navCtrl;
+        this._http_services = _http_services;
+        this.alertCtrl = alertCtrl;
+        //#region Init
+        this.data = {
+            choice: 'DAS',
+            ScanBarcode: '',
+            JOBID: ''
+        };
+        //掃描的紀錄
+        //barcode   條碼
+        //Check     驗證結果 OK,NO,CLEAR
+        //scanTime  掃描時間
+        this.DCS_Log = [];
+        //合法的紀錄
+        //ChuteId   滑道
+        //Duplex    疊箱
+        //StoreId   店號
+        //ItemCode  呼出碼
+        //Amount    數量
+        this.DCSresult = [];
+    }
+    //#endregion
+    _22_PrintPickingLabel.prototype.ngOnInit = function () {
+        var _this = this;
+        this._http_services.POST('', 'sqlcmd', 'select OrderNo=MAX(OrderNo) from DDI.dbo.DDI_WORKSPACE_STATUS with(nolock)', [{}])
+            .then(function (response) {
+            _this.data.JOBID = response[0].OrderNo;
+        });
+    };
+    ;
+    _22_PrintPickingLabel.prototype.search = function () {
+        //#region 紀錄資料
+        if (this.data.choice == 'DAS') {
+            this._http_services.POST('', 'sp', '[md.spDCS_LABEL_DAS]', [
+                { Name: '@JOBID', Value: this.data.JOBID },
+                { Name: '@PRINTER', Value: "172.20.22.4" },
+                { Name: '@BC', Value: this.data.ScanBarcode }
+            ])
+                .then(function (response) {
+                console.log(response);
+            });
+        }
+        else {
+            this._http_services.POST('', 'sp', '[md.spDCS_LABEL_SF]', [
+                { Name: '@cGUID', Value: this._uuid() },
+                { Name: '@cJOB_ID', Value: this.data.JOBID },
+                { Name: '@iSEQ', Value: "1" },
+                { Name: '@cTYPE', Value: "BOX" },
+                { Name: '@cPRINT_SITE', Value: "172.20.22.4" },
+                { Name: '@cBARCODE', Value: this.data.ScanBarcode }
+            ])
+                .then(function (response) {
+                console.log(response);
+            });
+        }
+        //#endregion
+        //紀錄掃描資料
+        this.DCS_Log.push(this.data.ScanBarcode);
+        //準備下一輪掃描
+        this.reset();
+        this.scan_Entry.setFocus();
+    };
+    ;
+    _22_PrintPickingLabel.prototype._uuid = function () {
+        var d = Date.now();
+        if (typeof performance !== 'undefined' && typeof performance.now === 'function') {
+            d += performance.now(); //use high-precision timer if available
+        }
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = (d + Math.random() * 16) % 16 | 0;
+            d = Math.floor(d / 16);
+            return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+        });
+    };
+    _22_PrintPickingLabel.prototype.reset = function () {
+        this.data.ScanBarcode = '';
+        this.scan_Entry.setFocus();
+    };
+    ;
+    _22_PrintPickingLabel.prototype.Totalreset = function () {
+        this.data.choice = 'DAS';
+        this.data.ScanBarcode = '';
+        this.DCSresult = [];
+        this.scan_Entry.setFocus();
+    };
+    ;
+    _22_PrintPickingLabel.prototype.help = function () {
+        var alert = this.alertCtrl.create({
+            title: '使用說明',
+            subTitle: '"000000"：全部列印',
+            buttons: ['關閉']
+        });
+        alert.present();
+    };
+    ;
+    //喪失focus
+    _22_PrintPickingLabel.prototype.myfocus = function () {
+        this.scan_Entry.setFocus();
+    };
+    ;
+    //全選
+    _22_PrintPickingLabel.prototype.selectAll = function ($event) {
+        $event._native.nativeElement.select();
+    };
+    //手勢
+    _22_PrintPickingLabel.prototype.swipeEvent = function (event) {
+        switch (event.direction) {
+            case 1://NONE
+                break;
+            case 2://LEFT
+                break;
+            case 4://RIGHT
+                this.navCtrl.pop();
+                break;
+            case 8://UP
+                break;
+            case 16://DOWN
+                break;
+        }
+        ;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('scan_Entry'),
+        __metadata("design:type", Object)
+    ], _22_PrintPickingLabel.prototype, "scan_Entry", void 0);
+    _22_PrintPickingLabel = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_22_PrintPickingLabel\PrintPickingLabel.html"*/'﻿<ion-header>\n\n    <ion-navbar>\n\n        <ion-title (click)="help()">撿貨標籤<button small ion-button outline>HELP</button></ion-title>\n\n    </ion-navbar>\n\n    <ion-toolbar>\n\n        <ion-item>\n\n            <ion-label>條碼</ion-label>\n\n            <ion-input #scan_Entry id="txb_scan_Entry" type="number"\n\n                       (keyup.enter)="search()"\n\n                       (ionFocus)="selectAll($event)"\n\n                       [(ngModel)]="data.ScanBarcode"></ion-input>\n\n        </ion-item>\n\n        <ion-buttons end>\n\n            <button ion-button (click)="reset()" color="danger" solid class="toolbar-button">\n\n                <ion-icon name="close"></ion-icon>\n\n            </button>\n\n            <button ion-button (click)="search()" color="primary" solid class="toolbar-button">\n\n                <ion-icon name="search"></ion-icon>\n\n            </button>\n\n        </ion-buttons>\n\n    </ion-toolbar>\n\n</ion-header>\n\n<ion-content (swipe)="swipeEvent($event)">\n\n    <ion-card>\n\n        <ion-card-header>\n\n            <ion-item>\n\n                <ion-label>批次</ion-label>\n\n                <ion-label>{{data.JOBID}}</ion-label>\n\n            </ion-item>\n\n        </ion-card-header>\n\n        <ion-list radio-group [(ngModel)]="data.choice">\n\n            <ion-list-header>\n\n                選擇模式\n\n            </ion-list-header>\n\n            <ion-item>\n\n                <ion-label>DAS</ion-label>\n\n                <ion-radio checked="true" value="DAS"></ion-radio>\n\n            </ion-item>\n\n            <ion-item>\n\n                <ion-label>SF</ion-label>\n\n                <ion-radio value="SF"></ion-radio>\n\n            </ion-item>\n\n        </ion-list>\n\n    </ion-card>\n\n</ion-content>'/*ion-inline-end:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_22_PrintPickingLabel\PrintPickingLabel.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2__ZZ_CommonLib_http_services__["a" /* http_services */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+    ], _22_PrintPickingLabel);
+    return _22_PrintPickingLabel;
+}());
+
+//# sourceMappingURL=PrintPickingLabel.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=5.js.map

@@ -10,10 +10,11 @@
             <ion-row align-items-center>
                 <ion-col col-3><span style="font-size: large">帳號</span></ion-col>
                 <ion-col col-9>
-                    <ion-input #txb_username type="tel"
+                    <ion-input #scan_Entry type="number"
+                               [ngClass]="['myScanBarcodeUI_input']"
                                [(ngModel)]="data.username"
-                               (keyup)="checkLength()"
-                               (keyup.enter)="enter('username')"
+                               (keyup)="myKeylogger($event)"
+                               (keydown.Tab)="myKeylogger($event)"
                                (ionFocus)="selectAll($event)"
                                placeholder="工號">
                     </ion-input>

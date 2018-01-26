@@ -32,15 +32,15 @@ export class _00_Login {
     data = {
         IsHideWhenKeyboardOpen: false
         , Changelog: myGlobals.Changelog
-        , username: ''
+        , username: '123456'
         , password: '111'
         , IsNFC_ON: false        //NFC有開啟    true:NFC開啟 false:NFC關閉
         , DCS_log_show: true
         , DCS_log_show_btnName: '顯示改版歷程'
-        , Iskeyin_OK: false
+        , Iskeyin_OK: true
     };
 
-    @ViewChild('txb_username') txb_username;
+    @ViewChild('scan_Entry') scan_Entry;
 
     initializeApp() {
         if (this.platform.is('core')) {
@@ -63,9 +63,7 @@ export class _00_Login {
 
     //進入頁面
     ionViewWillEnter() {
-        setTimeout(() => {
-            this.txb_username.setFocus();
-        }, 500);
+        this.myFocus();
 
         localStorage.clear();
     }
@@ -126,6 +124,20 @@ export class _00_Login {
         $event._native.nativeElement.select();
     }
 
+    //喪失focus
+    myFocus() {
+        setTimeout(() => {
+            this.scan_Entry.setFocus();
+        }, 300);
+    };
+
+    myKeylogger(event) {
+        let obj = myGlobals.keyCodeToValue(event.keyCode, this.data.username);
+        if (obj.indexOf('ENTER') >= 0) {
+            this.login();
+        }
+    }
+
     //進入測試網頁
     gotoTest() {
         this.navCtrl.push('_99_TEST');
@@ -139,16 +151,6 @@ export class _00_Login {
     checkLength() {
         if (this.data.username.length > 0 && this.data.password.length > 0)
             this.data.Iskeyin_OK = true;
-    }
-    //按下enter
-    enter(obj: string) {
-        switch (obj) {
-            //case 'username':
-            //    this.txb_password.setFocus(); break;
-            default:
-                if (this.data.Iskeyin_OK)
-                    this.login();
-        }
     }
 
     //#region NFC

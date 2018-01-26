@@ -26,7 +26,7 @@
     }
 
     & .toggle-icon {
-        @media all and (max-width:480px){
+        @media all and (max-width:480px) {
             background-color: white;
             margin-top: -20px !important;
         }
@@ -87,12 +87,7 @@ $font-family-base: Microsoft JhengHei;
 /***input***/
 input[type] {
     font-size: larger;
-    background-color: black;
-    color: white;
     border: solid #6C6C6C;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
 
     &:focus {
         border: solid #FF8040;
@@ -101,25 +96,33 @@ input[type] {
 
 .mytextarea {
     font-size: larger;
-    background-color: black;
-    color: white;
     border: solid #6C6C6C;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
     width: 100%;
-    outline: none;
+    color: white;
+    background-color: black;
 
     &:focus {
         border: solid #FF8040;
     }
 }
 
-.myScanBarcodeUI_Label{
-    color:white;
-    font-size:large;
-    margin-top:10px
+.myScanBarcodeUI_Label {
+    color: white;
+    font-size: large;
+    margin-top: 10px;
 }
-.myScanBarcodeUI:focus{
+
+.myScanBarcodeUI_input input {
+    color: white;
+    height: 40px;
+    margin-top: 7px;
+
+    &:focus {
+        border: solid #FF8040;
+    }
+}
+
+.myScanBarcodeUI:focus {
     border: solid #FF8040;
 }
 
@@ -137,7 +140,7 @@ input[type] {
         }
     }
 
-    & ion-grid {
+    & ion-row {
         padding-left: 16px;
         border-width: 1px 1px 1px 1px;
         border-style: solid;
@@ -176,6 +179,24 @@ input[type] {
         //even row
         &:nth-child(even) {
             background-color: #fdfdfd;
+        }
+    }
+}
+
+/* my Progress Bar */
+.myProgressBar {
+    background-color: white;
+    border-radius: 100px;
+
+    .loader {
+        background: #f20d49 !important;
+        border-radius: 100px;
+        height: 20px;
+
+        p {
+            text-align: center;
+            color: white !important;
+            text-align: center;
         }
     }
 }

@@ -1,1 +1,326 @@
-webpackJsonp([4],{653:function(l,n,u){"use strict";function a(l){return e._23(0,[e._19(402653184,1,{scan_Entry:0}),(l()(),e.Z(1,0,null,null,44,"ion-header",[["no-border",""]],null,null,null,null,null)),e.Y(2,16384,null,0,M.a,[f.a,e.j,e.z,[2,T.a]],null,null),(l()(),e._21(-1,null,["\n    "])),(l()(),e.Z(4,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,v.b,v.a)),e.Y(5,49152,null,0,P.a,[Y.a,[2,T.a],[2,V.a],f.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n        "])),(l()(),e.Z(7,0,null,3,2,"ion-title",[],null,null,null,y.b,y.a)),e.Y(8,49152,null,0,L.a,[f.a,e.j,e.z,[2,H.a],[2,P.a]],null,null),(l()(),e._21(-1,0,["進貨報到"])),(l()(),e._21(-1,3,["\n    "])),(l()(),e._21(-1,null,["\n    "])),(l()(),e.Z(12,0,null,null,32,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,Z.b,Z.a)),e.Y(13,49152,null,0,H.a,[f.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n        "])),(l()(),e.Z(15,0,null,3,16,"ion-item",[["class","item item-block"]],null,null,null,k.b,k.a)),e.Y(16,1097728,null,3,D.a,[j.a,f.a,e.j,e.z,[2,z.a]],null,null),e._19(335544320,2,{contentLabel:0}),e._19(603979776,3,{_buttons:1}),e._19(603979776,4,{_icons:1}),e.Y(20,16384,null,0,w.a,[],null,null),(l()(),e._21(-1,2,["\n            "])),(l()(),e.Z(22,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(23,16384,[[2,4]],0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["報到牌"])),(l()(),e._21(-1,2,["\n            "])),(l()(),e.Z(26,0,null,3,4,"ion-input",[["id","txb_scan_Entry"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"keyup.enter"],[null,"ionFocus"],[null,"ngModelChange"]],function(l,n,u){var a=!0,e=l.component;if("keyup.enter"===n){a=!1!==e.search()&&a}if("ionFocus"===n){a=!1!==e.selectAll(u)&&a}if("ngModelChange"===n){a=!1!==(e.data.CarNo=u)&&a}return a},F.b,F.a)),e.Y(27,671744,null,0,A.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),e._18(2048,null,A.f,null,[A.h]),e.Y(29,16384,null,0,A.g,[A.f],null,null),e.Y(30,5423104,[[1,4],["scan_Entry",4]],0,R.a,[f.a,O.a,j.a,Y.a,e.j,e.z,[2,S.a],[2,D.a],[2,A.f],K.a],{type:[0,"type"]},{ionFocus:"ionFocus"}),(l()(),e._21(-1,2,["\n        "])),(l()(),e._21(-1,3,["\n        "])),(l()(),e.Z(33,0,null,2,10,"ion-buttons",[["end",""]],null,null,null,null,null)),e.Y(34,16384,null,1,U.a,[f.a,e.j,e.z,[2,H.a],[2,P.a]],null,null),e._19(603979776,5,{_buttons:1}),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(37,0,null,null,5,"button",[["class","toolbar-button"],["color","primary"],["ion-button",""],["solid",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.search()&&a}return a},x.b,x.a)),e.Y(38,1097728,[[5,4]],0,W.a,[[8,""],f.a,e.j,e.z],{color:[0,"color"],solid:[1,"solid"]},null),(l()(),e._21(-1,0,["\n                "])),(l()(),e.Z(40,0,null,0,1,"ion-icon",[["name","search"],["role","img"]],[[2,"hide",null]],null,null,null,null)),e.Y(41,147456,null,0,B.a,[f.a,e.j,e.z],{name:[0,"name"]},null),(l()(),e._21(-1,0,["\n            "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e._21(-1,3,["\n    "])),(l()(),e._21(-1,null,["\n"])),(l()(),e._21(-1,null,["\n"])),(l()(),e.Z(47,0,null,null,233,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[[null,"swipe"]],function(l,n,u){var a=!0;if("swipe"===n){a=!1!==l.component.swipeEvent(u)&&a}return a},G.b,G.a)),e.Y(48,4374528,null,0,S.a,[f.a,O.a,K.a,e.j,e.z,Y.a,q.a,e.u,[2,T.a],[2,V.a]],null,null),(l()(),e._21(-1,1,["\n    "])),(l()(),e.Z(50,0,null,1,229,"ion-card",[],null,null,null,null,null)),e.Y(51,16384,null,0,J.a,[f.a,e.j,e.z],null,null),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(53,0,null,null,209,"ion-list",[["class","mylist"]],null,null,null,null,null)),e.Y(54,16384,null,0,X.a,[f.a,e.j,e.z,O.a,Q.l,K.a],null,null),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(56,0,null,null,16,"ion-item",[["class","item item-block"]],null,null,null,k.b,k.a)),e.Y(57,1097728,null,3,D.a,[j.a,f.a,e.j,e.z,[2,z.a]],null,null),e._19(335544320,6,{contentLabel:0}),e._19(603979776,7,{_buttons:1}),e._19(603979776,8,{_icons:1}),e.Y(61,16384,null,0,w.a,[],null,null),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(63,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(64,16384,[[6,4]],0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["狀態"])),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(67,0,null,1,4,"ion-label",[["item-content",""]],null,null,null,null,null)),e.Y(68,278528,null,0,o.m,[e.q,e.j,e.A],{ngStyle:[0,"ngStyle"]},null),e._16(69,{color:0}),e.Y(70,16384,[[6,4]],0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(71,null,["",""])),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(74,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,k.b,k.a)),e.Y(75,1097728,null,3,D.a,[j.a,f.a,e.j,e.z,[2,z.a]],null,null),e._19(335544320,9,{contentLabel:0}),e._19(603979776,10,{_buttons:1}),e._19(603979776,11,{_icons:1}),e.Y(79,16384,null,0,w.a,[],null,null),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(81,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(82,16384,[[9,4]],0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["物流公司"])),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(85,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(86,16384,[[9,4]],0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(87,null,["",""])),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(90,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,k.b,k.a)),e.Y(91,1097728,null,3,D.a,[j.a,f.a,e.j,e.z,[2,z.a]],null,null),e._19(335544320,12,{contentLabel:0}),e._19(603979776,13,{_buttons:1}),e._19(603979776,14,{_icons:1}),e.Y(95,16384,null,0,w.a,[],null,null),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(97,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(98,16384,[[12,4]],0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["報到車牌"])),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(101,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(102,16384,[[12,4]],0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(103,null,[""," ",""])),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(106,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,k.b,k.a)),e.Y(107,1097728,null,3,D.a,[j.a,f.a,e.j,e.z,[2,z.a]],null,null),e._19(335544320,15,{contentLabel:0}),e._19(603979776,16,{_buttons:1}),e._19(603979776,17,{_icons:1}),e.Y(111,16384,null,0,w.a,[],null,null),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(113,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(114,16384,[[15,4]],0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["指派碼頭"])),(l()(),e._21(-1,2,["\n                "])),(l()(),e.Z(117,0,null,1,2,"ion-label",[],null,null,null,null,null)),e.Y(118,16384,[[15,4]],0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(119,null,["",""])),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(122,0,null,null,45,"ion-grid",[["class","grid"]],null,null,null,null,null)),e.Y(123,16384,null,0,$.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(125,0,null,null,41,"ion-row",[["align-items-center",""],["class","row"]],null,null,null,null,null)),e.Y(126,16384,null,0,ll.a,[],null,null),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(128,0,null,null,6,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),e.Y(129,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(131,0,null,null,2,"ion-label",[],null,null,null,null,null)),e.Y(132,16384,null,0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["冷凍溫度"])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(136,0,null,null,9,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(137,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(139,0,null,null,5,"ion-toggle",[["class","toggle_temp"],["color","danger"]],[[2,"toggle-disabled",null],[2,"toggle-checked",null],[2,"toggle-activated",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionChange"],[null,"keyup"]],function(l,n,u){var a=!0,o=l.component;if("keyup"===n){a=!1!==e._12(l,140)._keyup(u)&&a}if("ngModelChange"===n){a=!1!==(o.VEHICLE_TEMP0_color.checked=u)&&a}if("ionChange"===n){a=!1!==o.onToggleChange(o.VEHICLE_TEMP0_color)&&a}return a},ul.b,ul.a)),e.Y(140,1228800,null,0,al.a,[j.a,f.a,O.a,e.j,e.z,el.a,[2,D.a],Q.l,K.a,e.u],{color:[0,"color"],disabled:[1,"disabled"]},{ionChange:"ionChange"}),e._18(1024,null,A.e,function(l){return[l]},[al.a]),e.Y(142,671744,null,0,A.h,[[8,null],[8,null],[8,null],[2,A.e]],{isDisabled:[0,"isDisabled"],model:[1,"model"]},{update:"ngModelChange"}),e._18(2048,null,A.f,null,[A.h]),e.Y(144,16384,null,0,A.g,[A.f],null,null),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(147,0,null,null,6,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(148,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(150,0,null,null,2,"ion-label",[["class","label_temp"]],null,null,null,null,null)),e.Y(151,16384,null,0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(152,null,["",""])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(155,0,null,null,10,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(156,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(158,0,null,null,6,"ion-input",[["onkeypress","return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46"],["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionFocus"]],function(l,n,u){var a=!0,e=l.component;if("ngModelChange"===n){a=!1!==(e.answer.VEHICLE_TEMP0=u)&&a}if("ionFocus"===n){a=!1!==e.selectAll(u)&&a}return a},F.b,F.a)),e.Y(159,278528,null,0,o.h,[e.p,e.q,e.j,e.A],{ngClass:[0,"ngClass"]},null),e._16(160,{input_pos_temperature:0,input_neg_temperature:1}),e.Y(161,671744,null,0,A.h,[[8,null],[8,null],[8,null],[8,null]],{isDisabled:[0,"isDisabled"],model:[1,"model"]},{update:"ngModelChange"}),e._18(2048,null,A.f,null,[A.h]),e.Y(163,16384,null,0,A.g,[A.f],null,null),e.Y(164,5423104,null,0,R.a,[f.a,O.a,j.a,Y.a,e.j,e.z,[2,S.a],[2,D.a],[2,A.f],K.a],{disabled:[0,"disabled"],type:[1,"type"]},{ionFocus:"ionFocus"}),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(169,0,null,null,45,"ion-grid",[["class","grid"]],null,null,null,null,null)),e.Y(170,16384,null,0,$.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(172,0,null,null,41,"ion-row",[["align-items-center",""],["class","row"]],null,null,null,null,null)),e.Y(173,16384,null,0,ll.a,[],null,null),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(175,0,null,null,6,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),e.Y(176,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(178,0,null,null,2,"ion-label",[["item-start",""]],null,null,null,null,null)),e.Y(179,16384,null,0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["冷藏溫度"])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(183,0,null,null,9,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(184,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(186,0,null,null,5,"ion-toggle",[["class","toggle_temp"],["color","danger"]],[[2,"toggle-disabled",null],[2,"toggle-checked",null],[2,"toggle-activated",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionChange"],[null,"keyup"]],function(l,n,u){var a=!0,o=l.component;if("keyup"===n){a=!1!==e._12(l,187)._keyup(u)&&a}if("ngModelChange"===n){a=!1!==(o.VEHICLE_TEMP1_color.checked=u)&&a}if("ionChange"===n){a=!1!==o.onToggleChange(o.VEHICLE_TEMP1_color)&&a}return a},ul.b,ul.a)),e.Y(187,1228800,null,0,al.a,[j.a,f.a,O.a,e.j,e.z,el.a,[2,D.a],Q.l,K.a,e.u],{color:[0,"color"],disabled:[1,"disabled"]},{ionChange:"ionChange"}),e._18(1024,null,A.e,function(l){return[l]},[al.a]),e.Y(189,671744,null,0,A.h,[[8,null],[8,null],[8,null],[2,A.e]],{isDisabled:[0,"isDisabled"],model:[1,"model"]},{update:"ngModelChange"}),e._18(2048,null,A.f,null,[A.h]),e.Y(191,16384,null,0,A.g,[A.f],null,null),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(194,0,null,null,6,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(195,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(197,0,null,null,2,"ion-label",[["class","label_temp"]],null,null,null,null,null)),e.Y(198,16384,null,0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(199,null,["",""])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(202,0,null,null,10,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(203,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(205,0,null,null,6,"ion-input",[["item-end",""],["onkeypress","return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46"],["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionFocus"]],function(l,n,u){var a=!0,e=l.component;if("ngModelChange"===n){a=!1!==(e.answer.VEHICLE_TEMP1=u)&&a}if("ionFocus"===n){a=!1!==e.selectAll(u)&&a}return a},F.b,F.a)),e.Y(206,278528,null,0,o.h,[e.p,e.q,e.j,e.A],{ngClass:[0,"ngClass"]},null),e._16(207,{input_pos_temperature:0,input_neg_temperature:1}),e.Y(208,671744,null,0,A.h,[[8,null],[8,null],[8,null],[8,null]],{isDisabled:[0,"isDisabled"],model:[1,"model"]},{update:"ngModelChange"}),e._18(2048,null,A.f,null,[A.h]),e.Y(210,16384,null,0,A.g,[A.f],null,null),e.Y(211,5423104,null,0,R.a,[f.a,O.a,j.a,Y.a,e.j,e.z,[2,S.a],[2,D.a],[2,A.f],K.a],{disabled:[0,"disabled"],type:[1,"type"]},{ionFocus:"ionFocus"}),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(216,0,null,null,45,"ion-grid",[["class","grid"]],null,null,null,null,null)),e.Y(217,16384,null,0,$.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(219,0,null,null,41,"ion-row",[["align-items-center",""],["class","row"]],null,null,null,null,null)),e.Y(220,16384,null,0,ll.a,[],null,null),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(222,0,null,null,6,"ion-col",[["class","col"]],null,null,null,null,null)),e.Y(223,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(225,0,null,null,2,"ion-label",[["item-start",""]],null,null,null,null,null)),e.Y(226,16384,null,0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["溫控溫度"])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(230,0,null,null,9,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(231,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(233,0,null,null,5,"ion-toggle",[["class","toggle_temp"],["color","danger"]],[[2,"toggle-disabled",null],[2,"toggle-checked",null],[2,"toggle-activated",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionChange"],[null,"keyup"]],function(l,n,u){var a=!0,o=l.component;if("keyup"===n){a=!1!==e._12(l,234)._keyup(u)&&a}if("ngModelChange"===n){a=!1!==(o.VEHICLE_TEMP2_color.checked=u)&&a}if("ionChange"===n){a=!1!==o.onToggleChange(o.VEHICLE_TEMP2_color)&&a}return a},ul.b,ul.a)),e.Y(234,1228800,null,0,al.a,[j.a,f.a,O.a,e.j,e.z,el.a,[2,D.a],Q.l,K.a,e.u],{color:[0,"color"],disabled:[1,"disabled"]},{ionChange:"ionChange"}),e._18(1024,null,A.e,function(l){return[l]},[al.a]),e.Y(236,671744,null,0,A.h,[[8,null],[8,null],[8,null],[2,A.e]],{isDisabled:[0,"isDisabled"],model:[1,"model"]},{update:"ngModelChange"}),e._18(2048,null,A.f,null,[A.h]),e.Y(238,16384,null,0,A.g,[A.f],null,null),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(241,0,null,null,6,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(242,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(244,0,null,null,2,"ion-label",[["class","label_temp"]],null,null,null,null,null)),e.Y(245,16384,null,0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(246,null,["",""])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                    "])),(l()(),e.Z(249,0,null,null,10,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(250,16384,null,0,nl.a,[],null,null),(l()(),e._21(-1,null,["\n                        "])),(l()(),e.Z(252,0,null,null,6,"ion-input",[["item-end",""],["onkeypress","return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46"],["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionFocus"]],function(l,n,u){var a=!0,e=l.component;if("ngModelChange"===n){a=!1!==(e.answer.VEHICLE_TEMP2=u)&&a}if("ionFocus"===n){a=!1!==e.selectAll(u)&&a}return a},F.b,F.a)),e.Y(253,278528,null,0,o.h,[e.p,e.q,e.j,e.A],{ngClass:[0,"ngClass"]},null),e._16(254,{input_pos_temperature:0,input_neg_temperature:1}),e.Y(255,671744,null,0,A.h,[[8,null],[8,null],[8,null],[8,null]],{isDisabled:[0,"isDisabled"],model:[1,"model"]},{update:"ngModelChange"}),e._18(2048,null,A.f,null,[A.h]),e.Y(257,16384,null,0,A.g,[A.f],null,null),e.Y(258,5423104,null,0,R.a,[f.a,O.a,j.a,Y.a,e.j,e.z,[2,S.a],[2,D.a],[2,A.f],K.a],{disabled:[0,"disabled"],type:[1,"type"]},{ionFocus:"ionFocus"}),(l()(),e._21(-1,null,["\n                    "])),(l()(),e._21(-1,null,["\n                "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(264,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,k.b,k.a)),e.Y(265,1097728,null,3,D.a,[j.a,f.a,e.j,e.z,[2,z.a]],null,null),e._19(335544320,18,{contentLabel:0}),e._19(603979776,19,{_buttons:1}),e._19(603979776,20,{_icons:1}),e.Y(269,16384,null,0,w.a,[],null,null),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,2,["\n            "])),(l()(),e.Z(272,0,null,2,1,"h1",[],null,null,null,null,null)),(l()(),e._21(-1,null,[" "])),(l()(),e.Z(274,0,null,2,0,"br",[],null,null,null,null,null)),(l()(),e._21(-1,2,["\n            "])),(l()(),e.Z(276,0,null,2,1,"h1",[],null,null,null,null,null)),(l()(),e._21(-1,null,[" "])),(l()(),e._21(-1,2,["\n        "])),(l()(),e._21(-1,null,["\n    "])),(l()(),e._21(-1,1,["\n"])),(l()(),e._21(-1,null,["\n"])),(l()(),e.Z(282,0,null,null,17,"div",[],[[8,"hidden",0]],null,null,null,null)),(l()(),e._21(-1,null,["\n    "])),(l()(),e.Z(284,0,null,null,14,"ion-footer",[["no-border",""]],null,null,null,null,null)),e.Y(285,16384,null,0,ol.a,[f.a,e.j,e.z,[2,T.a]],null,null),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(287,0,null,null,10,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,Z.b,Z.a)),e.Y(288,49152,null,0,H.a,[f.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n            "])),(l()(),e.Z(290,0,null,3,2,"button",[["block",""],["ion-button",""]],[[8,"disabled",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.register()&&a}return a},x.b,x.a)),e.Y(291,1097728,null,0,W.a,[[8,""],f.a,e.j,e.z],{block:[0,"block"]},null),(l()(),e._21(-1,0,["報到"])),(l()(),e._21(-1,3,["\n            "])),(l()(),e.Z(294,0,null,3,2,"ion-label",[["class","bottom_BLOCK"]],null,null,null,null,null)),e.Y(295,16384,null,0,N.a,[f.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(296,null,["區域：",""])),(l()(),e._21(-1,3,["\n        "])),(l()(),e._21(-1,null,["\n    "])),(l()(),e._21(-1,null,["\n"])),(l()(),e._21(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,27,0,u.data.CarNo);l(n,30,0,"text");l(n,38,0,"primary","");l(n,41,0,"search");l(n,68,0,l(n,69,0,u.data.viewColor));l(n,140,0,"danger",u.data.IsDisabled);l(n,142,0,u.data.IsDisabled,u.VEHICLE_TEMP0_color.checked);l(n,159,0,l(n,160,0,!u.VEHICLE_TEMP0_color.checked,u.VEHICLE_TEMP0_color.checked));l(n,161,0,u.data.IsDisabled,u.answer.VEHICLE_TEMP0);l(n,164,0,u.data.IsDisabled,"tel");l(n,187,0,"danger",u.data.IsDisabled);l(n,189,0,u.data.IsDisabled,u.VEHICLE_TEMP1_color.checked);l(n,206,0,l(n,207,0,!u.VEHICLE_TEMP1_color.checked,u.VEHICLE_TEMP1_color.checked));l(n,208,0,u.data.IsDisabled,u.answer.VEHICLE_TEMP1);l(n,211,0,u.data.IsDisabled,"tel");l(n,234,0,"danger",u.data.IsDisabled);l(n,236,0,u.data.IsDisabled,u.VEHICLE_TEMP2_color.checked);l(n,253,0,l(n,254,0,!u.VEHICLE_TEMP2_color.checked,u.VEHICLE_TEMP2_color.checked));l(n,255,0,u.data.IsDisabled,u.answer.VEHICLE_TEMP2);l(n,258,0,u.data.IsDisabled,"tel");l(n,291,0,"")},function(l,n){var u=n.component;l(n,4,0,e._12(n,5)._hidden,e._12(n,5)._sbPadding);l(n,12,0,e._12(n,13)._sbPadding);l(n,26,0,e._12(n,29).ngClassUntouched,e._12(n,29).ngClassTouched,e._12(n,29).ngClassPristine,e._12(n,29).ngClassDirty,e._12(n,29).ngClassValid,e._12(n,29).ngClassInvalid,e._12(n,29).ngClassPending);l(n,40,0,e._12(n,41)._hidden);l(n,47,0,e._12(n,48).statusbarPadding,e._12(n,48)._hasRefresher);l(n,71,0,u.result.ROW10);l(n,87,0,u.result.TRAN_NAME);l(n,103,0,u.result.VEHICLE_NO,u.result.VEHICLE_DRIVER);l(n,119,0,u.result.DOCK_NAME);l(n,139,0,e._12(n,140)._disabled,e._12(n,140)._value,e._12(n,140)._activated,e._12(n,144).ngClassUntouched,e._12(n,144).ngClassTouched,e._12(n,144).ngClassPristine,e._12(n,144).ngClassDirty,e._12(n,144).ngClassValid,e._12(n,144).ngClassInvalid,e._12(n,144).ngClassPending);l(n,152,0,u.VEHICLE_TEMP0_color.labelName);l(n,158,0,e._12(n,163).ngClassUntouched,e._12(n,163).ngClassTouched,e._12(n,163).ngClassPristine,e._12(n,163).ngClassDirty,e._12(n,163).ngClassValid,e._12(n,163).ngClassInvalid,e._12(n,163).ngClassPending);l(n,186,0,e._12(n,187)._disabled,e._12(n,187)._value,e._12(n,187)._activated,e._12(n,191).ngClassUntouched,e._12(n,191).ngClassTouched,e._12(n,191).ngClassPristine,e._12(n,191).ngClassDirty,e._12(n,191).ngClassValid,e._12(n,191).ngClassInvalid,e._12(n,191).ngClassPending);l(n,199,0,u.VEHICLE_TEMP1_color.labelName);l(n,205,0,e._12(n,210).ngClassUntouched,e._12(n,210).ngClassTouched,e._12(n,210).ngClassPristine,e._12(n,210).ngClassDirty,e._12(n,210).ngClassValid,e._12(n,210).ngClassInvalid,e._12(n,210).ngClassPending);l(n,233,0,e._12(n,234)._disabled,e._12(n,234)._value,e._12(n,234)._activated,e._12(n,238).ngClassUntouched,e._12(n,238).ngClassTouched,e._12(n,238).ngClassPristine,e._12(n,238).ngClassDirty,e._12(n,238).ngClassValid,e._12(n,238).ngClassInvalid,e._12(n,238).ngClassPending);l(n,246,0,u.VEHICLE_TEMP2_color.labelName);l(n,252,0,e._12(n,257).ngClassUntouched,e._12(n,257).ngClassTouched,e._12(n,257).ngClassPristine,e._12(n,257).ngClassDirty,e._12(n,257).ngClassValid,e._12(n,257).ngClassInvalid,e._12(n,257).ngClassPending);l(n,282,0,u.data.IsHideWhenKeyboardOpen);l(n,287,0,e._12(n,288)._sbPadding);l(n,290,0,u.data.IsDisabled);l(n,296,0,u.data.BLOCK_NAME)})}Object.defineProperty(n,"__esModule",{value:!0});var e=u(1),o=(u(0),u(16)),t=(u(36),u(91)),s=u(37),i=u(44),_=u(65),c=function(){function l(l,n,u,a,e,o){this.navCtrl=l,this.platform=n,this._http_services=u,this.alertCtrl=a,this.keyboard=e,this.vibration=o,this.data={CarNo:"",viewColor:"",IsDisabled:!0,USER_ID:localStorage.getItem("USER_ID"),BLOCK_NAME:localStorage.getItem("BLOCK_NAME"),IsHideWhenKeyboardOpen:!1},this.color={green:"#79FF79",red:"#FF5151"},this.result={},this.answer={VEHICLE_TEMP0:0,VEHICLE_TEMP1:0,VEHICLE_TEMP2:0},this.VEHICLE_TEMP0_color={labelName:"＋",checked:!1},this.VEHICLE_TEMP1_color={labelName:"＋",checked:!1},this.VEHICLE_TEMP2_color={labelName:"＋",checked:!1},i.h(),this.initializeApp()}return l.prototype.ionViewDidEnter=function(){var l=this;1==this.data.IsDisabled&&setTimeout(function(){l.scan_Entry.setFocus()},150)},l.prototype.initializeApp=function(){var l=this;this.platform.is("core")?console.log("You're develop in the browser"):this.platform.ready().then(function(){l.keyboard.onKeyboardShow().subscribe(function(){l.data.IsHideWhenKeyboardOpen=!0}),l.keyboard.onKeyboardHide().subscribe(function(){l.data.IsHideWhenKeyboardOpen=!1})})},l.prototype.reset=function(){i.d.set("CarNo",""),this.data.viewColor="",this.data.IsDisabled=!0,this.answer.VEHICLE_TEMP0=0,this.answer.VEHICLE_TEMP1=0,this.answer.VEHICLE_TEMP2=0,this.VEHICLE_TEMP0_color.checked=!1,this.onToggleChange(this.VEHICLE_TEMP0_color),this.VEHICLE_TEMP1_color.checked=!1,this.onToggleChange(this.VEHICLE_TEMP1_color),this.VEHICLE_TEMP2_color.checked=!1,this.onToggleChange(this.VEHICLE_TEMP2_color),this.result={},this.scan_Entry.setFocus()},l.prototype.search=function(){var l=this;this.vibration.vibrate(100),""!=this.data.CarNo&&(this.reset(),this._http_services.POST("","sp","spactDCS_ID_HEADER",[{Name:"@JOB_ID",Value:"1"},{Name:"@REG_ID",Value:this.data.CarNo}]).then(function(n){if(""!=n)switch(n[0].RT_CODE){case 0:l.result=n[0],l.answer.VEHICLE_TEMP0=Math.abs(n[0].VEHICLE_TEMP0),l.answer.VEHICLE_TEMP1=Math.abs(n[0].VEHICLE_TEMP1),l.answer.VEHICLE_TEMP2=Math.abs(n[0].VEHICLE_TEMP2),n[0].VEHICLE_TEMP0<0&&(l.VEHICLE_TEMP0_color.checked=!0,l.onToggleChange(l.VEHICLE_TEMP0_color)),n[0].VEHICLE_TEMP1<0&&(l.VEHICLE_TEMP1_color.checked=!0,l.onToggleChange(l.VEHICLE_TEMP1_color)),n[0].VEHICLE_TEMP2<0&&(l.VEHICLE_TEMP2_color.checked=!0,l.onToggleChange(l.VEHICLE_TEMP2_color)),l.data.CarNo=n[0].REG_ID,"未報到"==n[0].ROW10?(l.data.viewColor="red",l.data.IsDisabled=!1):(l.data.viewColor="green",l.data.IsDisabled=!0);break;default:l.alertCtrl.create({title:"失敗",subTitle:n[0].RT_MSG,buttons:[{text:"關閉",handler:function(n){l.scan_Entry.setFocus()}}]}).present()}l.scan_Entry.setFocus()}))},l.prototype.onToggleChange=function(l){l.labelName=1==l.checked?"－":"＋"},l.prototype.register=function(){var l=this;if(""!=this.data.CarNo&&0==this.data.IsDisabled){var n=this.answer.VEHICLE_TEMP0,u=this.answer.VEHICLE_TEMP1,a=this.answer.VEHICLE_TEMP2;1==this.VEHICLE_TEMP0_color.checked&&(n=-n),1==this.VEHICLE_TEMP1_color.checked&&(u=-u),1==this.VEHICLE_TEMP2_color.checked&&(a=-a),this._http_services.POST("","sp","spactDCS_ID_HEADER",[{Name:"@JOB_ID",Value:"2"},{Name:"@REG_ID",Value:this.data.CarNo},{Name:"@TEMP0",Value:this.answer.VEHICLE_TEMP0},{Name:"@TEMP1",Value:this.answer.VEHICLE_TEMP1},{Name:"@TEMP2",Value:this.answer.VEHICLE_TEMP2},{Name:"@USER_NAME",Value:this.data.USER_ID}]).then(function(n){if(""!=n){var u=n[0];switch(u.RT_CODE){case 0:l.alertCtrl.create({title:"成功",subTitle:u.RT_MSG,buttons:[{text:"關閉",handler:function(n){l.reset()}}]}).present();break;default:l.alertCtrl.create({title:"失敗",subTitle:u.RT_MSG,buttons:[{text:"關閉",handler:function(n){l.scan_Entry.setFocus()}}]}).present()}}l.scan_Entry.setFocus()})}},l.prototype.selectAll=function(l){l._native.nativeElement.select()},l.prototype.swipeEvent=function(l){switch(l.direction){case 1:case 2:break;case 4:this.navCtrl.pop()}},l}(),r=function(){return function(){}}(),d=u(355),g=u(356),E=u(357),h=u(358),C=u(359),b=u(360),p=u(361),I=u(362),m=u(363),M=u(55),f=u(3),T=u(7),v=u(68),P=u(33),Y=u(8),V=u(19),y=u(69),L=u(43),H=u(34),Z=u(182),k=u(364),D=u(27),j=u(24),z=u(70),w=u(129),N=u(57),F=u(365),A=u(23),R=u(92),O=u(5),S=u(20),K=u(9),U=u(61),x=u(30),W=u(17),B=u(39),G=u(56),q=u(31),J=u(181),X=u(72),Q=u(12),$=u(60),ll=u(45),nl=u(59),ul=u(668),al=u(183),el=u(46),ol=u(90),tl=u(58),sl=e.X({encapsulation:2,styles:[],data:{}}),il=e.V("ng-component",c,function(l){return e._23(0,[(l()(),e.Z(0,0,null,null,1,"ng-component",[],null,null,null,a,sl)),e.Y(1,49152,null,0,c,[V.a,O.a,_.a,tl.a,t.a,s.a],null,null)],null,null)},{},{},[]),_l=u(180),cl=u(66);u.d(n,"AppModuleNgFactory",function(){return rl});var rl=e.W(r,[],function(l){return e._8([e._9(512,e.i,e.S,[[8,[d.a,g.a,E.a,h.a,C.a,b.a,p.a,I.a,m.a,il]],[3,e.i],e.s]),e._9(4608,o.l,o.k,[e.r,[2,o.t]]),e._9(4608,A.k,A.k,[]),e._9(4608,A.c,A.c,[]),e._9(512,o.b,o.b,[]),e._9(512,A.j,A.j,[]),e._9(512,A.d,A.d,[]),e._9(512,A.i,A.i,[]),e._9(512,_l.a,_l.a,[]),e._9(512,_l.b,_l.b,[]),e._9(512,r,r,[]),e._9(256,cl.a,c,[])])})},668:function(l,n,u){"use strict";function a(l){return e._23(0,[(l()(),e.Z(0,0,null,null,1,"div",[["class","toggle-icon"]],null,null,null,null,null)),(l()(),e.Z(1,0,null,null,0,"div",[["class","toggle-inner"]],null,null,null,null,null)),(l()(),e.Z(2,0,null,null,1,"button",[["class","item-cover"],["disable-activated",""],["ion-button","item-cover"],["role","checkbox"],["type","button"]],[[8,"id",0],[1,"aria-checked",0],[1,"aria-labelledby",0],[1,"aria-disabled",0]],null,null,o.b,o.a)),e.Y(3,1097728,null,0,t.a,[[8,"item-cover"],s.a,e.j,e.z],null,null)],null,function(l,n){var u=n.component;l(n,2,0,u.id,u._value,u._labelId,u._disabled)})}u.d(n,"a",function(){return i}),n.b=a;var e=u(1),o=u(30),t=u(17),s=u(3),i=(u(24),u(5),u(46),u(12),u(9),e.X({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([4],{
+
+/***/ 701:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrintLogisticLabelModule", function() { return PrintLogisticLabelModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PrintLogisticLabel__ = __webpack_require__(721);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var PrintLogisticLabelModule = /** @class */ (function () {
+    function PrintLogisticLabelModule() {
+    }
+    PrintLogisticLabelModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__PrintLogisticLabel__["a" /* _23_PrintLogisticLabel */])
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__PrintLogisticLabel__["a" /* _23_PrintLogisticLabel */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_2__PrintLogisticLabel__["a" /* _23_PrintLogisticLabel */]]
+        })
+    ], PrintLogisticLabelModule);
+    return PrintLogisticLabelModule;
+}());
+
+//# sourceMappingURL=PrintLogisticLabel.module.js.map
+
+/***/ }),
+
+/***/ 721:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _23_PrintLogisticLabel; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_Settings__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__ = __webpack_require__(87);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+//Cordova
+
+
+
+var _23_PrintLogisticLabel = /** @class */ (function () {
+    function _23_PrintLogisticLabel(navCtrl, _http_services, alertCtrl, toastCtrl, vibration) {
+        this.navCtrl = navCtrl;
+        this._http_services = _http_services;
+        this.alertCtrl = alertCtrl;
+        this.toastCtrl = toastCtrl;
+        this.vibration = vibration;
+        //#region Init
+        this.data = {
+            ScanBarcode: ''
+        };
+        this.data2 = {
+            Barcode: '',
+            Shop: '',
+            Qty: '',
+            IP_Qty: '',
+            SUP_Qty: ''
+        };
+    }
+    //#endregion
+    _23_PrintLogisticLabel.prototype.search = function () {
+        var _this = this;
+        this.vibration.vibrate(100);
+        //#region Check error
+        var ErrMsg = '';
+        if (this.data.ScanBarcode == '') {
+            ErrMsg = '請輸入物流標';
+        }
+        if (ErrMsg != '') {
+            var toast = this.toastCtrl.create({
+                message: ErrMsg,
+                duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                position: 'bottom'
+            });
+            toast.present();
+            return;
+        }
+        //#endregion
+        var parameters = [];
+        if (this.data.ScanBarcode != '')
+            parameters.push({ Name: '@CODE', Value: this.data.ScanBarcode });
+        this._http_services.POST('', 'sp', '[md.spDCS_LABEL_SORTER]', parameters)
+            .then(function (response) {
+            if (response != '') {
+                switch (response[0].RT_CODE) {
+                    case '0':
+                        var toast = _this.toastCtrl.create({
+                            message: response[0].RT_MSG,
+                            duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                            position: 'bottom'
+                        });
+                        toast.present();
+                        break;
+                    default:
+                        var alert_1 = _this.alertCtrl.create({
+                            title: '錯誤' + response[0].RT_CODE,
+                            subTitle: response[0].RT_MSG,
+                            buttons: ['關閉']
+                        });
+                        alert_1.present();
+                        break;
+                }
+            }
+        });
+        //準備下一輪掃描
+        this.reset();
+        this.myfocus();
+    };
+    ;
+    _23_PrintLogisticLabel.prototype.search2 = function (Mode) {
+        var _this = this;
+        switch (Mode) {
+            case 0:
+                this.txb_search_1.setFocus();
+                return;
+            case 1:
+                this.txb_search_2.setFocus();
+                return;
+            case 2:
+                this.txb_search_3.setFocus();
+                return;
+            case 3:
+                this.txb_search_4.setFocus();
+                return;
+            case 4:
+                break;
+        }
+        this.vibration.vibrate(100);
+        //#region Check error
+        var ErrMsg = '';
+        if (this.data2.Barcode == '') {
+            ErrMsg = '請輸入呼出碼';
+        }
+        if (this.data2.Shop != '') {
+            if (this.data2.Qty == '') {
+                ErrMsg = '請輸入數量(已指定店鋪)';
+            }
+        }
+        if (ErrMsg != '') {
+            var toast = this.toastCtrl.create({
+                message: ErrMsg,
+                duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                position: 'bottom'
+            });
+            toast.present();
+            return;
+        }
+        //#endregion
+        //add parameter
+        var parameters = [];
+        if (this.data2.Barcode != '')
+            parameters.push({ Name: '@ITEM_ID', Value: this.data2.Barcode });
+        if (this.data2.Shop != '')
+            parameters.push({ Name: '@SITE_ID', Value: this.data2.Shop });
+        if (this.data2.Qty != '')
+            parameters.push({ Name: '@QTY', Value: this.data2.Qty });
+        if (this.data2.IP_Qty != '')
+            parameters.push({ Name: '@IP_QTY', Value: this.data2.IP_Qty });
+        if (this.data2.SUP_Qty != '')
+            parameters.push({ Name: '@SUP_QTY', Value: this.data2.SUP_Qty });
+        this._http_services.POST('', 'sp', '[md.spDCS_LABEL_SORTER]', parameters)
+            .then(function (response) {
+            if (response != '') {
+                switch (response[0].RT_CODE) {
+                    case '0':
+                        var toast = _this.toastCtrl.create({
+                            message: response[0].RT_MSG,
+                            duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                            position: 'bottom'
+                        });
+                        toast.present();
+                        break;
+                    default:
+                        var alert_2 = _this.alertCtrl.create({
+                            title: '錯誤' + response[0].RT_CODE,
+                            subTitle: response[0].RT_MSG,
+                            buttons: [{
+                                    text: '關閉',
+                                    handler: function () {
+                                        _this.myfocus2();
+                                    }
+                                }]
+                        });
+                        alert_2.present();
+                        break;
+                }
+            }
+        });
+        //準備下一輪掃描
+        this.reset();
+        this.myfocus2();
+    };
+    ;
+    _23_PrintLogisticLabel.prototype.reset = function () {
+        this.data.ScanBarcode = '';
+        this.data2.Barcode = '';
+        this.data2.Shop = '';
+        this.data2.Qty = '';
+        this.data2.IP_Qty = '';
+        this.data2.SUP_Qty = '';
+    };
+    ;
+    _23_PrintLogisticLabel.prototype.help = function () {
+        var alert = this.alertCtrl.create({
+            title: '使用說明',
+            subTitle: '1. 輸入物流標，產生指定內容<br/>'
+                + '2. 輸入指定內容：滑道(3)+疊箱(1)+店鋪(6)+批號(6)+數量(2)',
+            buttons: ['關閉']
+        });
+        alert.present();
+    };
+    ;
+    _23_PrintLogisticLabel.prototype.help2 = function () {
+        var alert = this.alertCtrl.create({
+            title: '使用說明',
+            subTitle: '1. 呼出碼一定要輸入<br/>'
+                + '2. 不指定店鋪，會印出所有店鋪標籤<br/>'
+                + '3.   指定店鋪一定要輸入數量<br/>'
+                + '4. 不指定入數，會印出系統預設入數:6',
+            buttons: ['關閉']
+        });
+        alert.present();
+    };
+    ;
+    //喪失focus
+    _23_PrintLogisticLabel.prototype.myfocus = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.scan_Entry.setFocus();
+        }, 150);
+    };
+    ;
+    _23_PrintLogisticLabel.prototype.myfocus2 = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.txb_search_0.setFocus();
+        }, 150);
+    };
+    ;
+    //全選
+    _23_PrintLogisticLabel.prototype.selectAll = function ($event) {
+        $event._native.nativeElement.select();
+    };
+    //手勢
+    _23_PrintLogisticLabel.prototype.swipeEvent = function (event) {
+        switch (event.direction) {
+            case 1://NONE
+                break;
+            case 2://LEFT
+                break;
+            case 4://RIGHT
+                this.navCtrl.pop();
+                break;
+            case 8://UP
+                break;
+            case 16://DOWN
+                break;
+        }
+        ;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('scan_Entry'),
+        __metadata("design:type", Object)
+    ], _23_PrintLogisticLabel.prototype, "scan_Entry", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('txb_search_0'),
+        __metadata("design:type", Object)
+    ], _23_PrintLogisticLabel.prototype, "txb_search_0", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('txb_search_1'),
+        __metadata("design:type", Object)
+    ], _23_PrintLogisticLabel.prototype, "txb_search_1", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('txb_search_2'),
+        __metadata("design:type", Object)
+    ], _23_PrintLogisticLabel.prototype, "txb_search_2", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('txb_search_3'),
+        __metadata("design:type", Object)
+    ], _23_PrintLogisticLabel.prototype, "txb_search_3", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('txb_search_4'),
+        __metadata("design:type", Object)
+    ], _23_PrintLogisticLabel.prototype, "txb_search_4", void 0);
+    _23_PrintLogisticLabel = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_23_PrintLogisticLabel\PrintLogisticLabel.html"*/'﻿<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>物流標籤列印</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content (swipe)="swipeEvent($event)">\n\n    <ion-card>\n\n        <ion-card-header (click)="help()">\n\n            從 物流標籤 補印<button small ion-button outline>HELP</button>\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n            <ion-grid>\n\n                <ion-row>\n\n                    <ion-col col-4>\n\n                        <ion-label>*物流標</ion-label>\n\n                    </ion-col>\n\n                    <ion-col col-8>\n\n                        <ion-input #scan_Entry id="txb_scan_Entry" type="number"\n\n                                   (keyup.enter)="search()"\n\n                                   (ionFocus)="selectAll($event)"\n\n                                   [(ngModel)]="data.ScanBarcode"></ion-input>\n\n                    </ion-col>\n\n                </ion-row>\n\n                <ion-row>\n\n                    <ion-col>\n\n                        <button ion-button (click)="search()" color="primary" solid class="toolbar-button">\n\n                            <ion-icon name="print"></ion-icon>\n\n                        </button>\n\n                    </ion-col>\n\n                </ion-row>\n\n            </ion-grid>\n\n        </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n        <ion-card-header (click)="help2()">\n\n            指定 詳細內容 補印<button small ion-button outline>HELP</button>\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n            <ion-grid>\n\n                <ion-row>\n\n                    <ion-col col-4>\n\n                        <ion-label>*呼出碼</ion-label>\n\n                    </ion-col>\n\n                    <ion-col col-8>\n\n                        <ion-input #txb_search_0 id="txb_scan_Entry2" type="number"\n\n                                   (ionFocus)="selectAll($event)"\n\n                                   (keyup.enter)="search2(0)"\n\n                                   [(ngModel)]="data2.Barcode"></ion-input>\n\n                    </ion-col>\n\n                </ion-row>\n\n                <ion-row>\n\n                    <ion-col col-4>\n\n                        <ion-label>店鋪代號</ion-label>\n\n                    </ion-col>\n\n                    <ion-col col-8>\n\n                        <ion-input #txb_search_1 type="number"\n\n                                   (ionFocus)="selectAll($event)"\n\n                                   (keyup.enter)="search2(1)"\n\n                                   [(ngModel)]="data2.Shop"></ion-input>\n\n                    </ion-col>\n\n                </ion-row>\n\n                <ion-row>\n\n                    <ion-col col-4>\n\n                        <ion-label>數量</ion-label>\n\n                    </ion-col>\n\n                    <ion-col col-8>\n\n                        <ion-input #txb_search_2 type="number"\n\n                                   (ionFocus)="selectAll($event)"\n\n                                   (keyup.enter)="search2(2)"\n\n                                   [(ngModel)]="data2.Qty"></ion-input>\n\n                    </ion-col>\n\n                </ion-row>\n\n                <ion-row>\n\n                    <ion-col col-4>\n\n                        <ion-label>入數</ion-label>\n\n                    </ion-col>\n\n                    <ion-col col-8>\n\n                        <ion-input #txb_search_3 type="number"\n\n                                   (ionFocus)="selectAll($event)"\n\n                                   (keyup.enter)="search2(3)"\n\n                                   [(ngModel)]="data2.IP_Qty"></ion-input>\n\n                    </ion-col>\n\n                </ion-row>\n\n                <ion-row>\n\n                    <ion-col col-4>\n\n                        <ion-label>廠商入數</ion-label>\n\n                    </ion-col>\n\n                    <ion-col col-8>\n\n                        <ion-input #txb_search_4 type="number"\n\n                                   (ionFocus)="selectAll($event)"\n\n                                   (keyup.enter)="search2(4)"\n\n                                   [(ngModel)]="data2.SUP_Qty"></ion-input>\n\n                    </ion-col>\n\n                </ion-row>\n\n                <ion-row>\n\n                    <ion-col>\n\n                        <button ion-button (click)="search2(4)" color="secondary" solid class="toolbar-button">\n\n                            <ion-icon name="print"></ion-icon>\n\n                        </button>\n\n                    </ion-col>\n\n                </ion-row>\n\n            </ion-grid>\n\n        </ion-card-content>\n\n    </ion-card>\n\n</ion-content>'/*ion-inline-end:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_23_PrintLogisticLabel\PrintLogisticLabel.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__["a" /* http_services */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__["a" /* Vibration */]])
+    ], _23_PrintLogisticLabel);
+    return _23_PrintLogisticLabel;
+}());
+
+//# sourceMappingURL=PrintLogisticLabel.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=4.js.map

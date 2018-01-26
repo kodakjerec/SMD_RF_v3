@@ -30,36 +30,55 @@
     </ion-toolbar>
 </ion-header>
 <ion-content (swipe)="swipeEvent($event)">
-    <ion-card>
-        <ion-grid class="mytable">
-            <ion-row>
-                <ion-col col-12>{{DisplayList.SITE_NAME}}</ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col style="font-size:70px;color:yellow" col-12>{{DisplayList.SITE_ID}}</ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-3>訂購量</ion-col>
-                <ion-col col-3>實績量</ion-col>
-                <ion-col col-6>剩餘量</ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col style="font-size:30px" col-3>{{DisplayList.AMOUNT}}</ion-col>
-                <ion-col style="font-size:30px" col-3>{{DisplayList.TQty}}</ion-col>
-                <ion-col style="font-size:30px" col-6>{{DisplayList.LeftQty}}</ion-col>
-            </ion-row>
-        </ion-grid>
-        <ion-item>
-            <!--IonicPage+div+hidden會導致Ionic排版錯誤，故意多加兩行空白-->
-            <h1>&nbsp;</h1><br />
-            <h1>&nbsp;</h1>
-        </ion-item>
-    </ion-card>
+    <ion-grid class="mytable">
+        <ion-row>
+            <ion-col col-1>{{DisplayList.SEQ}}</ion-col>
+            <ion-col col-11>{{DisplayList.SITE_NAME}}</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col style="font-size:70px;color:yellow" col-12>{{DisplayList.SITE_ID}}</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-3>訂購量</ion-col>
+            <ion-col col-3>實績量</ion-col>
+            <ion-col col-6>剩餘量</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col style="font-size:30px" col-3>{{DisplayList.AMOUNT}}</ion-col>
+            <ion-col style="font-size:30px" col-3>{{DisplayList.TQty}}</ion-col>
+            <ion-col style="font-size:30px" col-6>{{DisplayList.LeftQty}}</ion-col>
+        </ion-row>
+        <ion-row class="mytable_Head">
+            <ion-col col-1></ion-col>
+            <ion-col col-3>營業所</ion-col>
+            <ion-col col-2>代號</ion-col>
+            <ion-col col-2>訂購量</ion-col>
+            <ion-col col-2>實績量</ion-col>
+            <ion-col col-2>剩餘量</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let ListItem of TotalList" class="mytable_Detail">
+            <ion-col col-1> {{ListItem.SEQ}}</ion-col>
+            <ion-col col-3> {{ListItem.SITE_NAME}}</ion-col>
+            <ion-col col-2> {{ListItem.SITE_ID}}</ion-col>
+            <ion-col col-2> {{ListItem.AMOUNT}}</ion-col>
+            <ion-col col-2> {{ListItem.TQty}}</ion-col>
+            <ion-col col-2> {{ListItem.LeftQty}}</ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)" [enabled]="data.InfiniteScrollEnable">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>
 <div [hidden]="data.IsHideWhenKeyboardOpen">
     <ion-footer no-border>
         <ion-toolbar>
-            <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_NAME}}</ion-label>
+            <ion-buttons left>
+                <button color="danger" ion-button solid (click)='btn_ChangeTqty()'>改量</button>
+                <button color="secondary" ion-button outline (click)='btn_MorelastPrint()'>補標</button>
+            </ion-buttons>
+            <ion-buttons right>
+                <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_NAME}}</ion-label>
+            </ion-buttons>
         </ion-toolbar>
     </ion-footer>
 </div>

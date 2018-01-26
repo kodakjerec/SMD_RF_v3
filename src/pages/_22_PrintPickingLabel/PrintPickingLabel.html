@@ -5,7 +5,7 @@
     <ion-toolbar>
         <ion-item>
             <ion-label>條碼</ion-label>
-            <ion-input #scan_Entry id="txb_scan_Entry" type="tel"
+            <ion-input #scan_Entry id="txb_scan_Entry" type="number"
                        (keyup.enter)="search()"
                        (ionFocus)="selectAll($event)"
                        [(ngModel)]="data.ScanBarcode"></ion-input>

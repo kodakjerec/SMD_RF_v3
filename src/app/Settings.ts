@@ -10,9 +10,11 @@ export const DefaultServer = "DCStest";
 export const ShowLoadingWindow = false;
 
 export const Changelog = ''
-    + '\n18.01.15:'
+    + '\n18.01.25:'
     + '\n 1.新增功能 RFWAS'
     + '\n 2.新增硬體功能hot code push'
+    + '\n 3.變更條碼讀取方式, 現在有android鍵盤與條碼專用兩種'
+    + '\n 4.移除NFC自動登入, 但保留NFC硬體需求給未來使用'
     + '\n'
     + '\n17.12.13:'
     + '\n 1.登入步驟變更，登入->選區域->功能選單'
@@ -64,8 +66,10 @@ export function loginCheck() {
         location.href = '/';
 }
 //keycode 回傳 string
-export function keyCodeToValue(keycode: number) {
+export function keyCodeToValue(keycode: number, ParentObject: string): string {
     let returnStr = '';
+
+    //根據keycode判別字串
     if (96 <= keycode && keycode <= 105) {
         returnStr = String.fromCharCode(keycode - 48);
     }
@@ -74,9 +78,26 @@ export function keyCodeToValue(keycode: number) {
             case 9:     //Tab
             case 13:    //Enter
                 returnStr = 'ENTER'; break;
+            case 8:
+            case 46:
+                returnStr = 'DELETE'; break;
             default:
                 returnStr = String.fromCharCode(keycode);
         }
     }
-    return returnStr;
+
+    //決定字串回傳類型
+    switch (returnStr) {
+        case 'ENTER':
+            ParentObject += returnStr;
+            break;
+        case 'DELETE':
+            ParentObject = ParentObject.substr(0, ParentObject.length - 1);
+            break;
+        default:
+            ParentObject += returnStr;
+            break;
+    }
+
+    return ParentObject;
 }

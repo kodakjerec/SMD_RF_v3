@@ -1,1 +1,289 @@
-webpackJsonp([12],{655:function(l,n,u){"use strict";function a(l){return t._23(0,[t._19(402653184,1,{scan_Entry:0}),(l()(),t.Z(1,0,null,null,56,"ion-header",[["no-border",""]],null,null,null,null,null)),t.Y(2,16384,null,0,E.a,[v.a,t.j,t.z,[2,y.a]],null,null),(l()(),t._21(-1,null,["\n    "])),(l()(),t.Z(4,0,null,null,18,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,j.b,j.a)),t.Y(5,49152,null,0,C.a,[z.a,[2,y.a],[2,Z.a],v.a,t.j,t.z],null,null),(l()(),t._21(-1,3,["\n        "])),(l()(),t.Z(7,0,null,3,2,"ion-title",[],null,null,null,P.b,P.a)),t.Y(8,49152,null,0,k.a,[v.a,t.j,t.z,[2,S.a],[2,C.a]],null,null),(l()(),t._21(-1,0,["進貨單查詢"])),(l()(),t._21(-1,3,["\n        "])),(l()(),t.Z(11,0,null,2,10,"ion-buttons",[["end",""]],null,null,null,null,null)),t.Y(12,16384,null,1,T.a,[v.a,t.j,t.z,[2,S.a],[2,C.a]],null,null),t._19(603979776,2,{_buttons:1}),(l()(),t._21(-1,null,["\n            "])),(l()(),t.Z(15,0,null,null,5,"button",[["icon-end",""],["ion-button",""]],[[8,"disabled",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.Next()&&a}return a},R.b,R.a)),t.Y(16,1097728,[[2,4]],0,O.a,[[8,""],v.a,t.j,t.z],null,null),(l()(),t._21(-1,0,["\n                下一步\n                "])),(l()(),t.Z(18,0,null,0,1,"ion-icon",[["name","ios-arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(19,147456,null,0,V.a,[v.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t._21(-1,0,["\n            "])),(l()(),t._21(-1,null,["\n        "])),(l()(),t._21(-1,3,["\n    "])),(l()(),t._21(-1,null,["\n    "])),(l()(),t.Z(24,0,null,null,32,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,w.b,w.a)),t.Y(25,49152,null,0,S.a,[v.a,t.j,t.z],null,null),(l()(),t._21(-1,3,["\n        "])),(l()(),t.Z(27,0,null,3,16,"ion-item",[["class","item item-block"]],null,null,null,M.b,M.a)),t.Y(28,1097728,null,3,A.a,[L.a,v.a,t.j,t.z,[2,F.a]],null,null),t._19(335544320,3,{contentLabel:0}),t._19(603979776,4,{_buttons:1}),t._19(603979776,5,{_icons:1}),t.Y(32,16384,null,0,K.a,[],null,null),(l()(),t._21(-1,2,["\n            "])),(l()(),t.Z(34,0,null,1,2,"ion-label",[],null,null,null,null,null)),t.Y(35,16384,[[3,4]],0,H.a,[v.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(-1,null,["進貨單"])),(l()(),t._21(-1,2,["\n            "])),(l()(),t.Z(38,0,null,3,4,"ion-input",[["id","txb_scan_Entry"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"keyup.enter"],[null,"ionFocus"],[null,"ngModelChange"]],function(l,n,u){var a=!0,t=l.component;if("keyup.enter"===n){a=!1!==t.search()&&a}if("ionFocus"===n){a=!1!==t.selectAll(u)&&a}if("ngModelChange"===n){a=!1!==(t.data.PaperNo=u)&&a}return a},U.b,U.a)),t.Y(39,671744,null,0,x.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),t._18(2048,null,x.f,null,[x.h]),t.Y(41,16384,null,0,x.g,[x.f],null,null),t.Y(42,5423104,[[1,4],["scan_Entry",4]],0,B.a,[v.a,G.a,L.a,z.a,t.j,t.z,[2,J.a],[2,A.a],[2,x.f],W.a],{type:[0,"type"]},{ionFocus:"ionFocus"}),(l()(),t._21(-1,2,["\n        "])),(l()(),t._21(-1,3,["\n        "])),(l()(),t.Z(45,0,null,2,10,"ion-buttons",[["end",""]],null,null,null,null,null)),t.Y(46,16384,null,1,T.a,[v.a,t.j,t.z,[2,S.a],[2,C.a]],null,null),t._19(603979776,6,{_buttons:1}),(l()(),t._21(-1,null,["\n            "])),(l()(),t.Z(49,0,null,null,5,"button",[["class","toolbar-button"],["color","primary"],["ion-button",""],["solid",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.search()&&a}return a},R.b,R.a)),t.Y(50,1097728,[[6,4]],0,O.a,[[8,""],v.a,t.j,t.z],{color:[0,"color"],solid:[1,"solid"]},null),(l()(),t._21(-1,0,["\n                "])),(l()(),t.Z(52,0,null,0,1,"ion-icon",[["name","search"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(53,147456,null,0,V.a,[v.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t._21(-1,0,["\n            "])),(l()(),t._21(-1,null,["\n        "])),(l()(),t._21(-1,3,["\n    "])),(l()(),t._21(-1,null,["\n"])),(l()(),t._21(-1,null,["\n"])),(l()(),t.Z(59,0,null,null,74,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[[null,"swipe"],[null,"swipeup"]],function(l,n,u){var a=!0,t=l.component;if("swipe"===n){a=!1!==t.swipeEvent(u)&&a}if("swipeup"===n){a=!1!==t.swipeEvent(u)&&a}return a},Q.b,Q.a)),t.Y(60,4374528,null,0,J.a,[v.a,G.a,W.a,t.j,t.z,z.a,X.a,t.u,[2,y.a],[2,Z.a]],null,null),(l()(),t._21(-1,1,["\n    "])),(l()(),t.Z(62,0,null,1,70,"ion-card",[],null,null,null,null,null)),t.Y(63,16384,null,0,q.a,[v.a,t.j,t.z],null,null),(l()(),t._21(-1,null,["\n        "])),(l()(),t.Z(65,0,null,null,66,"ion-list",[["class","mylist"]],null,null,null,null,null)),t.Y(66,16384,null,0,$.a,[v.a,t.j,t.z,G.a,ll.l,W.a],null,null),(l()(),t._21(-1,null,["\n            "])),(l()(),t.Z(68,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,M.b,M.a)),t.Y(69,1097728,null,3,A.a,[L.a,v.a,t.j,t.z,[2,F.a]],null,null),t._19(335544320,7,{contentLabel:0}),t._19(603979776,8,{_buttons:1}),t._19(603979776,9,{_icons:1}),t.Y(73,16384,null,0,K.a,[],null,null),(l()(),t._21(-1,2,["\n                "])),(l()(),t.Z(75,0,null,1,2,"ion-label",[["class","item-left"]],null,null,null,null,null)),t.Y(76,16384,[[7,4]],0,H.a,[v.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(-1,null,["總品項數"])),(l()(),t._21(-1,2,["\n                "])),(l()(),t.Z(79,0,null,1,2,"ion-label",[],null,null,null,null,null)),t.Y(80,16384,[[7,4]],0,H.a,[v.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(81,null,["",""])),(l()(),t._21(-1,2,["\n            "])),(l()(),t._21(-1,null,["\n            "])),(l()(),t.Z(84,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,M.b,M.a)),t.Y(85,1097728,null,3,A.a,[L.a,v.a,t.j,t.z,[2,F.a]],null,null),t._19(335544320,10,{contentLabel:0}),t._19(603979776,11,{_buttons:1}),t._19(603979776,12,{_icons:1}),t.Y(89,16384,null,0,K.a,[],null,null),(l()(),t._21(-1,2,["\n                "])),(l()(),t.Z(91,0,null,1,2,"ion-label",[["class","item-left"]],null,null,null,null,null)),t.Y(92,16384,[[10,4]],0,H.a,[v.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(-1,null,["未驗品數"])),(l()(),t._21(-1,2,["\n                "])),(l()(),t.Z(95,0,null,1,2,"ion-label",[],null,null,null,null,null)),t.Y(96,16384,[[10,4]],0,H.a,[v.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(97,null,["",""])),(l()(),t._21(-1,2,["\n            "])),(l()(),t._21(-1,null,["\n            "])),(l()(),t.Z(100,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,M.b,M.a)),t.Y(101,1097728,null,3,A.a,[L.a,v.a,t.j,t.z,[2,F.a]],null,null),t._19(335544320,13,{contentLabel:0}),t._19(603979776,14,{_buttons:1}),t._19(603979776,15,{_icons:1}),t.Y(105,16384,null,0,K.a,[],null,null),(l()(),t._21(-1,2,["\n                "])),(l()(),t.Z(107,0,null,1,2,"ion-label",[["class","item-left"]],null,null,null,null,null)),t.Y(108,16384,[[13,4]],0,H.a,[v.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(-1,null,["待驗品數"])),(l()(),t._21(-1,2,["\n                "])),(l()(),t.Z(111,0,null,1,2,"ion-label",[],null,null,null,null,null)),t.Y(112,16384,[[13,4]],0,H.a,[v.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(113,null,["",""])),(l()(),t._21(-1,2,["\n            "])),(l()(),t._21(-1,null,["\n            "])),(l()(),t.Z(116,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,M.b,M.a)),t.Y(117,1097728,null,3,A.a,[L.a,v.a,t.j,t.z,[2,F.a]],null,null),t._19(335544320,16,{contentLabel:0}),t._19(603979776,17,{_buttons:1}),t._19(603979776,18,{_icons:1}),t.Y(121,16384,null,0,K.a,[],null,null),(l()(),t._21(-1,2,["\n                "])),(l()(),t.Z(123,0,null,1,2,"ion-label",[["class","item-left"]],null,null,null,null,null)),t.Y(124,16384,[[16,4]],0,H.a,[v.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(-1,null,["已驗品數"])),(l()(),t._21(-1,2,["\n                "])),(l()(),t.Z(127,0,null,1,2,"ion-label",[],null,null,null,null,null)),t.Y(128,16384,[[16,4]],0,H.a,[v.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(129,null,["",""])),(l()(),t._21(-1,2,["\n            "])),(l()(),t._21(-1,null,["\n        "])),(l()(),t._21(-1,null,["\n    "])),(l()(),t._21(-1,1,["\n"])),(l()(),t._21(-1,null,["\n"])),(l()(),t.Z(135,0,null,null,29,"div",[],[[8,"hidden",0]],null,null,null,null)),(l()(),t._21(-1,null,["\n    "])),(l()(),t.Z(137,0,null,null,26,"ion-footer",[["no-border",""]],null,null,null,null,null)),t.Y(138,16384,null,0,nl.a,[v.a,t.j,t.z,[2,y.a]],null,null),(l()(),t._21(-1,null,["\n        "])),(l()(),t.Z(140,0,null,null,22,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,w.b,w.a)),t.Y(141,49152,null,0,S.a,[v.a,t.j,t.z],null,null),(l()(),t._21(-1,3,["\n            "])),(l()(),t.Z(143,0,null,0,14,"ion-buttons",[["left",""]],null,null,null,null,null)),t.Y(144,16384,null,1,T.a,[v.a,t.j,t.z,[2,S.a],[2,C.a]],null,null),t._19(603979776,19,{_buttons:1}),(l()(),t._21(-1,null,["\n                "])),(l()(),t.Z(147,0,null,null,2,"button",[["color","secondary"],["ion-button",""],["outline",""]],[[8,"disabled",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.callPaperDetail()&&a}return a},R.b,R.a)),t.Y(148,1097728,[[19,4]],0,O.a,[[8,""],v.a,t.j,t.z],{color:[0,"color"],outline:[1,"outline"]},null),(l()(),t._21(-1,0,["\n                    明細\n                "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t.Z(151,0,null,null,5,"button",[["color","primary"],["icon-start",""],["ion-button",""],["solid",""]],[[8,"disabled",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.finish()&&a}return a},R.b,R.a)),t.Y(152,1097728,[[19,4]],0,O.a,[[8,""],v.a,t.j,t.z],{color:[0,"color"],solid:[1,"solid"]},null),(l()(),t._21(-1,0,["\n                    "])),(l()(),t.Z(154,0,null,0,1,"ion-icon",[["name","checkmark"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(155,147456,null,0,V.a,[v.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t._21(-1,0,["\n                    完成驗收\n                "])),(l()(),t._21(-1,null,["\n            "])),(l()(),t._21(-1,3,["\n            "])),(l()(),t.Z(159,0,null,3,2,"ion-label",[["class","bottom_BLOCK"]],null,null,null,null,null)),t.Y(160,16384,null,0,H.a,[v.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(161,null,["區域：",""])),(l()(),t._21(-1,3,["\n        "])),(l()(),t._21(-1,null,["\n    "])),(l()(),t._21(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,19,0,"ios-arrow-forward");l(n,39,0,u.data.PaperNo);l(n,42,0,"text");l(n,50,0,"primary","");l(n,53,0,"search");l(n,148,0,"secondary","");l(n,152,0,"primary","");l(n,155,0,"checkmark")},function(l,n){var u=n.component;l(n,4,0,t._12(n,5)._hidden,t._12(n,5)._sbPadding);l(n,15,0,u.data.IsDisabled);l(n,18,0,t._12(n,19)._hidden);l(n,24,0,t._12(n,25)._sbPadding);l(n,38,0,t._12(n,41).ngClassUntouched,t._12(n,41).ngClassTouched,t._12(n,41).ngClassPristine,t._12(n,41).ngClassDirty,t._12(n,41).ngClassValid,t._12(n,41).ngClassInvalid,t._12(n,41).ngClassPending);l(n,52,0,t._12(n,53)._hidden);l(n,59,0,t._12(n,60).statusbarPadding,t._12(n,60)._hasRefresher);l(n,81,0,u.result.ITEM_QTY);l(n,97,0,u.result.ITEM_QTY0);l(n,113,0,u.result.ITEM_QTY1);l(n,129,0,u.result.ITEM_QTY2);l(n,135,0,u.data.IsHideWhenKeyboardOpen);l(n,140,0,t._12(n,141)._sbPadding);l(n,147,0,u.data.IsDisabled);l(n,151,0,u.data.IsDisabled);l(n,154,0,t._12(n,155)._hidden);l(n,161,0,u.data.BLOCK_NAME)})}Object.defineProperty(n,"__esModule",{value:!0});var t=u(1),e=(u(0),u(16)),o=(u(36),u(91)),i=u(37),s=u(44),r=u(65),_=u(186),c=u(188),d=function(){function l(l,n,u,a,t,e,o,i){this.navCtrl=l,this.platform=n,this._http_services=u,this.modalCtrl=a,this.alertCtrl=t,this.toastCtrl=e,this.keyboard=o,this.vibration=i,this.data={CarNo:localStorage.getItem("CarNo"),PaperNo:"",PaperNo_ID:"",IsDisabled:!0,USER_ID:localStorage.getItem("USER_ID"),BLOCK_NAME:localStorage.getItem("BLOCK_NAME"),IsHideWhenKeyboardOpen:!1},this.result={},s.h(),this.initializeApp()}return l.prototype.ionViewDidEnter=function(){var l=this;1==this.data.IsDisabled&&setTimeout(function(){l.scan_Entry.setFocus()},150)},l.prototype.initializeApp=function(){var l=this;this.platform.is("core")?console.log("You're develop in the browser"):this.platform.ready().then(function(){l.keyboard.onKeyboardShow().subscribe(function(){l.data.IsHideWhenKeyboardOpen=!0}),l.keyboard.onKeyboardHide().subscribe(function(){l.data.IsHideWhenKeyboardOpen=!1})})},l.prototype.reset=function(){localStorage.setItem("PaperNo",""),localStorage.setItem("PaperNo_ID",""),this.data.PaperNo_ID="",this.result={},this.data.IsDisabled=!0,this.scan_Entry.setFocus()},l.prototype.search=function(){var l=this;this.vibration.vibrate(100),""!=this.data.PaperNo&&(this.reset(),this._http_services.POST("","sp","spactDCS_ID_HEADER",[{Name:"@JOB_ID",Value:"3"},{Name:"@REG_ID",Value:this.data.CarNo},{Name:"@ID",Value:this.data.PaperNo},{Name:"@USER_NAME",Value:this.data.USER_ID}]).then(function(n){if(""!=n)switch(n[0].RT_CODE){case-1:var u=[];for(var a in n){var t=n[a];u.push({Name:t.RT_MSG,Value:t.PO_ID})}s.d.set("ListTable_Source",u);var e=l.modalCtrl.create(_.a);e.onDidDismiss(function(n){l.data.PaperNo=s.d.get("ListTable_answer").Value,l.search()}),e.present();break;case 0:l.data.IsDisabled=!1,l.data.PaperNo=n[0].PO_ID,l.data.PaperNo_ID=n[0].ID,localStorage.setItem("PaperNo",l.data.PaperNo),localStorage.setItem("PaperNo_ID",l.data.PaperNo_ID),l._http_services.POST("","sp","spactDCS_ID_HEADER",[{Name:"@JOB_ID",Value:"31"},{Name:"@REG_ID",Value:l.data.CarNo},{Name:"@ID",Value:l.data.PaperNo},{Name:"@USER_NAME",Value:l.data.USER_ID}]).then(function(n){l.result=n[0]});break;default:l.alertCtrl.create({title:"失敗",subTitle:n[0].RT_MSG,buttons:[{text:"關閉",handler:function(n){l.scan_Entry.setFocus()}}]}).present()}l.scan_Entry.setFocus()}))},l.prototype.selectAll=function(l){l._native.nativeElement.select()},l.prototype.callPaperDetail=function(){var l=this;1!=this.data.IsDisabled&&this._http_services.POST("","sp","spactDCS_ID_HEADER",[{Name:"@JOB_ID",Value:13},{Name:"@REG_ID",Value:this.data.CarNo},{Name:"@ID",Value:this.data.PaperNo}]).then(function(n){s.d.set("ListTable_Source",n);l.modalCtrl.create(c.a).present()})},l.prototype.finish=function(){var l=this;this.vibration.vibrate(100),1!=this.data.IsDisabled&&this._http_services.POST("","sp","spactDCS_ID_HEADER",[{Name:"@JOB_ID",Value:"4"},{Name:"@REG_ID",Value:this.data.CarNo},{Name:"@ID",Value:this.data.PaperNo_ID},{Name:"@USER_NAME",Value:this.data.USER_ID}]).then(function(n){if(""!=n)switch(n[0].RT_CODE){case 0:l.toastCtrl.create({message:n[0].RT_MSG,duration:s.e,position:"bottom"}).present(),l.reset();break;default:l.alertCtrl.create({title:"失敗",subTitle:n[0].RT_MSG,buttons:[{text:"關閉",handler:function(n){l.scan_Entry.setFocus()}}]}).present()}})},l.prototype.Next=function(){1!=this.data.IsDisabled&&this.navCtrl.push("_123_ItemCode")},l.prototype.swipeEvent=function(l){switch(console.log(l),l.direction){case 1:break;case 2:this.Next();break;case 4:this.reset(),this.navCtrl.pop()}},l}(),b=function(){return function(){}}(),p=u(355),h=u(356),m=u(357),f=u(358),I=u(359),D=u(360),g=u(361),N=u(362),Y=u(363),E=u(55),v=u(3),y=u(7),j=u(68),C=u(33),z=u(8),Z=u(19),P=u(69),k=u(43),S=u(34),T=u(61),R=u(30),O=u(17),V=u(39),w=u(182),M=u(364),A=u(27),L=u(24),F=u(70),K=u(129),H=u(57),U=u(365),x=u(23),B=u(92),G=u(5),J=u(20),W=u(9),Q=u(56),X=u(31),q=u(181),$=u(72),ll=u(12),nl=u(90),ul=u(130),al=u(58),tl=u(71),el=t.X({encapsulation:2,styles:[],data:{}}),ol=t.V("ng-component",d,function(l){return t._23(0,[(l()(),t.Z(0,0,null,null,1,"ng-component",[],null,null,null,a,el)),t.Y(1,49152,null,0,d,[Z.a,G.a,r.a,ul.a,al.a,tl.a,o.a,i.a],null,null)],null,null)},{},{},[]),il=u(180),sl=u(66);u.d(n,"AppModuleNgFactory",function(){return rl});var rl=t.W(b,[],function(l){return t._8([t._9(512,t.i,t.S,[[8,[p.a,h.a,m.a,f.a,I.a,D.a,g.a,N.a,Y.a,ol]],[3,t.i],t.s]),t._9(4608,e.l,e.k,[t.r,[2,e.t]]),t._9(4608,x.k,x.k,[]),t._9(4608,x.c,x.c,[]),t._9(512,e.b,e.b,[]),t._9(512,x.j,x.j,[]),t._9(512,x.d,x.d,[]),t._9(512,x.i,x.i,[]),t._9(512,il.a,il.a,[]),t._9(512,il.b,il.b,[]),t._9(512,b,b,[]),t._9(256,sl.a,d,[])])})}});
+webpackJsonp([12],{
+
+/***/ 691:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PaperNo__ = __webpack_require__(711);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__PaperNo__["a" /* _122_PaperNo */])
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_3__PaperNo__["a" /* _122_PaperNo */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_3__PaperNo__["a" /* _122_PaperNo */]]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=PaperNo.module.js.map
+
+/***/ }),
+
+/***/ 711:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _122_PaperNo; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_Settings__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ZZ_CommonLib_ListTable_ListTable__ = __webpack_require__(359);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ZZ_CommonLib_PaperDetail_PaperDetail__ = __webpack_require__(360);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+//Cordova
+
+//My Pages
+
+
+
+
+var _122_PaperNo = /** @class */ (function () {
+    function _122_PaperNo(navCtrl, _http_services, modalCtrl, toastCtrl, vibration) {
+        this.navCtrl = navCtrl;
+        this._http_services = _http_services;
+        this.modalCtrl = modalCtrl;
+        this.toastCtrl = toastCtrl;
+        this.vibration = vibration;
+        this.data = {
+            CarNo: localStorage.getItem('CarNo'),
+            PaperNo: '',
+            PaperNo_ID: '',
+            IsDisabled: true,
+            USER_ID: localStorage.getItem('USER_ID'),
+            BLOCK_NAME: localStorage.getItem('BLOCK_NAME'),
+            IsHideWhenKeyboardOpen: false
+        }; // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
+        this.result = {};
+        __WEBPACK_IMPORTED_MODULE_3__app_Settings__["h" /* loginCheck */]();
+    }
+    _122_PaperNo.prototype.ionViewDidEnter = function () {
+        if (this.data.IsDisabled == true) {
+            this.myFocus();
+        }
+    };
+    //重置btn
+    _122_PaperNo.prototype.reset = function () {
+        localStorage.setItem('PaperNo', '');
+        localStorage.setItem('PaperNo_ID', '');
+        this.data.PaperNo_ID = '';
+        this.result = {};
+        this.data.IsDisabled = true;
+        this.myFocus();
+    };
+    ;
+    //#region 查詢報到牌btn
+    _122_PaperNo.prototype.search = function () {
+        var _this = this;
+        this.vibration.vibrate(100);
+        if (this.data.PaperNo == '') {
+            this.toastCtrl.create({
+                message: '請輸入數值',
+                duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                position: 'middle'
+            }).present();
+            return;
+        }
+        this.reset();
+        this._http_services.POST('', 'sp', 'spactDCS_ID_HEADER', [
+            { Name: '@JOB_ID', Value: '3' },
+            { Name: '@REG_ID', Value: this.data.CarNo },
+            { Name: '@ID', Value: this.data.PaperNo },
+            { Name: '@USER_NAME', Value: this.data.USER_ID }
+        ])
+            .then(function (response) {
+            if (response != '') {
+                switch (response[0].RT_CODE) {
+                    case -1:
+                        //Multi variables, choose one
+                        var Lists = [];
+                        for (var index in response) {
+                            var value = response[index];
+                            Lists.push({ Name: value.RT_MSG, Value: value.PO_ID });
+                        }
+                        __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].set('ListTable_Source', Lists);
+                        var obj = _this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__ZZ_CommonLib_ListTable_ListTable__["a" /* ListTablePage */]);
+                        obj.onDidDismiss(function (data) {
+                            _this.data.PaperNo = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('ListTable_answer').Value;
+                            _this.search();
+                            return;
+                        });
+                        obj.present();
+                        break;
+                    case 0:
+                        //Correct
+                        _this.data.IsDisabled = false;
+                        _this.data.PaperNo = response[0].PO_ID;
+                        _this.data.PaperNo_ID = response[0].ID;
+                        localStorage.setItem('PaperNo', _this.data.PaperNo);
+                        localStorage.setItem('PaperNo_ID', _this.data.PaperNo_ID);
+                        //帶出驗收明細
+                        _this._http_services.POST('', 'sp', 'spactDCS_ID_HEADER', [
+                            { Name: '@JOB_ID', Value: '31' },
+                            { Name: '@REG_ID', Value: _this.data.CarNo },
+                            { Name: '@ID', Value: _this.data.PaperNo },
+                            { Name: '@USER_NAME', Value: _this.data.USER_ID }
+                        ])
+                            .then(function (response2) {
+                            _this.result = response2[0];
+                        });
+                        break;
+                    default:
+                        _this.toastCtrl.create({
+                            message: response[0].RT_MSG,
+                            duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                            position: 'middle'
+                        }).present();
+                        break;
+                }
+            }
+            _this.myFocus();
+        });
+    };
+    ; //#endregion
+    //喪失focus
+    _122_PaperNo.prototype.myFocus = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.scan_Entry.setFocus();
+        }, 300);
+    };
+    ;
+    _122_PaperNo.prototype.myKeylogger = function (event) {
+        var obj = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["g" /* keyCodeToValue */](event.keyCode, this.data.CarNo);
+        if (obj.indexOf('ENTER') >= 0) {
+            this.search();
+        }
+    };
+    //全選
+    _122_PaperNo.prototype.selectAll = function ($event) {
+        $event._native.nativeElement.select();
+    };
+    //查詢明細
+    //呼叫進貨單明細
+    _122_PaperNo.prototype.callPaperDetail = function () {
+        var _this = this;
+        if (this.data.IsDisabled == true)
+            return;
+        this._http_services.POST('', 'sp', 'spactDCS_ID_HEADER', [{ Name: '@JOB_ID', Value: 13 },
+            { Name: '@REG_ID', Value: this.data.CarNo },
+            { Name: '@ID', Value: this.data.PaperNo }])
+            .then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].set('ListTable_Source', response);
+            var obj = _this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_6__ZZ_CommonLib_PaperDetail_PaperDetail__["a" /* PaperDetailPage */]);
+            obj.present();
+        });
+    };
+    ;
+    //單據完成
+    _122_PaperNo.prototype.finish = function () {
+        var _this = this;
+        this.vibration.vibrate(100);
+        if (this.data.IsDisabled == true)
+            return;
+        this._http_services.POST('', 'sp', 'spactDCS_ID_HEADER', [
+            { Name: '@JOB_ID', Value: '4' },
+            { Name: '@REG_ID', Value: this.data.CarNo },
+            { Name: '@ID', Value: this.data.PaperNo_ID },
+            { Name: '@USER_NAME', Value: this.data.USER_ID }
+        ])
+            .then(function (response) {
+            if (response != '') {
+                switch (response[0].RT_CODE) {
+                    case 0:
+                        var toast = _this.toastCtrl.create({
+                            message: response[0].RT_MSG,
+                            duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                            position: 'bottom'
+                        });
+                        toast.present();
+                        _this.reset();
+                        break;
+                    default:
+                        _this.toastCtrl.create({
+                            message: response[0].RT_MSG,
+                            duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                            position: 'middle'
+                        }).present();
+                        break;
+                }
+            }
+        });
+    };
+    //下一步
+    _122_PaperNo.prototype.Next = function () {
+        if (this.data.IsDisabled == true)
+            return;
+        this.navCtrl.push('_123_ItemCode');
+    };
+    ;
+    //手勢
+    _122_PaperNo.prototype.swipeEvent = function (event) {
+        console.log(event);
+        switch (event.direction) {
+            case 1://NONE
+                break;
+            case 2://LEFT
+                this.Next();
+                break;
+            case 4://RIGHT
+                this.reset();
+                this.navCtrl.pop();
+                break;
+        }
+        ;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('scan_Entry'),
+        __metadata("design:type", Object)
+    ], _122_PaperNo.prototype, "scan_Entry", void 0);
+    _122_PaperNo = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_12_ItemRcv\2_PaperNo\PaperNo.html"*/'<ion-header no-border>\n\n    <ion-navbar>\n\n        <ion-title>進貨單查詢</ion-title>\n\n        <ion-buttons end>\n\n            <button ion-button icon-end (click)="Next()" [disabled]="data.IsDisabled">\n\n                下一步\n\n                <ion-icon name="ios-arrow-forward"></ion-icon>\n\n            </button>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    <ion-toolbar>\n\n        <ion-row>\n\n            <ion-col col-3>\n\n                <ion-label [ngClass]="[\'myScanBarcodeUI_Label\']">進貨單</ion-label>\n\n            </ion-col>\n\n            <ion-col col-7>\n\n                <ion-input #scan_Entry type="text"\n\n                           [ngClass]="[\'myScanBarcodeUI_input\']"\n\n                           (keyup)="myKeylogger($event)"\n\n                           (keydown.Tab)="myKeylogger($event)"\n\n                           (ionFocus)="selectAll($event)"\n\n                           [(ngModel)]="data.PaperNo"></ion-input>\n\n            </ion-col>\n\n            <ion-col col-2>\n\n                <button ion-button (click)="search()" color="primary" solid class="toolbar-button">\n\n                    <ion-icon name="search"></ion-icon>\n\n                </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-toolbar>\n\n</ion-header>\n\n<ion-content (swipe)="swipeEvent($event)" (swipeup)="swipeEvent($event)">\n\n    <ion-card>\n\n        <ion-grid class="mylist">\n\n            <ion-row>\n\n                <ion-col col-4>\n\n                    <ion-label class="item-left">總品項數</ion-label>\n\n                </ion-col>\n\n                <ion-col col-8>\n\n                    <ion-label>{{result.ITEM_QTY}}</ion-label>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col col-4>\n\n                    <ion-label class="item-left">未驗品數</ion-label>\n\n                </ion-col>\n\n                <ion-col col-8>\n\n                    <ion-label>{{result.ITEM_QTY0}}</ion-label>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col col-4>\n\n                    <ion-label class="item-left">待驗品數</ion-label>\n\n                </ion-col>\n\n                <ion-col col-8>\n\n                    <ion-label>{{result.ITEM_QTY1}}</ion-label>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col col-4>\n\n                    <ion-label class="item-left">已驗品數</ion-label>\n\n                </ion-col>\n\n                <ion-col col-8>\n\n                    <ion-label>{{result.ITEM_QTY2}}</ion-label>\n\n                </ion-col>\n\n            </ion-row>\n\n        </ion-grid>\n\n        <ion-item>\n\n            <!--IonicPage+div+hidden會導致Ionic排版錯誤，故意多加兩行空白-->\n\n            <h1>&nbsp;</h1><br />\n\n            <h1>&nbsp;</h1>\n\n        </ion-item>\n\n    </ion-card>\n\n</ion-content>\n\n<div [hidden]="data.IsHideWhenKeyboardOpen">\n\n    <ion-footer no-border>\n\n        <ion-toolbar>\n\n            <ion-buttons left>\n\n                <button ion-button outline (click)="callPaperDetail()" color="secondary" [disabled]="data.IsDisabled">\n\n                    明細\n\n                </button>\n\n                <button ion-button icon-start solid (click)="finish()" color="primary" [disabled]="data.IsDisabled">\n\n                    <ion-icon name="checkmark"></ion-icon>\n\n                    完成驗收\n\n                </button>\n\n            </ion-buttons>\n\n            <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_NAME}}</ion-label>\n\n        </ion-toolbar>\n\n    </ion-footer>\n\n</div>'/*ion-inline-end:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_12_ItemRcv\2_PaperNo\PaperNo.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__["a" /* http_services */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__["a" /* Vibration */]])
+    ], _122_PaperNo);
+    return _122_PaperNo;
+}());
+
+//# sourceMappingURL=PaperNo.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=12.js.map

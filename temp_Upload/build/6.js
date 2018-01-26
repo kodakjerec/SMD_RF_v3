@@ -1,1 +1,426 @@
-webpackJsonp([6],{665:function(l,n,u){"use strict";function t(l){return o._23(0,[o._11(null,0)],null,null)}function i(l){return o._23(2,[(l()(),o.Z(0,0,null,null,1,"ion-icon",[["class","fab-close-icon"],["name","close"],["role","img"]],[[2,"hide",null]],null,null,null,null)),o.Y(1,147456,null,0,x.a,[Y.a,o.j,o.z],{name:[0,"name"]},null),(l()(),o.Z(2,0,null,null,1,"span",[["class","button-inner"]],null,null,null,null,null)),o._11(null,0),(l()(),o.Z(4,0,null,null,0,"div",[["class","button-effect"]],null,null,null,null,null))],function(l,n){l(n,1,0,"close")},function(l,n){l(n,0,0,o._12(n,1)._hidden)})}function e(l){return o._23(0,[(l()(),o.Z(0,0,null,null,47,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),o.Y(1,16384,null,0,w.a,[],null,null),(l()(),o._21(-1,null,["\n                "])),(l()(),o.Z(3,0,null,null,43,"ion-card",[],null,null,null,null,null)),o.Y(4,16384,null,0,k.a,[Y.a,o.j,o.z],null,null),(l()(),o._21(-1,null,["\n                    "])),(l()(),o.Z(6,0,null,null,4,"ion-card-header",[["style","padding:0px 0px 0px 0px;"]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.showPic(l.context.$implicit)&&t}return t},null,null)),o.Y(7,16384,null,0,y.a,[Y.a,o.j,o.z],null,null),(l()(),o._21(-1,null,["\n                        "])),(l()(),o.Z(9,0,null,null,0,"img",[],[[8,"src",4]],null,null,null,null)),(l()(),o._21(-1,null,["\n                    "])),(l()(),o._21(-1,null,["\n                    "])),(l()(),o.Z(12,0,null,null,33,"div",[],null,null,null,null,null)),(l()(),o._21(-1,null,["\n                        "])),(l()(),o.Z(14,0,null,null,9,"ion-fab",[["right",""],["top",""]],null,null,null,t,j)),o.Y(15,1228800,null,2,P.a,[z.a],null,null),o._19(335544320,3,{_mainButton:0}),o._19(603979776,4,{_fabLists:1}),(l()(),o._21(-1,0,["\n                            "])),(l()(),o.Z(19,0,null,0,3,"button",[["ion-fab",""],["mini",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.showPic(l.context.$implicit)&&t}return t},i,N)),o.Y(20,49152,[[3,4]],0,F.a,[Y.a,o.j,o.z],null,null),(l()(),o.Z(21,0,null,0,1,"ion-icon",[["name","checkmark"],["role","img"]],[[2,"hide",null]],null,null,null,null)),o.Y(22,147456,null,0,x.a,[Y.a,o.j,o.z],{name:[0,"name"]},null),(l()(),o._21(-1,0,["\n                        "])),(l()(),o._21(-1,null,["\n                        "])),(l()(),o.Z(25,0,null,null,19,"div",[],[[8,"hidden",0]],[["window","resize"]],function(l,n,u){var t=!0;if("window:resize"===n){t=!1!==l.component.onResize()&&t}return t},null,null)),(l()(),o._21(-1,null,["\n                            "])),(l()(),o.Z(27,0,null,null,1,"label",[],null,null,null,null,null)),(l()(),o._21(28,null,["",""])),(l()(),o.Z(29,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),o._21(-1,null,["\n                            "])),(l()(),o.Z(31,0,null,null,1,"label",[["style","white-space: pre;color:white"]],null,null,null,null,null)),(l()(),o._21(32,null,["",""])),(l()(),o._21(-1,null,["\n\n                            "])),(l()(),o.Z(34,0,null,null,9,"ion-fab",[["bottom",""],["right",""]],null,null,null,t,j)),o.Y(35,1228800,null,2,P.a,[z.a],null,null),o._19(335544320,5,{_mainButton:0}),o._19(603979776,6,{_fabLists:1}),(l()(),o._21(-1,0,["\n                                "])),(l()(),o.Z(39,0,null,0,3,"button",[["ion-fab",""],["mini",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.downloadPic(l.context.$implicit)&&t}return t},i,N)),o.Y(40,49152,[[5,4]],0,F.a,[Y.a,o.j,o.z],null,null),(l()(),o.Z(41,0,null,0,1,"ion-icon",[["name","download"],["role","img"]],[[2,"hide",null]],null,null,null,null)),o.Y(42,147456,null,0,x.a,[Y.a,o.j,o.z],{name:[0,"name"]},null),(l()(),o._21(-1,0,["\n                            "])),(l()(),o._21(-1,null,["\n                        "])),(l()(),o._21(-1,null,["\n                    "])),(l()(),o._21(-1,null,["\n                "])),(l()(),o._21(-1,null,["\n            "]))],function(l,n){l(n,22,0,"checkmark");l(n,42,0,"download")},function(l,n){var u=n.component;l(n,9,0,n.context.$implicit.ThumbnailImage);l(n,19,0,!n.context.$implicit.check);l(n,21,0,o._12(n,22)._hidden);l(n,25,0,u.data.devWidth<480);l(n,28,0,n.context.$implicit.FileName);l(n,32,0,n.context.$implicit.showDescription);l(n,41,0,o._12(n,42)._hidden)})}function a(l){return o._23(0,[o._19(402653184,1,{scan_Entry:0}),(l()(),o.Z(1,0,null,null,23,"ion-header",[],null,null,null,null,null)),o.Y(2,16384,null,0,L.a,[Y.a,o.j,o.z,[2,T.a]],null,null),(l()(),o._21(-1,null,["\n    "])),(l()(),o.Z(4,0,null,null,19,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,O.b,O.a)),o.Y(5,49152,null,0,C.a,[D.a,[2,T.a],[2,E.a],Y.a,o.j,o.z],null,null),(l()(),o._21(-1,3,["\n        "])),(l()(),o.Z(7,0,null,3,5,"ion-title",[],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.help()&&t}return t},W.b,W.a)),o.Y(8,49152,null,0,$.a,[Y.a,o.j,o.z,[2,I.a],[2,C.a]],null,null),(l()(),o._21(-1,0,["不良品相簿管理"])),(l()(),o.Z(10,0,null,0,2,"button",[["ion-button",""],["outline",""],["small",""]],null,null,null,S.b,S.a)),o.Y(11,1097728,null,0,B.a,[[8,""],Y.a,o.j,o.z],{small:[0,"small"],outline:[1,"outline"]},null),(l()(),o._21(-1,0,["HELP"])),(l()(),o._21(-1,3,["\n        "])),(l()(),o.Z(14,0,null,2,8,"ion-buttons",[["end",""]],null,null,null,null,null)),o.Y(15,16384,null,1,V.a,[Y.a,o.j,o.z,[2,I.a],[2,C.a]],null,null),o._19(603979776,2,{_buttons:1}),(l()(),o._21(-1,null,["\n            "])),(l()(),o.Z(18,0,null,null,3,"button",[["ion-fab",""],["mini",""]],null,[[null,"click"]],function(l,n,u){var t=!0,i=l.component;if("click"===n){t=!1!==i.deletePic(i.item)&&t}return t},i,N)),o.Y(19,49152,null,0,F.a,[Y.a,o.j,o.z],null,null),(l()(),o.Z(20,0,null,0,1,"ion-icon",[["name","trash"],["role","img"]],[[2,"hide",null]],null,null,null,null)),o.Y(21,147456,null,0,x.a,[Y.a,o.j,o.z],{name:[0,"name"]},null),(l()(),o._21(-1,null,["\n        "])),(l()(),o._21(-1,3,["\n    "])),(l()(),o._21(-1,null,["\n"])),(l()(),o._21(-1,null,["\n"])),(l()(),o.Z(26,0,null,null,13,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[[null,"swipe"]],function(l,n,u){var t=!0;if("swipe"===n){t=!1!==l.component.swipeEvent(u)&&t}return t},A.b,A.a)),o.Y(27,4374528,null,0,R.a,[Y.a,z.a,X.a,o.j,o.z,D.a,J.a,o.u,[2,T.a],[2,E.a]],null,null),(l()(),o._21(-1,1,["\n    "])),(l()(),o.Z(29,0,null,1,9,"ion-grid",[["class","grid"]],null,null,null,null,null)),o.Y(30,16384,null,0,M.a,[],null,null),(l()(),o._21(-1,null,["\n        "])),(l()(),o.Z(32,0,null,null,5,"ion-row",[["class","row"]],null,null,null,null,null)),o.Y(33,16384,null,0,H.a,[],null,null),(l()(),o._21(-1,null,["\n            "])),(l()(),o.U(16777216,null,null,1,null,e)),o.Y(36,802816,null,0,c.i,[o.I,o.F,o.p],{ngForOf:[0,"ngForOf"]},null),(l()(),o._21(-1,null,["\n        "])),(l()(),o._21(-1,null,["\n    "])),(l()(),o._21(-1,1,["\n"])),(l()(),o._21(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,11,0,"","");l(n,21,0,"trash");l(n,36,0,u.Lists)},function(l,n){l(n,4,0,o._12(n,5)._hidden,o._12(n,5)._sbPadding);l(n,20,0,o._12(n,21)._hidden);l(n,26,0,o._12(n,27).statusbarPadding,o._12(n,27)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var o=u(1),c=(u(0),u(16)),r=(u(36),u(65)),s=function(){function l(l,n,u,t){this.navCtrl=l,this.plt=n,this._http_services=u,this.alertCtrl=t,this.data={choice:"DAS",ScanBarcode:"",JOBID:"",devWidth:0},this.Lists=[],this.data.devWidth=n.width(),console.log("Dev Width"+this.data.devWidth)}return l.prototype.ngOnInit=function(){this.searchPic()},l.prototype.searchPic=function(){var l=this;this.Lists=[],this._http_services.POST("","Picture","search",[{}]).then(function(n){for(var u in n){var t=n[u],i=t.Description;l.Lists.push({FileName:t.FileName,Description:i,showDescription:i.replace(/\<br>/g,"\n"),ThumbnailImage:"data:image/png;base64,"+t.ThumbnailImage,CreateTime:t.CreateTime,check:!1})}console.log(l.Lists)})},l.prototype.showPic=function(l){l.check=!l.check},l.prototype.deletePic=function(){var l=this,n="",u=[];this.Lists.forEach(function(l){l.check&&(n+=l.FileName+"<br>",u.push(l.FileName))});this.alertCtrl.create({title:"確定要永久刪除勾選的圖片？",message:n,buttons:[{text:"取消",handler:function(){}},{text:"確定",handler:function(){l._http_services.POST("","Picture","delete",[{Name:"@FileName",Value:u}]).then(function(){l.searchPic()})}}]}).present()},l.prototype.downloadPic=function(l){this._http_services.POST("","Picture","download",[{Name:"@FileName",Value:l.FileName}]).then(function(){})},l.prototype.onResize=function(){this.data.devWidth=this.plt.width()},l.prototype.help=function(){this.alertCtrl.create({title:"使用說明",subTitle:'1. 手機介面瀏覽時，下載功能無法使用<br>2. 按下"下載圖案"：瀏覽器會跳出下載視窗<br>3. 按下"圖片"：勾選該張圖片，勾選的圖片右上角會有V圖案<br>4. 批次刪除：勾選多張圖片後，按下標題列右方的垃圾桶',buttons:["關閉"]}).present()},l.prototype.myfocus=function(){this.scan_Entry.setFocus()},l.prototype.selectAll=function(l){l._native.nativeElement.select()},l.prototype.swipeEvent=function(l){switch(l.direction){case 1:case 2:break;case 4:this.navCtrl.pop()}},l}(),_=function(){return function(){}}(),h=u(355),d=u(356),p=u(357),m=u(358),f=u(359),b=u(360),v=u(361),g=u(362),Z=u(363),w=u(59),k=u(181),Y=u(3),y=u(185),P=u(187),z=u(5),j=o.X({encapsulation:2,styles:[],data:{}}),x=u(39),F=u(93),N=o.X({encapsulation:2,styles:[],data:{}}),L=u(55),T=u(7),O=u(68),C=u(33),D=u(8),E=u(19),W=u(69),$=u(43),I=u(34),S=u(30),B=u(17),V=u(61),A=u(56),R=u(20),X=u(9),J=u(31),M=u(60),H=u(45),U=u(58),q=o.X({encapsulation:2,styles:[],data:{}}),G=o.V("ng-component",s,function(l){return o._23(0,[(l()(),o.Z(0,0,null,null,1,"ng-component",[],null,null,null,a,q)),o.Y(1,114688,null,0,s,[E.a,z.a,r.a,U.a],null,null)],function(l,n){l(n,1,0)},null)},{},{},[]),K=u(23),Q=u(180),ll=u(66);u.d(n,"AppModuleNgFactory",function(){return nl});var nl=o.W(_,[],function(l){return o._8([o._9(512,o.i,o.S,[[8,[h.a,d.a,p.a,m.a,f.a,b.a,v.a,g.a,Z.a,G]],[3,o.i],o.s]),o._9(4608,c.l,c.k,[o.r,[2,c.t]]),o._9(4608,K.k,K.k,[]),o._9(4608,K.c,K.c,[]),o._9(512,c.b,c.b,[]),o._9(512,K.j,K.j,[]),o._9(512,K.d,K.d,[]),o._9(512,K.i,K.i,[]),o._9(512,Q.a,Q.a,[]),o._9(512,Q.b,Q.b,[]),o._9(512,_,_,[]),o._9(256,ll.a,s,[])])})}});
+webpackJsonp([6],{
+
+/***/ 698:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_134_WAS_ReceiveModule", function() { return _134_WAS_ReceiveModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Receive__ = __webpack_require__(718);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var _134_WAS_ReceiveModule = /** @class */ (function () {
+    function _134_WAS_ReceiveModule() {
+    }
+    _134_WAS_ReceiveModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__Receive__["a" /* _134_WAS_Receive */])
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__Receive__["a" /* _134_WAS_Receive */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_2__Receive__["a" /* _134_WAS_Receive */]]
+        })
+    ], _134_WAS_ReceiveModule);
+    return _134_WAS_ReceiveModule;
+}());
+
+//# sourceMappingURL=Receive.module.js.map
+
+/***/ }),
+
+/***/ 718:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _134_WAS_Receive; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_Settings__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ZZ_CommonLib_LittleKeyPad_LittleKeyPad__ = __webpack_require__(358);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+//Cordova
+
+//My Pages
+
+
+
+var _134_WAS_Receive = /** @class */ (function () {
+    function _134_WAS_Receive(navCtrl, _http_services, alertCtrl, toastCtrl, modalCtrl, vibration) {
+        //localStorage.setItem('USER_ID', '123456');
+        //localStorage.setItem('BLOCK_NAME', '1樓撿貨區');
+        //localStorage.setItem('WAS_OrderNo', '1800901');
+        //localStorage.setItem('WAS_Item', '{ "ITEM_NO": "310098", "ITEM_NAME": "益之豬蒜泥白肉片" }');
+        //localStorage.setItem('WAS_Store', '{"RT_CODE": 0,"SITE_ID": "751400","SITE_NAME": "天母天玉","PRICE": 330,"PRICE_TYPE": "1","AMOUNT": 6,"TQty": 4,"TWeight":4.97,"LeftQty": 2,"SEQ":99}');
+        this.navCtrl = navCtrl;
+        this._http_services = _http_services;
+        this.alertCtrl = alertCtrl;
+        this.toastCtrl = toastCtrl;
+        this.modalCtrl = modalCtrl;
+        this.vibration = vibration;
+        this.data = {
+            RefValue: '',
+            BLOCK_NAME: localStorage.getItem('BLOCK_NAME'),
+            WAS_Barcode: '',
+            IsInputEnable: true,
+            IsHideWhenKeyboardOpen: false,
+            InputMode: 0,
+            InputModeName: '手動',
+            InputMode_Qty: '0',
+            InputMode_Weight: '0'
+        };
+        this.Receive = {
+            ORDER_NO: '',
+            ITEM_NO: '',
+            SITE_ID: '',
+            AMOUNT: 0,
+            TQty: 0,
+            TWeight: 0.00,
+            LeftQty: 0,
+            PRICE: 0,
+            PRICE_TYPE: '0',
+            ITEM_NAME: '',
+            SITE_NAME: '',
+            PRICE_TYPE_NAME: ''
+        };
+        this.DefaultTestServer = '172_31_31_250';
+        this.data.RefValue = localStorage.getItem('WAS_OrderNo')
+            + ',' + JSON.parse(localStorage.getItem('WAS_Item')).ITEM_NO
+            + ',' + JSON.parse(localStorage.getItem('WAS_Store')).SITE_ID;
+    }
+    _134_WAS_Receive.prototype.ionViewWillEnter = function () {
+        this.BringDisplayList();
+        this.myFocus();
+    };
+    _134_WAS_Receive.prototype.BringDisplayList = function () {
+        this.Receive.ORDER_NO = localStorage.getItem('WAS_OrderNo');
+        var wasItem = JSON.parse(localStorage.getItem('WAS_Item'));
+        this.Receive.ITEM_NO = wasItem.ITEM_NO;
+        this.Receive.ITEM_NAME = wasItem.ITEM_NAME;
+        var wasStore = JSON.parse(localStorage.getItem('WAS_Store'));
+        this.Receive.SITE_ID = wasStore.SITE_ID;
+        this.Receive.SITE_NAME = wasStore.SITE_NAME;
+        this.Receive.PRICE = wasStore.PRICE;
+        this.Receive.AMOUNT = wasStore.AMOUNT;
+        this.Receive.TQty = wasStore.TQty;
+        this.Receive.TWeight = wasStore.TWeight;
+        this.Receive.LeftQty = wasStore.LeftQty;
+        this.Receive.PRICE_TYPE = wasStore.PRICE_TYPE;
+        switch (this.Receive.PRICE_TYPE) {
+            case '0':
+                this.Receive.PRICE_TYPE_NAME = '秤重';
+                break;
+            case '1':
+                this.Receive.PRICE_TYPE_NAME = '定額';
+                break;
+        }
+    };
+    //重置btn
+    _134_WAS_Receive.prototype.reset = function () {
+        localStorage.setItem('WAS_Store', '');
+        this.data.WAS_Barcode = '';
+        this.data.InputMode_Qty = '0';
+        this.data.InputMode_Weight = '0';
+        this.data.IsInputEnable = true;
+        this.myFocus();
+    };
+    ;
+    //查詢
+    _134_WAS_Receive.prototype.barcode_search = function () {
+        var ErrMsg = '';
+        var AssignQty = 0;
+        var AssignWeight = 0.00;
+        var ITEM_NO = this.data.WAS_Barcode.substr(2, 6);
+        //檢查
+        if (ITEM_NO != this.Receive.ITEM_NO) {
+            ErrMsg = '條碼 與 呼出碼 不吻合';
+        }
+        AssignQty += 1;
+        if (ErrMsg.length > 0) {
+            this.toastCtrl.create({
+                message: ErrMsg,
+                duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                position: 'middle'
+            }).present();
+            this.myFocus();
+            this.data.WAS_Barcode = '';
+            this.data.IsInputEnable = true;
+            return;
+        }
+        this.search(this.data.WAS_Barcode, AssignQty, AssignWeight);
+    };
+    _134_WAS_Receive.prototype.Input_search = function () {
+        var _this = this;
+        var AssignQty = 0;
+        var AssignWeight = 0.00;
+        //檢查Qty和Weight
+        AssignQty = parseInt(this.data.InputMode_Qty);
+        AssignWeight = parseFloat(this.data.InputMode_Weight);
+        //減量輸入
+        if (AssignQty < 0)
+            AssignWeight = 0 - Math.abs(AssignWeight);
+        if (AssignQty == 0) {
+            //不可為空
+            this.toastCtrl.create({
+                message: '請輸入數值',
+                duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                position: 'middle'
+            }).present();
+        }
+        else if (AssignQty < 0) {
+            this.alertCtrl.create({
+                title: '提示 減量',
+                subTitle: '指示量 ' + AssignQty.toString() + ' 小於零，將會執行減量<br/>'
+                    + '請確認是否輸入正確？',
+                buttons: [{
+                        text: '取消',
+                        handler: function () {
+                            return;
+                        }
+                    },
+                    {
+                        text: '確定',
+                        handler: function () {
+                            _this.search('0', AssignQty, AssignWeight);
+                        }
+                    }
+                ]
+            }).present();
+        }
+        else if (AssignQty > this.Receive.LeftQty) {
+            //Qty超過剩餘量, 需提示使用者
+            this.alertCtrl.create({
+                title: '提示',
+                subTitle: '指示量 ' + AssignQty.toString() + ' 超出剩餘量 ' + this.Receive.LeftQty.toString() + '<br/>'
+                    + '請確認是否輸入正確？',
+                buttons: [{
+                        text: '取消',
+                        handler: function () {
+                            return;
+                        }
+                    },
+                    {
+                        text: '確定',
+                        handler: function () {
+                            _this.search('0', AssignQty, AssignWeight);
+                        }
+                    }
+                ]
+            }).present();
+        }
+        else {
+            this.search('0', AssignQty, AssignWeight);
+        }
+    };
+    _134_WAS_Receive.prototype.search = function (barcode, AssignQty, AssignWeight) {
+        var _this = this;
+        this.vibration.vibrate(100);
+        this.data.IsInputEnable = false;
+        //#region 驗收
+        var sql_parameter = this.Receive.ORDER_NO
+            + ',' + this.Receive.ITEM_NO
+            + ',' + this.Receive.SITE_ID
+            + ',' + AssignQty.toString()
+            + ',' + AssignWeight.toString()
+            + ',' + barcode
+            + ',' + localStorage.getItem('USER_ID');
+        this._http_services.POST(this.DefaultTestServer, 'sp', '[WAS].dbo.spactWAS_Line_v2', [{ Name: '@Step', Value: '3' },
+            { Name: '@Parameters', Value: sql_parameter }])
+            .then(function (response) {
+            if (response != undefined) {
+                switch (response[0].RT_CODE) {
+                    case 0:
+                        //塞入歷史資料
+                        __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].set('lastReceive', {
+                            Order_No: _this.Receive.ORDER_NO,
+                            Item_No: _this.Receive.ITEM_NO,
+                            Store: _this.Receive.SITE_ID,
+                            barcode: barcode,
+                            AssignQty: AssignQty,
+                            AssignWeight: AssignWeight
+                        });
+                        _this.Receive.TQty = response[0].TQty;
+                        _this.Receive.TWeight = response[0].TWeight;
+                        _this.Receive.LeftQty = response[0].LeftQty;
+                        if (_this.Receive.LeftQty <= 0) {
+                            //吐標
+                            //驗收完畢
+                            _this.reset();
+                            _this.navCtrl.pop();
+                        }
+                        break;
+                    default:
+                        _this.toastCtrl.create({
+                            message: response[0].RT_MSG,
+                            duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                            position: 'middle'
+                        }).present();
+                        break;
+                }
+            }
+        })
+            .then(function (response) {
+            _this.reset();
+        });
+        //#endregion 驗收
+    };
+    //刪除上一次紀錄
+    _134_WAS_Receive.prototype.btn_MorelastReceive = function () {
+        var _this = this;
+        var oldData = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('lastReceive');
+        if (__WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('lastReceive') == undefined) {
+            this.toastCtrl.create({
+                message: '沒有上一次的操作紀錄',
+                duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                position: 'middle'
+            }).present();
+            this.myFocus();
+            return;
+        }
+        //開始刪除舊資料				
+        var sql_parameter = oldData.Order_No
+            + ',' + oldData.Item_No
+            + ',' + oldData.Store
+            + ',' + (0 - oldData.AssignQty).toString()
+            + ',' + (0 - oldData.AssignWeight).toString()
+            + ',' + oldData.barcode
+            + ',' + localStorage.getItem('USER_ID');
+        this._http_services.POST(this.DefaultTestServer, 'sp', '[WAS].dbo.spactWAS_Line_v2', [{ Name: '@Step', Value: '3' },
+            { Name: '@Parameters', Value: sql_parameter }])
+            .then(function (response) {
+            if (response != undefined) {
+                __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].set('lastReceive', undefined);
+                switch (response[0].RT_CODE) {
+                    case 0:
+                        //同一個營業所, 才需要幫忙更新資料
+                        if (oldData.Store == _this.Receive.SITE_ID) {
+                            _this.Receive.TQty = response[0].TQty;
+                            _this.Receive.TWeight = response[0].TWeight;
+                            _this.Receive.LeftQty = response[0].LeftQty;
+                        }
+                        _this.toastCtrl.create({
+                            message: '刪除上一筆資料完成',
+                            duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                            position: 'middle'
+                        }).present();
+                        break;
+                    default:
+                        _this.toastCtrl.create({
+                            message: response[0].RT_MSG,
+                            duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                            position: 'middle'
+                        }).present();
+                        break;
+                }
+            }
+        })
+            .then(function (response) {
+            _this.reset();
+        });
+    };
+    //切換 手動/自動條碼 模式, 0-手動 1-自動條碼
+    _134_WAS_Receive.prototype.btn_ChangeInputMode = function () {
+        var _this = this;
+        if (this.data.InputMode == 0) {
+            this.data.InputMode = 1;
+            this.data.InputModeName = '條碼';
+            setTimeout(function () {
+                _this.scan_Entry2.setFocus();
+            }, 300);
+        }
+        else {
+            this.data.InputMode = 0;
+            this.data.InputModeName = '手動';
+            this.myFocus();
+        }
+    };
+    //全選
+    _134_WAS_Receive.prototype.selectAll = function ($event) {
+        $event._native.nativeElement.select();
+    };
+    //Focus
+    _134_WAS_Receive.prototype.myFocus = function () {
+        var _this = this;
+        if (this.data.InputMode == 0) {
+            setTimeout(function () {
+                _this.scan_Entry._elementRef.nativeElement.focus();
+            }, 300);
+        }
+    };
+    _134_WAS_Receive.prototype.myKeylogger = function (event) {
+        this.data.WAS_Barcode = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["g" /* keyCodeToValue */](event.keyCode, this.data.WAS_Barcode);
+        if (this.data.WAS_Barcode.indexOf('ENTER') >= 0) {
+            this.data.WAS_Barcode = this.data.WAS_Barcode.replace('ENTER', '');
+            this.barcode_search();
+        }
+    };
+    _134_WAS_Receive.prototype.openKeyPad = function () {
+        var _this = this;
+        var obj = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__ZZ_CommonLib_LittleKeyPad_LittleKeyPad__["a" /* LittleKeyPad */], { Name: '條碼', Value: this.data.WAS_Barcode });
+        obj.onDidDismiss(function (data) {
+            _this.data.WAS_Barcode = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('ListTable_answer');
+            _this.barcode_search();
+        });
+        obj.present();
+    };
+    //手勢
+    _134_WAS_Receive.prototype.swipeEvent = function (event) {
+        switch (event.direction) {
+            case 1://NONE
+                break;
+            case 2://LEFT
+                break;
+            case 4://RIGHT
+                this.reset();
+                this.navCtrl.pop();
+                break;
+            case 8://UP
+                break;
+            case 16://DOWN
+                break;
+        }
+        ;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('scan_Entry'),
+        __metadata("design:type", Object)
+    ], _134_WAS_Receive.prototype, "scan_Entry", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('scan_Entry2'),
+        __metadata("design:type", Object)
+    ], _134_WAS_Receive.prototype, "scan_Entry2", void 0);
+    _134_WAS_Receive = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_13_WAS\4_Receive\Receive.html"*/'<ion-header no-border>\n\n    <ion-navbar>\n\n        <ion-title>WAS_驗收</ion-title>\n\n        <ion-buttons end>\n\n            <span style="white-space:pre;color:white">{{data.RefValue}}</span>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content (swipe)="swipeEvent($event)">\n\n    <ion-grid>\n\n        <div [hidden]="data.InputMode==1">\n\n            <ion-row>\n\n                <ion-col col-3>\n\n                    <ion-label [ngClass]="[\'myScanBarcodeUI_Label\']">條碼</ion-label>\n\n                </ion-col>\n\n                <ion-col col-7>\n\n                    <button ion-button outline block\n\n                            [ngClass]="[\'myScanBarcodeUI\']"\n\n                            #scan_Entry\n\n                            (keyup)="myKeylogger($event)"\n\n                            (blur)="myFocus()"\n\n                            (ionFocus)="selectAll($event)"\n\n                            [disabled]="!data.IsInputEnable">\n\n                        {{data.WAS_Barcode}}\n\n                    </button>\n\n                </ion-col>\n\n                <ion-col col-2>\n\n                    <button ion-button (click)="openKeyPad()" color="primary" solid class="toolbar-button">\n\n                        <ion-icon name="keypad"></ion-icon>\n\n                    </button>\n\n                </ion-col>\n\n            </ion-row>\n\n        </div>\n\n        <div [hidden]="data.InputMode==0">\n\n            <ion-row>\n\n                <ion-col col-3>\n\n                    <ion-label [ngClass]="[\'myScanBarcodeUI_Label\']">數量</ion-label>\n\n                </ion-col>\n\n                <ion-col col-9>\n\n                    <ion-input type="tel" [ngClass]="[\'myScanBarcodeUI\']"\n\n                               #scan_Entry2\n\n                               [(ngModel)]="data.InputMode_Qty"\n\n                               (ionFocus)="selectAll($event)">\n\n                    </ion-input>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col col-3>\n\n                    <ion-label [ngClass]="[\'myScanBarcodeUI_Label\']">重量</ion-label>\n\n                </ion-col>\n\n                <ion-col col-9>\n\n                    <ion-input type="tel" [ngClass]="[\'myScanBarcodeUI\']"\n\n                               [(ngModel)]="data.InputMode_Weight"\n\n                               (ionFocus)="selectAll($event)">\n\n                    </ion-input>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <button ion-button block solid (click)=\'Input_search()\'>確認手動輸入</button>\n\n            </ion-row>\n\n        </div>\n\n    </ion-grid>\n\n\n\n    <ion-grid class="mytable">\n\n        <ion-row>\n\n            <ion-col>剩餘量</ion-col>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col style="font-size:70px;color:yellow" col-12>{{Receive.LeftQty}}</ion-col>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-6>累積驗收量</ion-col>\n\n            <ion-col col-6>累積驗收重量</ion-col>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col style="font-size:30px" col-6>{{Receive.TQty}}</ion-col>\n\n            <ion-col style="font-size:30px" col-6>{{Receive.TWeight}}</ion-col>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-2>訂購量</ion-col>\n\n            <ion-col col-10>{{Receive.AMOUNT}}</ion-col>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-2>品名</ion-col>\n\n            <ion-col col-10>{{Receive.ITEM_NAME}}</ion-col>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-2>營業所</ion-col>\n\n            <ion-col col-10>{{Receive.SITE_NAME}}</ion-col>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-2>價格</ion-col>\n\n            <ion-col col-5><span>{{Receive.PRICE_TYPE_NAME}}</span></ion-col>\n\n            <ion-col col-5><span>{{Receive.PRICE}}</span></ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n<div [hidden]="data.IsHideWhenKeyboardOpen">\n\n    <ion-footer no-border>\n\n        <ion-toolbar>\n\n            <ion-buttons left>\n\n                <button color="primary" ion-button solid (click)=\'btn_ChangeInputMode()\'>{{data.InputModeName}}</button>\n\n                <button color="danger" ion-button outline (click)=\'btn_MorelastReceive()\'>刪除</button>\n\n            </ion-buttons>\n\n            <ion-buttons right>\n\n                <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_NAME}}</ion-label>\n\n            </ion-buttons>\n\n        </ion-toolbar>\n\n    </ion-footer>\n\n</div>\n\n'/*ion-inline-end:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_13_WAS\4_Receive\Receive.html"*/
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__["a" /* http_services */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__["a" /* http_services */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__["a" /* Vibration */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__["a" /* Vibration */]) === "function" && _f || Object])
+    ], _134_WAS_Receive);
+    return _134_WAS_Receive;
+    var _a, _b, _c, _d, _e, _f;
+}());
+
+//# sourceMappingURL=Receive.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=6.js.map

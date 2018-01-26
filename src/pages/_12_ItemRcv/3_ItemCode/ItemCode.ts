@@ -1,8 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, ModalController, ToastController, Platform, IonicPage } from 'ionic-angular';
+import { NavController, ModalController, ToastController, IonicPage } from 'ionic-angular';
 
 //Cordova
-import { Keyboard } from '@ionic-native/keyboard';
 import { Vibration } from '@ionic-native/vibration';
 
 //My Pages
@@ -20,25 +19,38 @@ import { ListTablePage } from '../../_ZZ_CommonLib/ListTable/ListTable';
 
 export class _123_ItemCode {
     constructor(public navCtrl: NavController
-        , public platform: Platform
         , public _http_services: http_services
         , private modalCtrl: ModalController
-        , private alertCtrl: AlertController
         , private toastCtrl: ToastController
-        , private keyboard: Keyboard
         , private vibration: Vibration) {
-        myGlobals.loginCheck();
 
-        this.initializeApp();
+        //localStorage.setItem('USER_ID', '123456');
+        //localStorage.setItem('BLOCK_NAME', '1樓進貨暫存區');
+        //localStorage.setItem('CarNo', '023');
+        //localStorage.setItem('PaperNo', 'PO180125008341');
+        //localStorage.setItem('PaperNo_ID', 'ID180126000086');
+        //localStorage.setItem('ItemCode', '621087');
+        //localStorage.setItem('ITEM_HOID', '1161129110915');
+        //localStorage.setItem('LOT_ID', '2180125000150');
+        //localStorage.setItem('ReceiveResult', '{"RT_CODE":0,"RT_MSG":"找到了","ITEM_HOID":"1161129110915","IDN_ID":"IDN180124000239","CN":"621087","PO_QTY":"46 / 46","ITEM_ID":"621087","ROW1":"621087 人蔘枸杞雞（元進莊）","ROW2":"約７００ｇ/ 售價 119","ROW3":"本單應收 46 待收 46","ROW4":"應抽驗數4 (10%)","ROW5":"已收良品 0","ROW6":"已收不良 0","ROW7":"已收搭贈 0","PRICE":119,"NAME":"人蔘枸杞雞（元進莊）","SPEC":"約７００ｇ","UNIT":"盒","PRICE_TYPE":0,"UNIT_QTY":1,"UNIT_WEIGHT":700,"QC_RATE":"10%","QC_QTY":4,"QL_TYPE":0,"QE_TYPE":1,"QE_TYPE_NAME":"效期","QE_TYPE_TEXT":"","QT_TYPE":1,"QT_TYPE_NAME":"表面溫度","BARCODE":"20621087","ADDON_QTY":0,"ADDON_WT":0,"QTY":30,"WT":0,"NG_QTY":0,"NG_WT":0}');
+        //this.data.CarNo = localStorage.getItem('CarNo');
+        //this.data.PaperNo = localStorage.getItem('PaperNo');
+        //this.data.PaperNo_ID = localStorage.getItem('PaperNo_ID');
+        //this.data.ItemCode = localStorage.getItem('ItemCode');
+        //this.data.ITEM_HOID = localStorage.getItem('ITEM_HOID');
+        //this.data.LOT_ID = localStorage.getItem('LOT_ID');
+        //this.data.USER_ID = localStorage.getItem('USER_ID');
+        //this.data.BLOCK_NAME = localStorage.getItem('BLOCK_NAME');
+
+
+        myGlobals.loginCheck();
     }
 
     @ViewChild('scan_Entry') scan_Entry;
 
-    ionViewDidEnter() {
+    ionViewWillEnter() {
         if (this.data.IsDisabled == true) {
-            setTimeout(() => {
-                this.scan_Entry.setFocus();
-            }, 150);
+            this.myFocus();
         }
     }
 
@@ -49,7 +61,6 @@ export class _123_ItemCode {
         , ItemCode: ''
         , ITEM_HOID: ''
         , LOT_ID: ''
-        , viewColor: ''
         , IsDisabled: true
         , USER_ID: localStorage.getItem('USER_ID')
         , BLOCK_NAME: localStorage.getItem('BLOCK_NAME')
@@ -61,32 +72,14 @@ export class _123_ItemCode {
         , SunDay_placeholder: '123'
         , Temp: 0
         , QTY_ShowTotal: 0
-        , QTY_left: 0
+        , QTY_ProgressBar: ''
         , DisplaySunDay: 0
     };
     result = {};
 
-    //20170613需求，加入溫度正負按鈕
-    Temp_color = { labelName: '＋', checked: false };
-    onToggleChange(item) {
-        if (item.checked == true)
-            item.labelName = '－';
-        else
-            item.labelName = '＋';
-    }
-    //加入溫度正負按鈕END
-
-    initializeApp() {
-        if (this.platform.is('core')) {
-            console.log("You're develop in the browser");
-            return;
-        }
-        this.platform.ready()
-            .then(() => {
-                this.keyboard.onKeyboardShow().subscribe(() => { this.data.IsHideWhenKeyboardOpen = true });
-                this.keyboard.onKeyboardHide().subscribe(() => { this.data.IsHideWhenKeyboardOpen = false });
-            })
-            ;
+    //進度表
+    getQTY_ProgressBar() {
+        return this.answer.QTY_ProgressBar;
     }
 
     //重置btn
@@ -100,26 +93,30 @@ export class _123_ItemCode {
         this.answer.SunDay_placeholder = '123';
 
         this.answer.QTY_ShowTotal = 0;
-        this.answer.QTY_left = 0;
+        this.answer.QTY_ProgressBar = '';
         this.answer.DisplaySunDay = 0;
 
         //溫度
         this.answer.Temp = 0;
-        //溫度正負
-        this.Temp_color.checked = false;
-        this.onToggleChange(this.Temp_color);
+
 
         this.result = {};
         this.data.IsDisabled = true;
 
-        this.scan_Entry.setFocus();
+        this.myFocus();
     };
 
     //#region 查詢報到牌btn
     search() {
         this.vibration.vibrate(100);
-        if (this.data.ItemCode == '')
+        if (this.data.ItemCode.length <= 0) {
+            this.toastCtrl.create({
+                message: '請輸入數值',
+                duration: myGlobals.Set_timeout,
+                position: 'middle'
+            }).present();
             return;
+        }
 
         this.reset();
 
@@ -179,15 +176,9 @@ export class _123_ItemCode {
 
                             //SHOW 待收百分比
                             var QTY = obj_response.PO_QTY.split("/");
-                            this.answer.QTY_left = parseInt(QTY[0]);
                             this.answer.QTY_ShowTotal = parseInt(QTY[1]);
-
-                            //SHOW待收顏色
-                            if (this.answer.QTY_left <= 0)
-                                this.data.viewColor = 'white';
-                            else
-                                this.data.viewColor = 'red';
-
+                            this.answer.QTY_ProgressBar = Math.round(obj_response.QTY / this.answer.QTY_ShowTotal * 100).toString()+'%';
+                            
                             //介面顯示設定
                             this.answer.SunDay = obj_response.QE_TYPE_TEXT;
 
@@ -199,30 +190,29 @@ export class _123_ItemCode {
                             }
                             break;
                         default:
-                            //Error
-                            let alert_fail = this.alertCtrl.create({
-                                title: '失敗',
-                                subTitle: response[0].RT_MSG,
-                                buttons: [{
-                                    text: '關閉',
-                                    handler: data => {
-                                        this.scan_Entry.setFocus();
-                                    }
-                                }]
-                            });
-                            alert_fail.present();
+                            this.toastCtrl.create({
+                                message: response[0].RT_MSG,
+                                duration: myGlobals.Set_timeout,
+                                position: 'middle'
+                            }).present();
                             break;
                     }
                 }
-                this.scan_Entry.setFocus();
+                this.myFocus();
             });
     };//#endregion
 
     //單品完成
     finish() {
         this.vibration.vibrate(100);
-        if (this.data.ItemCode == '')
+        if (this.data.ItemCode.length <= 0) {
+            this.toastCtrl.create({
+                message: '請輸入呼出碼',
+                duration: myGlobals.Set_timeout,
+                position: 'middle'
+            }).present();
             return;
+        }
 
         this._http_services.POST('', 'sp'
             , 'spactDCS_ID_LINE'
@@ -253,18 +243,11 @@ export class _123_ItemCode {
                             else
                                 ErrorMessage = response[0].MEG;
 
-                            //Error
-                            let alert_fail = this.alertCtrl.create({
-                                title: '失敗',
-                                subTitle: ErrorMessage,
-                                buttons: [{
-                                    text: '關閉',
-                                    handler: data => {
-                                        this.scan_Entry.setFocus();
-                                    }
-                                }]
-                            });
-                            alert_fail.present();
+                            this.toastCtrl.create({
+                                message: ErrorMessage,
+                                duration: myGlobals.Set_timeout,
+                                position: 'middle'
+                            }).present();
                             break;
                     }
                 }
@@ -276,8 +259,10 @@ export class _123_ItemCode {
         if (this.data.IsDisabled == true)
             return;
 
-        if (this.Temp_color.checked == true)
-            this.answer.Temp = 0 - this.answer.Temp;
+        let ErrMsg = '';
+        //批號
+        //效期
+        //溫度
 
         //開始鎖定
         this._http_services.POST('', 'sp'
@@ -299,28 +284,34 @@ export class _123_ItemCode {
                             this.data.LOT_ID = response[0].LOT_ID;
 
                             localStorage.setItem('LOT_ID', this.data.LOT_ID);
-                            myGlobals.ProgParameters.set('ReceiveResult', this.result);
-
+                            localStorage.setItem('ReceiveResult', JSON.stringify(this.result));
                             this.navCtrl.push('_124_ItemRcv');
                             break;
                         default:
-                            //Error
-                            let alert_fail = this.alertCtrl.create({
-                                title: '失敗',
-                                subTitle: response[0].RT_MSG,
-                                buttons: [{
-                                    text: '關閉',
-                                    handler: data => {
-                                        this.scan_Entry.setFocus();
-                                    }
-                                }]
-                            });
-                            alert_fail.present();
+                            this.toastCtrl.create({
+                                message: response[0].RT_MSG,
+                                duration: myGlobals.Set_timeout,
+                                position: 'middle'
+                            }).present();
                             break;
                     }
                 }
             });
     };
+
+    //喪失focus
+    myFocus() {
+        setTimeout(() => {
+            this.scan_Entry.setFocus();
+        }, 300);
+    };
+
+    myKeylogger(event) {
+        let obj = myGlobals.keyCodeToValue(event.keyCode, this.data.CarNo);
+        if (obj.indexOf('ENTER') >= 0) {
+            this.search();
+        }
+    }
 
     //全選
     selectAll($event) {

@@ -1,1 +1,474 @@
-webpackJsonp([0],{662:function(l,n,u){"use strict";function o(l){return e._23(0,[(l()(),e.Z(0,0,null,null,18,"ion-row",[["class","mytable_Detail row"]],null,null,null,null,null)),e.Y(1,16384,null,0,k.a,[],null,null),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(3,0,null,null,2,"ion-col",[["class","col"]],null,null,null,null,null)),e.Y(4,16384,null,0,v.a,[],null,null),(l()(),e._21(5,null,[" ",""])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(7,0,null,null,2,"ion-col",[["class","col"]],null,null,null,null,null)),e.Y(8,16384,null,0,v.a,[],null,null),(l()(),e._21(9,null,[" ",""])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(11,0,null,null,2,"ion-col",[["class","col"]],null,null,null,null,null)),e.Y(12,16384,null,0,v.a,[],null,null),(l()(),e._21(13,null,[" ",""])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(15,0,null,null,2,"ion-col",[["class","col"]],null,null,null,null,null)),e.Y(16,16384,null,0,v.a,[],null,null),(l()(),e._21(17,null,[" ",""])),(l()(),e._21(-1,null,["\n        "]))],null,function(l,n){l(n,5,0,n.context.$implicit.ChuteId);l(n,9,0,n.context.$implicit.StoreId);l(n,13,0,n.context.$implicit.ItemCode);l(n,17,0,n.context.$implicit.Amount)})}function t(l){return e._23(0,[(l()(),e.Z(0,0,null,null,15,"ion-row",[["class","mytable_Detail row"]],null,null,null,null,null)),e.Y(1,16384,null,0,k.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(3,0,null,null,2,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),e.Y(4,16384,null,0,v.a,[],null,null),(l()(),e._21(5,null,["[","]"])),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(7,0,null,null,2,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(8,16384,null,0,v.a,[],null,null),(l()(),e._21(9,null,["",""])),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(11,0,null,null,3,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(12,16384,null,0,v.a,[],null,null),(l()(),e._21(13,null,["",""])),e._17(14,2),(l()(),e._21(-1,null,["\n            "]))],null,function(l,n){l(n,5,0,n.context.$implicit.barcode);l(n,9,0,n.context.$implicit.Check);l(n,13,0,e._22(n,13,0,l(n,14,0,e._12(n.parent,0),n.context.$implicit.scanTime,"HH:mm:ss")))})}function a(l){return e._23(0,[e._15(0,r.d,[e.r]),e._19(402653184,1,{scan_Entry:0}),(l()(),e.Z(2,0,null,null,54,"ion-header",[],null,null,null,null,null)),e.Y(3,16384,null,0,Z.a,[D.a,e.j,e.z,[2,B.a]],null,null),(l()(),e._21(-1,null,["\n    "])),(l()(),e.Z(5,0,null,null,9,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,I.b,I.a)),e.Y(6,49152,null,0,T.a,[E.a,[2,B.a],[2,j.a],D.a,e.j,e.z],{color:[0,"color"]},null),(l()(),e._21(-1,3,["\n        "])),(l()(),e.Z(8,0,null,3,5,"ion-title",[],null,[[null,"click"]],function(l,n,u){var o=!0;if("click"===n){o=!1!==l.component.help()&&o}return o},N.b,N.a)),e.Y(9,49152,null,0,F.a,[D.a,e.j,e.z,[2,O.a],[2,T.a]],null,null),(l()(),e._21(-1,0,["籃明細"])),(l()(),e.Z(11,0,null,0,2,"button",[["ion-button",""],["outline",""],["small",""]],null,null,null,z.b,z.a)),e.Y(12,1097728,null,0,P.a,[[8,""],D.a,e.j,e.z],{small:[0,"small"],outline:[1,"outline"]},null),(l()(),e._21(-1,0,["HELP"])),(l()(),e._21(-1,3,["\n    "])),(l()(),e._21(-1,null,["\n    "])),(l()(),e.Z(16,0,null,null,39,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,R.b,R.a)),e.Y(17,49152,null,0,O.a,[D.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n        "])),(l()(),e.Z(19,0,null,3,35,"ion-row",[["class","row"]],null,null,null,null,null)),e.Y(20,278528,null,0,r.h,[e.p,e.q,e.j,e.A],{ngClass:[0,"ngClass"]},null),e._16(21,{"toolbar-background_danger":0}),e.Y(22,16384,null,0,k.a,[],null,null),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(24,0,null,null,8,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(25,16384,null,0,v.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(27,0,null,null,4,"ion-label",[],null,null,null,null,null)),e.Y(28,278528,null,0,r.h,[e.p,e.q,e.j,e.A],{ngClass:[0,"ngClass"]},null),e._14(29,1),e.Y(30,16384,null,0,x.a,[D.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["條碼"])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(34,0,null,null,8,"ion-col",[["class","col"],["col-8",""]],null,null,null,null,null)),e.Y(35,16384,null,0,v.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(37,0,null,null,4,"button",[["block",""],["ion-button",""],["outline",""]],[[8,"disabled",0]],[[null,"keyup"],[null,"blur"],[null,"ionFocus"]],function(l,n,u){var o=!0,t=l.component;if("keyup"===n){o=!1!==t.myKeylogger(u)&&o}if("blur"===n){o=!1!==t.myFocus()&&o}if("ionFocus"===n){o=!1!==t.selectAll(u)&&o}return o},z.b,z.a)),e.Y(38,278528,null,0,r.h,[e.p,e.q,e.j,e.A],{ngClass:[0,"ngClass"]},null),e._14(39,1),e.Y(40,1097728,[[1,4],["scan_Entry",4]],0,P.a,[[8,""],D.a,e.j,e.z],{outline:[0,"outline"],block:[1,"block"]},null),(l()(),e._21(41,0,["\n                    ","\n                "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(44,0,null,null,9,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(45,16384,null,0,v.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(47,0,null,null,5,"button",[["class","toolbar-button"],["color","primary"],["ion-button",""],["solid",""]],null,[[null,"click"]],function(l,n,u){var o=!0;if("click"===n){o=!1!==l.component.openKeyPad()&&o}return o},z.b,z.a)),e.Y(48,1097728,null,0,P.a,[[8,""],D.a,e.j,e.z],{color:[0,"color"],solid:[1,"solid"]},null),(l()(),e._21(-1,0,["\n                    "])),(l()(),e.Z(50,0,null,0,1,"ion-icon",[["name","keypad"],["role","img"]],[[2,"hide",null]],null,null,null,null)),e.Y(51,147456,null,0,A.a,[D.a,e.j,e.z],{name:[0,"name"]},null),(l()(),e._21(-1,0,["\n                "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e._21(-1,3,["\n    "])),(l()(),e._21(-1,null,["\n"])),(l()(),e._21(-1,null,["\n"])),(l()(),e.Z(58,0,null,null,73,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[[null,"swipe"]],function(l,n,u){var o=!0;if("swipe"===n){o=!1!==l.component.swipeEvent(u)&&o}return o},L.b,L.a)),e.Y(59,278528,null,0,r.h,[e.p,e.q,e.j,e.A],{ngClass:[0,"ngClass"]},null),e._16(60,{"toolbar-background_danger":0}),e.Y(61,4374528,null,0,V.a,[D.a,M.a,$.a,e.j,e.z,E.a,G.a,e.u,[2,B.a],[2,j.a]],null,null),(l()(),e._21(-1,1,["\n    "])),(l()(),e.Z(63,0,null,1,37,"ion-grid",[["class","mytable grid"]],null,null,null,null,null)),e.Y(64,16384,null,0,K.a,[],null,null),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(66,0,null,null,10,"ion-row",[["class","row"],["style","font-size:xx-large"]],null,null,null,null,null)),e.Y(67,16384,null,0,k.a,[],null,null),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(69,0,null,null,2,"ion-col",[["class","col"]],null,null,null,null,null)),e.Y(70,16384,null,0,v.a,[],null,null),(l()(),e._21(71,null,["",""])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(73,0,null,null,2,"ion-col",[["class","col"]],null,null,null,null,null)),e.Y(74,16384,null,0,v.a,[],null,null),(l()(),e._21(75,null,["",""])),(l()(),e._21(-1,null,["\n        "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(78,0,null,null,18,"ion-row",[["class","mytable_Head row"]],null,null,null,null,null)),e.Y(79,16384,null,0,k.a,[],null,null),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(81,0,null,null,2,"ion-col",[["class","col"]],null,null,null,null,null)),e.Y(82,16384,null,0,v.a,[],null,null),(l()(),e._21(-1,null,["滑道"])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(85,0,null,null,2,"ion-col",[["class","col"]],null,null,null,null,null)),e.Y(86,16384,null,0,v.a,[],null,null),(l()(),e._21(-1,null,["店號"])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(89,0,null,null,2,"ion-col",[["class","col"]],null,null,null,null,null)),e.Y(90,16384,null,0,v.a,[],null,null),(l()(),e._21(-1,null,["呼出碼"])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(93,0,null,null,2,"ion-col",[["class","col"]],null,null,null,null,null)),e.Y(94,16384,null,0,v.a,[],null,null),(l()(),e._21(-1,null,["數量"])),(l()(),e._21(-1,null,["\n        "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e.U(16777216,null,null,1,null,o)),e.Y(99,802816,null,0,r.i,[e.I,e.F,e.p],{ngForOf:[0,"ngForOf"]},null),(l()(),e._21(-1,null,["\n    "])),(l()(),e._21(-1,1,["\n\n    "])),(l()(),e.Z(102,0,null,1,2,"button",[["full",""],["ion-button",""],["outline",""]],null,[[null,"click"]],function(l,n,u){var o=!0;if("click"===n){o=!1!==l.component.showDCS_log()&&o}return o},z.b,z.a)),e.Y(103,1097728,null,0,P.a,[[8,""],D.a,e.j,e.z],{outline:[0,"outline"],full:[1,"full"]},null),(l()(),e._21(104,0,["\n        ","\n    "])),(l()(),e._21(-1,1,["\n    "])),(l()(),e.Z(106,0,null,1,24,"div",[["id","DCS_log"]],[[8,"hidden",0]],null,null,null,null)),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(108,0,null,null,21,"ion-grid",[["class","grid"]],null,null,null,null,null)),e.Y(109,16384,null,0,K.a,[],null,null),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(111,0,null,null,14,"ion-row",[["class","mytable_Head row"]],null,null,null,null,null)),e.Y(112,16384,null,0,k.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(114,0,null,null,2,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),e.Y(115,16384,null,0,v.a,[],null,null),(l()(),e._21(-1,null,["條碼"])),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(118,0,null,null,2,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(119,16384,null,0,v.a,[],null,null),(l()(),e._21(-1,null,["動作"])),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(122,0,null,null,2,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(123,16384,null,0,v.a,[],null,null),(l()(),e._21(-1,null,["掃描時間"])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.U(16777216,null,null,1,null,t)),e.Y(128,802816,null,0,r.i,[e.I,e.F,e.p],{ngForOf:[0,"ngForOf"]},null),(l()(),e._21(-1,null,["\n        "])),(l()(),e._21(-1,null,["\n    "])),(l()(),e._21(-1,1,["\n"]))],function(l,n){var u=n.component;l(n,6,0,e._2(1,"",u.data.ShowBackgroundColor_header,""));l(n,12,0,"","");l(n,20,0,l(n,21,0,u.data.ShowBackgroundColor));l(n,28,0,l(n,29,0,"myScanBarcodeUI_Label"));l(n,38,0,l(n,39,0,"myScanBarcodeUI"));l(n,40,0,"","");l(n,48,0,"primary","");l(n,51,0,"keypad");l(n,59,0,l(n,60,0,u.data.ShowBackgroundColor));l(n,99,0,u.DCSresult);l(n,103,0,"","");l(n,128,0,u.DCS_Log)},function(l,n){var u=n.component;l(n,5,0,e._12(n,6)._hidden,e._12(n,6)._sbPadding);l(n,16,0,e._12(n,17)._sbPadding);l(n,37,0,!u.data.IsInputEnable);l(n,41,0,u.data.ScanBarcode);l(n,50,0,e._12(n,51)._hidden);l(n,58,0,e._12(n,61).statusbarPadding,e._12(n,61)._hasRefresher);l(n,71,0,u.data.ShowStoreId);l(n,75,0,u.data.ShowStoreName);l(n,104,0,u.data.DCS_log_show_btnName);l(n,106,0,u.data.DCS_log_show)})}Object.defineProperty(n,"__esModule",{value:!0});var e=u(1),r=(u(0),u(16)),i=(u(36),u(37)),c=u(44),s=u(65),_=u(667),d=u(184),h=function(){function l(l,n,u,o,t,a){this.navCtrl=l,this._http_services=n,this.alertCtrl=u,this.modalCtrl=o,this.pipes=t,this.vibration=a,this.data={ScanBarcode:"",ShowStoreId:"",ShowStoreName:"",ShowBackgroundColor:!1,ShowBackgroundColor_header:"",IsInputEnable:!0,DCS_log_show:!0,DCS_log_show_btnName:"顯示掃描log"},this.DCS_Log=[],this.DCSresult=[]}return l.prototype.ionViewWillEnter=function(){this.myFocus()},l.prototype.reset=function(){this.data.ScanBarcode="",this.myFocus()},l.prototype.Totalreset=function(){this.data.ScanBarcode="",this.data.ShowStoreId="",this.data.ShowStoreName="",this.DCSresult=[],this.myFocus()},l.prototype.selectAll=function(l){l._native.nativeElement.select()},l.prototype.help=function(){this.alertCtrl.create({title:"使用說明",subTitle:'"0000"：送出籃明細，印標籤，並且清除目前資料<br />"1111"：清除目前資料<br />同店號的條碼才能彙總，若要重來請清除目前資料<br />',buttons:["關閉"]}).present()},l.prototype.showDCS_log=function(){this.data.DCS_log_show?(this.data.DCS_log_show=!1,this.data.DCS_log_show_btnName="不顯示掃描log"):(this.data.DCS_log_show=!0,this.data.DCS_log_show_btnName="顯示掃描log")},l.prototype.search=function(){this.vibration.vibrate(100);var l="",n={barcode:this.data.ScanBarcode,Check:"",scanTime:new Date};switch(n.barcode){case"0000":var u="";this.DCSresult.forEach(function(l){u+=l.barcode+","}),this.search_Receive(u),n.Check="V提交",this.Totalreset();break;case"1111":n.Check="清除",this.Totalreset();break;default:var o={barcode:n.barcode,ChuteId:n.barcode.substring(0,3),Duplex:n.barcode.substring(3,3),StoreId:n.barcode.substring(4,10),ItemCode:n.barcode.substring(10,16),Amount:n.barcode.substring(16,18)};18!=n.barcode.length?l="X長度錯誤":this.DCSresult.length>0?(this.data.ShowStoreId!=o.StoreId&&(l="X店不同"),this.DCSresult.forEach(function(n){n.barcode==o.barcode&&(l="X條碼重複")})):(this.data.ShowStoreId=o.StoreId,this.search_BringStore(o)),""==l?(this.DCSresult.push(o),n.Check="V"):n.Check=l}this.pushLog(n),""!=l?(this.data.ShowBackgroundColor=!0,this.data.ShowBackgroundColor_header="danger",this.vibration.vibrate([200,100,200,100,200,100,200,100,200])):(this.data.ShowBackgroundColor=!1,this.data.ShowBackgroundColor_header=""),this.reset()},l.prototype.search_Receive=function(l){var n=this;this._http_services.POST("","sp","spactDCS_BASKET",[{Name:"@Step",Value:"0"},{Name:"@GUIDMessage",Value:l}]).then(function(l){var u=l[0],o={};switch(u.RT_CODE){case"0":o={barcode:u.RT_MSG,Check:"提交單號",scanTime:new Date},n.pushLog(o);break;default:o={barcode:u.RT_MSG,Check:"提交失敗",scanTime:new Date},n.pushLog(o)}})},l.prototype.search_BringStore=function(l){var n=this;this._http_services.POST("","sp","spactDCS_BASKET",[{Name:"@Step",Value:"1"},{Name:"@GUIDMessage",Value:l.StoreId}]).then(function(l){if(""!=l){var u=l[0];switch(u.RT_CODE){case 0:n.data.ShowStoreName=u.RT_MSG;break;default:n.alertCtrl.create({title:"錯誤代號："+u.RT_CODE,subTitle:u.RT_MSG,buttons:["關閉"]}).present()}}})},l.prototype.pushLog=function(l){this.DCS_Log.push(l),this.pipes.myOrderByPipe.transform(this.DCS_Log,{property:"scanTime",direction:-1})},l.prototype.myFocus=function(){var l=this;setTimeout(function(){l.scan_Entry._elementRef.nativeElement.focus()},300)},l.prototype.myKeylogger=function(l){var n=c.g(l.keyCode);switch(n){case"ENTER":this.search();break;default:this.data.ScanBarcode+=n}},l.prototype.openKeyPad=function(){var l=this,n=this.modalCtrl.create(d.a,{Name:"批次",Value:this.data.ScanBarcode});n.onDidDismiss(function(n){l.data.ScanBarcode=c.d.get("ListTable_answer"),l.search()}),n.present()},l.prototype.swipeEvent=function(l){switch(l.direction){case 1:case 2:break;case 4:this.navCtrl.pop()}},l}(),p=function(){return function(){}}(),b=u(355),f=u(356),g=u(357),S=u(358),m=u(359),C=u(360),y=u(361),w=u(362),Y=u(363),k=u(45),v=u(59),Z=u(55),D=u(3),B=u(7),I=u(68),T=u(33),E=u(8),j=u(19),N=u(69),F=u(43),O=u(34),z=u(30),P=u(17),R=u(182),x=u(57),A=u(39),L=u(56),V=u(20),M=u(5),$=u(9),G=u(31),K=u(60),U=u(58),H=u(130),q=e.X({encapsulation:2,styles:[],data:{}}),X=e.V("ng-component",h,function(l){return e._23(0,[(l()(),e.Z(0,0,null,null,1,"ng-component",[],null,null,null,a,q)),e.Y(1,49152,null,0,h,[j.a,s.a,U.a,H.a,_.a,i.a],null,null)],null,null)},{},{},[]),W=u(23),J=u(180),Q=u(66);u.d(n,"AppModuleNgFactory",function(){return ll});var ll=e.W(p,[],function(l){return e._8([e._9(512,e.i,e.S,[[8,[b.a,f.a,g.a,S.a,m.a,C.a,y.a,w.a,Y.a,X]],[3,e.i],e.s]),e._9(4608,r.l,r.k,[e.r,[2,r.t]]),e._9(4608,W.k,W.k,[]),e._9(4608,W.c,W.c,[]),e._9(512,r.b,r.b,[]),e._9(512,_.a,_.a,[]),e._9(512,W.j,W.j,[]),e._9(512,W.d,W.d,[]),e._9(512,W.i,W.i,[]),e._9(512,J.a,J.a,[]),e._9(512,J.b,J.b,[]),e._9(512,p,p,[]),e._9(256,Q.a,h,[])])})},667:function(l,n,u){"use strict";u(0),u(1);var o=function(){function l(){}return l.prototype.transform=function(l,n){return l.sort(function(l,u){return l[n.property]<u[n.property]?-1*n.direction:l[n.property]>u[n.property]?1*n.direction:0})},l}(),t=function(){function l(){}return l.prototype.transform=function(l,n){return l&&n?l.filter(function(l){return-1!==l[n.property].indexOf(n.keyword)}):l},l}();u.d(n,"a",function(){return a});var a=function(){return function(){this.myOrderByPipe=new o,this.mySearchPipe=new t}}()}});
+webpackJsonp([0],{
+
+/***/ 699:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BasketListModule", function() { return BasketListModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__BasketList__ = __webpack_require__(719);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(704);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var BasketListModule = /** @class */ (function () {
+    function BasketListModule() {
+    }
+    BasketListModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__["a" /* PipesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__BasketList__["a" /* _21_BasketList */])
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__BasketList__["a" /* _21_BasketList */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_2__BasketList__["a" /* _21_BasketList */]]
+        })
+    ], BasketListModule);
+    return BasketListModule;
+}());
+
+//# sourceMappingURL=BasketList.module.js.map
+
+/***/ }),
+
+/***/ 704:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PipesModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BasketList_pipe__ = __webpack_require__(705);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__SearchPipe__ = __webpack_require__(706);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+// Pipes
+
+
+var PipesModule = /** @class */ (function () {
+    function PipesModule() {
+        this.myOrderByPipe = new __WEBPACK_IMPORTED_MODULE_1__BasketList_pipe__["a" /* OrderByPipe */]();
+        this.mySearchPipe = new __WEBPACK_IMPORTED_MODULE_2__SearchPipe__["a" /* SearchPipe */]();
+    }
+    PipesModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_1__BasketList_pipe__["a" /* OrderByPipe */],
+                __WEBPACK_IMPORTED_MODULE_2__SearchPipe__["a" /* SearchPipe */]
+            ],
+            imports: [],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_1__BasketList_pipe__["a" /* OrderByPipe */],
+                __WEBPACK_IMPORTED_MODULE_2__SearchPipe__["a" /* SearchPipe */]
+            ]
+        })
+    ], PipesModule);
+    return PipesModule;
+}());
+
+//# sourceMappingURL=pipes.module.js.map
+
+/***/ }),
+
+/***/ 705:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrderByPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+//排序
+/*
+    sample:     transform(this.DCS_Log, { property: 'scanTime', direction: -1 });
+    HowToUse:   transform( Array[], {property: string, direction: boolean});
+    Inputs:     property: ColumnName
+                direction: 1:Ascending -1:Descending
+                Array[]: You want to sort
+*/
+
+var OrderByPipe = /** @class */ (function () {
+    function OrderByPipe() {
+    }
+    OrderByPipe.prototype.transform = function (records, args) {
+        return records.sort(function (a, b) {
+            if (a[args.property] < b[args.property]) {
+                return -1 * args.direction;
+            }
+            else if (a[args.property] > b[args.property]) {
+                return 1 * args.direction;
+            }
+            else {
+                return 0;
+            }
+        });
+    };
+    ;
+    OrderByPipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Pipe */])({
+            name: 'orderBy'
+        })
+    ], OrderByPipe);
+    return OrderByPipe;
+}());
+
+//# sourceMappingURL=BasketList_pipe.js.map
+
+/***/ }),
+
+/***/ 706:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+//排序
+/*
+    sample:     transform(this.DCS_Log, { property: 'scanTime', direction: -1 });
+    HowToUse:   transform( Array[], {property: string, direction: boolean});
+    Inputs:     property: ColumnName
+                direction: 1:Ascending -1:Descending
+                Array[]: You want to sort
+*/
+
+var SearchPipe = /** @class */ (function () {
+    function SearchPipe() {
+    }
+    SearchPipe.prototype.transform = function (records, args) {
+        if (!records || !args)
+            return records;
+        return records.filter(function (record) { return record[args.property].indexOf(args.keyword) !== -1; });
+    };
+    ;
+    SearchPipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Pipe */])({
+            name: 'myfilter'
+        })
+    ], SearchPipe);
+    return SearchPipe;
+}());
+
+//# sourceMappingURL=SearchPipe.js.map
+
+/***/ }),
+
+/***/ 719:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _21_BasketList; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_Settings__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ZZ_CommonLib_LittleKeyPad_LittleKeyPad__ = __webpack_require__(358);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(704);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+//Cordova
+
+//My Pages
+
+
+
+
+var _21_BasketList = /** @class */ (function () {
+    function _21_BasketList(navCtrl, plt, navParams, _http_services, alertCtrl, modalCtrl, pipes, vibration) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this._http_services = _http_services;
+        this.alertCtrl = alertCtrl;
+        this.modalCtrl = modalCtrl;
+        this.pipes = pipes;
+        this.vibration = vibration;
+        this.data = {
+            ScanBarcode: '',
+            ShowStoreId: '',
+            ShowStoreName: '',
+            ShowBackgroundColor: false,
+            ShowBackgroundColor_header: '',
+            DCS_log_show: true,
+            DCS_log_show_btnName: '顯示掃描log'
+        };
+        //掃描的紀錄
+        //barcode   條碼
+        //Check     驗證結果 OK,NO,CLEAR
+        //scanTime  掃描時間
+        this.DCS_Log = [];
+        //合法的紀錄
+        //ChuteId   滑道
+        //Duplex    疊箱
+        //StoreId   店號
+        //ItemCode  呼出碼
+        //Amount    數量
+        this.DCSresult = [];
+        //開啟Help
+        this.help = function () {
+            var alert = this.alertCtrl.create({
+                title: '使用說明',
+                subTitle: '"0000"：送出籃明細，印標籤，並且清除目前資料<br />"1111"：清除目前資料<br />同店號的條碼才能彙總，若要重來請清除目前資料<br />',
+                buttons: ['關閉']
+            });
+            alert.present();
+        };
+    }
+    _21_BasketList.prototype.ionViewWillEnter = function () {
+        this.myFocus();
+    };
+    _21_BasketList.prototype.reset = function () {
+        this.data.ScanBarcode = '';
+        this.myFocus();
+    };
+    ;
+    _21_BasketList.prototype.Totalreset = function () {
+        this.data.ScanBarcode = '';
+        this.data.ShowStoreId = '';
+        this.data.ShowStoreName = '';
+        this.DCSresult = [];
+        this.myFocus();
+    };
+    ;
+    //變更log區塊高度
+    _21_BasketList.prototype.showDCS_log = function () {
+        if (this.data.DCS_log_show) {
+            this.data.DCS_log_show = false;
+            this.data.DCS_log_show_btnName = "不顯示掃描log";
+        }
+        else {
+            this.data.DCS_log_show = true;
+            this.data.DCS_log_show_btnName = "顯示掃描log";
+        }
+    };
+    //塞入log
+    _21_BasketList.prototype.pushLog = function (scanData) {
+        this.DCS_Log.push(scanData);
+        this.pipes.myOrderByPipe.transform(this.DCS_Log, { property: 'scanTime', direction: -1 }); //重新排序
+    };
+    //查詢條碼
+    _21_BasketList.prototype.search = function () {
+        var _this = this;
+        this.vibration.vibrate(100);
+        var ErrMsg = '';
+        var scanData = {
+            barcode: this.data.ScanBarcode,
+            Check: '',
+            scanTime: new Date()
+        };
+        //#region 紀錄資料
+        switch (scanData.barcode) {
+            case '0000'://送出籃明細+RESET
+                var obj = '';
+                this.DCSresult.forEach(function (value) {
+                    obj += value.barcode + ',';
+                });
+                this._http_services.POST('172_31_31_250', 'sp', 'spactDCS_BASKET', [{ Name: '@Step', Value: '0' },
+                    { Name: '@GUIDMessage', Value: obj }])
+                    .subscribe(function (response) {
+                    var result = response[0];
+                    var successPageId = {};
+                    switch (result.RT_CODE) {
+                        case '0':
+                            //記錄到log
+                            successPageId = {
+                                barcode: result.RT_MSG,
+                                Check: '提交單號',
+                                scanTime: new Date()
+                            };
+                            _this.pushLog(successPageId);
+                            break;
+                        default:
+                            //記錄到log
+                            successPageId = {
+                                barcode: result.RT_MSG,
+                                Check: '提交失敗',
+                                scanTime: new Date()
+                            };
+                            _this.pushLog(successPageId);
+                    }
+                });
+                scanData.Check = 'V提交';
+                this.Totalreset();
+                break;
+            case '1111'://RESET
+                scanData.Check = '清除';
+                this.Totalreset();
+                break;
+            default:
+                if (scanData.barcode.length == 18) {
+                    var SuccessData = {
+                        barcode: scanData.barcode,
+                        ChuteId: scanData.barcode.substring(0, 3),
+                        Duplex: scanData.barcode.substring(3, 3),
+                        StoreId: scanData.barcode.substring(4, 10),
+                        ItemCode: scanData.barcode.substring(10, 16),
+                        Amount: scanData.barcode.substring(16, 18)
+                    };
+                    //#region 檢查店號是否相同
+                    if (this.DCSresult.length > 0) {
+                        if (this.data.ShowStoreId != SuccessData.StoreId) {
+                            ErrMsg = 'X店不同';
+                        }
+                    }
+                    else {
+                        //第一筆不檢查
+                        this.data.ShowStoreId = SuccessData.StoreId;
+                        //帶入店號
+                        this._http_services.POST('172_31_31_250', 'sp', 'spactDCS_BASKET', [{ Name: '@Step', Value: '1' },
+                            { Name: '@GUIDMessage', Value: SuccessData.StoreId }])
+                            .subscribe(function (response) {
+                            if (response != '') {
+                                var result = response[0];
+                                switch (result.RT_CODE) {
+                                    case 0:
+                                        _this.data.ShowStoreName = result.RT_MSG;
+                                        break;
+                                    default:
+                                        var alert_1 = _this.alertCtrl.create({
+                                            title: '錯誤代號：' + result.RT_CODE,
+                                            subTitle: result.RT_MSG,
+                                            buttons: ['關閉']
+                                        });
+                                        alert_1.present();
+                                }
+                            }
+                        });
+                    }
+                    //#endregion
+                    //#region 檢查條碼是否重複刷入
+                    this.DCSresult.forEach(function (obj) {
+                        if (obj.barcode == SuccessData.barcode) {
+                            ErrMsg = 'X條碼重複';
+                        }
+                    });
+                    //#endregion
+                }
+                else {
+                    ErrMsg = 'X';
+                }
+                if (ErrMsg == '') {
+                    //合法, 輸出至暫存檔
+                    this.DCSresult.push(SuccessData);
+                    scanData.Check = 'V';
+                }
+                else {
+                    scanData.Check = ErrMsg;
+                }
+                break;
+        }
+        //#endregion
+        //紀錄掃描資料
+        this.pushLog(scanData);
+        if (ErrMsg != '') {
+            this.data.ShowBackgroundColor = true;
+            this.data.ShowBackgroundColor_header = 'danger';
+            this.vibration.vibrate([200, 100, 200, 100, 200, 100, 200, 100, 200]);
+        }
+        else {
+            this.data.ShowBackgroundColor = false;
+            this.data.ShowBackgroundColor_header = '';
+        }
+        //準備下一輪掃描
+        this.reset();
+    };
+    //全選
+    _21_BasketList.prototype.selectAll = function ($event) {
+        $event._native.nativeElement.select();
+    };
+    //Focus
+    _21_BasketList.prototype.myFocus = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.scan_Entry._elementRef.nativeElement.focus();
+        }, 300);
+    };
+    _21_BasketList.prototype.myKeylogger = function (event) {
+        this.data.ScanBarcode = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["g" /* keyCodeToValue */](event.keyCode, this.data.ScanBarcode);
+        if (this.data.ScanBarcode.indexOf('ENTER') >= 0) {
+            this.data.ScanBarcode = this.data.ScanBarcode.replace('ENTER', '');
+            this.search();
+        }
+    };
+    _21_BasketList.prototype.openKeyPad = function () {
+        var _this = this;
+        var obj = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__ZZ_CommonLib_LittleKeyPad_LittleKeyPad__["a" /* LittleKeyPad */], { Name: '批次', Value: this.data.ScanBarcode });
+        obj.onDidDismiss(function (data) {
+            _this.data.ScanBarcode = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('ListTable_answer');
+            _this.search();
+        });
+        obj.present();
+    };
+    //手勢
+    _21_BasketList.prototype.swipeEvent = function (event) {
+        switch (event.direction) {
+            case 1://NONE
+                break;
+            case 2://LEFT
+                break;
+            case 4://RIGHT
+                this.navCtrl.pop();
+                break;
+            case 8://UP
+                break;
+            case 16://DOWN
+                break;
+        }
+        ;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('scan_Entry'),
+        __metadata("design:type", Object)
+    ], _21_BasketList.prototype, "scan_Entry", void 0);
+    _21_BasketList = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_21_BasketList\BasketList.html"*/'﻿<ion-header>\n\n    <ion-navbar color="{{data.ShowBackgroundColor_header}}">\n\n        <ion-title (click)="help()">籃明細<button small ion-button outline>HELP</button></ion-title>\n\n    </ion-navbar>\n\n    <ion-toolbar>\n\n        <ion-row [ngClass]="{\'toolbar-background_danger\':data.ShowBackgroundColor}">\n\n            <ion-col col-2>\n\n                <ion-label [ngClass]="[\'myScanBarcodeUI_Label\']">條碼</ion-label>\n\n            </ion-col>\n\n            <ion-col col-8>\n\n                <button ion-button outline block\n\n                        [ngClass]="[\'myScanBarcodeUI\']"\n\n                        #scan_Entry\n\n                        (keyup)="myKeylogger($event)"\n\n                        (blur)="myFocus()"\n\n                        (ionFocus)="selectAll($event)">\n\n                    {{data.ScanBarcode}}\n\n                </button>\n\n            </ion-col>\n\n            <ion-col col-2>\n\n                <button ion-button (click)="openKeyPad()" color="primary" solid class="toolbar-button">\n\n                    <ion-icon name="keypad"></ion-icon>\n\n                </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-toolbar>\n\n</ion-header>\n\n<ion-content (swipe)="swipeEvent($event)" [ngClass]="{\'toolbar-background_danger\':data.ShowBackgroundColor}">\n\n    <ion-grid class="mytable">\n\n        <ion-row style="font-size:xx-large">\n\n            <ion-col>{{data.ShowStoreId}}</ion-col>\n\n            <ion-col>{{data.ShowStoreName}}</ion-col>\n\n        </ion-row>\n\n        <ion-row class="mytable_Head">\n\n            <ion-col>滑道</ion-col>\n\n            <ion-col>店號</ion-col>\n\n            <ion-col>呼出碼</ion-col>\n\n            <ion-col>數量</ion-col>\n\n        </ion-row>\n\n        <ion-row *ngFor="let s of DCSresult" class="mytable_Detail">\n\n            <ion-col> {{s.ChuteId}}</ion-col>\n\n            <ion-col> {{s.StoreId}}</ion-col>\n\n            <ion-col> {{s.ItemCode}}</ion-col>\n\n            <ion-col> {{s.Amount}}</ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n\n\n    <button ion-button (click)="showDCS_log()" full outline>\n\n        {{data.DCS_log_show_btnName}}\n\n    </button>\n\n    <div id="DCS_log" [hidden]="data.DCS_log_show">\n\n        <ion-grid>\n\n            <ion-row class="mytable_Head">\n\n                <ion-col col-6>條碼</ion-col>\n\n                <ion-col col-3>動作</ion-col>\n\n                <ion-col col-3>掃描時間</ion-col>\n\n            </ion-row>\n\n            <ion-row *ngFor="let s of DCS_Log" class="mytable_Detail">\n\n                <ion-col col-6>[{{s.barcode}}]</ion-col>\n\n                <ion-col col-3>{{s.Check}}</ion-col>\n\n                <ion-col col-3>{{s.scanTime | date:\'HH:mm:ss\'}}</ion-col>\n\n            </ion-row>\n\n        </ion-grid>\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_21_BasketList\BasketList.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__["a" /* http_services */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__["a" /* PipesModule */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__["a" /* Vibration */]])
+    ], _21_BasketList);
+    return _21_BasketList;
+}());
+
+//# sourceMappingURL=BasketList.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=0.js.map

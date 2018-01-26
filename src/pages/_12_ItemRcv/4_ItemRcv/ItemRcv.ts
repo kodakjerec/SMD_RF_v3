@@ -1,9 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, ModalController, ToastController, Platform, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, ModalController, ToastController, IonicPage } from 'ionic-angular';
 import { Navbar } from 'ionic-angular';
 
 //Cordova
-import { Keyboard } from '@ionic-native/keyboard';
 import { Vibration } from '@ionic-native/vibration';
 
 //My Pages
@@ -23,29 +22,29 @@ import { myCAMERAPage } from '../../_ZZ_CommonLib/myCAMERA/myCAMERA';
 
 export class _124_ItemRcv {
     constructor(public navCtrl: NavController
-        , public platform: Platform
         , public _http_services: http_services
-        , private modalCtrl: ModalController
         , private alertCtrl: AlertController
+        , private modalCtrl: ModalController
         , private toastCtrl: ToastController
-        , private keyboard: Keyboard
         , private vibration: Vibration) {
         myGlobals.loginCheck();
 
-        this.result = myGlobals.ProgParameters.get('ReceiveResult');
+        this.result = JSON.parse(localStorage.getItem('ReceiveResult'));
         this.InitQueryItemState();
 
         //SHOW 待收百分比
         var QTY = this.result.PO_QTY.split("/");
-        this.answer.QTY_left = parseInt(QTY[0]);
         this.answer.QTY_ShowTotal = parseInt(QTY[1]);
-
-        this.initializeApp();
+        this.answer.QTY_ProgressBar = Math.round(this.result.QTY / this.answer.QTY_ShowTotal * 100).toString()+'%';
     }
 
     @ViewChild(Navbar) navBar: Navbar;
     @ViewChild('scan_Entry') scan_Entry;
     @ViewChild('scan_Entry2') scan_Entry2;
+
+    ionViewDidEnter() {
+        this.myFocus();
+    }
 
     //覆寫原本退回的動作
     ionViewDidLoad() {
@@ -58,19 +57,6 @@ export class _124_ItemRcv {
             //Write here wherever you wanna do
             this.Back();
         }
-    }
-
-    initializeApp() {
-        if (this.platform.is('core')) {
-            console.log("You're develop in the browser");
-            return;
-        }
-        this.platform.ready()
-            .then(() => {
-                this.keyboard.onKeyboardShow().subscribe(() => { this.data.IsHideWhenKeyboardOpen = true });
-                this.keyboard.onKeyboardHide().subscribe(() => { this.data.IsHideWhenKeyboardOpen = false });
-            })
-            ;
     }
 
     data = {
@@ -92,7 +78,7 @@ export class _124_ItemRcv {
         , QualityName: '品質'
         , QualityList: []
         , QTY_ShowTotal: 0
-        , QTY_left: 0
+        , QTY_ProgressBar: ''
     };
     result = {
         PO_QTY: '0/0'
@@ -109,16 +95,10 @@ export class _124_ItemRcv {
         , ROW6: ''
     };
 
-    //20170613需求，加入溫度正負按鈕
-    QTY_color = { labelName: '＋', checked: false };
-    WEIGHT_color = { labelName: '＋', checked: false };
-    onToggleChange(item) {
-        if (item.checked == true)
-            item.labelName = '－';
-        else
-            item.labelName = '＋';
+    //進度表
+    getQTY_ProgressBar() {
+        return this.answer.QTY_ProgressBar;
     }
-    //加入溫度正負按鈕END
 
     //上一頁
     Back() {
@@ -127,12 +107,6 @@ export class _124_ItemRcv {
         myGlobals.ProgParameters.set('ReceiveResult', this.result);
         this.navCtrl.pop();
     };
-
-    ionViewDidEnter() {
-        setTimeout(() => {
-            this.scan_Entry.setFocus();
-        }, 150);
-    }
 
     //重置btn
     reset() {
@@ -144,13 +118,8 @@ export class _124_ItemRcv {
         //數量 重量
         this.answer.QTY = 0;
         this.answer.WEIGHT = 0.0;
-        //數量 重量 正負 reset
-        this.QTY_color.checked = false;
-        this.onToggleChange(this.QTY_color);
-        this.WEIGHT_color.checked = false;
-        this.onToggleChange(this.WEIGHT_color);
 
-        this.scan_Entry.setFocus();
+        this.myFocus();
     };
 
     //選擇品質
@@ -237,28 +206,55 @@ export class _124_ItemRcv {
     //驗收
     Receive() {
         this.vibration.vibrate(100);
-        //檢查
-        if (this.result.PRICE_TYPE == 0 && this.answer.WEIGHT <= 0) {
-            //Error
-            let alert_fail = this.alertCtrl.create({
-                title: '失敗',
-                subTitle: "秤重欄位尚未輸入",
-                buttons: [{
-                    text: '關閉',
-                    handler: data => {
-                        this.scan_Entry2.setFocus();
-                    }
-                }]
-            });
-            alert_fail.present();
-            return;
+
+        let ErrMsg:string = '';
+        //#region 檢查
+        if (this.answer.QTY == 0) {
+            ErrMsg += "數量欄位尚未輸入 ";
         }
 
-        //正負
-        if (this.QTY_color.checked == true)
-            this.answer.QTY = 0 - this.answer.QTY;
-        if (this.WEIGHT_color.checked == true)
-            this.answer.WEIGHT = 0 - this.answer.WEIGHT;
+        if (this.result.PRICE_TYPE == 0 && this.answer.WEIGHT == 0) {
+            ErrMsg += "秤重欄位尚未輸入 ";   
+        }
+
+        if (ErrMsg.length>0) {
+            //Error
+            this.toastCtrl.create({
+                message: ErrMsg,
+                duration: myGlobals.Set_timeout,
+                position: 'middle'
+            }).present();
+
+            this.myFocus2();
+            return;
+        }
+        //#endregion
+
+        if (this.answer.QTY < 0 || this.answer.WEIGHT < 0) {
+            if (this.answer.QTY < 0) {
+                ErrMsg = '數量 ' + this.answer.QTY.toString() + ' 小於零，將會執行減量<br/>'
+                    + '請確認是否輸入正確？';
+            }
+            if (this.answer.WEIGHT < 0) {
+                ErrMsg = '重量 ' + this.answer.WEIGHT.toString() + ' 小於零，將會執行減量<br/>'
+                    + '請確認是否輸入正確？';
+            }
+
+            this.alertCtrl.create({
+                title: '提示 減量',
+                subTitle: ErrMsg ,
+                buttons: [{
+                    text: '取消'
+                    , handler: () => {
+                        return;
+                    }
+                }
+                    , {
+                        text: '確定'
+                    }
+                ]
+            }).present();
+        }
 
         //驗收
         this._http_services.POST('', 'sp'
@@ -276,10 +272,6 @@ export class _124_ItemRcv {
                 if (response != '') {
                     switch (response[0].RT_CODE) {
                         case 0:
-                            //SHOW 待收百分比
-                            this.answer.QTY_left -= this.answer.QTY;
-
-                            console.log(response[0]);
                             //更新顯示
                             this.result.ADDON_QTY = response[0].ADDON_QTY;
                             this.result.ADDON_WT = response[0].ADDON_WT;
@@ -292,37 +284,31 @@ export class _124_ItemRcv {
                             this.result.ROW5 = response[0].ROW5;
                             this.result.ROW6 = response[0].ROW6;
 
+                            this.answer.QTY_ProgressBar = Math.round(this.result.QTY / this.answer.QTY_ShowTotal * 100).toString()+'%';
+
                             //reset
                             this.reset();
 
-                            let toast = this.toastCtrl.create({
+                            this.toastCtrl.create({
                                 message: response[0].RT_MSG,
                                 duration: myGlobals.Set_timeout,
                                 position: 'bottom'
-                            });
-                            toast.onDidDismiss(() => {
-                                this.scan_Entry.setFocus();
-                            });
-                            toast.present();
+                            }).present();
 
                             break;
                         default:
                             //Error
-                            let alert_fail = this.alertCtrl.create({
-                                title: '失敗',
-                                subTitle: response[0].RT_MSG,
-                                buttons: [{
-                                    text: '關閉',
-                                    handler: data => {
-                                        this.scan_Entry.setFocus();
-                                    }
-                                }]
-                            });
-                            alert_fail.present();
+                            this.toastCtrl.create({
+                                message: response[0].RT_MSG,
+                                duration: myGlobals.Set_timeout,
+                                position: 'middle'
+                            }).present();
                             break;
                     }
                 }
             });
+
+        this.myFocus();
     };
 
     //解鎖
@@ -334,7 +320,7 @@ export class _124_ItemRcv {
                 , { Name: '@ID', Value: this.data.PaperNo_ID }
                 , { Name: '@ITEM', Value: this.data.LOT_ID }
                 , { Name: '@USER_ID', Value: this.data.USER_ID }
-            ]).then(() => { });
+            ]);
     };
 
     //拍照上傳
@@ -354,6 +340,18 @@ export class _124_ItemRcv {
         let obj = this.modalCtrl.create(myCAMERAPage);
         obj.present();
     }
+
+    //喪失focus
+    myFocus() {
+        setTimeout(() => {
+            this.scan_Entry.setFocus();
+        }, 300);
+    };
+    myFocus2() {
+        setTimeout(() => {
+            this.scan_Entry2.setFocus();
+        }, 300);
+    };
 
     //全選
     selectAll($event) {

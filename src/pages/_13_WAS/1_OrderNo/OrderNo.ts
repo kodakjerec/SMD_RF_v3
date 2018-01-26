@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, ToastController, ModalController, IonicPage } from 'ionic-angular';
+import { NavController, ToastController, ModalController, IonicPage } from 'ionic-angular';
 
 //Cordova
 import { Vibration } from '@ionic-native/vibration';
@@ -19,10 +19,10 @@ import { LittleKeyPad } from '../../_ZZ_CommonLib/LittleKeyPad/LittleKeyPad';
 export class _131_WAS_OrderNo {
     constructor(public navCtrl: NavController
         , public _http_services: http_services
-        , private alertCtrl: AlertController
         , private toastCtrl: ToastController
         , private modalCtrl: ModalController
         , private vibration: Vibration) {
+
     }
 
     @ViewChild('scan_Entry') scan_Entry;
@@ -76,11 +76,11 @@ export class _131_WAS_OrderNo {
             this.toastCtrl.create({
                 message: '請輸入數值',
                 duration: myGlobals.Set_timeout,
-                position: 'bottom'
-            }).present()
-                .then(response => {
-                    this.myFocus();
-                });
+                position: 'middle'
+            }).present();
+            this.myFocus();
+            this.data.WAS_OrderNo = '';
+            this.data.IsInputEnable = true;
             return;
         }
 
@@ -95,25 +95,23 @@ export class _131_WAS_OrderNo {
                     case 0:
                         localStorage.setItem('WAS_OrderNo', response[0].RT_MSG);
                         this.data.WAS_OrderNo = response[0].RT_MSG;
-                        let toast = this.toastCtrl.create({
+                        this.toastCtrl.create({
                             message: '驗證成功 ' + response[0].RT_MSG,
                             duration: myGlobals.Set_timeout,
-                            position: 'bottom'
-                        });
-                        toast.present();
-                        this.data.WAS_OrderNo = '';
+                            position: 'middle'
+                        }).present();
                         this.navCtrl.push('_132_WAS_Item');
                         break;
                     default:
-                        let alert = this.alertCtrl.create({
-                            title: '錯誤代號：' + response[0].RT_CODE,
-                            subTitle: response[0].RT_MSG,
-                            buttons: ['關閉']
-                        });
-                        alert.present();
+                        this.toastCtrl.create({
+                            message: response[0].RT_MSG,
+                            duration: myGlobals.Set_timeout,
+                            position: 'middle'
+                        }).present();
                 }
             })
             .then(response => {
+                this.data.WAS_OrderNo = '';
                 this.data.IsInputEnable = true;
             })
             ;
@@ -130,14 +128,10 @@ export class _131_WAS_OrderNo {
         }, 300);
     }
     myKeylogger(event) {
-        let keyValue = myGlobals.keyCodeToValue(event.keyCode);
-        switch (keyValue) {
-            case 'ENTER':
-                this.search();
-                break;
-            default:
-                this.data.WAS_OrderNo += keyValue;
-                break;
+        this.data.WAS_OrderNo = myGlobals.keyCodeToValue(event.keyCode, this.data.WAS_OrderNo);
+        if (this.data.WAS_OrderNo.indexOf('ENTER') >= 0) {
+            this.data.WAS_OrderNo = this.data.WAS_OrderNo.replace('ENTER', '');
+            this.search();
         }
     }
     openKeyPad() {

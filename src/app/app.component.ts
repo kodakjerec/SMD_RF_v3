@@ -27,6 +27,7 @@ export class SMDRF {
         , public fcm: FCM
         , private alertCtrl: AlertController
     ) {
+        this.statusBar.hide();
         this.initializeApp();
 
         // used for an example of ngFor and navigation
@@ -50,7 +51,6 @@ export class SMDRF {
                 this.myFCM()
             })
             .then(() => {
-                this.statusBar.styleDefault();
                 this.splashScreen.hide();
             })
             ;

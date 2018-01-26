@@ -1,1 +1,365 @@
-webpackJsonp([1],{659:function(l,n,u){"use strict";function t(l){return e._23(0,[(l()(),e.Z(0,0,null,null,18,"ion-row",[["class","mytable_Detail row"]],null,null,null,null,null)),e.Y(1,16384,null,0,Z.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(3,0,null,null,2,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),e.Y(4,16384,null,0,Y.a,[],null,null),(l()(),e._21(5,null,[" ",""])),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(7,0,null,null,2,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(8,16384,null,0,Y.a,[],null,null),(l()(),e._21(9,null,[" ",""])),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(11,0,null,null,2,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(12,16384,null,0,Y.a,[],null,null),(l()(),e._21(13,null,[" ",""])),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(15,0,null,null,2,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(16,16384,null,0,Y.a,[],null,null),(l()(),e._21(17,null,[" ",""])),(l()(),e._21(-1,null,["\n            "]))],null,function(l,n){l(n,5,0,n.context.$implicit.ITEM_NO);l(n,9,0,n.context.$implicit.AMOUNT);l(n,13,0,n.context.$implicit.TQty);l(n,17,0,n.context.$implicit.LeftQty)})}function a(l){return e._23(0,[e._19(402653184,1,{scan_Entry:0}),(l()(),e.Z(1,0,null,null,57,"ion-header",[["no-border",""]],null,null,null,null,null)),e.Y(2,16384,null,0,A.a,[E.a,e.j,e.z,[2,W.a]],null,null),(l()(),e._21(-1,null,["\n    "])),(l()(),e.Z(4,0,null,null,14,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,O.b,O.a)),e.Y(5,49152,null,0,T.a,[w.a,[2,W.a],[2,C.a],E.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n        "])),(l()(),e.Z(7,0,null,3,2,"ion-title",[],null,null,null,j.b,j.a)),e.Y(8,49152,null,0,k.a,[E.a,e.j,e.z,[2,N.a],[2,T.a]],null,null),(l()(),e._21(-1,0,["WAS_呼出碼"])),(l()(),e._21(-1,3,["\n        "])),(l()(),e.Z(11,0,null,2,6,"ion-buttons",[["end",""]],null,null,null,null,null)),e.Y(12,16384,null,1,M.a,[E.a,e.j,e.z,[2,N.a],[2,T.a]],null,null),e._19(603979776,2,{_buttons:1}),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(15,0,null,null,1,"span",[["style","white-space:pre;color:white"]],null,null,null,null,null)),(l()(),e._21(16,null,["",""])),(l()(),e._21(-1,null,["\n        "])),(l()(),e._21(-1,3,["\n    "])),(l()(),e._21(-1,null,["\n    "])),(l()(),e.Z(20,0,null,null,37,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,L.b,L.a)),e.Y(21,49152,null,0,N.a,[E.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n        "])),(l()(),e.Z(23,0,null,3,33,"ion-row",[["class","row"]],null,null,null,null,null)),e.Y(24,16384,null,0,Z.a,[],null,null),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(26,0,null,null,8,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(27,16384,null,0,Y.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(29,0,null,null,4,"ion-label",[],null,null,null,null,null)),e.Y(30,278528,null,0,o.h,[e.p,e.q,e.j,e.A],{ngClass:[0,"ngClass"]},null),e._14(31,1),e.Y(32,16384,null,0,z.a,[E.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(-1,null,["呼出碼"])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(36,0,null,null,8,"ion-col",[["class","col"],["col-7",""]],null,null,null,null,null)),e.Y(37,16384,null,0,Y.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(39,0,null,null,4,"button",[["block",""],["ion-button",""],["outline",""]],[[8,"disabled",0]],[[null,"keyup"],[null,"blur"],[null,"ionFocus"]],function(l,n,u){var t=!0,a=l.component;if("keyup"===n){t=!1!==a.myKeylogger(u)&&t}if("blur"===n){t=!1!==a.myFocus()&&t}if("ionFocus"===n){t=!1!==a.selectAll(u)&&t}return t},D.b,D.a)),e.Y(40,278528,null,0,o.h,[e.p,e.q,e.j,e.A],{ngClass:[0,"ngClass"]},null),e._14(41,1),e.Y(42,1097728,[[1,4],["scan_Entry",4]],0,P.a,[[8,""],E.a,e.j,e.z],{outline:[0,"outline"],block:[1,"block"]},null),(l()(),e._21(43,0,["\n                    ","\n                "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(46,0,null,null,9,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(47,16384,null,0,Y.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(49,0,null,null,5,"button",[["class","toolbar-button"],["color","primary"],["ion-button",""],["solid",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.openKeyPad()&&t}return t},D.b,D.a)),e.Y(50,1097728,null,0,P.a,[[8,""],E.a,e.j,e.z],{color:[0,"color"],solid:[1,"solid"]},null),(l()(),e._21(-1,0,["\n                    "])),(l()(),e.Z(52,0,null,0,1,"ion-icon",[["name","keypad"],["role","img"]],[[2,"hide",null]],null,null,null,null)),e.Y(53,147456,null,0,R.a,[E.a,e.j,e.z],{name:[0,"name"]},null),(l()(),e._21(-1,0,["\n                "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e._21(-1,3,["\n    "])),(l()(),e._21(-1,null,["\n"])),(l()(),e._21(-1,null,["\n"])),(l()(),e.Z(60,0,null,null,49,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[[null,"swipe"]],function(l,n,u){var t=!0;if("swipe"===n){t=!1!==l.component.swipeEvent(u)&&t}return t},V.b,V.a)),e.Y(61,4374528,null,0,F.a,[E.a,K.a,B.a,e.j,e.z,w.a,x.a,e.u,[2,W.a],[2,C.a]],null,null),(l()(),e._21(-1,1,["\n    "])),(l()(),e.Z(63,0,null,1,45,"ion-card",[],null,null,null,null,null)),e.Y(64,16384,null,0,U.a,[E.a,e.j,e.z],null,null),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(66,0,null,null,25,"ion-grid",[["class","mytable grid"]],null,null,null,null,null)),e.Y(67,16384,null,0,$.a,[],null,null),(l()(),e._21(-1,null,["\n            "])),(l()(),e.Z(69,0,null,null,18,"ion-row",[["class","mytable_Head row"]],null,null,null,null,null)),e.Y(70,16384,null,0,Z.a,[],null,null),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(72,0,null,null,2,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),e.Y(73,16384,null,0,Y.a,[],null,null),(l()(),e._21(-1,null,["呼出碼"])),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(76,0,null,null,2,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(77,16384,null,0,Y.a,[],null,null),(l()(),e._21(-1,null,["訂購"])),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(80,0,null,null,2,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(81,16384,null,0,Y.a,[],null,null),(l()(),e._21(-1,null,["實績"])),(l()(),e._21(-1,null,["\n                "])),(l()(),e.Z(84,0,null,null,2,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),e.Y(85,16384,null,0,Y.a,[],null,null),(l()(),e._21(-1,null,["剩餘"])),(l()(),e._21(-1,null,["\n            "])),(l()(),e._21(-1,null,["\n            "])),(l()(),e.U(16777216,null,null,1,null,t)),e.Y(90,802816,null,0,o.i,[e.I,e.F,e.p],{ngForOf:[0,"ngForOf"]},null),(l()(),e._21(-1,null,["\n        "])),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(93,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,G.b,G.a)),e.Y(94,1097728,null,3,H.a,[q.a,E.a,e.j,e.z,[2,J.a]],null,null),e._19(335544320,3,{contentLabel:0}),e._19(603979776,4,{_buttons:1}),e._19(603979776,5,{_icons:1}),e.Y(98,16384,null,0,Q.a,[],null,null),(l()(),e._21(-1,2,["\n            "])),(l()(),e._21(-1,2,["\n            "])),(l()(),e.Z(101,0,null,2,1,"h1",[],null,null,null,null,null)),(l()(),e._21(-1,null,[" "])),(l()(),e.Z(103,0,null,2,0,"br",[],null,null,null,null,null)),(l()(),e._21(-1,2,["\n            "])),(l()(),e.Z(105,0,null,2,1,"h1",[],null,null,null,null,null)),(l()(),e._21(-1,null,[" "])),(l()(),e._21(-1,2,["\n        "])),(l()(),e._21(-1,null,["\n    "])),(l()(),e._21(-1,1,["\n"])),(l()(),e._21(-1,null,["\n"])),(l()(),e.Z(111,0,null,null,13,"div",[],[[8,"hidden",0]],null,null,null,null)),(l()(),e._21(-1,null,["\n    "])),(l()(),e.Z(113,0,null,null,10,"ion-footer",[["no-border",""]],null,null,null,null,null)),e.Y(114,16384,null,0,X.a,[E.a,e.j,e.z,[2,W.a]],null,null),(l()(),e._21(-1,null,["\n        "])),(l()(),e.Z(116,0,null,null,6,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,L.b,L.a)),e.Y(117,49152,null,0,N.a,[E.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n            "])),(l()(),e.Z(119,0,null,3,2,"ion-label",[["class","bottom_BLOCK"]],null,null,null,null,null)),e.Y(120,16384,null,0,z.a,[E.a,e.j,e.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),e._21(121,null,["區域：",""])),(l()(),e._21(-1,3,["\n        "])),(l()(),e._21(-1,null,["\n    "])),(l()(),e._21(-1,null,["\n"])),(l()(),e._21(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,30,0,l(n,31,0,"myScanBarcodeUI_Label"));l(n,40,0,l(n,41,0,"myScanBarcodeUI"));l(n,42,0,"","");l(n,50,0,"primary","");l(n,53,0,"keypad");l(n,90,0,u.DisplayList)},function(l,n){var u=n.component;l(n,4,0,e._12(n,5)._hidden,e._12(n,5)._sbPadding);l(n,16,0,u.data.RefValue);l(n,20,0,e._12(n,21)._sbPadding);l(n,39,0,!u.data.IsInputEnable);l(n,43,0,u.data.WAS_Item);l(n,52,0,e._12(n,53)._hidden);l(n,60,0,e._12(n,61).statusbarPadding,e._12(n,61)._hasRefresher);l(n,111,0,u.data.IsHideWhenKeyboardOpen);l(n,116,0,e._12(n,117)._sbPadding);l(n,121,0,u.data.BLOCK_NAME)})}Object.defineProperty(n,"__esModule",{value:!0});var e=u(1),o=(u(0),u(16)),i=(u(36),u(37)),s=u(44),r=u(65),c=u(667),_=u(184),p=function(){function l(l,n,u,t,a,e,o){this.navCtrl=l,this._http_services=n,this.pipes=u,this.alertCtrl=t,this.toastCtrl=a,this.modalCtrl=e,this.vibration=o,this.data={RefValue:"",BLOCK_NAME:localStorage.getItem("BLOCK_NAME"),WAS_Item:"",IsInputEnable:!0,IsHideWhenKeyboardOpen:!1},this.DisplayList=[],this.DefaultTestServer="172_31_31_250",this.data.RefValue=localStorage.getItem("WAS_OrderNo")}return l.prototype.ionViewWillEnter=function(){this.BringDisplayList(),this.myFocus()},l.prototype.BringDisplayList=function(){var l=this;this._http_services.POST(this.DefaultTestServer,"sp","[WAS].dbo.spactWAS_Line_v2",[{Name:"@Step",Value:"01"},{Name:"@Parameters",Value:this.data.RefValue+","}]).then(function(n){void 0!=n&&(l.DisplayList=n)})},l.prototype.reset=function(){localStorage.setItem("WAS_Item",""),this.data.WAS_Item="",this.myFocus()},l.prototype.search=function(){var l=this;this.vibration.vibrate(100),this.data.IsInputEnable=!1;var n=this.pipes.mySearchPipe.transform(this.DisplayList,{property:"ITEM_NO",keyword:this.data.WAS_Item});if(this.data.WAS_Item=n.length>0?n[0].ITEM_NO:this.DisplayList[0].ITEM_NO,this.data.WAS_Item.length<=0)this.toastCtrl.create({message:"請輸入數值",duration:s.e,position:"bottom"}).present().then(function(n){l.myFocus()});else{this._http_services.POST(this.DefaultTestServer,"sp","[WAS].dbo.spactWAS_Line_v2",[{Name:"@Step",Value:"1"},{Name:"@Parameters",Value:this.data.RefValue+","+this.data.WAS_Item}]).then(function(n){switch(n[0].RT_CODE){case 0:var u=JSON.stringify({ITEM_NO:n[0].RT_MSG,ITEM_NAME:n[0].ITEM_NAME});localStorage.setItem("WAS_Item",u);l.toastCtrl.create({message:"驗證成功 "+n[0].RT_MSG,duration:s.e,position:"bottom"}).present(),l.data.WAS_Item="",l.navCtrl.push("_133_WAS_Store");break;default:l.alertCtrl.create({title:"錯誤代號："+n[0].RT_CODE,subTitle:n[0].RT_MSG,buttons:["關閉"]}).present()}}).then(function(n){l.data.IsInputEnable=!0})}},l.prototype.selectAll=function(l){l._native.nativeElement.select()},l.prototype.myFocus=function(){var l=this;setTimeout(function(){l.scan_Entry._elementRef.nativeElement.focus()},300)},l.prototype.myKeylogger=function(l){var n=s.g(l.keyCode);switch(n){case"ENTER":this.search();break;default:this.data.WAS_Item+=n}},l.prototype.openKeyPad=function(){var l=this,n=this.modalCtrl.create(_.a,{Name:"呼出碼",Value:this.data.WAS_Item});n.onDidDismiss(function(n){l.data.WAS_Item=s.d.get("ListTable_answer"),l.search()}),n.present()},l.prototype.swipeEvent=function(l){switch(l.direction){case 1:case 2:break;case 4:this.reset(),this.navCtrl.pop()}},l}(),d=function(){return function(){}}(),h=u(355),b=u(356),f=u(357),m=u(358),y=u(359),S=u(360),g=u(361),v=u(362),I=u(363),Z=u(45),Y=u(59),A=u(55),E=u(3),W=u(7),O=u(68),T=u(33),w=u(8),C=u(19),j=u(69),k=u(43),N=u(34),M=u(61),L=u(182),z=u(57),D=u(30),P=u(17),R=u(39),V=u(56),F=u(20),K=u(5),B=u(9),x=u(31),U=u(181),$=u(60),G=u(364),H=u(27),q=u(24),J=u(70),Q=u(129),X=u(90),ll=u(58),nl=u(71),ul=u(130),tl=e.X({encapsulation:2,styles:[],data:{}}),al=e.V("ng-component",p,function(l){return e._23(0,[(l()(),e.Z(0,0,null,null,1,"ng-component",[],null,null,null,a,tl)),e.Y(1,49152,null,0,p,[C.a,r.a,c.a,ll.a,nl.a,ul.a,i.a],null,null)],null,null)},{},{},[]),el=u(23),ol=u(180),il=u(66);u.d(n,"AppModuleNgFactory",function(){return sl});var sl=e.W(d,[],function(l){return e._8([e._9(512,e.i,e.S,[[8,[h.a,b.a,f.a,m.a,y.a,S.a,g.a,v.a,I.a,al]],[3,e.i],e.s]),e._9(4608,o.l,o.k,[e.r,[2,o.t]]),e._9(4608,el.k,el.k,[]),e._9(4608,el.c,el.c,[]),e._9(512,o.b,o.b,[]),e._9(512,c.a,c.a,[]),e._9(512,el.j,el.j,[]),e._9(512,el.d,el.d,[]),e._9(512,el.i,el.i,[]),e._9(512,ol.a,ol.a,[]),e._9(512,ol.b,ol.b,[]),e._9(512,d,d,[]),e._9(256,il.a,p,[])])})},667:function(l,n,u){"use strict";u(0),u(1);var t=function(){function l(){}return l.prototype.transform=function(l,n){return l.sort(function(l,u){return l[n.property]<u[n.property]?-1*n.direction:l[n.property]>u[n.property]?1*n.direction:0})},l}(),a=function(){function l(){}return l.prototype.transform=function(l,n){return l&&n?l.filter(function(l){return-1!==l[n.property].indexOf(n.keyword)}):l},l}();u.d(n,"a",function(){return e});var e=function(){return function(){this.myOrderByPipe=new t,this.mySearchPipe=new a}}()}});
+webpackJsonp([1],{
+
+/***/ 695:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_132_WAS_ItemModule", function() { return _132_WAS_ItemModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Item__ = __webpack_require__(715);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(704);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var _132_WAS_ItemModule = /** @class */ (function () {
+    function _132_WAS_ItemModule() {
+    }
+    _132_WAS_ItemModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__["a" /* PipesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__Item__["a" /* _132_WAS_Item */])
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__Item__["a" /* _132_WAS_Item */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_2__Item__["a" /* _132_WAS_Item */]]
+        })
+    ], _132_WAS_ItemModule);
+    return _132_WAS_ItemModule;
+}());
+
+//# sourceMappingURL=Item.module.js.map
+
+/***/ }),
+
+/***/ 704:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PipesModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BasketList_pipe__ = __webpack_require__(705);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__SearchPipe__ = __webpack_require__(706);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+// Pipes
+
+
+var PipesModule = /** @class */ (function () {
+    function PipesModule() {
+        this.myOrderByPipe = new __WEBPACK_IMPORTED_MODULE_1__BasketList_pipe__["a" /* OrderByPipe */]();
+        this.mySearchPipe = new __WEBPACK_IMPORTED_MODULE_2__SearchPipe__["a" /* SearchPipe */]();
+    }
+    PipesModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_1__BasketList_pipe__["a" /* OrderByPipe */],
+                __WEBPACK_IMPORTED_MODULE_2__SearchPipe__["a" /* SearchPipe */]
+            ],
+            imports: [],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_1__BasketList_pipe__["a" /* OrderByPipe */],
+                __WEBPACK_IMPORTED_MODULE_2__SearchPipe__["a" /* SearchPipe */]
+            ]
+        })
+    ], PipesModule);
+    return PipesModule;
+}());
+
+//# sourceMappingURL=pipes.module.js.map
+
+/***/ }),
+
+/***/ 705:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrderByPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+//排序
+/*
+    sample:     transform(this.DCS_Log, { property: 'scanTime', direction: -1 });
+    HowToUse:   transform( Array[], {property: string, direction: boolean});
+    Inputs:     property: ColumnName
+                direction: 1:Ascending -1:Descending
+                Array[]: You want to sort
+*/
+
+var OrderByPipe = /** @class */ (function () {
+    function OrderByPipe() {
+    }
+    OrderByPipe.prototype.transform = function (records, args) {
+        return records.sort(function (a, b) {
+            if (a[args.property] < b[args.property]) {
+                return -1 * args.direction;
+            }
+            else if (a[args.property] > b[args.property]) {
+                return 1 * args.direction;
+            }
+            else {
+                return 0;
+            }
+        });
+    };
+    ;
+    OrderByPipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Pipe */])({
+            name: 'orderBy'
+        })
+    ], OrderByPipe);
+    return OrderByPipe;
+}());
+
+//# sourceMappingURL=BasketList_pipe.js.map
+
+/***/ }),
+
+/***/ 706:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+//排序
+/*
+    sample:     transform(this.DCS_Log, { property: 'scanTime', direction: -1 });
+    HowToUse:   transform( Array[], {property: string, direction: boolean});
+    Inputs:     property: ColumnName
+                direction: 1:Ascending -1:Descending
+                Array[]: You want to sort
+*/
+
+var SearchPipe = /** @class */ (function () {
+    function SearchPipe() {
+    }
+    SearchPipe.prototype.transform = function (records, args) {
+        if (!records || !args)
+            return records;
+        return records.filter(function (record) { return record[args.property].indexOf(args.keyword) !== -1; });
+    };
+    ;
+    SearchPipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Pipe */])({
+            name: 'myfilter'
+        })
+    ], SearchPipe);
+    return SearchPipe;
+}());
+
+//# sourceMappingURL=SearchPipe.js.map
+
+/***/ }),
+
+/***/ 715:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _132_WAS_Item; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_Settings__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ZZ_CommonLib_LittleKeyPad_LittleKeyPad__ = __webpack_require__(358);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+//Cordova
+
+//My Pages
+
+
+
+var _132_WAS_Item = /** @class */ (function () {
+    function _132_WAS_Item(navCtrl, _http_services, toastCtrl, modalCtrl, vibration) {
+        this.navCtrl = navCtrl;
+        this._http_services = _http_services;
+        this.toastCtrl = toastCtrl;
+        this.modalCtrl = modalCtrl;
+        this.vibration = vibration;
+        this.data = {
+            RefValue: '',
+            BLOCK_NAME: localStorage.getItem('BLOCK_NAME'),
+            WAS_Item: '',
+            IsInputEnable: true,
+            IsHideWhenKeyboardOpen: false
+        }; // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
+        this.DisplayList = [];
+        this.DefaultTestServer = '172_31_31_250';
+        this.data.RefValue = localStorage.getItem('WAS_OrderNo');
+    }
+    _132_WAS_Item.prototype.ionViewWillEnter = function () {
+        this.BringDisplayList();
+        this.myFocus();
+    };
+    _132_WAS_Item.prototype.BringDisplayList = function () {
+        var _this = this;
+        var sql_parameter = this.data.RefValue + ',';
+        this._http_services.POST(this.DefaultTestServer, 'sp', '[WAS].dbo.spactWAS_Line_v2', [{ Name: '@Step', Value: '01' },
+            { Name: '@Parameters', Value: sql_parameter }])
+            .then(function (response) {
+            if (response != undefined) {
+                _this.DisplayList = response;
+            }
+        });
+    };
+    //重置btn
+    _132_WAS_Item.prototype.reset = function () {
+        localStorage.setItem('WAS_Item', '');
+        this.data.WAS_Item = '';
+        this.myFocus();
+    };
+    ;
+    //查詢
+    _132_WAS_Item.prototype.search = function () {
+        var _this = this;
+        this.vibration.vibrate(100);
+        this.data.IsInputEnable = false;
+        ////test
+        //let FilterObj = this.pipes.mySearchPipe.transform(this.DisplayList, { property: 'ITEM_NO', keyword: this.data.WAS_Item });
+        //if (FilterObj.length > 0)
+        //    this.data.WAS_Item = FilterObj[0].ITEM_NO;
+        //else
+        //    this.data.WAS_Item = this.DisplayList[0].ITEM_NO;
+        if (this.data.WAS_Item.length <= 0) {
+            this.toastCtrl.create({
+                message: '請輸入數值',
+                duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                position: 'middle'
+            }).present();
+            this.myFocus();
+            this.data.WAS_Item = '';
+            this.data.IsInputEnable = true;
+            return;
+        }
+        var sql_parameter = this.data.RefValue + ',' + this.data.WAS_Item;
+        this._http_services.POST(this.DefaultTestServer, 'sp', '[WAS].dbo.spactWAS_Line_v2', [{ Name: '@Step', Value: '1' },
+            { Name: '@Parameters', Value: sql_parameter }])
+            .then(function (response) {
+            switch (response[0].RT_CODE) {
+                case 0:
+                    var result = JSON.stringify({
+                        ITEM_NO: response[0].RT_MSG,
+                        ITEM_NAME: response[0].ITEM_NAME
+                    });
+                    localStorage.setItem('WAS_Item', result);
+                    _this.toastCtrl.create({
+                        message: '驗證成功 ' + response[0].RT_MSG,
+                        duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                        position: 'middle'
+                    }).present();
+                    _this.navCtrl.push('_133_WAS_Store');
+                    break;
+                default:
+                    _this.toastCtrl.create({
+                        message: response[0].RT_MSG,
+                        duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                        position: 'middle'
+                    }).present();
+            }
+        })
+            .then(function (response) {
+            _this.data.WAS_Item = '';
+            _this.data.IsInputEnable = true;
+        });
+    };
+    //全選
+    _132_WAS_Item.prototype.selectAll = function ($event) {
+        $event._native.nativeElement.select();
+    };
+    //Focus
+    _132_WAS_Item.prototype.myFocus = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.scan_Entry._elementRef.nativeElement.focus();
+        }, 300);
+    };
+    _132_WAS_Item.prototype.myKeylogger = function (event) {
+        this.data.WAS_Item = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["g" /* keyCodeToValue */](event.keyCode, this.data.WAS_Item);
+        if (this.data.WAS_Item.indexOf('ENTER') >= 0) {
+            this.data.WAS_Item = this.data.WAS_Item.replace('ENTER', '');
+            this.search();
+        }
+    };
+    _132_WAS_Item.prototype.openKeyPad = function () {
+        var _this = this;
+        var obj = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__ZZ_CommonLib_LittleKeyPad_LittleKeyPad__["a" /* LittleKeyPad */], { Name: '呼出碼', Value: this.data.WAS_Item });
+        obj.onDidDismiss(function (data) {
+            _this.data.WAS_Item = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('ListTable_answer');
+            _this.search();
+        });
+        obj.present();
+    };
+    //手勢
+    _132_WAS_Item.prototype.swipeEvent = function (event) {
+        switch (event.direction) {
+            case 1://NONE
+                break;
+            case 2://LEFT
+                break;
+            case 4://RIGHT
+                this.reset();
+                this.navCtrl.pop();
+                break;
+            case 8://UP
+                break;
+            case 16://DOWN
+                break;
+        }
+        ;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('scan_Entry'),
+        __metadata("design:type", Object)
+    ], _132_WAS_Item.prototype, "scan_Entry", void 0);
+    _132_WAS_Item = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_13_WAS\2_Item\Item.html"*/'<ion-header no-border>\n\n    <ion-navbar>\n\n        <ion-title>WAS_呼出碼</ion-title>\n\n        <ion-buttons end>\n\n            <span style="white-space:pre;color:white">{{data.RefValue}}</span>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    <ion-toolbar>\n\n        <ion-row>\n\n            <ion-col col-3>\n\n                <ion-label [ngClass]="[\'myScanBarcodeUI_Label\']">呼出碼</ion-label>\n\n            </ion-col>\n\n            <ion-col col-7>\n\n                <button ion-button outline block\n\n                        [ngClass]="[\'myScanBarcodeUI\']"\n\n                        #scan_Entry\n\n                        (keyup)="myKeylogger($event)"\n\n                        (blur)="myFocus()"\n\n                        (ionFocus)="selectAll($event)"\n\n                        [disabled]="!data.IsInputEnable">\n\n                    {{data.WAS_Item}}\n\n                </button>\n\n            </ion-col>\n\n            <ion-col col-2>\n\n                <button ion-button (click)="openKeyPad()" color="primary" solid class="toolbar-button">\n\n                    <ion-icon name="keypad"></ion-icon>\n\n                </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-toolbar>\n\n</ion-header>\n\n<ion-content (swipe)="swipeEvent($event)">\n\n    <ion-grid class="mytable">\n\n        <ion-row class="mytable_Head">\n\n            <ion-col col-4>呼出碼</ion-col>\n\n            <ion-col col-2>計價</ion-col>\n\n            <ion-col col-2>訂購</ion-col>\n\n            <ion-col col-2>實績</ion-col>\n\n            <ion-col col-2>剩餘</ion-col>\n\n        </ion-row>\n\n        <ion-row *ngFor="let ListItem of DisplayList" class="mytable_Detail">\n\n            <ion-col col-4> {{ListItem.ITEM_NO}}</ion-col>\n\n            <ion-col col-2> {{ListItem.PRICE_TYPE_NAME}}</ion-col>\n\n            <ion-col col-2> {{ListItem.AMOUNT}}</ion-col>\n\n            <ion-col col-2> {{ListItem.TQty}}</ion-col>\n\n            <ion-col col-2> {{ListItem.LeftQty}}</ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n    <ion-item>\n\n        <!--IonicPage+div+hidden會導致Ionic排版錯誤，故意多加兩行空白-->\n\n        <h1>&nbsp;</h1><br />\n\n        <h1>&nbsp;</h1>\n\n    </ion-item>\n\n</ion-content>\n\n<div [hidden]="data.IsHideWhenKeyboardOpen">\n\n    <ion-footer no-border>\n\n        <ion-toolbar>\n\n            <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_NAME}}</ion-label>\n\n        </ion-toolbar>\n\n    </ion-footer>\n\n</div>\n\n'/*ion-inline-end:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_13_WAS\2_Item\Item.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__["a" /* http_services */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__["a" /* Vibration */]])
+    ], _132_WAS_Item);
+    return _132_WAS_Item;
+}());
+
+//# sourceMappingURL=Item.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=1.js.map

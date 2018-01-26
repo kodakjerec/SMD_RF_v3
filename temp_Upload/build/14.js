@@ -1,1 +1,254 @@
-webpackJsonp([14],{652:function(l,n,u){"use strict";function a(l){return i._23(0,[(l()(),i.Z(0,0,null,null,2,"button",[["block",""],["class","btn_list"],["color","dark"],["ion-button",""],["large",""]],[[8,"disabled",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.menuClicked(l.context.$implicit)&&a}return a},E.b,E.a)),i.Y(1,1097728,null,0,g.a,[[8,""],Y.a,i.j,i.z],{color:[0,"color"],large:[1,"large"],block:[2,"block"]},null),(l()(),i._21(2,0,["\n            ","\n        "]))],function(l,n){l(n,1,0,"dark","","")},function(l,n){l(n,0,0,n.component.data.isButtonDisabled);l(n,2,0,n.context.$implicit.Caption)})}function t(l){return i._23(0,[(l()(),i.Z(0,0,null,null,10,"ion-header",[],null,null,null,null,null)),i.Y(1,16384,null,0,m.a,[Y.a,i.j,i.z,[2,B.a]],null,null),(l()(),i._21(-1,null,["\n    "])),(l()(),i.Z(3,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,L.b,L.a)),i.Y(4,49152,null,0,k.a,[v.a,[2,B.a],[2,M.a],Y.a,i.j,i.z],null,null),(l()(),i._21(-1,3,["\n        "])),(l()(),i.Z(6,0,null,3,2,"ion-title",[],null,null,null,N.b,N.a)),i.Y(7,49152,null,0,D.a,[Y.a,i.j,i.z,[2,K.a],[2,k.a]],null,null),(l()(),i._21(8,0,["",""])),(l()(),i._21(-1,3,["\n    "])),(l()(),i._21(-1,null,["\n"])),(l()(),i._21(-1,null,["\n"])),(l()(),i.Z(12,0,null,null,9,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,j.b,j.a)),i.Y(13,4374528,null,0,T.a,[Y.a,Z.a,z.a,i.j,i.z,v.a,y.a,i.u,[2,B.a],[2,M.a]],null,null),(l()(),i._21(-1,1,["\n    "])),(l()(),i.Z(15,0,null,1,5,"ion-list",[["class","mylist"]],null,null,null,null,null)),i.Y(16,16384,null,0,A.a,[Y.a,i.j,i.z,Z.a,I.l,z.a],null,null),(l()(),i._21(-1,null,["\n        "])),(l()(),i.U(16777216,null,null,1,null,a)),i.Y(19,802816,null,0,o.i,[i.I,i.F,i.p],{ngForOf:[0,"ngForOf"]},null),(l()(),i._21(-1,null,["\n    "])),(l()(),i._21(-1,1,["\n"])),(l()(),i._21(-1,null,["\n"])),(l()(),i.Z(23,0,null,null,10,"ion-footer",[],null,null,null,null,null)),i.Y(24,16384,null,0,U.a,[Y.a,i.j,i.z,[2,B.a]],null,null),(l()(),i._21(-1,null,["\n    "])),(l()(),i.Z(26,0,null,null,6,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,F.b,F.a)),i.Y(27,49152,null,0,K.a,[Y.a,i.j,i.z],null,null),(l()(),i._21(-1,3,["\n        "])),(l()(),i.Z(29,0,null,3,2,"ion-label",[["class","bottom_BLOCK"]],null,null,null,null,null)),i.Y(30,16384,null,0,S.a,[Y.a,i.j,i.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),i._21(31,null,["區域：",""])),(l()(),i._21(-1,3,["\n    "])),(l()(),i._21(-1,null,["\n"]))],function(l,n){l(n,19,0,n.component.Lists)},function(l,n){var u=n.component;l(n,3,0,i._12(n,4)._hidden,i._12(n,4)._sbPadding);l(n,8,0,u.data.Caption);l(n,12,0,i._12(n,13).statusbarPadding,i._12(n,13)._hasRefresher);l(n,26,0,i._12(n,27)._sbPadding);l(n,31,0,u.data.BLOCK_NAME)})}Object.defineProperty(n,"__esModule",{value:!0});var i=u(1),o=(u(0),u(16)),e=(u(36),u(44)),s=u(65),_=function(){function l(l,n,u){this.navCtrl=l,this.navParams=n,this._http_services=u,this.Lists=[{}],this.data={Caption:"",OP_TYPE:"",BLOCK_ID:"",BLOCK_NAME:"",isButtonDisabled:!1},this.data.Caption=n.get("Title"),this.data.OP_TYPE=n.get("OP_TYPE"),this.data.BLOCK_ID=n.get("BLOCK_ID"),this.data.BLOCK_NAME=n.get("BLOCK_NAME"),e.h(),this.queryMENUS()}return l.prototype.queryMENUS=function(){var l=this;this._http_services.POST("","sp","[ui].[spDCS_RF_MENU]",[{Name:"@MODE",Value:"2"},{Name:"@OP_TYPE",Value:this.data.OP_TYPE},{Name:"@MENUID",Value:this.data.BLOCK_ID}]).then(function(n){n&&(l.Lists=n)})},l.prototype.menuClicked=function(l){var n=this;switch(this.data.isButtonDisabled=!0,l.URL){case"":this.navCtrl.push("_02_Menu",{Title:l.Caption,BLOCK_ID:l.MENUID,BLOCK_NAME:this.data.BLOCK_NAME,OP_TYPE:this.data.OP_TYPE});break;case"BACK":this.navCtrl.pop();break;default:this.navCtrl.push(l.URL)}setTimeout(function(){n.data.isButtonDisabled=!1},2e3)},l}(),r=function(){return function(){}}(),c=u(355),d=u(356),b=u(357),h=u(358),p=u(359),f=u(360),C=u(361),O=u(362),P=u(363),E=u(30),g=u(17),Y=u(3),m=u(55),B=u(7),L=u(68),k=u(33),v=u(8),M=u(19),N=u(69),D=u(43),K=u(34),j=u(56),T=u(20),Z=u(5),z=u(9),y=u(31),A=u(72),I=u(12),U=u(90),F=u(182),S=u(57),R=u(15),V=i.X({encapsulation:2,styles:[],data:{}}),q=i.V("ng-component",_,function(l){return i._23(0,[(l()(),i.Z(0,0,null,null,1,"ng-component",[],null,null,null,t,V)),i.Y(1,49152,null,0,_,[M.a,R.a,s.a],null,null)],null,null)},{},{},[]),w=u(23),x=u(180),$=u(66);u.d(n,"AppModuleNgFactory",function(){return J});var J=i.W(r,[],function(l){return i._8([i._9(512,i.i,i.S,[[8,[c.a,d.a,b.a,h.a,p.a,f.a,C.a,O.a,P.a,q]],[3,i.i],i.s]),i._9(4608,o.l,o.k,[i.r,[2,o.t]]),i._9(4608,w.k,w.k,[]),i._9(4608,w.c,w.c,[]),i._9(512,o.b,o.b,[]),i._9(512,w.j,w.j,[]),i._9(512,w.d,w.d,[]),i._9(512,w.i,w.i,[]),i._9(512,x.a,x.a,[]),i._9(512,x.b,x.b,[]),i._9(512,r,r,[]),i._9(256,$.a,_,[])])})}});
+webpackJsonp([14],{
+
+/***/ 689:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckInModule", function() { return CheckInModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__CheckIn__ = __webpack_require__(709);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var CheckInModule = /** @class */ (function () {
+    function CheckInModule() {
+    }
+    CheckInModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__CheckIn__["a" /* _11_CheckIn */])
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__CheckIn__["a" /* _11_CheckIn */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_2__CheckIn__["a" /* _11_CheckIn */]]
+        })
+    ], CheckInModule);
+    return CheckInModule;
+}());
+
+//# sourceMappingURL=CheckIn.module.js.map
+
+/***/ }),
+
+/***/ 709:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _11_CheckIn; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_Settings__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__ = __webpack_require__(87);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+//Cordova
+
+//My Pages
+
+
+var _11_CheckIn = /** @class */ (function () {
+    function _11_CheckIn(navCtrl, _http_services, alertCtrl, toastCtrl, vibration) {
+        this.navCtrl = navCtrl;
+        this._http_services = _http_services;
+        this.alertCtrl = alertCtrl;
+        this.toastCtrl = toastCtrl;
+        this.vibration = vibration;
+        this.data = {
+            CarNo: '',
+            viewColor: '',
+            IsDisabled: true,
+            USER_ID: localStorage.getItem('USER_ID'),
+            BLOCK_NAME: localStorage.getItem('BLOCK_NAME'),
+            IsHideWhenKeyboardOpen: false
+        }; // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
+        this.color = { green: '#79FF79', red: '#FF5151' }; // 控制已報到/未報到 顏色
+        this.result = {};
+        this.answer = { VEHICLE_TEMP0: 0, VEHICLE_TEMP1: 0, VEHICLE_TEMP2: 0 };
+        __WEBPACK_IMPORTED_MODULE_3__app_Settings__["h" /* loginCheck */]();
+    }
+    _11_CheckIn.prototype.ionViewDidEnter = function () {
+        if (this.data.IsDisabled == true) {
+            this.myFocus();
+        }
+    };
+    //重置btn
+    _11_CheckIn.prototype.reset = function () {
+        __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].set('CarNo', '');
+        this.data.viewColor = '';
+        this.data.IsDisabled = true;
+        //輸入溫度
+        this.answer.VEHICLE_TEMP0 = 0;
+        this.answer.VEHICLE_TEMP1 = 0;
+        this.answer.VEHICLE_TEMP2 = 0;
+        this.result = {};
+        this.myFocus();
+    };
+    ;
+    //#region 查詢報到牌btn
+    _11_CheckIn.prototype.search = function () {
+        var _this = this;
+        this.vibration.vibrate(100);
+        if (this.data.CarNo == '') {
+            this.toastCtrl.create({
+                message: '請輸入數值',
+                duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                position: 'middle'
+            }).present();
+            return;
+        }
+        this.reset();
+        this._http_services.POST('', 'sp', 'spactDCS_ID_HEADER', [
+            { Name: '@JOB_ID', Value: '1' },
+            { Name: '@REG_ID', Value: this.data.CarNo }
+        ])
+            .then(function (response) {
+            if (response != undefined) {
+                switch (response[0].RT_CODE) {
+                    case 0:
+                        //Correct
+                        _this.result = response[0];
+                        //溫度
+                        _this.answer.VEHICLE_TEMP0 = Math.abs(response[0].VEHICLE_TEMP0);
+                        _this.answer.VEHICLE_TEMP1 = Math.abs(response[0].VEHICLE_TEMP1);
+                        _this.answer.VEHICLE_TEMP2 = Math.abs(response[0].VEHICLE_TEMP2);
+                        _this.data.CarNo = response[0].REG_ID;
+                        if (response[0].ROW10 == '未報到') {
+                            _this.data.viewColor = 'red';
+                            _this.data.IsDisabled = false;
+                        }
+                        else {
+                            _this.data.viewColor = 'green';
+                            _this.data.IsDisabled = true;
+                        }
+                        break;
+                    default:
+                        _this.toastCtrl.create({
+                            message: response[0].RT_MSG,
+                            duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                            position: 'middle'
+                        }).present();
+                        break;
+                }
+            }
+            _this.myFocus();
+        });
+    };
+    ; //#endregion
+    //#region 報到牌報到btn
+    _11_CheckIn.prototype.register = function () {
+        var _this = this;
+        if (this.data.CarNo == '')
+            return;
+        if (this.data.IsDisabled == false) {
+            this._http_services.POST('', 'sp', 'spactDCS_ID_HEADER', [
+                { Name: '@JOB_ID', Value: '2' },
+                { Name: '@REG_ID', Value: this.data.CarNo },
+                { Name: '@TEMP0', Value: this.answer.VEHICLE_TEMP0 },
+                { Name: '@TEMP1', Value: this.answer.VEHICLE_TEMP1 },
+                { Name: '@TEMP2', Value: this.answer.VEHICLE_TEMP2 },
+                { Name: '@USER_NAME', Value: this.data.USER_ID }
+            ])
+                .then(function (response) {
+                if (response != undefined) {
+                    switch (response[0].RT_CODE) {
+                        case 0:
+                            //Correct
+                            var alert_success = _this.alertCtrl.create({
+                                title: '成功',
+                                subTitle: response[0].RT_MSG,
+                                buttons: ['關閉']
+                            });
+                            alert_success.onDidDismiss(function () {
+                                _this.reset();
+                            });
+                            alert_success.present();
+                            break;
+                        default:
+                            //Error
+                            _this.toastCtrl.create({
+                                message: response[0].RT_MSG,
+                                duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                                position: 'middle'
+                            }).present();
+                            break;
+                    }
+                }
+                _this.myFocus();
+            });
+        } //if IsDisabled == false
+    };
+    ; //#endregion
+    //喪失focus
+    _11_CheckIn.prototype.myFocus = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.scan_Entry.setFocus();
+        }, 300);
+    };
+    ;
+    //全選
+    _11_CheckIn.prototype.selectAll = function ($event) {
+        $event._native.nativeElement.select();
+    };
+    _11_CheckIn.prototype.myKeylogger = function (event) {
+        var obj = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["g" /* keyCodeToValue */](event.keyCode, this.data.CarNo);
+        if (obj.indexOf('ENTER') >= 0) {
+            this.search();
+        }
+    };
+    //手勢
+    _11_CheckIn.prototype.swipeEvent = function (event) {
+        switch (event.direction) {
+            case 1://NONE
+                break;
+            case 2://LEFT
+                break;
+            case 4://RIGHT
+                this.navCtrl.pop();
+                break;
+            case 8://UP
+                break;
+            case 16://DOWN
+                break;
+        }
+        ;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('scan_Entry'),
+        __metadata("design:type", Object)
+    ], _11_CheckIn.prototype, "scan_Entry", void 0);
+    _11_CheckIn = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_11_CheckIn\CheckIn.html"*/'<ion-header no-border>\n\n    <ion-navbar>\n\n        <ion-title>進貨報到</ion-title>\n\n    </ion-navbar>\n\n    <ion-toolbar>\n\n        <ion-row>\n\n            <ion-col col-3>\n\n                <ion-label [ngClass]="[\'myScanBarcodeUI_Label\']">報到牌</ion-label>\n\n            </ion-col>\n\n            <ion-col col-7>\n\n                <ion-input #scan_Entry type="text"\n\n                           [ngClass]="[\'myScanBarcodeUI_input\']"\n\n                           (keyup)="myKeylogger($event)"\n\n                           (keydown.Tab)="myKeylogger($event)"\n\n                           (ionFocus)="selectAll($event)"\n\n                           [(ngModel)]="data.CarNo"></ion-input>\n\n            </ion-col>\n\n            <ion-col col-2>\n\n                <button ion-button (click)="search()" color="primary" solid class="toolbar-button">\n\n                    <ion-icon name="search"></ion-icon>\n\n                </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-toolbar>\n\n</ion-header>\n\n<ion-content (swipe)="swipeEvent($event)">\n\n    <ion-card>\n\n        <ion-grid class="mylist">\n\n            <ion-row>\n\n                <ion-col col-4>\n\n                    <ion-label>狀態</ion-label>\n\n                </ion-col>\n\n                <ion-col col-8>\n\n                    <ion-label item-content [ngStyle]="{color: data.viewColor}">{{result.ROW10}}</ion-label>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col col-4>\n\n                    <ion-label>物流公司</ion-label>\n\n                </ion-col>\n\n                <ion-col col-8>\n\n                    <ion-label>{{result.TRAN_NAME}}</ion-label>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col col-4>\n\n                    <ion-label>報到車牌</ion-label>\n\n                </ion-col>\n\n                <ion-col col-8>\n\n                    <ion-label>{{result.VEHICLE_NO}} {{result.VEHICLE_DRIVER}}</ion-label>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col col-4>\n\n                    <ion-label>指派碼頭</ion-label>\n\n                </ion-col>\n\n                <ion-col col-8>\n\n                    <ion-label>{{result.DOCK_NAME}}</ion-label>\n\n                </ion-col>\n\n            </ion-row>\n\n\n\n            <ion-row align-items-center>\n\n                <ion-col col-4>\n\n                    <ion-label>冷凍溫度</ion-label>\n\n                </ion-col>\n\n                <ion-col col-8>\n\n                    <ion-input type="number"\n\n                               [ngClass]="[\'myScanBarcodeUI_input\']"\n\n                               [(ngModel)]="answer.VEHICLE_TEMP0"\n\n                               (ionFocus)="selectAll($event)"\n\n                               [disabled]="data.IsDisabled"></ion-input>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row align-items-center>\n\n                <ion-col col-4>\n\n                    <ion-label item-start>冷藏溫度</ion-label>\n\n                </ion-col>\n\n                <ion-col col-8>\n\n                    <ion-input type="number"\n\n                               [ngClass]="[\'myScanBarcodeUI_input\']"\n\n                               [(ngModel)]="answer.VEHICLE_TEMP1"\n\n                               (ionFocus)="selectAll($event)"\n\n                               [disabled]="data.IsDisabled"></ion-input>\n\n                </ion-col>\n\n            </ion-row>\n\n            <ion-row align-items-center>\n\n                <ion-col col-4>\n\n                    <ion-label item-start>溫控溫度</ion-label>\n\n                </ion-col>\n\n                <ion-col col-8>\n\n                    <ion-input type="number"\n\n                               [ngClass]="[\'myScanBarcodeUI_input\']"\n\n                               [(ngModel)]="answer.VEHICLE_TEMP2"\n\n                               (ionFocus)="selectAll($event)"\n\n                               [disabled]="data.IsDisabled"></ion-input>\n\n                </ion-col>\n\n            </ion-row>\n\n        </ion-grid>\n\n    </ion-card>\n\n</ion-content>\n\n<div [hidden]="data.IsHideWhenKeyboardOpen">\n\n    <ion-footer no-border>\n\n        <ion-toolbar>\n\n            <button ion-button (click)="register()" [disabled]="data.IsDisabled" block>報到</button>\n\n            <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_NAME}}</ion-label>\n\n        </ion-toolbar>\n\n    </ion-footer>\n\n</div>\n\n'/*ion-inline-end:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_11_CheckIn\CheckIn.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__["a" /* http_services */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__["a" /* Vibration */]])
+    ], _11_CheckIn);
+    return _11_CheckIn;
+}());
+
+//# sourceMappingURL=CheckIn.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=14.js.map

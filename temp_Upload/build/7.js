@@ -1,1 +1,322 @@
-webpackJsonp([7],{664:function(l,n,u){"use strict";function a(l){return t._23(0,[t._19(402653184,1,{scan_Entry:0}),t._19(402653184,2,{txb_search_0:0}),t._19(402653184,3,{txb_search_1:0}),t._19(402653184,4,{txb_search_2:0}),t._19(402653184,5,{txb_search_3:0}),t._19(402653184,6,{txb_search_4:0}),(l()(),t.Z(6,0,null,null,10,"ion-header",[],null,null,null,null,null)),t.Y(7,16384,null,0,Y.a,[m.a,t.j,t.z,[2,v.a]],null,null),(l()(),t._21(-1,null,["\n    "])),(l()(),t.Z(9,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,Z.b,Z.a)),t.Y(10,49152,null,0,P.a,[S.a,[2,v.a],[2,j.a],m.a,t.j,t.z],null,null),(l()(),t._21(-1,3,["\n        "])),(l()(),t.Z(12,0,null,3,2,"ion-title",[],null,null,null,F.b,F.a)),t.Y(13,49152,null,0,T.a,[m.a,t.j,t.z,[2,z.a],[2,P.a]],null,null),(l()(),t._21(-1,0,["物流標籤列印"])),(l()(),t._21(-1,3,["\n    "])),(l()(),t._21(-1,null,["\n"])),(l()(),t._21(-1,null,["\n"])),(l()(),t.Z(18,0,null,null,204,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[[null,"swipe"]],function(l,n,u){var a=!0;if("swipe"===n){a=!1!==l.component.swipeEvent(u)&&a}return a},k.b,k.a)),t.Y(19,4374528,null,0,w.a,[m.a,M.a,Q.a,t.j,t.z,S.a,E.a,t.u,[2,v.a],[2,j.a]],null,null),(l()(),t._21(-1,1,["\n    "])),(l()(),t.Z(21,0,null,1,55,"ion-card",[],null,null,null,null,null)),t.Y(22,16384,null,0,x.a,[m.a,t.j,t.z],null,null),(l()(),t._21(-1,null,["\n        "])),(l()(),t.Z(24,0,null,null,6,"ion-card-header",[],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.help()&&a}return a},null,null)),t.Y(25,16384,null,0,I.a,[m.a,t.j,t.z],null,null),(l()(),t._21(-1,null,["\n            從 物流標籤 補印"])),(l()(),t.Z(27,0,null,null,2,"button",[["ion-button",""],["outline",""],["small",""]],null,null,null,B.b,B.a)),t.Y(28,1097728,null,0,D.a,[[8,""],m.a,t.j,t.z],{small:[0,"small"],outline:[1,"outline"]},null),(l()(),t._21(-1,0,["HELP"])),(l()(),t._21(-1,null,["\n        "])),(l()(),t._21(-1,null,["\n        "])),(l()(),t.Z(32,0,null,null,43,"ion-card-content",[],null,null,null,null,null)),t.Y(33,16384,null,0,R.a,[m.a,t.j,t.z],null,null),(l()(),t._21(-1,null,["\n            "])),(l()(),t.Z(35,0,null,null,39,"ion-grid",[["class","grid"]],null,null,null,null,null)),t.Y(36,16384,null,0,U.a,[],null,null),(l()(),t._21(-1,null,["\n                "])),(l()(),t.Z(38,0,null,null,20,"ion-row",[["class","row"]],null,null,null,null,null)),t.Y(39,16384,null,0,V.a,[],null,null),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(41,0,null,null,6,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),t.Y(42,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(44,0,null,null,2,"ion-label",[],null,null,null,null,null)),t.Y(45,16384,null,0,O.a,[m.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(-1,null,["*物流標"])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(49,0,null,null,8,"ion-col",[["class","col"],["col-8",""]],null,null,null,null,null)),t.Y(50,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(52,0,null,null,4,"ion-input",[["id","txb_scan_Entry"],["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"keyup.enter"],[null,"ionFocus"],[null,"ngModelChange"]],function(l,n,u){var a=!0,t=l.component;if("keyup.enter"===n){a=!1!==t.search()&&a}if("ionFocus"===n){a=!1!==t.selectAll(u)&&a}if("ngModelChange"===n){a=!1!==(t.data.ScanBarcode=u)&&a}return a},N.b,N.a)),t.Y(53,671744,null,0,L.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),t._18(2048,null,L.f,null,[L.h]),t.Y(55,16384,null,0,L.g,[L.f],null,null),t.Y(56,5423104,[[1,4],["scan_Entry",4]],0,G.a,[m.a,M.a,H.a,S.a,t.j,t.z,[2,w.a],[2,J.a],[2,L.f],Q.a],{type:[0,"type"]},{ionFocus:"ionFocus"}),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t.Z(60,0,null,null,13,"ion-row",[["class","row"]],null,null,null,null,null)),t.Y(61,16384,null,0,V.a,[],null,null),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(63,0,null,null,9,"ion-col",[["class","col"]],null,null,null,null,null)),t.Y(64,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(66,0,null,null,5,"button",[["class","toolbar-button"],["color","primary"],["ion-button",""],["solid",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.search()&&a}return a},B.b,B.a)),t.Y(67,1097728,null,0,D.a,[[8,""],m.a,t.j,t.z],{color:[0,"color"],solid:[1,"solid"]},null),(l()(),t._21(-1,0,["\n                            "])),(l()(),t.Z(69,0,null,0,1,"ion-icon",[["name","print"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(70,147456,null,0,W.a,[m.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t._21(-1,0,["\n                        "])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t._21(-1,null,["\n            "])),(l()(),t._21(-1,null,["\n        "])),(l()(),t._21(-1,null,["\n    "])),(l()(),t._21(-1,1,["\n\n    "])),(l()(),t.Z(78,0,null,1,143,"ion-card",[],null,null,null,null,null)),t.Y(79,16384,null,0,x.a,[m.a,t.j,t.z],null,null),(l()(),t._21(-1,null,["\n        "])),(l()(),t.Z(81,0,null,null,6,"ion-card-header",[],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.help2()&&a}return a},null,null)),t.Y(82,16384,null,0,I.a,[m.a,t.j,t.z],null,null),(l()(),t._21(-1,null,["\n            指定 詳細內容 補印"])),(l()(),t.Z(84,0,null,null,2,"button",[["ion-button",""],["outline",""],["small",""]],null,null,null,B.b,B.a)),t.Y(85,1097728,null,0,D.a,[[8,""],m.a,t.j,t.z],{small:[0,"small"],outline:[1,"outline"]},null),(l()(),t._21(-1,0,["HELP"])),(l()(),t._21(-1,null,["\n        "])),(l()(),t._21(-1,null,["\n        "])),(l()(),t.Z(89,0,null,null,131,"ion-card-content",[],null,null,null,null,null)),t.Y(90,16384,null,0,R.a,[m.a,t.j,t.z],null,null),(l()(),t._21(-1,null,["\n            "])),(l()(),t.Z(92,0,null,null,127,"ion-grid",[["class","grid"]],null,null,null,null,null)),t.Y(93,16384,null,0,U.a,[],null,null),(l()(),t._21(-1,null,["\n                "])),(l()(),t.Z(95,0,null,null,20,"ion-row",[["class","row"]],null,null,null,null,null)),t.Y(96,16384,null,0,V.a,[],null,null),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(98,0,null,null,6,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),t.Y(99,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(101,0,null,null,2,"ion-label",[],null,null,null,null,null)),t.Y(102,16384,null,0,O.a,[m.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(-1,null,["*呼出碼"])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(106,0,null,null,8,"ion-col",[["class","col"],["col-8",""]],null,null,null,null,null)),t.Y(107,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(109,0,null,null,4,"ion-input",[["id","txb_scan_Entry2"],["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ionFocus"],[null,"keyup.enter"],[null,"ngModelChange"]],function(l,n,u){var a=!0,t=l.component;if("ionFocus"===n){a=!1!==t.selectAll(u)&&a}if("keyup.enter"===n){a=!1!==t.search2(0)&&a}if("ngModelChange"===n){a=!1!==(t.data2.Barcode=u)&&a}return a},N.b,N.a)),t.Y(110,671744,null,0,L.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),t._18(2048,null,L.f,null,[L.h]),t.Y(112,16384,null,0,L.g,[L.f],null,null),t.Y(113,5423104,[[2,4],["txb_search_0",4]],0,G.a,[m.a,M.a,H.a,S.a,t.j,t.z,[2,w.a],[2,J.a],[2,L.f],Q.a],{type:[0,"type"]},{ionFocus:"ionFocus"}),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t.Z(117,0,null,null,20,"ion-row",[["class","row"]],null,null,null,null,null)),t.Y(118,16384,null,0,V.a,[],null,null),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(120,0,null,null,6,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),t.Y(121,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(123,0,null,null,2,"ion-label",[],null,null,null,null,null)),t.Y(124,16384,null,0,O.a,[m.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(-1,null,["店鋪代號"])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(128,0,null,null,8,"ion-col",[["class","col"],["col-8",""]],null,null,null,null,null)),t.Y(129,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(131,0,null,null,4,"ion-input",[["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ionFocus"],[null,"keyup.enter"],[null,"ngModelChange"]],function(l,n,u){var a=!0,t=l.component;if("ionFocus"===n){a=!1!==t.selectAll(u)&&a}if("keyup.enter"===n){a=!1!==t.search2(1)&&a}if("ngModelChange"===n){a=!1!==(t.data2.Shop=u)&&a}return a},N.b,N.a)),t.Y(132,671744,null,0,L.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),t._18(2048,null,L.f,null,[L.h]),t.Y(134,16384,null,0,L.g,[L.f],null,null),t.Y(135,5423104,[[3,4],["txb_search_1",4]],0,G.a,[m.a,M.a,H.a,S.a,t.j,t.z,[2,w.a],[2,J.a],[2,L.f],Q.a],{type:[0,"type"]},{ionFocus:"ionFocus"}),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t.Z(139,0,null,null,20,"ion-row",[["class","row"]],null,null,null,null,null)),t.Y(140,16384,null,0,V.a,[],null,null),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(142,0,null,null,6,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),t.Y(143,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(145,0,null,null,2,"ion-label",[],null,null,null,null,null)),t.Y(146,16384,null,0,O.a,[m.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(-1,null,["數量"])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(150,0,null,null,8,"ion-col",[["class","col"],["col-8",""]],null,null,null,null,null)),t.Y(151,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(153,0,null,null,4,"ion-input",[["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ionFocus"],[null,"keyup.enter"],[null,"ngModelChange"]],function(l,n,u){var a=!0,t=l.component;if("ionFocus"===n){a=!1!==t.selectAll(u)&&a}if("keyup.enter"===n){a=!1!==t.search2(2)&&a}if("ngModelChange"===n){a=!1!==(t.data2.Qty=u)&&a}return a},N.b,N.a)),t.Y(154,671744,null,0,L.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),t._18(2048,null,L.f,null,[L.h]),t.Y(156,16384,null,0,L.g,[L.f],null,null),t.Y(157,5423104,[[4,4],["txb_search_2",4]],0,G.a,[m.a,M.a,H.a,S.a,t.j,t.z,[2,w.a],[2,J.a],[2,L.f],Q.a],{type:[0,"type"]},{ionFocus:"ionFocus"}),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t.Z(161,0,null,null,20,"ion-row",[["class","row"]],null,null,null,null,null)),t.Y(162,16384,null,0,V.a,[],null,null),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(164,0,null,null,6,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),t.Y(165,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(167,0,null,null,2,"ion-label",[],null,null,null,null,null)),t.Y(168,16384,null,0,O.a,[m.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(-1,null,["入數"])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(172,0,null,null,8,"ion-col",[["class","col"],["col-8",""]],null,null,null,null,null)),t.Y(173,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(175,0,null,null,4,"ion-input",[["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ionFocus"],[null,"keyup.enter"],[null,"ngModelChange"]],function(l,n,u){var a=!0,t=l.component;if("ionFocus"===n){a=!1!==t.selectAll(u)&&a}if("keyup.enter"===n){a=!1!==t.search2(3)&&a}if("ngModelChange"===n){a=!1!==(t.data2.IP_Qty=u)&&a}return a},N.b,N.a)),t.Y(176,671744,null,0,L.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),t._18(2048,null,L.f,null,[L.h]),t.Y(178,16384,null,0,L.g,[L.f],null,null),t.Y(179,5423104,[[5,4],["txb_search_3",4]],0,G.a,[m.a,M.a,H.a,S.a,t.j,t.z,[2,w.a],[2,J.a],[2,L.f],Q.a],{type:[0,"type"]},{ionFocus:"ionFocus"}),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t.Z(183,0,null,null,20,"ion-row",[["class","row"]],null,null,null,null,null)),t.Y(184,16384,null,0,V.a,[],null,null),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(186,0,null,null,6,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),t.Y(187,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(189,0,null,null,2,"ion-label",[],null,null,null,null,null)),t.Y(190,16384,null,0,O.a,[m.a,t.j,t.z,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(-1,null,["廠商入數"])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(194,0,null,null,8,"ion-col",[["class","col"],["col-8",""]],null,null,null,null,null)),t.Y(195,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(197,0,null,null,4,"ion-input",[["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ionFocus"],[null,"keyup.enter"],[null,"ngModelChange"]],function(l,n,u){var a=!0,t=l.component;if("ionFocus"===n){a=!1!==t.selectAll(u)&&a}if("keyup.enter"===n){a=!1!==t.search2(4)&&a}if("ngModelChange"===n){a=!1!==(t.data2.SUP_Qty=u)&&a}return a},N.b,N.a)),t.Y(198,671744,null,0,L.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),t._18(2048,null,L.f,null,[L.h]),t.Y(200,16384,null,0,L.g,[L.f],null,null),t.Y(201,5423104,[[6,4],["txb_search_4",4]],0,G.a,[m.a,M.a,H.a,S.a,t.j,t.z,[2,w.a],[2,J.a],[2,L.f],Q.a],{type:[0,"type"]},{ionFocus:"ionFocus"}),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t.Z(205,0,null,null,13,"ion-row",[["class","row"]],null,null,null,null,null)),t.Y(206,16384,null,0,V.a,[],null,null),(l()(),t._21(-1,null,["\n                    "])),(l()(),t.Z(208,0,null,null,9,"ion-col",[["class","col"]],null,null,null,null,null)),t.Y(209,16384,null,0,A.a,[],null,null),(l()(),t._21(-1,null,["\n                        "])),(l()(),t.Z(211,0,null,null,5,"button",[["class","toolbar-button"],["color","secondary"],["ion-button",""],["solid",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.search2(4)&&a}return a},B.b,B.a)),t.Y(212,1097728,null,0,D.a,[[8,""],m.a,t.j,t.z],{color:[0,"color"],solid:[1,"solid"]},null),(l()(),t._21(-1,0,["\n                            "])),(l()(),t.Z(214,0,null,0,1,"ion-icon",[["name","print"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(215,147456,null,0,W.a,[m.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t._21(-1,0,["\n                        "])),(l()(),t._21(-1,null,["\n                    "])),(l()(),t._21(-1,null,["\n                "])),(l()(),t._21(-1,null,["\n            "])),(l()(),t._21(-1,null,["\n        "])),(l()(),t._21(-1,null,["\n    "])),(l()(),t._21(-1,1,["\n"]))],function(l,n){var u=n.component;l(n,28,0,"","");l(n,53,0,u.data.ScanBarcode);l(n,56,0,"tel");l(n,67,0,"primary","");l(n,70,0,"print");l(n,85,0,"","");l(n,110,0,u.data2.Barcode);l(n,113,0,"tel");l(n,132,0,u.data2.Shop);l(n,135,0,"tel");l(n,154,0,u.data2.Qty);l(n,157,0,"tel");l(n,176,0,u.data2.IP_Qty);l(n,179,0,"tel");l(n,198,0,u.data2.SUP_Qty);l(n,201,0,"tel");l(n,212,0,"secondary","");l(n,215,0,"print")},function(l,n){l(n,9,0,t._12(n,10)._hidden,t._12(n,10)._sbPadding);l(n,18,0,t._12(n,19).statusbarPadding,t._12(n,19)._hasRefresher);l(n,52,0,t._12(n,55).ngClassUntouched,t._12(n,55).ngClassTouched,t._12(n,55).ngClassPristine,t._12(n,55).ngClassDirty,t._12(n,55).ngClassValid,t._12(n,55).ngClassInvalid,t._12(n,55).ngClassPending);l(n,69,0,t._12(n,70)._hidden);l(n,109,0,t._12(n,112).ngClassUntouched,t._12(n,112).ngClassTouched,t._12(n,112).ngClassPristine,t._12(n,112).ngClassDirty,t._12(n,112).ngClassValid,t._12(n,112).ngClassInvalid,t._12(n,112).ngClassPending);l(n,131,0,t._12(n,134).ngClassUntouched,t._12(n,134).ngClassTouched,t._12(n,134).ngClassPristine,t._12(n,134).ngClassDirty,t._12(n,134).ngClassValid,t._12(n,134).ngClassInvalid,t._12(n,134).ngClassPending);l(n,153,0,t._12(n,156).ngClassUntouched,t._12(n,156).ngClassTouched,t._12(n,156).ngClassPristine,t._12(n,156).ngClassDirty,t._12(n,156).ngClassValid,t._12(n,156).ngClassInvalid,t._12(n,156).ngClassPending);l(n,175,0,t._12(n,178).ngClassUntouched,t._12(n,178).ngClassTouched,t._12(n,178).ngClassPristine,t._12(n,178).ngClassDirty,t._12(n,178).ngClassValid,t._12(n,178).ngClassInvalid,t._12(n,178).ngClassPending);l(n,197,0,t._12(n,200).ngClassUntouched,t._12(n,200).ngClassTouched,t._12(n,200).ngClassPristine,t._12(n,200).ngClassDirty,t._12(n,200).ngClassValid,t._12(n,200).ngClassInvalid,t._12(n,200).ngClassPending);l(n,214,0,t._12(n,215)._hidden)})}Object.defineProperty(n,"__esModule",{value:!0});var t=u(1),e=(u(0),u(16)),o=(u(36),u(37)),s=u(44),i=u(65),c=function(){function l(l,n,u,a,t){this.navCtrl=l,this._http_services=n,this.alertCtrl=u,this.toastCtrl=a,this.vibration=t,this.data={ScanBarcode:""},this.data2={Barcode:"",Shop:"",Qty:"",IP_Qty:"",SUP_Qty:""}}return l.prototype.search=function(){var l=this;this.vibration.vibrate(100);var n="";if(""==this.data.ScanBarcode&&(n="請輸入物流標"),""==n){var u=[];""!=this.data.ScanBarcode&&u.push({Name:"@CODE",Value:this.data.ScanBarcode}),this._http_services.POST("","sp","[md.spDCS_LABEL_SORTER]",u).then(function(n){if(""!=n)switch(n[0].RT_CODE){case"0":l.toastCtrl.create({message:n[0].RT_MSG,duration:s.e,position:"bottom"}).present();break;default:l.alertCtrl.create({title:"錯誤"+n[0].RT_CODE,subTitle:n[0].RT_MSG,buttons:["關閉"]}).present()}}),this.reset(),this.myfocus()}else{this.toastCtrl.create({message:n,duration:s.e,position:"bottom"}).present()}},l.prototype.search2=function(l){var n=this;switch(l){case 0:return void this.txb_search_1.setFocus();case 1:return void this.txb_search_2.setFocus();case 2:return void this.txb_search_3.setFocus();case 3:return void this.txb_search_4.setFocus()}this.vibration.vibrate(100);var u="";if(""==this.data2.Barcode&&(u="請輸入呼出碼"),""!=this.data2.Shop&&""==this.data2.Qty&&(u="請輸入數量(已指定店鋪)"),""==u){var a=[];""!=this.data2.Barcode&&a.push({Name:"@ITEM_ID",Value:this.data2.Barcode}),""!=this.data2.Shop&&a.push({Name:"@SITE_ID",Value:this.data2.Shop}),""!=this.data2.Qty&&a.push({Name:"@QTY",Value:this.data2.Qty}),""!=this.data2.IP_Qty&&a.push({Name:"@IP_QTY",Value:this.data2.IP_Qty}),""!=this.data2.SUP_Qty&&a.push({Name:"@SUP_QTY",Value:this.data2.SUP_Qty}),this._http_services.POST("","sp","[md.spDCS_LABEL_SORTER]",a).then(function(l){if(""!=l)switch(l[0].RT_CODE){case"0":n.toastCtrl.create({message:l[0].RT_MSG,duration:s.e,position:"bottom"}).present();break;default:n.alertCtrl.create({title:"錯誤"+l[0].RT_CODE,subTitle:l[0].RT_MSG,buttons:[{text:"關閉",handler:function(){n.myfocus2()}}]}).present()}}),this.reset(),this.myfocus2()}else{this.toastCtrl.create({message:u,duration:s.e,position:"bottom"}).present()}},l.prototype.reset=function(){this.data.ScanBarcode="",this.data2.Barcode="",this.data2.Shop="",this.data2.Qty="",this.data2.IP_Qty="",this.data2.SUP_Qty=""},l.prototype.help=function(){this.alertCtrl.create({title:"使用說明",subTitle:"1. 輸入物流標，產生指定內容<br/>2. 輸入指定內容：滑道(3)+疊箱(1)+店鋪(6)+批號(6)+數量(2)",buttons:["關閉"]}).present()},l.prototype.help2=function(){this.alertCtrl.create({title:"使用說明",subTitle:"1. 呼出碼一定要輸入<br/>2. 不指定店鋪，會印出所有店鋪標籤<br/>3.   指定店鋪一定要輸入數量<br/>4. 不指定入數，會印出系統預設入數:6",buttons:["關閉"]}).present()},l.prototype.myfocus=function(){var l=this;setTimeout(function(){l.scan_Entry.setFocus()},150)},l.prototype.myfocus2=function(){var l=this;setTimeout(function(){l.txb_search_0.setFocus()},150)},l.prototype.selectAll=function(l){l._native.nativeElement.select()},l.prototype.swipeEvent=function(l){switch(l.direction){case 1:case 2:break;case 4:this.navCtrl.pop()}},l}(),r=function(){return function(){}}(),_=u(355),d=u(356),h=u(357),g=u(358),p=u(359),f=u(360),y=u(361),b=u(362),C=u(363),Y=u(55),m=u(3),v=u(7),Z=u(68),P=u(33),S=u(8),j=u(19),F=u(69),T=u(43),z=u(34),k=u(56),w=u(20),M=u(5),Q=u(9),E=u(31),x=u(181),I=u(185),B=u(30),D=u(17),R=u(191),U=u(60),V=u(45),A=u(59),O=u(57),N=u(365),L=u(23),G=u(92),H=u(24),J=u(27),W=u(39),X=u(58),q=u(71),K=t.X({encapsulation:2,styles:[],data:{}}),$=t.V("ng-component",c,function(l){return t._23(0,[(l()(),t.Z(0,0,null,null,1,"ng-component",[],null,null,null,a,K)),t.Y(1,49152,null,0,c,[j.a,i.a,X.a,q.a,o.a],null,null)],null,null)},{},{},[]),ll=u(180),nl=u(66);u.d(n,"AppModuleNgFactory",function(){return ul});var ul=t.W(r,[],function(l){return t._8([t._9(512,t.i,t.S,[[8,[_.a,d.a,h.a,g.a,p.a,f.a,y.a,b.a,C.a,$]],[3,t.i],t.s]),t._9(4608,e.l,e.k,[t.r,[2,e.t]]),t._9(4608,L.k,L.k,[]),t._9(4608,L.c,L.c,[]),t._9(512,e.b,e.b,[]),t._9(512,L.j,L.j,[]),t._9(512,L.d,L.d,[]),t._9(512,L.i,L.i,[]),t._9(512,ll.a,ll.a,[]),t._9(512,ll.b,ll.b,[]),t._9(512,r,r,[]),t._9(256,nl.a,c,[])])})}});
+webpackJsonp([7],{
+
+/***/ 696:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_133_WAS_StoreModule", function() { return _133_WAS_StoreModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Store__ = __webpack_require__(716);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var _133_WAS_StoreModule = /** @class */ (function () {
+    function _133_WAS_StoreModule() {
+    }
+    _133_WAS_StoreModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__Store__["a" /* _133_WAS_Store */])
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__Store__["a" /* _133_WAS_Store */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_2__Store__["a" /* _133_WAS_Store */]]
+        })
+    ], _133_WAS_StoreModule);
+    return _133_WAS_StoreModule;
+}());
+
+//# sourceMappingURL=Store.module.js.map
+
+/***/ }),
+
+/***/ 716:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _133_WAS_Store; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_Settings__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ZZ_CommonLib_LittleKeyPad_LittleKeyPad__ = __webpack_require__(358);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+//Cordova
+
+//My Pages
+
+
+
+var _133_WAS_Store = /** @class */ (function () {
+    function _133_WAS_Store(navCtrl, _http_services, toastCtrl, modalCtrl, vibration) {
+        this.navCtrl = navCtrl;
+        this._http_services = _http_services;
+        this.toastCtrl = toastCtrl;
+        this.modalCtrl = modalCtrl;
+        this.vibration = vibration;
+        this.data = {
+            RefValue: '',
+            BLOCK_NAME: localStorage.getItem('BLOCK_NAME'),
+            WAS_Store: '',
+            IsInputEnable: true,
+            IsHideWhenKeyboardOpen: false,
+            InfiniteScrollEnable: true //啟用無限卷軸
+            ,
+            theLastSEQ: 0 //上次驗收最後進入的營業所SEQ
+            ,
+            NoMoreOrders: false //重整畫面使用, 已經沒有剩餘訂單的判斷
+        };
+        this.DisplayList = {
+            SITE_ID: '',
+            SEQ: 0,
+            AMOUNT: 0,
+            UPD_AMOUNT: 0,
+            TQty: 0,
+            LeftQty: 0,
+            SITE_NAME: ''
+        };
+        this.TotalList = [];
+        this.DefaultTestServer = '172_31_31_250';
+        this.data.RefValue = localStorage.getItem('WAS_OrderNo')
+            + ',' + JSON.parse(localStorage.getItem('WAS_Item')).ITEM_NO;
+    }
+    _133_WAS_Store.prototype.ionViewWillEnter = function () {
+        this.BringDisplayList(this.data.theLastSEQ);
+        this.myFocus();
+    };
+    _133_WAS_Store.prototype.BringDisplayList = function (startSEQ) {
+        var _this = this;
+        var sql_StepValue = '11';
+        var sql_parameter = this.data.RefValue + ',' + startSEQ.toString();
+        return this._http_services.POST(this.DefaultTestServer, 'sp', '[WAS].dbo.spactWAS_Line_v2', [{ Name: '@Step', Value: sql_StepValue },
+            { Name: '@Parameters', Value: sql_parameter }])
+            .then(function (response) {
+            if (response != undefined) {
+                //先填入清單
+                _this.BringDisplayList_Add(response);
+                if (_this.TotalList.length > 0)
+                    _this.DisplayList = _this.TotalList[0];
+                //檢查特殊情況
+                if (response.length == 0) {
+                    _this.data.InfiniteScrollEnable = false;
+                    //連續兩次查料都沒有待處理清單, 回到上一頁
+                    if (_this.data.NoMoreOrders) {
+                        _this.reset();
+                        _this.navCtrl.pop();
+                        return;
+                    }
+                    //從驗收回來後, 檢查是否還有剩餘資料
+                    if (_this.data.theLastSEQ > 0) {
+                        _this.data.theLastSEQ = 0;
+                        _this.data.NoMoreOrders = true;
+                        _this.BringDisplayList(0);
+                        return;
+                    }
+                }
+                else {
+                    _this.data.NoMoreOrders = false;
+                    _this.data.InfiniteScrollEnable = true;
+                    //小於sp設定的50筆
+                    //再次重頭搜尋未完成項目
+                    if (response.length < 50) {
+                        if (_this.data.theLastSEQ > 0) {
+                            console.log('小於sp設定的50筆');
+                            _this.data.theLastSEQ = 0;
+                            _this.BringDisplayList(0);
+                            return;
+                        }
+                    }
+                }
+            }
+            return response;
+        });
+    };
+    //查詢結果匯入TotalList
+    _133_WAS_Store.prototype.BringDisplayList_Add = function (response) {
+        var _this = this;
+        response.forEach(function (value, index, array) {
+            var checkPK = _this.TotalList.filter(function (value2, index2, array2) { return value2.SITE_ID == value.SITE_ID; });
+            if (checkPK.length == 0)
+                _this.TotalList.push(value);
+        });
+    };
+    //重置btn
+    _133_WAS_Store.prototype.reset = function () {
+        this.data.IsInputEnable = true;
+        this.data.InfiniteScrollEnable = true; //啟用無限卷軸
+        this.data.theLastSEQ = 0; //上次驗收最後進入的營業所SEQ
+        this.data.NoMoreOrders = false; //重整畫面使用, 已經沒有剩餘訂單的判斷
+        this.data.WAS_Store = '';
+        this.TotalList = [];
+        this.myFocus();
+    };
+    ;
+    //查詢
+    _133_WAS_Store.prototype.search = function () {
+        var _this = this;
+        this.vibration.vibrate(100);
+        this.data.IsInputEnable = false;
+        ////test
+        //this.data.WAS_Store = this.DisplayList.SITE_ID;
+        if (this.data.WAS_Store.length <= 0) {
+            this.toastCtrl.create({
+                message: '請輸入數值',
+                duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                position: 'middle'
+            }).present();
+            this.myFocus();
+            this.data.WAS_Store = '';
+            this.data.IsInputEnable = true;
+            return;
+        }
+        var sql_parameter = this.data.RefValue + ',' + this.data.WAS_Store;
+        this._http_services.POST(this.DefaultTestServer, 'sp', '[WAS].dbo.spactWAS_Line_v2', [{ Name: '@Step', Value: '2' },
+            { Name: '@Parameters', Value: sql_parameter }])
+            .then(function (response) {
+            switch (response[0].RT_CODE) {
+                case 0:
+                    var result = JSON.stringify({
+                        SITE_ID: response[0].SITE_ID,
+                        SEQ: response[0].SEQ,
+                        AMOUNT: response[0].AMOUNT,
+                        TQty: response[0].TQty,
+                        TWeight: response[0].TWeight,
+                        LeftQty: response[0].LeftQty,
+                        SITE_NAME: response[0].SITE_NAME,
+                        PRICE: response[0].PRICE,
+                        PRICE_TYPE: response[0].PRICE_TYPE
+                    });
+                    localStorage.setItem('WAS_Store', result);
+                    _this.toastCtrl.create({
+                        message: '驗證成功 ' + response[0].RT_MSG,
+                        duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                        position: 'middle'
+                    }).present();
+                    _this.reset();
+                    _this.navCtrl.push('_134_WAS_Receive');
+                    break;
+                default:
+                    _this.toastCtrl.create({
+                        message: response[0].RT_MSG,
+                        duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                        position: 'middle'
+                    }).present();
+            }
+        })
+            .then(function (response) {
+            _this.data.WAS_Store = '';
+            _this.data.IsInputEnable = true;
+        });
+    };
+    //改量
+    _133_WAS_Store.prototype.btn_ChangeTqty = function () {
+        this.reset();
+        this.navCtrl.push('_1331_WAS_StoreChgAmount');
+    };
+    //補標
+    _133_WAS_Store.prototype.btn_MorelastPrint = function () {
+        if (__WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('lastPrint') == undefined) {
+            this.toastCtrl.create({
+                message: '沒有上一次的列印紀錄',
+                duration: __WEBPACK_IMPORTED_MODULE_3__app_Settings__["e" /* Set_timeout */],
+                position: 'middle'
+            }).present();
+            this.myFocus();
+            return;
+        }
+        //開始補標
+        this.reset();
+    };
+    //無限卷軸
+    _133_WAS_Store.prototype.doInfinite = function (infiniteScroll) {
+        var obj = this.TotalList[this.TotalList.length - 1];
+        this.BringDisplayList(obj.SEQ + 1)
+            .then(function (response) {
+            infiniteScroll.complete();
+        });
+    };
+    //全選
+    _133_WAS_Store.prototype.selectAll = function ($event) {
+        $event._native.nativeElement.select();
+    };
+    //Focus
+    _133_WAS_Store.prototype.myFocus = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.scan_Entry._elementRef.nativeElement.focus();
+        }, 300);
+    };
+    _133_WAS_Store.prototype.myKeylogger = function (event) {
+        this.data.WAS_Store = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["g" /* keyCodeToValue */](event.keyCode, this.data.WAS_Store);
+        if (this.data.WAS_Store.indexOf('ENTER') >= 0) {
+            this.data.WAS_Store = this.data.WAS_Store.replace('ENTER', '');
+            this.search();
+        }
+    };
+    _133_WAS_Store.prototype.openKeyPad = function () {
+        var _this = this;
+        var obj = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__ZZ_CommonLib_LittleKeyPad_LittleKeyPad__["a" /* LittleKeyPad */], { Name: '營業所', Value: this.data.WAS_Store });
+        obj.onDidDismiss(function (data) {
+            _this.data.WAS_Store = __WEBPACK_IMPORTED_MODULE_3__app_Settings__["d" /* ProgParameters */].get('ListTable_answer');
+            _this.search();
+        });
+        obj.present();
+    };
+    //手勢
+    _133_WAS_Store.prototype.swipeEvent = function (event) {
+        switch (event.direction) {
+            case 1://NONE
+                break;
+            case 2://LEFT
+                break;
+            case 4://RIGHT
+                this.reset();
+                this.navCtrl.pop();
+                break;
+            case 8://UP
+                break;
+            case 16://DOWN
+                break;
+        }
+        ;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('scan_Entry'),
+        __metadata("design:type", Object)
+    ], _133_WAS_Store.prototype, "scan_Entry", void 0);
+    _133_WAS_Store = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_13_WAS\3_Store\Store.html"*/'<ion-header no-border>\n\n    <ion-navbar>\n\n        <ion-title>WAS_營業所</ion-title>\n\n        <ion-buttons end>\n\n            <span style="white-space:pre;color:white">{{data.RefValue}}</span>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n    <ion-toolbar>\n\n        <ion-row>\n\n            <ion-col col-3>\n\n                <ion-label [ngClass]="[\'myScanBarcodeUI_Label\']">營業所</ion-label>\n\n            </ion-col>\n\n            <ion-col col-7>\n\n                <button ion-button outline block\n\n                        [ngClass]="[\'myScanBarcodeUI\']"\n\n                        #scan_Entry\n\n                        (keyup)="myKeylogger($event)"\n\n                        (blur)="myFocus()"\n\n                        (ionFocus)="selectAll($event)"\n\n                        [disabled]="!data.IsInputEnable">\n\n                    {{data.WAS_Store}}\n\n                </button>\n\n            </ion-col>\n\n            <ion-col col-2>\n\n                <button ion-button (click)="openKeyPad()" color="primary" solid class="toolbar-button">\n\n                    <ion-icon name="keypad"></ion-icon>\n\n                </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-toolbar>\n\n</ion-header>\n\n<ion-content (swipe)="swipeEvent($event)">\n\n    <ion-grid class="mytable">\n\n        <ion-row>\n\n            <ion-col col-1>{{DisplayList.SEQ}}</ion-col>\n\n            <ion-col col-11>{{DisplayList.SITE_NAME}}</ion-col>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col style="font-size:70px;color:yellow" col-12>{{DisplayList.SITE_ID}}</ion-col>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-3>訂購量</ion-col>\n\n            <ion-col col-3>實績量</ion-col>\n\n            <ion-col col-6>剩餘量</ion-col>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col style="font-size:30px" col-3>{{DisplayList.AMOUNT}}</ion-col>\n\n            <ion-col style="font-size:30px" col-3>{{DisplayList.TQty}}</ion-col>\n\n            <ion-col style="font-size:30px" col-6>{{DisplayList.LeftQty}}</ion-col>\n\n        </ion-row>\n\n        <ion-row class="mytable_Head">\n\n            <ion-col col-1></ion-col>\n\n            <ion-col col-3>營業所</ion-col>\n\n            <ion-col col-2>代號</ion-col>\n\n            <ion-col col-2>訂購量</ion-col>\n\n            <ion-col col-2>實績量</ion-col>\n\n            <ion-col col-2>剩餘量</ion-col>\n\n        </ion-row>\n\n        <ion-row *ngFor="let ListItem of TotalList" class="mytable_Detail">\n\n            <ion-col col-1> {{ListItem.SEQ}}</ion-col>\n\n            <ion-col col-3> {{ListItem.SITE_NAME}}</ion-col>\n\n            <ion-col col-2> {{ListItem.SITE_ID}}</ion-col>\n\n            <ion-col col-2> {{ListItem.AMOUNT}}</ion-col>\n\n            <ion-col col-2> {{ListItem.TQty}}</ion-col>\n\n            <ion-col col-2> {{ListItem.LeftQty}}</ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n    <ion-infinite-scroll (ionInfinite)="doInfinite($event)" [enabled]="data.InfiniteScrollEnable">\n\n        <ion-infinite-scroll-content></ion-infinite-scroll-content>\n\n    </ion-infinite-scroll>\n\n</ion-content>\n\n<div [hidden]="data.IsHideWhenKeyboardOpen">\n\n    <ion-footer no-border>\n\n        <ion-toolbar>\n\n            <ion-buttons left>\n\n                <button color="danger" ion-button solid (click)=\'btn_ChangeTqty()\'>改量</button>\n\n                <button color="secondary" ion-button outline (click)=\'btn_MorelastPrint()\'>補標</button>\n\n            </ion-buttons>\n\n            <ion-buttons right>\n\n                <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_NAME}}</ion-label>\n\n            </ion-buttons>\n\n        </ion-toolbar>\n\n    </ion-footer>\n\n</div>\n\n'/*ion-inline-end:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_13_WAS\3_Store\Store.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_4__ZZ_CommonLib_http_services__["a" /* http_services */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_vibration__["a" /* Vibration */]])
+    ], _133_WAS_Store);
+    return _133_WAS_Store;
+}());
+
+//# sourceMappingURL=Store.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=7.js.map

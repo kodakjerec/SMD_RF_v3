@@ -1,1 +1,134 @@
-webpackJsonp([15],{651:function(l,n,u){"use strict";function t(l){return i._23(0,[(l()(),i.Z(0,0,null,null,2,"button",[["block",""],["color","dark"],["ion-button",""],["large",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.menuClicked(l.context.$implicit)&&t}return t},C.b,C.a)),i.Y(1,1097728,null,0,O.a,[[8,""],E.a,i.j,i.z],{color:[0,"color"],large:[1,"large"],block:[2,"block"]},null),(l()(),i._21(2,0,["\n            ",",","\n        "]))],function(l,n){l(n,1,0,"dark","","")},function(l,n){l(n,2,0,n.context.$implicit.ID,n.context.$implicit.NAME)})}function a(l){return i._23(0,[(l()(),i.Z(0,0,null,null,10,"ion-header",[],null,null,null,null,null)),i.Y(1,16384,null,0,S.a,[E.a,i.j,i.z,[2,I.a]],null,null),(l()(),i._21(-1,null,["\n    "])),(l()(),i.Z(3,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,v.b,v.a)),i.Y(4,49152,null,0,Y.a,[j.a,[2,I.a],[2,P.a],E.a,i.j,i.z],null,null),(l()(),i._21(-1,3,["\n        "])),(l()(),i.Z(6,0,null,3,2,"ion-title",[],null,null,null,y.b,y.a)),i.Y(7,49152,null,0,D.a,[E.a,i.j,i.z,[2,L.a],[2,Y.a]],null,null),(l()(),i._21(-1,0,["選擇區域"])),(l()(),i._21(-1,3,["\n    "])),(l()(),i._21(-1,null,["\n"])),(l()(),i._21(-1,null,["\n"])),(l()(),i.Z(12,0,null,null,9,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,M.b,M.a)),i.Y(13,4374528,null,0,N.a,[E.a,A.a,Z.a,i.j,i.z,j.a,z.a,i.u,[2,I.a],[2,P.a]],null,null),(l()(),i._21(-1,1,["\n    "])),(l()(),i.Z(15,0,null,1,5,"ion-list",[["class","mylist"]],null,null,null,null,null)),i.Y(16,16384,null,0,K.a,[E.a,i.j,i.z,A.a,R.l,Z.a],null,null),(l()(),i._21(-1,null,["\n        "])),(l()(),i.U(16777216,null,null,1,null,t)),i.Y(19,802816,null,0,e.i,[i.I,i.F,i.p],{ngForOf:[0,"ngForOf"]},null),(l()(),i._21(-1,null,["\n    "])),(l()(),i._21(-1,1,["\n"]))],function(l,n){l(n,19,0,n.component.Lists)},function(l,n){l(n,3,0,i._12(n,4)._hidden,i._12(n,4)._sbPadding);l(n,12,0,i._12(n,13).statusbarPadding,i._12(n,13)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var i=u(1),e=(u(0),u(16)),o=(u(36),u(44)),r=u(65),c=function(){function l(l,n,u){this.navCtrl=l,this.toastCtrl=n,this._http_services=u,this.data={USER_ID:localStorage.getItem("USER_ID")},o.h();this.toastCtrl.create({message:"使用者 "+this.data.USER_ID+" 成功登入",duration:o.e,position:"bottom"}).present(),this.queryBLOCKS()}return l.prototype.queryBLOCKS=function(){var l=this;this._http_services.POST("","sp","[ui].[spDCS_LOGIN_WORKSPACE]",[{Name:"@ID",Value:this.data.USER_ID}]).then(function(n){n&&(l.Lists=n)})},l.prototype.menuClicked=function(l){localStorage.setItem("BLOCK_NAME",l.NAME),this.navCtrl.push("_02_Menu",{Title:"選單",BLOCK_ID:"0",BLOCK_NAME:l.NAME,OP_TYPE:l.OP_TYPE})},l}(),s=function(){return function(){}}(),_=u(355),d=u(356),p=u(357),f=u(358),h=u(359),b=u(360),g=u(361),m=u(362),k=u(363),C=u(30),O=u(17),E=u(3),S=u(55),I=u(7),v=u(68),Y=u(33),j=u(8),P=u(19),y=u(69),D=u(43),L=u(34),M=u(56),N=u(20),A=u(5),Z=u(9),z=u(31),K=u(72),R=u(12),B=u(71),U=i.X({encapsulation:2,styles:[],data:{}}),F=i.V("ng-component",c,function(l){return i._23(0,[(l()(),i.Z(0,0,null,null,1,"ng-component",[],null,null,null,a,U)),i.Y(1,49152,null,0,c,[P.a,B.a,r.a],null,null)],null,null)},{},{},[]),T=u(23),x=u(180),$=u(66);u.d(n,"AppModuleNgFactory",function(){return q});var q=i.W(s,[],function(l){return i._8([i._9(512,i.i,i.S,[[8,[_.a,d.a,p.a,f.a,h.a,b.a,g.a,m.a,k.a,F]],[3,i.i],i.s]),i._9(4608,e.l,e.k,[i.r,[2,e.t]]),i._9(4608,T.k,T.k,[]),i._9(4608,T.c,T.c,[]),i._9(512,e.b,e.b,[]),i._9(512,T.j,T.j,[]),i._9(512,T.d,T.d,[]),i._9(512,T.i,T.i,[]),i._9(512,x.a,x.a,[]),i._9(512,x.b,x.b,[]),i._9(512,s,s,[]),i._9(256,$.a,c,[])])})}});
+webpackJsonp([15],{
+
+/***/ 688:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Menu__ = __webpack_require__(708);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__Menu__["a" /* _02_Menu */])
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_3__Menu__["a" /* _02_Menu */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_3__Menu__["a" /* _02_Menu */]]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=Menu.module.js.map
+
+/***/ }),
+
+/***/ 708:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _02_Menu; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_Settings__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ZZ_CommonLib_http_services__ = __webpack_require__(87);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var _02_Menu = /** @class */ (function () {
+    function _02_Menu(navCtrl, navParams, _http_services) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this._http_services = _http_services;
+        this.Lists = [{}];
+        this.data = { Caption: '', OP_TYPE: '', BLOCK_ID: '', BLOCK_NAME: '', isButtonDisabled: false };
+        this.data.Caption = navParams.get('Title');
+        this.data.OP_TYPE = navParams.get('OP_TYPE');
+        this.data.BLOCK_ID = navParams.get('BLOCK_ID');
+        this.data.BLOCK_NAME = navParams.get('BLOCK_NAME');
+        __WEBPACK_IMPORTED_MODULE_2__app_Settings__["h" /* loginCheck */]();
+        this.queryMENUS();
+    }
+    _02_Menu.prototype.queryMENUS = function () {
+        var _this = this;
+        var sql_cmd = "[ui].[spDCS_RF_MENU]";
+        this._http_services.POST('', 'sp', sql_cmd, [
+            { Name: '@MODE', Value: '2' },
+            { Name: '@OP_TYPE', Value: this.data.OP_TYPE },
+            { Name: '@MENUID', Value: this.data.BLOCK_ID }
+        ])
+            .then(function (response) {
+            if (response) {
+                _this.Lists = response;
+            }
+        });
+    };
+    _02_Menu.prototype.menuClicked = function (item) {
+        var _this = this;
+        //���T���ϥΫ��s
+        this.data.isButtonDisabled = true;
+        //Menu
+        switch (item.URL) {
+            case '':
+                this.navCtrl.push('_02_Menu', {
+                    Title: item.Caption,
+                    BLOCK_ID: item.MENUID,
+                    BLOCK_NAME: this.data.BLOCK_NAME,
+                    OP_TYPE: this.data.OP_TYPE
+                });
+                break;
+            case 'BACK':
+                this.navCtrl.pop();
+                break;
+            default:
+                //link to other page
+                this.navCtrl.push(item.URL);
+        }
+        //����������
+        setTimeout(function () {
+            _this.data.isButtonDisabled = false;
+        }, 2000);
+    };
+    _02_Menu = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_02_Menu\Menu.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>{{data.Caption}}</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n    <ion-list class="mylist">\n\n        <button ion-button\n\n                *ngFor="let item of Lists"\n\n                (click)="menuClicked(item)"\n\n                class="btn_list"\n\n                color="dark"\n\n                [disabled]="data.isButtonDisabled"\n\n                large block>\n\n            {{item.Caption}}\n\n        </button>\n\n    </ion-list>\n\n</ion-content>\n\n<ion-footer>\n\n    <ion-toolbar>\n\n        <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_NAME}}</ion-label>\n\n    </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"F:\Projects\SMD\SMD_HandRF\RF_Web\RF_Web\SMD_RF_v3\src\pages\_02_Menu\Menu.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__ZZ_CommonLib_http_services__["a" /* http_services */]])
+    ], _02_Menu);
+    return _02_Menu;
+}());
+
+//# sourceMappingURL=Menu.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=15.js.map

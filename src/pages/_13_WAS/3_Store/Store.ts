@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, ToastController, ModalController, IonicPage } from 'ionic-angular';
+import { NavController, ToastController, ModalController, IonicPage } from 'ionic-angular';
 
 //Cordova
 import { Vibration } from '@ionic-native/vibration';
@@ -19,20 +19,17 @@ import { LittleKeyPad } from '../../_ZZ_CommonLib/LittleKeyPad/LittleKeyPad';
 export class _133_WAS_Store {
     constructor(public navCtrl: NavController
         , public _http_services: http_services
-        , private alertCtrl: AlertController
         , private toastCtrl: ToastController
         , private modalCtrl: ModalController
         , private vibration: Vibration) {
-        localStorage.setItem('WAS_OrderNo', '1800901');
-        localStorage.setItem('WAS_Item', '{ "ITEM_NO": "212521", "ITEM_NAME": "肉魚" }');
-
+       
         this.data.RefValue = localStorage.getItem('WAS_OrderNo')
             + ',' + JSON.parse(localStorage.getItem('WAS_Item')).ITEM_NO;
     }
     @ViewChild('scan_Entry') scan_Entry;
 
     ionViewWillEnter() {
-        this.BringDisplayList();
+        this.BringDisplayList(this.data.theLastSEQ);
         this.myFocus();
     }
 
@@ -42,36 +39,94 @@ export class _133_WAS_Store {
         , WAS_Store: ''
         , IsInputEnable: true
         , IsHideWhenKeyboardOpen: false
-    };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
+        , InfiniteScrollEnable: true    //啟用無限卷軸
+        , theLastSEQ: 0             //上次驗收最後進入的營業所SEQ
+        , NoMoreOrders: false       //重整畫面使用, 已經沒有剩餘訂單的判斷
+    };
 
     DisplayList = {
         SITE_ID: ''
         , SEQ: 0
         , AMOUNT: 0
+        , UPD_AMOUNT: 0
         , TQty: 0
         , LeftQty: 0
         , SITE_NAME: ''
     };
+    TotalList = [];
     DefaultTestServer = '172_31_31_250';
 
-    BringDisplayList() {
-        let sql_parameter = this.data.RefValue + ','
+    BringDisplayList(startSEQ) {
+        let sql_StepValue = '11';
+        let sql_parameter = this.data.RefValue + ',' + startSEQ.toString();
 
-        this._http_services.POST(this.DefaultTestServer, 'sp'
+        return this._http_services.POST(this.DefaultTestServer, 'sp'
             , '[WAS].dbo.spactWAS_Line_v2'
-            , [{ Name: '@Step', Value: '11' }
+            , [{ Name: '@Step', Value: sql_StepValue }
                 , { Name: '@Parameters', Value: sql_parameter }])
             .then((response) => {
                 if (response != undefined) {
-                    this.DisplayList = response[0];
+                    //先填入清單
+                    this.BringDisplayList_Add(response);
+                    if (this.TotalList.length > 0)
+                        this.DisplayList = this.TotalList[0];
+
+                    //檢查特殊情況
+                    if (response.length == 0) {
+
+                        this.data.InfiniteScrollEnable = false;
+
+                        //連續兩次查料都沒有待處理清單, 回到上一頁
+                        if (this.data.NoMoreOrders) {
+                            this.reset();
+                            this.navCtrl.pop();
+                            return;
+                        }
+
+                        //從驗收回來後, 檢查是否還有剩餘資料
+                        if (this.data.theLastSEQ > 0) {
+                            this.data.theLastSEQ = 0;
+                            this.data.NoMoreOrders = true;
+                            this.BringDisplayList(0);
+                            return;
+                        }
+                    }
+                    else {
+                        this.data.NoMoreOrders = false;
+                        this.data.InfiniteScrollEnable = true;
+
+                        //小於sp設定的50筆
+                        //再次重頭搜尋未完成項目
+                        if (response.length < 50) {
+                            if (this.data.theLastSEQ > 0) {
+                                console.log('小於sp設定的50筆');
+                                this.data.theLastSEQ = 0;
+                                this.BringDisplayList(0);
+                                return;
+                            }
+                        }
+                    }
                 }
+
+                return response;
             });
     }
-
+    //查詢結果匯入TotalList
+    BringDisplayList_Add(response) {
+        response.forEach((value, index, array) => {
+            let checkPK = this.TotalList.filter((value2, index2, array2) => value2.SITE_ID == value.SITE_ID);
+            if (checkPK.length == 0)
+                this.TotalList.push(value);
+        });
+    }
     //重置btn
     reset() {
-        localStorage.setItem('WAS_Store', '');
+        this.data.IsInputEnable = true;
+        this.data.InfiniteScrollEnable = true;    //啟用無限卷軸
+        this.data.theLastSEQ = 0;       //上次驗收最後進入的營業所SEQ
+        this.data.NoMoreOrders = false;     //重整畫面使用, 已經沒有剩餘訂單的判斷
         this.data.WAS_Store = '';
+        this.TotalList = [];
 
         this.myFocus();
     };
@@ -88,11 +143,11 @@ export class _133_WAS_Store {
             this.toastCtrl.create({
                 message: '請輸入數值',
                 duration: myGlobals.Set_timeout,
-                position: 'bottom'
-            }).present()
-                .then(response => {
-                    this.myFocus();
-                });
+                position: 'middle'
+            }).present();
+            this.myFocus();
+            this.data.WAS_Store = '';
+            this.data.IsInputEnable = true;
             return;
         }
 
@@ -106,38 +161,72 @@ export class _133_WAS_Store {
                 switch (response[0].RT_CODE) {
                     case 0:
                         let result = JSON.stringify({
-                            SITE_ID: response[0].RT_MSG
+                            SITE_ID: response[0].SITE_ID
+                            , SEQ: response[0].SEQ
+                            , AMOUNT: response[0].AMOUNT
+                            , TQty: response[0].TQty
+                            , TWeight: response[0].TWeight
+                            , LeftQty: response[0].LeftQty
                             , SITE_NAME: response[0].SITE_NAME
                             , PRICE: response[0].PRICE
                             , PRICE_TYPE: response[0].PRICE_TYPE
-                            , AMOUNT: response[0].AMOUNT
-                            , TQty: response[0].TQty
-                            , LeftQty: response[0].LeftQty
                         });
                         localStorage.setItem('WAS_Store', result);
 
-                        let toast = this.toastCtrl.create({
+                        this.toastCtrl.create({
                             message: '驗證成功 ' + response[0].RT_MSG,
                             duration: myGlobals.Set_timeout,
-                            position: 'bottom'
-                        });
-                        toast.present();
-                        this.data.WAS_Store = '';
+                            position: 'middle'
+                        }).present();
+
+                        this.reset();
+
                         this.navCtrl.push('_134_WAS_Receive');
                         break;
                     default:
-                        let alert = this.alertCtrl.create({
-                            title: '錯誤代號：' + response[0].RT_CODE,
-                            subTitle: response[0].RT_MSG,
-                            buttons: ['關閉']
-                        });
-                        alert.present();
+                        this.toastCtrl.create({
+                            message: response[0].RT_MSG,
+                            duration: myGlobals.Set_timeout,
+                            position: 'middle'
+                        }).present();
                 }
             })
             .then(response => {
+                this.data.WAS_Store = '';
                 this.data.IsInputEnable = true;
             })
             ;
+    }
+
+    //改量
+    btn_ChangeTqty() {
+        this.reset();
+        this.navCtrl.push('_1331_WAS_StoreChgAmount');
+    }
+
+    //補標
+    btn_MorelastPrint() {
+        if (myGlobals.ProgParameters.get('lastPrint') == undefined) {
+            this.toastCtrl.create({
+                message: '沒有上一次的列印紀錄',
+                duration: myGlobals.Set_timeout,
+                position: 'middle'
+            }).present();
+            this.myFocus();
+            return;
+        }
+
+        //開始補標
+        this.reset();
+    }
+
+    //無限卷軸
+    doInfinite(infiniteScroll) {
+        let obj = this.TotalList[this.TotalList.length - 1];
+        this.BringDisplayList(obj.SEQ + 1)
+            .then(response => {
+                infiniteScroll.complete();
+            });
     }
 
     //全選
@@ -151,14 +240,10 @@ export class _133_WAS_Store {
         }, 300);
     }
     myKeylogger(event) {
-        let keyValue = myGlobals.keyCodeToValue(event.keyCode);
-        switch (keyValue) {
-            case 'ENTER':
-                this.search();
-                break;
-            default:
-                this.data.WAS_Store += keyValue;
-                break;
+        this.data.WAS_Store = myGlobals.keyCodeToValue(event.keyCode, this.data.WAS_Store);
+        if (this.data.WAS_Store.indexOf('ENTER') >= 0) {
+            this.data.WAS_Store = this.data.WAS_Store.replace('ENTER', '');
+            this.search();
         }
     }
     openKeyPad() {

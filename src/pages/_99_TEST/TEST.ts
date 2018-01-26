@@ -19,6 +19,8 @@ import { LittleKeyPad } from '../_ZZ_CommonLib/LittleKeyPad/LittleKeyPad';
 export class _99_TEST {
     constructor(public navCtrl: NavController
         , private modalCtrl: ModalController) {
+        localStorage.setItem('USER_ID', '123456');
+        localStorage.setItem('BLOCK_NAME', '1樓撿貨區');
     };
 
     @ViewChild('scan_Entry') scan_Entry;
@@ -58,7 +60,7 @@ export class _99_TEST {
     }
 
     myBarcodeUI() {
-        let obj = this.modalCtrl.create(LittleKeyPad, {Name:'條碼',Value:'456'});
+        let obj = this.modalCtrl.create(LittleKeyPad, { Name: '條碼', Value: '456' });
         obj.onDidDismiss(data => {
             console.log(myGlobals.ProgParameters.get('ListTable_answer'));
         });

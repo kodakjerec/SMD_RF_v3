@@ -1,8 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, ModalController, Platform, IonicPage } from 'ionic-angular';
+import { NavController, ToastController, ModalController, IonicPage } from 'ionic-angular';
 
 //Cordova
-import { Keyboard } from '@ionic-native/keyboard';
 import { Vibration } from '@ionic-native/vibration';
 
 //My Pages
@@ -20,24 +19,18 @@ import { PaperDetailPage } from '../../_ZZ_CommonLib/PaperDetail/PaperDetail';
 
 export class _121_CarNo {
     constructor(public navCtrl: NavController
-        , public platform: Platform
         , public _http_services: http_services
         , private modalCtrl: ModalController
-        , private alertCtrl: AlertController
-        , private keyboard: Keyboard
+        , private toastCtrl: ToastController
         , private vibration: Vibration) {
         myGlobals.loginCheck();
-
-        this.initializeApp();
     }
 
     @ViewChild('scan_Entry') scan_Entry;
 
     ionViewDidEnter() {
         if (this.data.IsDisabled == true) {
-            setTimeout(() => {
-                this.scan_Entry.setFocus();
-            }, 150);
+            this.myFocus();
         }
     }
 
@@ -52,19 +45,6 @@ export class _121_CarNo {
     color = { green: '#79FF79', red: '#FF5151' }; // 控制已報到/未報到 顏色
     result = {};
 
-    initializeApp() {
-        if (this.platform.is('core')) {
-            console.log("You're develop in the browser");
-            return;
-        }
-        this.platform.ready()
-            .then(() => {
-                this.keyboard.onKeyboardShow().subscribe(() => { this.data.IsHideWhenKeyboardOpen = true });
-                this.keyboard.onKeyboardHide().subscribe(() => { this.data.IsHideWhenKeyboardOpen = false });
-            })
-            ;
-    }
-
     //重置btn
     reset() {
         localStorage.setItem('CarNo', '');
@@ -74,7 +54,7 @@ export class _121_CarNo {
         this.data.viewColor = '';
         this.data.IsDisabled = true;
 
-        this.scan_Entry.setFocus();
+        this.myFocus();
     };
     //查詢欄位專用清除
     reset_btn() {
@@ -85,8 +65,14 @@ export class _121_CarNo {
     //#region 查詢報到牌btn
     search() {
         this.vibration.vibrate(100);
-        if (this.data.CarNo == '')
+        if (this.data.CarNo == '') {
+            this.toastCtrl.create({
+                message: '請輸入數值',
+                duration: myGlobals.Set_timeout,
+                position: 'middle'
+            }).present();
             return;
+        }
 
         this.reset();
 
@@ -98,7 +84,7 @@ export class _121_CarNo {
             ])
             .then((response) => {
 
-                if (response != '') {
+                if (response != undefined) {
                     switch (response[0].RT_CODE) {
                         case 0:
                             //Correct
@@ -118,28 +104,23 @@ export class _121_CarNo {
                             }
                             break;
                         default:
-                            //Error
-                            let alert_fail = this.alertCtrl.create({
-                                title: '失敗',
-                                subTitle: response[0].RT_MSG,
-                                buttons: [{
-                                    text: '關閉',
-                                    handler: data => {
-                                        this.scan_Entry.setFocus();
-                                    }
-                                }]
-                            });
-                            alert_fail.present();
+                            this.toastCtrl.create({
+                                message: response[0].RT_MSG,
+                                duration: myGlobals.Set_timeout,
+                                position: 'middle'
+                            }).present();
                             break;
                     }
                 }
-                this.scan_Entry.setFocus();
+                this.myFocus();
             });
     };//#endregion
 
     //喪失focus
-    myfocus() {
-        //this.scan_Entry.setFocus();
+    myFocus() {
+        setTimeout(() => {
+            this.scan_Entry.setFocus();
+        }, 300);
     };
 
     //全選
@@ -173,6 +154,13 @@ export class _121_CarNo {
 
         this.navCtrl.push('_122_PaperNo');
     };
+
+    myKeylogger(event) {
+        let obj = myGlobals.keyCodeToValue(event.keyCode, this.data.CarNo);
+        if (obj.indexOf('ENTER') >= 0) {
+            this.search();
+        }
+    }
 
     //手勢
     swipeEvent(event) {
