@@ -8,7 +8,8 @@ rem µo¥¬hot code push
 rem code-push release SMDRF ./www/build/ 1.0.1
 
 rem ¥]¸Ëapk
-cordova build --debug -- --keystore=mtk6753.keystore --alias=androiddebugkey --storePassword=android --password=android
+rem cordova build --debug -- --keystore=mtk6753.keystore --alias=androiddebugkey --storePassword=android --password=android
+cordova run --debug -- --keystore=mtk6753.keystore --alias=androiddebugkey --storePassword=android --password=android --device
 
 
 

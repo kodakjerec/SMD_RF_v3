@@ -21,12 +21,11 @@ export class UpdateApp {
         , private appUpdate: AppUpdate
         , private codePush: CodePush
     ) {
+        window["thisRef"] = this;
         this.initialApp();
     }
 
     initialApp() {
-        this.data.ErrorTitle = '開始更新';
-        this.data.ErrorMessage = '';
         this.data.checkStatus0 = 'danger';
         this.data.checkStatus1 = 'danger';
         this.data.checkStatus2 = false;
@@ -49,8 +48,8 @@ export class UpdateApp {
         , checkStatus1: 'danger'
         , checkStatus2: false
         , ApkVersion: ''
-        , ErrorTitle: ''
-        , ErrorMessage: ''
+        , MsgApk: 'Apk開始更新'
+        , MsgWeb: 'Web開始更新'
     };
 
     gotoMain() {
@@ -58,34 +57,72 @@ export class UpdateApp {
     }
 
     //#region 檢查更新 hot code push
-
     hotCodePush() {
-        let myloadingCtrl = this.loadingCtrl.create({
-            content: "檢查網頁更新中...",
-        });
-        myloadingCtrl.present();
-        this.codePush.sync().subscribe((syncStatus) => console.log(syncStatus));
-
-        const downloadProgress = (progress) => {
-            this.data.ErrorMessage = 'Downloaded ' + progress.receivedBytes + toString() + ' of ' + progress.totalBytes.toString();
-        }
-        this.codePush
-            .sync({}, downloadProgress)
+        this.codePush.sync()
             .subscribe((syncStatus) => {
-                console.log(syncStatus);
-                this.data.checkStatus1 = 'secondary';
-                myloadingCtrl.dismiss();
-                this.hotcodepush_ChangeFlag();
+                this.syncStatus(syncStatus)
             });
     }
+    syncStatus(syncStatus) {
+        console.log(syncStatus);
+        let ErrMSg = '';
 
+        if (syncStatus === SyncStatus.UP_TO_DATE) {
+
+            // facing some zoning problems here !!
+            // why ??
+            // forcing to run in the ngzone
+            ErrMSg = 'App is up to date !';
+            this.data.checkStatus1 = 'secondary';
+            this.hotcodepush_ChangeFlag();
+        }
+        else {
+            // not facing zoning issue here ?
+            switch (syncStatus) {
+                case SyncStatus.IN_PROGRESS:
+                    ErrMSg = 'An update is in progress ..';
+                    break;
+
+                case SyncStatus.CHECKING_FOR_UPDATE:
+                    ErrMSg = 'Checking for update ..';
+                    break;
+
+                case SyncStatus.DOWNLOADING_PACKAGE:
+                    ErrMSg = 'Downloading package ..';
+                    break;
+
+                case SyncStatus.INSTALLING_UPDATE:
+                    ErrMSg = 'Installing update ..';
+                    break;
+
+                case SyncStatus.UPDATE_INSTALLED:
+                    ErrMSg = 'Installed the update ..';
+                    this.data.checkStatus1 = 'secondary';
+                    this.hotcodepush_ChangeFlag();
+                    break;
+
+                case SyncStatus.ERROR:
+                    ErrMSg = 'An error occurred :( ...';
+                    break;
+
+                default:
+                    ErrMSg = 'An unhandled sync status ..';
+                    break;
+            }
+        }
+
+        this.data.MsgWeb = 'Web:'+ ErrMSg;
+    }
+    downloadProgress(downloadProgress) {
+        if (downloadProgress) {
+            console.log('Downloaded ' + downloadProgress.receivedBytes.toString() + ' of ' + downloadProgress.totalBytes.toString());
+        }
+    }
     hotcodepush_ChangeFlag() {
         console.log('Check Finish Apk:' + this.data.checkStatus0 + ' Web:' + this.data.checkStatus1);
 
         //沒有做到同步處理, 無法檢查web 更新狀況
         if (this.data.checkStatus0 == 'secondary') {
-            this.data.ErrorTitle = '更新完畢';
-            this.data.ErrorMessage = 'Complete';
             this.data.checkStatus2 = true;
 
             let toast = this.toastCtrl.create({
@@ -104,7 +141,7 @@ export class UpdateApp {
     //#region 檢查更新 Full apk
     checkUpdate() {
         console.log('Apk Update is Loading ');
-        const updateUrl = 'http://' + myGlobals.Global_Server + '/Version/update.xml';
+        let updateUrl = 'http://' + myGlobals.Global_Server + '/Version/update.xml';
         return this.appUpdate.checkAppUpdate(updateUrl)
             .then(response => {
                 let ErrMsg: string = '';
@@ -113,7 +150,7 @@ export class UpdateApp {
                         break;
                     case 202:   //No need to update
                         console.log('Apk No Need to update ');
-                        this.data.ErrorTitle = '更新完畢';
+                        ErrMsg = 'Apk 更新完畢';
                         this.data.checkStatus0 = 'secondary';
                         break;
                     case 203:   //version is updating
@@ -131,8 +168,7 @@ export class UpdateApp {
                         break;
                 };
                 if (ErrMsg != '') {
-                    this.data.ErrorTitle = '檢查更新出錯';
-                    this.data.ErrorMessage = ErrMsg;
+                    this.data.MsgApk = 'Apk:'+ ErrMsg;
                 }
 
                 return response;
