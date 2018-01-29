@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
-import { Platform, NavParams, LoadingController, AlertController, ToastController, NavController } from 'ionic-angular';
+import { Platform, LoadingController, ToastController, NavController } from 'ionic-angular';
 
 //Cordova
 import { AppUpdate } from '@ionic-native/app-update';
+import { CodePush } from '@ionic-native/code-push';
 
 //My Pages
 import * as myGlobals from '../../app/Settings';
 import { _00_Login } from '../_00_Login/Login';
-
-//hot code push
-declare var chcp: any;
 
 @Component({
     templateUrl: 'UpdateApp.html'
@@ -17,12 +15,11 @@ declare var chcp: any;
 export class UpdateApp {
     constructor(
         public platform: Platform
-        , private navparams: NavParams
         , public navCtrl: NavController
         , public loadingCtrl: LoadingController
-        , private alertCtrl: AlertController
         , private toastCtrl: ToastController
         , private appUpdate: AppUpdate
+        , private codePush: CodePush
     ) {
         this.initialApp();
     }
@@ -31,7 +28,7 @@ export class UpdateApp {
         this.data.ErrorTitle = '開始更新';
         this.data.ErrorMessage = '';
         this.data.checkStatus0 = 'danger';
-        this.data.checkStatus1 = 'secondary';
+        this.data.checkStatus1 = 'danger';
         this.data.checkStatus2 = false;
 
         if (this.platform.is('core')) {
@@ -42,6 +39,8 @@ export class UpdateApp {
         }
         this.platform.ready()
             .then(response => { this.checkUpdate() })
+            .then(response => { this.hotCodePush() })
+            ;
     }
 
     data = {
@@ -49,7 +48,6 @@ export class UpdateApp {
         , checkStatus0: 'danger'
         , checkStatus1: 'danger'
         , checkStatus2: false
-        , WebVersion: ''
         , ApkVersion: ''
         , ErrorTitle: ''
         , ErrorMessage: ''
@@ -60,76 +58,36 @@ export class UpdateApp {
     }
 
     //#region 檢查更新 hot code push
-    myloadingCtrl= this.loadingCtrl.create({
-        content: "檢查網頁更新中...",
-    });
-    hotCodePush(): any {
-        this.myloadingCtrl.present();
 
-        window["thisRef"] = this;
-        chcp.fetchUpdate(this.updateCallback);
-        chcp.getVersionInfo(this.InfoCallback);
-    }
-    updateCallback(error, data) {
-        if (error) {
-            switch (error.code) {
-                case 2:
-                    console.log('Web ' + error.description);
-                    window["thisRef"].data.ErrorTitle = 'Web更新完畢';
-                    window["thisRef"].data.checkStatus1 = 'secondary';
-                    window["thisRef"].hotcodepush_ChangeFlag();
-                    break;
-                default:
-                    window["thisRef"].data.ErrorTitle = 'Web更新失敗';
-                    window["thisRef"].data.ErrorMessage = error.description;
-                    console.error(error);
-                    break;
-            }
+    hotCodePush() {
+        let myloadingCtrl = this.loadingCtrl.create({
+            content: "檢查網頁更新中...",
+        });
+        myloadingCtrl.present();
+        this.codePush.sync().subscribe((syncStatus) => console.log(syncStatus));
+
+        const downloadProgress = (progress) => {
+            this.data.ErrorMessage = 'Downloaded ' + progress.receivedBytes + toString() + ' of ' + progress.totalBytes.toString();
         }
-        else {
-            // 进度
-            var progress = parseFloat(data.progress);
-            console.log(data);
-            if (progress == 1.0) {
-                chcp.installUpdate();
-            }
-
-            console.log('Web Update is Loading ');
-            window["thisRef"].data.ErrorTitle = 'Web正在更新';
-
-			let myalert = window["thisRef"].alertCtrl.create({
-				title: '準備下載 Web 更新',
-				buttons: ['關閉']
-			});
-			myalert.onDidDismiss(response => {
-				chcp.installUpdate(error => {
-					if (error) {
-						console.error(error);
-						window["thisRef"].data.ErrorTitle = 'Web更新失敗';
-						window["thisRef"].data.ErrorMessage = error.code;
-					}
-					else {
-						console.log('Web Update Finished ');
-						window["thisRef"].data.ErrorTitle = 'Web更新完畢';
-						window["thisRef"].data.checkStatus1 = 'secondary';
-						window["thisRef"].hotcodepush_ChangeFlag();
-					}
-				});
-			});
-			myalert.present();
-        }
+        this.codePush
+            .sync({}, downloadProgress)
+            .subscribe((syncStatus) => {
+                console.log(syncStatus);
+                this.data.checkStatus1 = 'secondary';
+                myloadingCtrl.dismiss();
+                this.hotcodepush_ChangeFlag();
+            });
     }
-    InfoCallback(err, data) {
-        window["thisRef"].data.WebVersion = data.currentWebVersion;
-        window["thisRef"].data.ApkVersion = data.appVersion;
-    }
+
     hotcodepush_ChangeFlag() {
-        this.myloadingCtrl.dismiss();
         console.log('Check Finish Apk:' + this.data.checkStatus0 + ' Web:' + this.data.checkStatus1);
 
         //沒有做到同步處理, 無法檢查web 更新狀況
         if (this.data.checkStatus0 == 'secondary') {
+            this.data.ErrorTitle = '更新完畢';
+            this.data.ErrorMessage = 'Complete';
             this.data.checkStatus2 = true;
+
             let toast = this.toastCtrl.create({
                 message: '更新完畢，自動進入登入畫面',
                 duration: 1000,
@@ -144,10 +102,10 @@ export class UpdateApp {
     //#endregion
 
     //#region 檢查更新 Full apk
-    checkUpdate(): any {
+    checkUpdate() {
         console.log('Apk Update is Loading ');
         const updateUrl = 'http://' + myGlobals.Global_Server + '/Version/update.xml';
-        this.appUpdate.checkAppUpdate(updateUrl)
+        return this.appUpdate.checkAppUpdate(updateUrl)
             .then(response => {
                 let ErrMsg: string = '';
                 switch (response.code) {
@@ -176,11 +134,10 @@ export class UpdateApp {
                     this.data.ErrorTitle = '檢查更新出錯';
                     this.data.ErrorMessage = ErrMsg;
                 }
+
+                return response;
             })
-            .then(response => {
-                this.hotCodePush();
-            });
-        ;
+            ;
     }
     //#endregion
 }

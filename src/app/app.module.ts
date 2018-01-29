@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 //Cordova plugins
-import { FCM } from '@ionic-native/fcm';
 import { AppUpdate } from '@ionic-native/app-update';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -14,6 +13,7 @@ import { Camera } from '@ionic-native/camera';
 import { Keyboard } from '@ionic-native/keyboard';
 import { Vibration } from '@ionic-native/vibration';
 import { File } from '@ionic-native/file';
+import { CodePush } from '@ionic-native/code-push';
 
 //My Pages
 import { SMDRF } from './app.component';
@@ -69,13 +69,13 @@ import { LittleKeyPad } from '../pages/_ZZ_CommonLib/LittleKeyPad/LittleKeyPad';
         StatusBar,
         SplashScreen,
         http_services,
-        FCM,
         AppUpdate,
         NFC, Ndef,
         Camera,
         Keyboard,
         Vibration,
         File,
+        CodePush,
         { provide: ErrorHandler, useClass: IonicErrorHandler }
     ]
 })

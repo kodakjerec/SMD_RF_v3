@@ -1,8 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, AlertController } from 'ionic-angular';
+import { Nav, Platform } from 'ionic-angular';
 
 //Cordova plugins
-import { FCM } from '@ionic-native/fcm';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -24,8 +23,6 @@ export class SMDRF {
     constructor(public platform: Platform
         , public statusBar: StatusBar
         , public splashScreen: SplashScreen
-        , public fcm: FCM
-        , private alertCtrl: AlertController
     ) {
         this.statusBar.hide();
         this.initializeApp();
@@ -48,51 +45,9 @@ export class SMDRF {
         }
         this.platform.ready()
             .then(() => {
-                this.myFCM()
-            })
-            .then(() => {
                 this.splashScreen.hide();
             })
             ;
-    }
-
-    myFCM() {
-
-        // Okay, so the platform is ready and our plugins are available.
-        // Here you can do any higher level native things you might need.
-
-        //FCM
-        this.fcm.subscribeToTopic('developers');
-
-        this.fcm.getToken().then(token => {
-            //backend.registerToken(token);
-            console.log(token);
-        })
-
-        this.fcm.onNotification().subscribe(data => {
-            if (data.wasTapped) {
-                let alert_background = this.alertCtrl.create({
-                    title: 'B ' + data.title,
-                    subTitle: data.body,
-                    buttons: ['關閉']
-                });
-                alert_background.present();
-            } else {
-                let alert_foreground = this.alertCtrl.create({
-                    title: 'F ' + data.title,
-                    subTitle: data.body,
-                    buttons: ['關閉']
-                });
-                alert_foreground.present();
-            };
-        })
-
-        this.fcm.onTokenRefresh().subscribe(token => {
-            //backend.registerToken(token);
-        })
-
-        //解除安裝
-        //fcm.unsubscribeFromTopic('developers');
     }
 
     openPage(page) {

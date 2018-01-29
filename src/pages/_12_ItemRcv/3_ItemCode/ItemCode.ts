@@ -259,7 +259,7 @@ export class _123_ItemCode {
         if (this.data.IsDisabled == true)
             return;
 
-        let ErrMsg = '';
+        //let ErrMsg = '';
         //批號
         //效期
         //溫度
