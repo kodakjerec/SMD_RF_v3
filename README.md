@@ -1,26 +1,19 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+SMD RF
+v1.0.3
 
-## How to use this template
+ChangeLog:
+1.新增功能 RFWAS
+2.新增硬體功能hot code push
+3.變更條碼讀取方式, 現在有android鍵盤與條碼專用兩種
+4.移除NFC自動登入, 但保留NFC硬體需求給未來使用
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+軟體架構: 
+Ionic 3, Angular 5
+特殊硬體需求:
+Vibration, Code-push, App-update
+Android版本:
+sdk 19~25
+Android 7.0 相容
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start mySideMenu sidemenu
-```
-
-Then, to run it, cd into `mySideMenu` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+How to use:
+npm install 
