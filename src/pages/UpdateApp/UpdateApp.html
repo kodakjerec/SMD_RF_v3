@@ -1,6 +1,7 @@
 <ion-content>
     <ion-grid>
         <ion-row>
+            <button color="danger" (click)="gotoMain()" ion-button block>跳過此頁</button>
             <button [color]="data.checkStatus0" (click)="initialApp()" ion-button block>更新 Apk</button>
             <button [color]="data.checkStatus1" (click)="initialApp()" ion-button block>更新 Web</button>
             <button [disabled]="!data.checkStatus2" ion-button (click)="gotoMain()" block>進入RF</button>

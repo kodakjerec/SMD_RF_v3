@@ -46,7 +46,7 @@ export class _132_WAS_Item {
         let sql_parameter = this.data.RefValue + ','
 
         this._http_services.POST(this.DefaultTestServer, 'sp'
-            , '[WAS].dbo.spactWAS_Line_v2'
+            , '[WAS].dbo.spactWAS_Line'
             , [{ Name: '@Step', Value: '01' }
                 , { Name: '@Parameters', Value: sql_parameter }])
             .then((response) => {
@@ -91,7 +91,7 @@ export class _132_WAS_Item {
         let sql_parameter = this.data.RefValue + ',' + this.data.WAS_Item;
 
         this._http_services.POST(this.DefaultTestServer, 'sp'
-            , '[WAS].dbo.spactWAS_Line_v2'
+            , '[WAS].dbo.spactWAS_Line'
             , [{ Name: '@Step', Value: '1' }
                 , { Name: '@Parameters', Value: sql_parameter }])
             .then((response) => {

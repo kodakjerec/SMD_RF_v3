@@ -23,11 +23,11 @@ export class _134_WAS_Receive {
         , private toastCtrl: ToastController
         , private modalCtrl: ModalController
         , private vibration: Vibration) {
-//localStorage.setItem('USER_ID', '123456');
-//localStorage.setItem('BLOCK_NAME', '1樓撿貨區');
-//localStorage.setItem('WAS_OrderNo', '1800901');
-//localStorage.setItem('WAS_Item', '{ "ITEM_NO": "310098", "ITEM_NAME": "益之豬蒜泥白肉片" }');
-//localStorage.setItem('WAS_Store', '{"RT_CODE": 0,"SITE_ID": "751400","SITE_NAME": "天母天玉","PRICE": 330,"PRICE_TYPE": "1","AMOUNT": 6,"TQty": 4,"TWeight":4.97,"LeftQty": 2,"SEQ":99}');
+        //localStorage.setItem('USER_ID', '123456');
+        //localStorage.setItem('BLOCK_NAME', '1樓撿貨區');
+        //localStorage.setItem('WAS_OrderNo', '1800901');
+        //localStorage.setItem('WAS_Item', '{ "ITEM_NO": "310098", "ITEM_NAME": "益之豬蒜泥白肉片" }');
+        //localStorage.setItem('WAS_Store', '{"RT_CODE": 0,"SITE_ID": "751400","SITE_NAME": "天母天玉","PRICE": 330,"PRICE_TYPE": "1","AMOUNT": 6,"TQty": 4,"TWeight":4.97,"LeftQty": 2,"SEQ":99}');
 
         this.data.RefValue = localStorage.getItem('WAS_OrderNo')
             + ',' + JSON.parse(localStorage.getItem('WAS_Item')).ITEM_NO
@@ -218,7 +218,7 @@ export class _134_WAS_Receive {
             + ',' + barcode
             + ',' + localStorage.getItem('USER_ID');
         this._http_services.POST(this.DefaultTestServer, 'sp'
-            , '[WAS].dbo.spactWAS_Line_v2'
+            , '[WAS].dbo.spactWAS_Line'
             , [{ Name: '@Step', Value: '3' }
                 , { Name: '@Parameters', Value: sql_parameter }])
             .then((response) => {
@@ -241,7 +241,7 @@ export class _134_WAS_Receive {
 
                             if (this.Receive.LeftQty <= 0) {
                                 //吐標
-
+                                this.PrintLabel();
 
                                 //驗收完畢
                                 this.reset();
@@ -289,7 +289,7 @@ export class _134_WAS_Receive {
             + ',' + oldData.barcode
             + ',' + localStorage.getItem('USER_ID');
         this._http_services.POST(this.DefaultTestServer, 'sp'
-            , '[WAS].dbo.spactWAS_Line_v2'
+            , '[WAS].dbo.spactWAS_Line'
             , [{ Name: '@Step', Value: '3' }
                 , { Name: '@Parameters', Value: sql_parameter }])
             .then((response) => {
@@ -389,5 +389,19 @@ export class _134_WAS_Receive {
             case 16://DOWN
                 break;
         };
+    }
+
+    //吐標
+    PrintLabel() {
+        let sql_parameter =
+            this.Receive.ORDER_NO
+            + ',' + this.Receive.ITEM_NO
+            + ',' + this.Receive.SITE_ID
+            + ',' + localStorage.getItem('BLOCK_ID');
+
+        this._http_services.POST(this.DefaultTestServer, 'sp'
+            , '[WAS].dbo.spactWAS_Line'
+            , [{ Name: '@Step', Value: '4' }
+                , { Name: '@Parameters', Value: sql_parameter }])
     }
 }

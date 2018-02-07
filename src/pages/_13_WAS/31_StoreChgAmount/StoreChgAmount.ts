@@ -41,7 +41,7 @@ export class _1331_WAS_StoreChgAmount {
         let sql_parameter = this.data.RefValue + ',' + startSEQ.toString();
 
         return this._http_services.POST(this.DefaultTestServer, 'sp'
-            , '[WAS].dbo.spactWAS_Line_v2'
+            , '[WAS].dbo.spactWAS_Line'
             , [{ Name: '@Step', Value: sql_StepValue }
                 , { Name: '@Parameters', Value: sql_parameter }])
             .then((response) => {
@@ -97,7 +97,7 @@ export class _1331_WAS_StoreChgAmount {
                         let sql_parameter = this.data.RefValue + ',' + item.SITE_ID + ',' + data.UPD_AMOUNT + ',' + localStorage.getItem('USER_ID');
 
                         this._http_services.POST(this.DefaultTestServer, 'sp'
-                            , '[WAS].dbo.spactWAS_Line_v2'
+                            , '[WAS].dbo.spactWAS_Line'
                             , [{ Name: '@Step', Value: sql_StepValue }
                                 , { Name: '@Parameters', Value: sql_parameter }])
                             .then((response) => {

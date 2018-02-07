@@ -67,57 +67,48 @@ export class UpdateApp {
         console.log(syncStatus);
         let ErrMSg = '';
 
-        if (syncStatus === SyncStatus.UP_TO_DATE) {
+		// not facing zoning issue here ?
+		switch (syncStatus) {
+			case 0: //SyncStatus.UP_TO_DATE
+				ErrMSg = 'App is up to date !';
+				this.data.checkStatus1 = 'secondary';
+				this.hotcodepush_ChangeFlag();
+				break;
+			case 1: //SyncStatus.UPDATE_INSTALLED
+				ErrMSg = 'Installed the update ..';
+				this.data.checkStatus1 = 'secondary';
+				this.hotcodepush_ChangeFlag();
+				this.codePush.restartApplication();
+				break;
+			case 2: //SyncStatus.UPDATE_IGNORED
+				ErrMSg = 'UPDATE_IGNORED ...';
+				break;
+			case 3: //SyncStatus.ERROR
+				ErrMSg = 'An error occurred :( ...';
+				break;
+			case 4: //SyncStatus.IN_PROGRESS
+				ErrMSg = 'An update is in progress ..';
+				break;
+			case 5: //SyncStatus.CHECKING_FOR_UPDATE
+				ErrMSg = 'Checking for update ..';
+				break;
+			case 6: //SyncStatus.AWAITING_USER_ACTION
+				break;
+			case 7: //SyncStatus.DOWNLOADING_PACKAGE
+				ErrMSg = 'Downloading package ..';
+				break;
+			case 8: //SyncStatus.INSTALLING_UPDATE
+				ErrMSg = 'Installing update ..';
+				break;
 
-            // facing some zoning problems here !!
-            // why ??
-            // forcing to run in the ngzone
-            ErrMSg = 'App is up to date !';
-            this.data.checkStatus1 = 'secondary';
-            this.hotcodepush_ChangeFlag();
-        }
-        else {
-            // not facing zoning issue here ?
-            switch (syncStatus) {
-                case SyncStatus.IN_PROGRESS:
-                    ErrMSg = 'An update is in progress ..';
-                    break;
-
-                case SyncStatus.CHECKING_FOR_UPDATE:
-                    ErrMSg = 'Checking for update ..';
-                    break;
-
-                case SyncStatus.DOWNLOADING_PACKAGE:
-                    ErrMSg = 'Downloading package ..';
-                    break;
-
-                case SyncStatus.INSTALLING_UPDATE:
-                    ErrMSg = 'Installing update ..';
-                    break;
-
-                case SyncStatus.UPDATE_INSTALLED:
-                    ErrMSg = 'Installed the update ..';
-                    this.data.checkStatus1 = 'secondary';
-                    this.hotcodepush_ChangeFlag();
-                    break;
-
-                case SyncStatus.ERROR:
-                    ErrMSg = 'An error occurred :( ...';
-                    break;
-
-                default:
-                    ErrMSg = 'An unhandled sync status ..';
-                    break;
-            }
-        }
+			default:
+				ErrMSg = 'An unhandled sync status ..';
+				break;
+		}
 
         this.data.MsgWeb = 'Web:'+ ErrMSg;
     }
-    downloadProgress(downloadProgress) {
-        if (downloadProgress) {
-            console.log('Downloaded ' + downloadProgress.receivedBytes.toString() + ' of ' + downloadProgress.totalBytes.toString());
-        }
-    }
+
     hotcodepush_ChangeFlag() {
         console.log('Check Finish Apk:' + this.data.checkStatus0 + ' Web:' + this.data.checkStatus1);
 

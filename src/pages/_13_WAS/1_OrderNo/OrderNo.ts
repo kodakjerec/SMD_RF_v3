@@ -47,7 +47,7 @@ export class _131_WAS_OrderNo {
 
     BringDisplayList() {
         this._http_services.POST(this.DefaultTestServer, 'sp'
-            , '[WAS].dbo.spactWAS_Line_v2'
+            , '[WAS].dbo.spactWAS_Line'
             , [{ Name: '@Step', Value: '00' }
                 , { Name: '@Parameters', Value: '' }])
             .then((response) => {
@@ -87,7 +87,7 @@ export class _131_WAS_OrderNo {
         let sql_parameter = this.data.WAS_OrderNo;
 
         this._http_services.POST(this.DefaultTestServer, 'sp'
-            , '[WAS].dbo.spactWAS_Line_v2'
+            , '[WAS].dbo.spactWAS_Line'
             , [{ Name: '@Step', Value: '0' }
                 , { Name: '@Parameters', Value: sql_parameter }])
             .then((response) => {

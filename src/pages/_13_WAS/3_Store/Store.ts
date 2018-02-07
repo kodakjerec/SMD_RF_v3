@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, ToastController, ModalController, IonicPage } from 'ionic-angular';
+import { NavController, ToastController, AlertController, ModalController, IonicPage } from 'ionic-angular';
 
 //Cordova
 import { Vibration } from '@ionic-native/vibration';
@@ -8,6 +8,7 @@ import { Vibration } from '@ionic-native/vibration';
 import * as myGlobals from '../../../app/Settings';
 import { http_services } from '../../_ZZ_CommonLib/http_services';
 import { LittleKeyPad } from '../../_ZZ_CommonLib/LittleKeyPad/LittleKeyPad';
+import { ListTablePage } from '../../_ZZ_CommonLib/ListTable/ListTable';
 
 @IonicPage({
     name: '_133_WAS_Store',
@@ -20,9 +21,16 @@ export class _133_WAS_Store {
     constructor(public navCtrl: NavController
         , public _http_services: http_services
         , private toastCtrl: ToastController
+        , private alertCtrl: AlertController
         , private modalCtrl: ModalController
         , private vibration: Vibration) {
-       
+        //localStorage.setItem('USER_ID', '123456');
+        //localStorage.setItem('BLOCK_NAME', 'A1DP1');
+        //localStorage.setItem('BLOCK_NAME', '1樓撿貨區');
+        //localStorage.setItem('WAS_OrderNo', '2018020601');
+        //localStorage.setItem('WAS_Item', '{ "ITEM_NO": "310005", "ITEM_NAME": "澳洲穀飼牛梅花火鍋片" }');
+        //localStorage.setItem('WAS_Store', '{"SITE_ID":"222100","SEQ":8,"AMOUNT":3,"TQty":1,"TWeight":1,"LeftQty":2,"SITE_NAME":"宜蘭泰山","PRICE":500,"PRICE_TYPE":"0"}');
+
         this.data.RefValue = localStorage.getItem('WAS_OrderNo')
             + ',' + JSON.parse(localStorage.getItem('WAS_Item')).ITEM_NO;
     }
@@ -61,7 +69,7 @@ export class _133_WAS_Store {
         let sql_parameter = this.data.RefValue + ',' + startSEQ.toString();
 
         return this._http_services.POST(this.DefaultTestServer, 'sp'
-            , '[WAS].dbo.spactWAS_Line_v2'
+            , '[WAS].dbo.spactWAS_Line'
             , [{ Name: '@Step', Value: sql_StepValue }
                 , { Name: '@Parameters', Value: sql_parameter }])
             .then((response) => {
@@ -154,7 +162,7 @@ export class _133_WAS_Store {
         let sql_parameter = this.data.RefValue + ',' + this.data.WAS_Store;
 
         this._http_services.POST(this.DefaultTestServer, 'sp'
-            , '[WAS].dbo.spactWAS_Line_v2'
+            , '[WAS].dbo.spactWAS_Line'
             , [{ Name: '@Step', Value: '2' }
                 , { Name: '@Parameters', Value: sql_parameter }])
             .then((response) => {
@@ -181,6 +189,7 @@ export class _133_WAS_Store {
 
                         this.reset();
 
+                        this.data.theLastSEQ = response[0].SEQ;
                         this.navCtrl.push('_134_WAS_Receive');
                         break;
                     default:
@@ -206,18 +215,37 @@ export class _133_WAS_Store {
 
     //補標
     btn_MorelastPrint() {
-        if (myGlobals.ProgParameters.get('lastPrint') == undefined) {
-            this.toastCtrl.create({
-                message: '沒有上一次的列印紀錄',
-                duration: myGlobals.Set_timeout,
-                position: 'middle'
-            }).present();
-            this.myFocus();
-            return;
-        }
+        let sql_parameter = this.data.RefValue;
 
-        //開始補標
-        this.reset();
+        this._http_services.POST(this.DefaultTestServer, 'sp'
+            , '[WAS].dbo.spactWAS_Line'
+            , [{ Name: '@Step', Value: '40' }
+                , { Name: '@Parameters', Value: sql_parameter }])
+            .then((response) => {
+                if (response.length > 0) {
+                    //開始補標
+                    myGlobals.ProgParameters.set('ListTable_Source', response);
+
+                    let obj = this.modalCtrl.create(ListTablePage);
+                    obj.onDidDismiss(data => {
+                        let ID = myGlobals.ProgParameters.get('ListTable_answer').Value;
+                        this._http_services.POST(this.DefaultTestServer, 'sp'
+                            , '[WAS].dbo.spactWAS_Line'
+                            , [{ Name: '@Step', Value: '41' }
+                                , { Name: '@Parameters', Value: ID }])
+                            .then((response) => {
+                                //因為是特殊處理案例, 要跳出視窗嚴加提醒使用者
+                                this.alertCtrl.create({
+                                    title: '結果 ' + response[0].RT_CODE,
+                                    message: response[0].RT_MSG,
+                                    buttons: ['關閉']
+                                }).present();
+                            })
+                        return;
+                    });
+                    obj.present();
+                }
+            });
     }
 
     //無限卷軸
@@ -240,6 +268,7 @@ export class _133_WAS_Store {
         }, 300);
     }
     myKeylogger(event) {
+        console.log(event);
         this.data.WAS_Store = myGlobals.keyCodeToValue(event.keyCode, this.data.WAS_Store);
         if (this.data.WAS_Store.indexOf('ENTER') >= 0) {
             this.data.WAS_Store = this.data.WAS_Store.replace('ENTER', '');

@@ -48,6 +48,7 @@ export class _01_Zone {
     }
 
     menuClicked(item) {
+        localStorage.setItem('BLOCK_ID', item.ID);
         localStorage.setItem('BLOCK_NAME', item.NAME);
         this.navCtrl.push('_02_Menu', {
             Title: '選單'
