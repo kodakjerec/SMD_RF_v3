@@ -1,0 +1,30 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>WAS_補印標籤</ion-title>
+        <ion-buttons end>
+            <span style="white-space:pre;color:white">{{data.RefValue}}</span>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content (swipe)="swipeEvent($event)">
+    <ion-grid class="mytable">
+        <ion-row class="mytable_Head">
+            <ion-col col-2>呼出碼</ion-col>
+            <ion-col col-2>營業所</ion-col>
+            <ion-col col-1>數量</ion-col>
+            <ion-col col-1>列印時間</ion-col>
+            <ion-col col-1>種類</ion-col>
+            <ion-col col-4>內容</ion-col>
+            <ion-col col-1>列印次數</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let ListItem of TotalList" class="mytable_Detail" (click)="readyChangeAMOUNT(ListItem)">
+            <ion-col style="font-size:30px" col-2> {{ListItem.ITEM_NO}}</ion-col>
+            <ion-col style="font-size:30px" col-2> {{ListItem.SITE_ID}}</ion-col>
+            <ion-col style="font-size:20px" col-1> {{ListItem.QTY}}</ion-col>
+            <ion-col col-1> {{ListItem.PrintTIME}}</ion-col>
+            <ion-col col-1> {{ListItem.PrintMode}}</ion-col>
+            <ion-col col-4> {{ListItem.Content}}</ion-col>
+            <ion-col col-1>{{ListItem.PrintTimes}}</ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>WAS_刪除驗收紀錄</ion-title>
+        <ion-buttons end>
+            <span style="white-space:pre;color:white">{{data.RefValue}}</span>
+        </ion-buttons>
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-row>
+            <ion-col col-3>
+                <ion-label [ngClass]="['myScanBarcodeUI_Label']">呼出碼</ion-label>
+            </ion-col>
+            <ion-col col-7>
+                <button ion-button outline block
+                        [ngClass]="['myScanBarcodeUI']"
+                        #scan_Entry
+                        (keyup)="myKeylogger($event)"
+                        (ionFocus)="selectAll($event)">
+                    {{data.ITEM_NO}}
+                </button>
+            </ion-col>
+            <ion-col col-2>
+                <button ion-button (click)="openKeyPad()" color="primary" solid class="toolbar-button">
+                    <ion-icon name="keypad"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+<ion-content (swipe)="swipeEvent($event)">
+    <ion-grid class="mytable">
+        <ion-row class="mytable_Head">
+            <ion-col col-2>呼出碼</ion-col>
+            <ion-col col-2>營業所</ion-col>
+            <ion-col col-2>驗收量</ion-col>
+            <ion-col col-2>驗收重量</ion-col>
+            <ion-col col-2>驗收條碼</ion-col>
+            <ion-col col-2>時間</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let ListItem of TotalList" class="mytable_Detail" (click)="readyChangeAMOUNT(ListItem)">
+            <ion-col style="font-size:30px" col-2> {{ListItem.ITEM_NO}}</ion-col>
+            <ion-col style="font-size:30px" col-2> {{ListItem.SITE_ID}}</ion-col>
+            <ion-col style="font-size:30px" col-2> {{ListItem.QTY}}</ion-col>
+            <ion-col style="font-size:30px" col-2> {{ListItem.WEIGHT}}</ion-col>
+            <ion-col col-2> {{ListItem.BARCODE}}</ion-col>
+            <ion-col col-2> {{ListItem.ManufactureTIME}}</ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

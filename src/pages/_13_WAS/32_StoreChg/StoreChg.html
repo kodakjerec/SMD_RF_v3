@@ -1,6 +1,6 @@
 <ion-header no-border>
     <ion-navbar>
-        <ion-title>WAS_更改訂購量</ion-title>
+        <ion-title>WAS_切換營業所</ion-title>
         <ion-buttons end>
             <span style="white-space:pre;color:white">{{data.RefValue}}</span>
         </ion-buttons>
@@ -14,15 +14,15 @@
             <ion-col col-2>代號</ion-col>
             <ion-col col-2>訂購量</ion-col>
             <ion-col col-1>指示量</ion-col>
-            <ion-col col-2>修改量</ion-col>
+            <ion-col col-2>剩餘量</ion-col>
         </ion-row>
         <ion-row *ngFor="let ListItem of TotalList" class="mytable_Detail" (click)="readyChangeAMOUNT(ListItem)">
             <ion-col col-2> {{ListItem.SEQ}}</ion-col>
             <ion-col style="font-size:30px" col-3> {{ListItem.SITE_NAME}}</ion-col>
             <ion-col style="font-size:30px" col-2> {{ListItem.SITE_ID}}</ion-col>
-            <ion-col style="font-size:30px" col-2> {{ListItem.AMOUNT}}</ion-col>
-            <ion-col style="font-size:30px" col-1> {{ListItem.TQty}}</ion-col>
-            <ion-col style="font-size:30px" col-2> {{ListItem.UPD_AMOUNT}}</ion-col>
+            <ion-col style="font-size:20px" col-2> {{ListItem.AMOUNT}}</ion-col>
+            <ion-col style="font-size:20px" col-1> {{ListItem.TQty}}</ion-col>
+            <ion-col style="font-size:30px" col-2> {{ListItem.LeftQty}}</ion-col>
         </ion-row>
     </ion-grid>
     <ion-infinite-scroll (ionInfinite)="doInfinite($event)">

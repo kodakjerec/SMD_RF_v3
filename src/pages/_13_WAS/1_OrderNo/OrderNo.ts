@@ -22,7 +22,24 @@ export class _131_WAS_OrderNo {
         , private toastCtrl: ToastController
         , private modalCtrl: ModalController
         , private vibration: Vibration) {
+        localStorage.setItem('USER_ID', '123456');
+        localStorage.setItem('BLOCK_ID', 'A1DP1');
+        localStorage.setItem('BLOCK_NAME', '1樓撿貨區');
+    }
 
+    enterFullScreen() {
+        var elem = document.getElementById("Mainapp");
+
+        if (!this.data.FullScreenMode) {
+            this.data.FullScreenMode = true;
+            //show full screen 
+            elem.webkitRequestFullScreen();
+        }
+        else {
+            this.data.FullScreenMode = false;
+
+            document.webkitExitFullscreen();
+        }
     }
 
     @ViewChild('scan_Entry') scan_Entry;
@@ -39,8 +56,8 @@ export class _131_WAS_OrderNo {
         BLOCK_NAME: localStorage.getItem('BLOCK_NAME')
         , WAS_OrderNo: ''
         , IsInputEnable: true
-        , IsHideWhenKeyboardOpen: false
-    };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
+        , FullScreenMode: false
+    };
 
     DisplayList = [];
     DefaultTestServer = '172_31_31_250';

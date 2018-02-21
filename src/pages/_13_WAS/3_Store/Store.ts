@@ -229,18 +229,20 @@ export class _133_WAS_Store {
                     let obj = this.modalCtrl.create(ListTablePage);
                     obj.onDidDismiss(data => {
                         let ID = myGlobals.ProgParameters.get('ListTable_answer').Value;
-                        this._http_services.POST(this.DefaultTestServer, 'sp'
-                            , '[WAS].dbo.spactWAS_Line'
-                            , [{ Name: '@Step', Value: '41' }
-                                , { Name: '@Parameters', Value: ID }])
-                            .then((response) => {
-                                //因為是特殊處理案例, 要跳出視窗嚴加提醒使用者
-                                this.alertCtrl.create({
-                                    title: '結果 ' + response[0].RT_CODE,
-                                    message: response[0].RT_MSG,
-                                    buttons: ['關閉']
-                                }).present();
-                            })
+                        if (ID != '') {
+                            this._http_services.POST(this.DefaultTestServer, 'sp'
+                                , '[WAS].dbo.spactWAS_Line'
+                                , [{ Name: '@Step', Value: '41' }
+                                    , { Name: '@Parameters', Value: ID }])
+                                .then((response) => {
+                                    //因為是特殊處理案例, 要跳出視窗嚴加提醒使用者
+                                    this.alertCtrl.create({
+                                        title: '結果 ' + response[0].RT_CODE,
+                                        message: response[0].RT_MSG,
+                                        buttons: ['關閉']
+                                    }).present();
+                                })
+                        }
                         return;
                     });
                     obj.present();

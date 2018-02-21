@@ -39,11 +39,11 @@
             <ion-col col-2>剩餘</ion-col>
         </ion-row>
         <ion-row *ngFor="let ListItem of DisplayList" class="mytable_Detail">
-            <ion-col col-4> {{ListItem.ITEM_NO}}</ion-col>
+            <ion-col style="font-size:30px" col-4> {{ListItem.ITEM_NO}}</ion-col>
             <ion-col col-2> {{ListItem.PRICE_TYPE_NAME}}</ion-col>
             <ion-col col-2> {{ListItem.AMOUNT}}</ion-col>
             <ion-col col-2> {{ListItem.TQty}}</ion-col>
-            <ion-col col-2> {{ListItem.LeftQty}}</ion-col>
+            <ion-col style="font-size:30px" col-2> {{ListItem.LeftQty}}</ion-col>
         </ion-row>
     </ion-grid>
     <ion-item>
@@ -55,7 +55,13 @@
 <div [hidden]="data.IsHideWhenKeyboardOpen">
     <ion-footer no-border>
         <ion-toolbar>
-            <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_NAME}}</ion-label>
-        </ion-toolbar>
-    </ion-footer>
+            <ion-buttons left>
+                <button color="danger" ion-button solid (click)='btn_MorelastReceive()'>刪除驗收</button>
+                <button color="secondary" ion-button solid (click)='btn_MorelastPrint()'>補標</button>
+            </ion-buttons>
+            <ion-buttons right>
+                <ion-label class="bottom_BLOCK">區域：{{data.BLOCK_NAME}}</ion-label>
+            </ion-buttons>
+</ion-toolbar>
+</ion-footer>
 </div>

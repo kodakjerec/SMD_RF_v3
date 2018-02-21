@@ -1,6 +1,11 @@
 <ion-header no-border>
     <ion-navbar>
         <ion-title>WAS_批次</ion-title>
+        <ion-buttons end>
+            <button ion-button solid color="primary" (click)="enterFullScreen()">
+                <ion-icon name="expand">全螢幕</ion-icon>
+            </button>
+        </ion-buttons>
     </ion-navbar>
     <ion-toolbar>
         <ion-row>
@@ -32,7 +37,7 @@
             <ion-col col-12>可用批次</ion-col>
         </ion-row>
         <ion-row *ngFor="let ListItem of DisplayList" class="mytable_Detail">
-            <ion-col col-12> {{ListItem.ORDER_NO}}</ion-col>
+            <ion-col style="font-size:30px" col-12> {{ListItem.ORDER_NO}}</ion-col>
         </ion-row>
     </ion-grid>
 </ion-content>

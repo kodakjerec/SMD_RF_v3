@@ -22,6 +22,10 @@ export class _132_WAS_Item {
         , private toastCtrl: ToastController
         , private modalCtrl: ModalController
         , private vibration: Vibration) {
+        //localStorage.setItem('WAS_OrderNo', '18021101');
+        //localStorage.setItem('WAS_Item', '{ "ITEM_NO": "110257", "ITEM_NAME": "黑柿蕃茄" }');
+        //localStorage.setItem('WAS_Store', '{"RT_CODE": 0,"SITE_ID": "751400","SITE_NAME": "天母天玉","PRICE": 330,"PRICE_TYPE": "1","AMOUNT": 6,"TQty": 4,"TWeight":4.97,"LeftQty": 2,"SEQ":99}');
+
         this.data.RefValue = localStorage.getItem('WAS_OrderNo');
     }
     @ViewChild('scan_Entry') scan_Entry;
@@ -36,14 +40,19 @@ export class _132_WAS_Item {
         , BLOCK_NAME: localStorage.getItem('BLOCK_NAME')
         , WAS_Item: ''
         , IsInputEnable: true
-        , IsHideWhenKeyboardOpen: false
-    };  // IsDisabled控制"btn報到"是否顯示，預設不顯示：IsDisabled = true
+        , IsRefresh: true   //重新查詢
+    };  
 
     DisplayList = [];
     DefaultTestServer = '172_31_31_250';
 
     BringDisplayList() {
         let sql_parameter = this.data.RefValue + ','
+
+        if (!this.data.IsRefresh) {
+            this.data.IsRefresh = true;
+            return;
+        }
 
         this._http_services.POST(this.DefaultTestServer, 'sp'
             , '[WAS].dbo.spactWAS_Line'
@@ -108,7 +117,7 @@ export class _132_WAS_Item {
                             duration: myGlobals.Set_timeout,
                             position: 'middle'
                         }).present();
-                        this.navCtrl.push('_133_WAS_Store');
+                        this.navCtrl.push('_134_WAS_Receive_v2');
                         break;
                     default:
                         this.toastCtrl.create({
@@ -168,5 +177,17 @@ export class _132_WAS_Item {
             case 16://DOWN
                 break;
         };
+    }
+
+    //刪除驗收紀錄
+    btn_MorelastReceive() {
+        this.data.IsRefresh = false;
+        this.navCtrl.push('_1342_WAS_ReceiveDelete');
+    }
+
+    //補標
+    btn_MorelastPrint() {
+        this.data.IsRefresh = false;
+        this.navCtrl.push('_1333_WAS_PrintLostLabel');
     }
 }
