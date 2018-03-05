@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, ToastController, IonicPage } from 'ionic-angular';
 
+import * as myGlobals from '../../app/Settings';
 import { http_services } from '../_ZZ_CommonLib/http_services';
 
 @IonicPage({
@@ -14,7 +15,9 @@ import { http_services } from '../_ZZ_CommonLib/http_services';
 export class _22_PrintPickingLabel {
     constructor(public navCtrl: NavController
         , public _http_services: http_services
-        , private alertCtrl: AlertController) {
+        , private alertCtrl: AlertController
+        , private toastCtrl: ToastController
+    ) {
     }
 
     //#region Init
@@ -60,12 +63,16 @@ export class _22_PrintPickingLabel {
             this._http_services.POST('', 'sp'
                 , '[md.spDCS_LABEL_DAS]'
                 , [
-                    { Name: '@JOBID', Value: this.data.JOBID }
+                    { Name: '@JOB_ID', Value: this.data.JOBID }
                     , { Name: '@PRINTER', Value: "172.20.22.4" }
                     , { Name: '@BC', Value: this.data.ScanBarcode }
                 ])
                 .then((response) => {
-                    console.log(response);
+                    this.toastCtrl.create({
+                        message: 'DAS:預印標完成',
+                        duration: myGlobals.Set_timeout,
+                        position: 'middle'
+                    }).present();
                 });
         }
         else {
@@ -80,7 +87,11 @@ export class _22_PrintPickingLabel {
                     , { Name: '@cBARCODE', Value: this.data.ScanBarcode }
                 ])
                 .then((response) => {
-                    console.log(response);
+                    this.toastCtrl.create({
+                        message: 'SF:冷凍標完成',
+                        duration: myGlobals.Set_timeout,
+                        position: 'middle'
+                    }).present();
                 });
         }
         //#endregion

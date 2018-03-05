@@ -4,7 +4,8 @@
 //網址
 //export const Global_Server = 'localhost:1793';
 //export const Global_Server = 'localhost/RF_DB';
-export const Global_Server = '172.31.31.250/RF_DB';
+export const Global_Server = '172.20.20.11/RF_DB';
+//export const Global_Server = '172.31.31.250/RF_DB';
 export const Set_timeout = 1500;
 export const DefaultServer = "DCStest";
 export const ShowLoadingWindow = false;
