@@ -320,15 +320,20 @@ export class _134_WAS_Receive_v2 {
 
                             this.Receive.NowBOXQTY = (parseInt(this.Receive.NowBOXQTY) + AssignQty).toString();    //箱入數增加
 
-                            //手動輸入, 吐小計標
+                            
                             if (barcode == '0') {
+								//手動輸入, 吐小計標
                                 this.PrintLabel(0, AssignQty, AssignWeight);
+								
+								//驗收完畢
+                                this.data.theLastSEQ = this.Receive.SEQ;
+                                this.BringFirstStore();
                             }
                             else {
                                 //箱入數滿足, 吐小計標
-                                if (parseInt(this.Receive.NowBOXQTY) >= this.Receive.BOXQTY) {
-                                    this.PrintLabel(0, parseInt(this.Receive.NowBOXQTY), 0);
-                                }
+                                //if (parseInt(this.Receive.NowBOXQTY) >= this.Receive.BOXQTY) {
+                                //    this.PrintLabel(0, parseInt(this.Receive.NowBOXQTY), 0);
+                                //}
 
                                 //無剩餘量
                                 if (this.Receive.LeftQty <= 0) {

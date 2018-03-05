@@ -57,11 +57,7 @@ export class UpdateApp {
     };
 
     gotoMain() {
-<<<<<<< HEAD
         this.navCtrl.setRoot('_131_WAS_OrderNo');
-=======
-        this.navCtrl.setRoot(_00_Login);
->>>>>>> 5f25ed00a8e88b3a36b323ca6f6825573056c28f
     }
 
     //#region 檢查更新 hot code push

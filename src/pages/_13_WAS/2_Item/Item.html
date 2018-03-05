@@ -38,7 +38,9 @@
             <ion-col col-2>實績</ion-col>
             <ion-col col-2>剩餘</ion-col>
         </ion-row>
-        <ion-row *ngFor="let ListItem of DisplayList" class="mytable_Detail">
+        <ion-row *ngFor="let ListItem of DisplayList" 
+				class="mytable_Detail"
+				(click)="search_UIClick(ListItem)">
             <ion-col style="font-size:30px" col-4> {{ListItem.ITEM_NO}}</ion-col>
             <ion-col col-2> {{ListItem.PRICE_TYPE_NAME}}</ion-col>
             <ion-col col-2> {{ListItem.AMOUNT}}</ion-col>

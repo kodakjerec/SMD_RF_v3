@@ -74,6 +74,10 @@ export class _132_WAS_Item {
     };
 
     //查詢
+	search_UIClick(item){
+		this.data.WAS_Item= item.ITEM_NO;
+		this.search();
+	}
     search() {
         this.vibration.vibrate(100);
         this.data.IsInputEnable = false;

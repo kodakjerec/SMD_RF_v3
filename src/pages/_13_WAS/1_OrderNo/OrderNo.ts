@@ -83,6 +83,10 @@ export class _131_WAS_OrderNo {
     };
 
     //查詢
+	search_UIClick(item){
+		this.data.WAS_OrderNo= item.ORDER_NO;
+		this.search();
+	}
     search() {
         this.vibration.vibrate(100);
         this.data.IsInputEnable = false;

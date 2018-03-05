@@ -36,7 +36,9 @@
         <ion-row class="mytable_Head">
             <ion-col col-12>可用批次</ion-col>
         </ion-row>
-        <ion-row *ngFor="let ListItem of DisplayList" class="mytable_Detail">
+        <ion-row *ngFor="let ListItem of DisplayList" 
+				class="mytable_Detail"
+				(click)="search_UIClick(ListItem)">
             <ion-col style="font-size:30px" col-12> {{ListItem.ORDER_NO}}</ion-col>
         </ion-row>
     </ion-grid>

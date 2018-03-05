@@ -65,11 +65,13 @@ export class _1332_WAS_StoreChg {
     //查詢結果匯入TotalList
     BringDisplayList_Add(response) {
         response.forEach((value, index, array) => {
+			if(value.UPD_AMOUNT!=null)
+				value.AMOUNT=value.UPD_AMOUNT;
             this.TotalList.push(value);
         });
     }
 
-    //改量
+    //變更營業所
     readyChangeAMOUNT(item) {
         this.vibration.vibrate(100);
         let alert = this.alertCtrl.create({
