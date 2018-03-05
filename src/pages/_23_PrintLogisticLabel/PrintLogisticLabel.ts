@@ -38,6 +38,10 @@ export class _23_PrintLogisticLabel {
     @ViewChild('scan_Entry') scan_Entry;
     //#endregion
 
+	ionViewWillEnter(){
+		console.log('refresh ALL js');
+	}
+	
     search() {
         this.vibration.vibrate(100);
 

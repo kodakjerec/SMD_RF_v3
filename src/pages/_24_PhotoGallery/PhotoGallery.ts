@@ -34,6 +34,10 @@ export class _24_PhotoGallery {
     @ViewChild('scan_Entry') scan_Entry;
     //#endregion
 
+	ionViewWillEnter(){
+		console.log('refresh ALL js');
+	}
+	
     ngOnInit() {
         this.searchPic();
     };

@@ -25,6 +25,10 @@ export class UpdateApp {
         this.initialApp();
     }
 
+	ionViewWillEnter(){
+		console.log('refresh ALL js');
+	}
+	
     initialApp() {
         this.data.checkStatus0 = 'danger';
         this.data.checkStatus1 = 'danger';
@@ -53,10 +57,7 @@ export class UpdateApp {
     };
 
     gotoMain() {
-        //test
         this.navCtrl.setRoot('_131_WAS_OrderNo');
-
-        //this.navCtrl.setRoot(_00_Login);
     }
 
     //#region 檢查更新 hot code push

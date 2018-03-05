@@ -104,7 +104,7 @@ export class _124_ItemRcv {
     Back() {
         this.Unlock();
         this.reset();
-        myGlobals.ProgParameters.set('ReceiveResult', this.result);
+        localStorage.setItem('ReceiveResult', JSON.stringify(this.result));
         this.navCtrl.pop();
     };
 

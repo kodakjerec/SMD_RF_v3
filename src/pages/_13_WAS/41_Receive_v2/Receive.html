@@ -82,22 +82,12 @@
             <ion-col style="font-size:30px" col-6>{{Receive.TWeight}}</ion-col>
         </ion-row>
         <ion-row>
-            <ion-col col-4>箱入數</ion-col>
-            <ion-col col-4>訂購量</ion-col>
-            <ion-col col-4>營業所</ion-col>
+            <ion-col col-6>訂購量</ion-col>
+            <ion-col col-6>營業所</ion-col>
         </ion-row>
         <ion-row>
-            <ion-col style="font-size:30px" col-2>
-                <ion-input type="number"
-                           [ngClass]="['myScanBarcodeUI_input']"
-                           [(ngModel)]="Receive.NowBOXQTY"
-                           (click)="disablemyFocus(0)"
-                           (ionFocus)="selectAll($event)">
-                </ion-input>
-            </ion-col>
-            <ion-col style="font-size:30px" col-2>{{Receive.BOXQTY}}</ion-col>
-            <ion-col style="font-size:30px" col-4>{{Receive.AMOUNT}}</ion-col>
-            <ion-col style="font-size:30px" col-4>{{Receive.SITE_ID}} {{Receive.SITE_NAME}}</ion-col>
+            <ion-col style="font-size:30px" col-6>{{Receive.AMOUNT}}</ion-col>
+            <ion-col style="font-size:30px" col-6>{{Receive.SITE_ID}} {{Receive.SITE_NAME}}</ion-col>
         </ion-row>
         <ion-row>
             <ion-col col-2>品名</ion-col>

@@ -41,6 +41,10 @@ export class _22_PrintPickingLabel {
     @ViewChild('scan_Entry') scan_Entry;
     //#endregion
 
+	ionViewWillEnter(){
+		console.log('refresh ALL js');
+	}
+	
     ngOnInit() {
         this._http_services.POST('', 'sqlcmd'
             , 'select OrderNo=MAX(OrderNo) from DDI.dbo.DDI_WORKSPACE_STATUS with(nolock)'

@@ -26,9 +26,9 @@ export class _123_ItemCode {
 
         //localStorage.setItem('USER_ID', '123456');
         //localStorage.setItem('BLOCK_NAME', '1樓進貨暫存區');
-        //localStorage.setItem('CarNo', '023');
-        //localStorage.setItem('PaperNo', 'PO180125008341');
-        //localStorage.setItem('PaperNo_ID', 'ID180126000086');
+        //localStorage.setItem('CarNo', '004');
+        //localStorage.setItem('PaperNo', 'PO180303011451');
+        //localStorage.setItem('PaperNo_ID', 'ID180305000063');
         //localStorage.setItem('ItemCode', '621087');
         //localStorage.setItem('ITEM_HOID', '1161129110915');
         //localStorage.setItem('LOT_ID', '2180125000150');
@@ -49,6 +49,15 @@ export class _123_ItemCode {
     @ViewChild('scan_Entry') scan_Entry;
 
     ionViewWillEnter() {
+        if (localStorage.getItem('ReceiveResult') != undefined || localStorage.getItem('ReceiveResult') != null) {
+            this.result = JSON.parse(localStorage.getItem('ReceiveResult'));
+
+            //SHOW 待收百分比
+            var QTY = this.result.PO_QTY.split("/");
+            this.answer.QTY_ShowTotal = parseInt(QTY[1]);
+            this.answer.QTY_ProgressBar = Math.round(this.result.QTY / this.answer.QTY_ShowTotal * 100).toString() + '%';
+        }
+
         if (this.data.IsDisabled == true) {
             this.myFocus();
         }
@@ -75,7 +84,7 @@ export class _123_ItemCode {
         , QTY_ProgressBar: ''
         , DisplaySunDay: 0
     };
-    result = {};
+    result:any = {};
 
     //進度表
     getQTY_ProgressBar() {
@@ -177,8 +186,8 @@ export class _123_ItemCode {
                             //SHOW 待收百分比
                             var QTY = obj_response.PO_QTY.split("/");
                             this.answer.QTY_ShowTotal = parseInt(QTY[1]);
-                            this.answer.QTY_ProgressBar = Math.round(obj_response.QTY / this.answer.QTY_ShowTotal * 100).toString()+'%';
-                            
+                            this.answer.QTY_ProgressBar = Math.round(obj_response.QTY / this.answer.QTY_ShowTotal * 100).toString() + '%';
+
                             //介面顯示設定
                             this.answer.SunDay = obj_response.QE_TYPE_TEXT;
 
