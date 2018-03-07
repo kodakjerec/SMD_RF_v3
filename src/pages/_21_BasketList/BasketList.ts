@@ -1,11 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Platform, NavParams, AlertController, IonicPage } from 'ionic-angular';
+import { NavController, Platform, NavParams, AlertController, ModalController, IonicPage } from 'ionic-angular';
 
 //Cordova
 import { Vibration } from '@ionic-native/vibration';
 
 //My Pages
+import * as myGlobals from '../../app/Settings';
 import { http_services } from '../_ZZ_CommonLib/http_services';
+import { LittleKeyPad } from '../_ZZ_CommonLib/LittleKeyPad/LittleKeyPad';
 import { PipesModule } from '../../pipes/pipes.module';
 
 @IonicPage({
@@ -22,6 +24,7 @@ export class _21_BasketList {
         , public navParams: NavParams
         , public _http_services: http_services
         , private alertCtrl: AlertController
+		, private modalCtrl: ModalController
         , private pipes: PipesModule
         , private vibration: Vibration) {
     }
@@ -50,24 +53,25 @@ export class _21_BasketList {
     //Amount    數量
     DCSresult = []
 
+	DefaultTestServer = 'DCStest';
+	
     @ViewChild('scan_Entry') scan_Entry;
 
+	ionViewWillEnter() {
+        this.myFocus();
+    }
+	
     reset() {
         this.data.ScanBarcode = '';
-        this.scan_Entry.setFocus();
+        this.myFocus();
     };
     Totalreset() {
         this.data.ScanBarcode = '';
         this.data.ShowStoreId = '';
         this.data.ShowStoreName = '';
         this.DCSresult = [];
-        this.scan_Entry.setFocus();
+        this.myFocus();
     };
-
-    //全選
-    selectAll($event) {
-        $event._native.nativeElement.select();
-    }
 
     //開啟Help
     help = function () {
@@ -111,11 +115,11 @@ export class _21_BasketList {
                     obj += value.barcode + ',';
                 });
 
-                this._http_services.POST('172_31_31_250', 'sp'
+                this._http_services.POST(this.DefaultTestServer, 'sp'
                     , 'spactDCS_BASKET'
                     , [{ Name: '@Step', Value: '0' }
                         , { Name: '@GUIDMessage', Value: obj }])
-                    .subscribe((response) => {
+                    .then((response) => {
                         var result = response[0];
                         var successPageId = {};
                         switch (result.RT_CODE) {
@@ -168,11 +172,11 @@ export class _21_BasketList {
                         this.data.ShowStoreId = SuccessData.StoreId;
 
                         //帶入店號
-                        this._http_services.POST('172_31_31_250', 'sp'
+                        this._http_services.POST(this.DefaultTestServer, 'sp'
                             , 'spactDCS_BASKET'
                             , [{ Name: '@Step', Value: '1' }
                                 , { Name: '@GUIDMessage', Value: SuccessData.StoreId }])
-                            .subscribe((response) => {
+                            .then((response) => {
                                 if (response != '') {
                                     var result = response[0];
 
@@ -189,7 +193,7 @@ export class _21_BasketList {
                                             alert.present();
                                     }
                                 }
-                                this.scan_Entry.setFocus();
+                               this.myFocus();
                             });
                     }
                     //#endregion
@@ -235,15 +239,35 @@ export class _21_BasketList {
         //準備下一輪掃描
         this.reset();
 
-        this.scan_Entry.setFocus();
+        this.myFocus();
     }
-    //喪失focus
-    myfocus() {
+		
+	//全選
+    selectAll($event) {
+        $event._native.nativeElement.select();
+    }
+    //Focus
+    myFocus() {
         setTimeout(() => {
-            this.scan_Entry.setFocus();
-        }, 150);
-    };
-
+            this.scan_Entry._elementRef.nativeElement.focus();
+        }, 300);
+    }
+	myKeylogger(event) {
+        this.data.ScanBarcode = myGlobals.keyCodeToValue(event.keyCode, this.data.ScanBarcode);
+        if (this.data.ScanBarcode.indexOf('ENTER') >= 0) {
+            this.data.ScanBarcode = this.data.ScanBarcode.replace('ENTER', '');
+            this.search();
+        }
+    }
+	openKeyPad() {
+        let obj = this.modalCtrl.create(LittleKeyPad, { Name: '條碼', Value: this.data.ScanBarcode });
+        obj.onDidDismiss(data => {
+            this.data.ScanBarcode = myGlobals.ProgParameters.get('ListTable_answer');
+            this.search();
+        });
+        obj.present();
+    }
+	
     //塞入log
     pushLog(scanData: any) {
         this.DCS_Log.push(scanData);
